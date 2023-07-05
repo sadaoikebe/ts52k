@@ -11,9 +11,11 @@
 *.sch~*
 *.sch#
 *.sch.swp
-ts52k-backups/*
-jlcpcb/assembly/*
-jlcpcb/gerber/*
+**/ts52k-backups/*
+**/jlcpcb/assembly/*
+**/jlcpcb/gerber/*
 ts52k-rescue.*
 fp-info-cache
 **/.DS_Store
+*.FCStd1
+
