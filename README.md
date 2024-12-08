@@ -21,6 +21,7 @@ TS52K PCBA | [JLCPCB PCBA](pcb/) | 1 |
 定位板 | [Laser Cut Brass](case/) | 1 | t=1.5mm できるだけ重い金属が良い
 ヒートセット M3x6mmx4.6mm | [AliEx/淘宝等](https://www.aliexpress.com/item/1005002288716120.html) | 8 | 長さは6mmでなくても良い
 RPG | | 1 |
+キースイッチ | AliEx/淘宝/自キ専門店等 | 52 | お好きな打鍵感のものを。Kailh Box白軸おすすめ
 M3 円頭六角ボルト 6mm | | 8 |
 クッション 2mm厚 x 2mm x 87mm | | 12 | Poron/EVAフォーム等
 2u スタビライザー | AliEx/淘宝/自キ専門店等 | 3 | PCB Mount
