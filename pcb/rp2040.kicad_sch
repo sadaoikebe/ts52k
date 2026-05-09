@@ -3817,6 +3817,12 @@
 			(uuid "4145bdd1-ba70-43be-9b76-6566f6602b50")
 		)
 		(instances
+			(project "ts52k"
+				(path "/a46aaf04-b440-466e-8b21-108f618a37ed/9a14334a-849e-4731-b6a7-99d43fb7e05a"
+					(reference "R?")
+					(unit 1)
+				)
+			)
 			(project "rp2040"
 				(path "/dd12cbaa-6e17-4279-bf84-6941edc87c53"
 					(reference "R?")
@@ -3897,6 +3903,12 @@
 			(uuid "ff323ee9-470a-4f10-a495-9394b6a32d37")
 		)
 		(instances
+			(project "ts52k"
+				(path "/a46aaf04-b440-466e-8b21-108f618a37ed/9a14334a-849e-4731-b6a7-99d43fb7e05a"
+					(reference "C?")
+					(unit 1)
+				)
+			)
 			(project "rp2040"
 				(path "/dd12cbaa-6e17-4279-bf84-6941edc87c53"
 					(reference "C?")
@@ -3974,6 +3986,12 @@
 			(uuid "a59476e8-1956-49c8-9d6f-8ab1ce800778")
 		)
 		(instances
+			(project "ts52k"
+				(path "/a46aaf04-b440-466e-8b21-108f618a37ed/9a14334a-849e-4731-b6a7-99d43fb7e05a"
+					(reference "#PWR?")
+					(unit 1)
+				)
+			)
 			(project "rp2040"
 				(path "/dd12cbaa-6e17-4279-bf84-6941edc87c53"
 					(reference "#PWR?")
@@ -4052,6 +4070,12 @@
 			(uuid "87a4c05c-e4e2-4993-9cf9-dafbc299d4d9")
 		)
 		(instances
+			(project "ts52k"
+				(path "/a46aaf04-b440-466e-8b21-108f618a37ed/9a14334a-849e-4731-b6a7-99d43fb7e05a"
+					(reference "R?")
+					(unit 1)
+				)
+			)
 			(project "rp2040"
 				(path "/dd12cbaa-6e17-4279-bf84-6941edc87c53"
 					(reference "R?")
@@ -4132,6 +4156,12 @@
 			(uuid "4cb5f8d1-53cc-441f-8907-07d15ac03de5")
 		)
 		(instances
+			(project "ts52k"
+				(path "/a46aaf04-b440-466e-8b21-108f618a37ed/9a14334a-849e-4731-b6a7-99d43fb7e05a"
+					(reference "C?")
+					(unit 1)
+				)
+			)
 			(project "rp2040"
 				(path "/dd12cbaa-6e17-4279-bf84-6941edc87c53"
 					(reference "C?")
@@ -4212,6 +4242,12 @@
 			(uuid "7f85b16c-13b6-4bce-ac80-3bd85560d172")
 		)
 		(instances
+			(project "ts52k"
+				(path "/a46aaf04-b440-466e-8b21-108f618a37ed/9a14334a-849e-4731-b6a7-99d43fb7e05a"
+					(reference "C?")
+					(unit 1)
+				)
+			)
 			(project "rp2040"
 				(path "/dd12cbaa-6e17-4279-bf84-6941edc87c53"
 					(reference "C?")
@@ -4290,6 +4326,12 @@
 			(uuid "b7d2eff7-634e-4dab-8e35-f0a9aba2f3ee")
 		)
 		(instances
+			(project "ts52k"
+				(path "/a46aaf04-b440-466e-8b21-108f618a37ed/9a14334a-849e-4731-b6a7-99d43fb7e05a"
+					(reference "R?")
+					(unit 1)
+				)
+			)
 			(project "rp2040"
 				(path "/dd12cbaa-6e17-4279-bf84-6941edc87c53"
 					(reference "R?")
@@ -4370,6 +4412,12 @@
 			(uuid "a44a2ac5-aef9-4074-b545-039e1efc9033")
 		)
 		(instances
+			(project "ts52k"
+				(path "/a46aaf04-b440-466e-8b21-108f618a37ed/9a14334a-849e-4731-b6a7-99d43fb7e05a"
+					(reference "C?")
+					(unit 1)
+				)
+			)
 			(project "rp2040"
 				(path "/dd12cbaa-6e17-4279-bf84-6941edc87c53"
 					(reference "C?")
@@ -4450,6 +4498,12 @@
 			(uuid "c74a8d22-74ee-4fdc-957b-3c1bb78db479")
 		)
 		(instances
+			(project "ts52k"
+				(path "/a46aaf04-b440-466e-8b21-108f618a37ed/9a14334a-849e-4731-b6a7-99d43fb7e05a"
+					(reference "C?")
+					(unit 1)
+				)
+			)
 			(project "rp2040"
 				(path "/dd12cbaa-6e17-4279-bf84-6941edc87c53"
 					(reference "C?")
@@ -4528,6 +4582,12 @@
 			(uuid "30be7161-3088-45bd-b5a5-4c287fc0d9a9")
 		)
 		(instances
+			(project "ts52k"
+				(path "/a46aaf04-b440-466e-8b21-108f618a37ed/9a14334a-849e-4731-b6a7-99d43fb7e05a"
+					(reference "R?")
+					(unit 1)
+				)
+			)
 			(project "rp2040"
 				(path "/dd12cbaa-6e17-4279-bf84-6941edc87c53"
 					(reference "R?")
@@ -4605,6 +4665,12 @@
 			(uuid "51946be1-d1d0-4325-8504-089c9de5a87c")
 		)
 		(instances
+			(project "ts52k"
+				(path "/a46aaf04-b440-466e-8b21-108f618a37ed/9a14334a-849e-4731-b6a7-99d43fb7e05a"
+					(reference "#PWR?")
+					(unit 1)
+				)
+			)
 			(project "rp2040"
 				(path "/dd12cbaa-6e17-4279-bf84-6941edc87c53"
 					(reference "#PWR?")
@@ -4685,6 +4751,12 @@
 			(uuid "e8824b7d-fdcb-4ec3-ae09-cdd212612f82")
 		)
 		(instances
+			(project "ts52k"
+				(path "/a46aaf04-b440-466e-8b21-108f618a37ed/9a14334a-849e-4731-b6a7-99d43fb7e05a"
+					(reference "C?")
+					(unit 1)
+				)
+			)
 			(project "rp2040"
 				(path "/dd12cbaa-6e17-4279-bf84-6941edc87c53"
 					(reference "C?")
@@ -4766,6 +4838,12 @@
 			(uuid "3a28d864-de23-43f5-a14f-896174464bca")
 		)
 		(instances
+			(project "ts52k"
+				(path "/a46aaf04-b440-466e-8b21-108f618a37ed/9a14334a-849e-4731-b6a7-99d43fb7e05a"
+					(reference "R?")
+					(unit 1)
+				)
+			)
 			(project "rp2040"
 				(path "/dd12cbaa-6e17-4279-bf84-6941edc87c53"
 					(reference "R?")
@@ -4846,6 +4924,12 @@
 			(uuid "f4bcba58-9664-4669-9228-cd5db90e9c55")
 		)
 		(instances
+			(project "ts52k"
+				(path "/a46aaf04-b440-466e-8b21-108f618a37ed/9a14334a-849e-4731-b6a7-99d43fb7e05a"
+					(reference "C?")
+					(unit 1)
+				)
+			)
 			(project "rp2040"
 				(path "/dd12cbaa-6e17-4279-bf84-6941edc87c53"
 					(reference "C?")
@@ -5124,6 +5208,12 @@
 			(uuid "da27bdac-0eea-4be9-9566-f97cfd50edeb")
 		)
 		(instances
+			(project "ts52k"
+				(path "/a46aaf04-b440-466e-8b21-108f618a37ed/9a14334a-849e-4731-b6a7-99d43fb7e05a"
+					(reference "U?")
+					(unit 1)
+				)
+			)
 			(project "rp2040"
 				(path "/dd12cbaa-6e17-4279-bf84-6941edc87c53"
 					(reference "U?")
@@ -5202,6 +5292,12 @@
 			(uuid "b7443ae8-f013-44a5-ba75-dc1b397839d3")
 		)
 		(instances
+			(project "ts52k"
+				(path "/a46aaf04-b440-466e-8b21-108f618a37ed/9a14334a-849e-4731-b6a7-99d43fb7e05a"
+					(reference "R?")
+					(unit 1)
+				)
+			)
 			(project "rp2040"
 				(path "/dd12cbaa-6e17-4279-bf84-6941edc87c53"
 					(reference "R?")
@@ -5280,6 +5376,12 @@
 			(uuid "5d0a8e43-1b83-4854-b28e-387b673fb567")
 		)
 		(instances
+			(project "ts52k"
+				(path "/a46aaf04-b440-466e-8b21-108f618a37ed/9a14334a-849e-4731-b6a7-99d43fb7e05a"
+					(reference "R?")
+					(unit 1)
+				)
+			)
 			(project "rp2040"
 				(path "/dd12cbaa-6e17-4279-bf84-6941edc87c53"
 					(reference "R?")
@@ -5360,6 +5462,12 @@
 			(uuid "c61dd168-2620-4412-9dce-c398cb92d407")
 		)
 		(instances
+			(project "ts52k"
+				(path "/a46aaf04-b440-466e-8b21-108f618a37ed/9a14334a-849e-4731-b6a7-99d43fb7e05a"
+					(reference "C?")
+					(unit 1)
+				)
+			)
 			(project "rp2040"
 				(path "/dd12cbaa-6e17-4279-bf84-6941edc87c53"
 					(reference "C?")
@@ -5440,6 +5548,12 @@
 			(uuid "64c98183-5332-4eaf-a1c7-e7aac2614c06")
 		)
 		(instances
+			(project "ts52k"
+				(path "/a46aaf04-b440-466e-8b21-108f618a37ed/9a14334a-849e-4731-b6a7-99d43fb7e05a"
+					(reference "C?")
+					(unit 1)
+				)
+			)
 			(project "rp2040"
 				(path "/dd12cbaa-6e17-4279-bf84-6941edc87c53"
 					(reference "C?")
@@ -5520,6 +5634,12 @@
 			(uuid "5f464db4-289b-4031-b14c-be936a79acbd")
 		)
 		(instances
+			(project "ts52k"
+				(path "/a46aaf04-b440-466e-8b21-108f618a37ed/9a14334a-849e-4731-b6a7-99d43fb7e05a"
+					(reference "C?")
+					(unit 1)
+				)
+			)
 			(project "rp2040"
 				(path "/dd12cbaa-6e17-4279-bf84-6941edc87c53"
 					(reference "C?")
@@ -5604,6 +5724,12 @@
 			(uuid "8297a1fb-48b5-40d8-9f25-b33e1a4f700b")
 		)
 		(instances
+			(project "ts52k"
+				(path "/a46aaf04-b440-466e-8b21-108f618a37ed/9a14334a-849e-4731-b6a7-99d43fb7e05a"
+					(reference "X?")
+					(unit 1)
+				)
+			)
 			(project "rp2040"
 				(path "/dd12cbaa-6e17-4279-bf84-6941edc87c53"
 					(reference "X?")
@@ -5681,6 +5807,12 @@
 			(uuid "cef85062-9dfc-4673-a798-1dadb9bf6e32")
 		)
 		(instances
+			(project "ts52k"
+				(path "/a46aaf04-b440-466e-8b21-108f618a37ed/9a14334a-849e-4731-b6a7-99d43fb7e05a"
+					(reference "#PWR?")
+					(unit 1)
+				)
+			)
 			(project "rp2040"
 				(path "/dd12cbaa-6e17-4279-bf84-6941edc87c53"
 					(reference "#PWR?")
@@ -5761,6 +5893,12 @@
 			(uuid "cbfebf75-ab3c-4347-9dff-448c4db98e1a")
 		)
 		(instances
+			(project "ts52k"
+				(path "/a46aaf04-b440-466e-8b21-108f618a37ed/9a14334a-849e-4731-b6a7-99d43fb7e05a"
+					(reference "C?")
+					(unit 1)
+				)
+			)
 			(project "rp2040"
 				(path "/dd12cbaa-6e17-4279-bf84-6941edc87c53"
 					(reference "C?")
@@ -5838,6 +5976,12 @@
 			(uuid "cfff3323-8a5d-489d-aa5a-e2be125b8a84")
 		)
 		(instances
+			(project "ts52k"
+				(path "/a46aaf04-b440-466e-8b21-108f618a37ed/9a14334a-849e-4731-b6a7-99d43fb7e05a"
+					(reference "#PWR?")
+					(unit 1)
+				)
+			)
 			(project "rp2040"
 				(path "/dd12cbaa-6e17-4279-bf84-6941edc87c53"
 					(reference "#PWR?")
@@ -5916,6 +6060,12 @@
 			(uuid "5caa377c-2dba-4a55-8fe5-aaef981d047b")
 		)
 		(instances
+			(project "ts52k"
+				(path "/a46aaf04-b440-466e-8b21-108f618a37ed/9a14334a-849e-4731-b6a7-99d43fb7e05a"
+					(reference "R?")
+					(unit 1)
+				)
+			)
 			(project "rp2040"
 				(path "/dd12cbaa-6e17-4279-bf84-6941edc87c53"
 					(reference "R?")
@@ -5996,6 +6146,12 @@
 			(uuid "5f609b0a-df64-4cbf-ad73-9d2a66b2419a")
 		)
 		(instances
+			(project "ts52k"
+				(path "/a46aaf04-b440-466e-8b21-108f618a37ed/9a14334a-849e-4731-b6a7-99d43fb7e05a"
+					(reference "C?")
+					(unit 1)
+				)
+			)
 			(project "rp2040"
 				(path "/dd12cbaa-6e17-4279-bf84-6941edc87c53"
 					(reference "C?")
@@ -6074,6 +6230,12 @@
 			(uuid "defcb709-73d0-4e38-a5dc-6b3dc22a3420")
 		)
 		(instances
+			(project "ts52k"
+				(path "/a46aaf04-b440-466e-8b21-108f618a37ed/9a14334a-849e-4731-b6a7-99d43fb7e05a"
+					(reference "R?")
+					(unit 1)
+				)
+			)
 			(project "rp2040"
 				(path "/dd12cbaa-6e17-4279-bf84-6941edc87c53"
 					(reference "R?")
@@ -6154,6 +6316,12 @@
 			(uuid "bf305130-edd9-4c60-98a7-fc527caad7de")
 		)
 		(instances
+			(project "ts52k"
+				(path "/a46aaf04-b440-466e-8b21-108f618a37ed/9a14334a-849e-4731-b6a7-99d43fb7e05a"
+					(reference "C?")
+					(unit 1)
+				)
+			)
 			(project "rp2040"
 				(path "/dd12cbaa-6e17-4279-bf84-6941edc87c53"
 					(reference "C?")
@@ -6234,6 +6402,12 @@
 			(uuid "06ac68a6-b777-4784-a464-8f89adc3ecc7")
 		)
 		(instances
+			(project "ts52k"
+				(path "/a46aaf04-b440-466e-8b21-108f618a37ed/9a14334a-849e-4731-b6a7-99d43fb7e05a"
+					(reference "C?")
+					(unit 1)
+				)
+			)
 			(project "rp2040"
 				(path "/dd12cbaa-6e17-4279-bf84-6941edc87c53"
 					(reference "C?")
@@ -6311,6 +6485,12 @@
 			(uuid "79fbd898-09a6-4bcb-987d-3d67036856ff")
 		)
 		(instances
+			(project "ts52k"
+				(path "/a46aaf04-b440-466e-8b21-108f618a37ed/9a14334a-849e-4731-b6a7-99d43fb7e05a"
+					(reference "#PWR?")
+					(unit 1)
+				)
+			)
 			(project "rp2040"
 				(path "/dd12cbaa-6e17-4279-bf84-6941edc87c53"
 					(reference "#PWR?")
@@ -6388,6 +6568,12 @@
 			(uuid "95340ba9-1135-4f6b-89fe-c6e95768fda3")
 		)
 		(instances
+			(project "ts52k"
+				(path "/a46aaf04-b440-466e-8b21-108f618a37ed/9a14334a-849e-4731-b6a7-99d43fb7e05a"
+					(reference "#PWR?")
+					(unit 1)
+				)
+			)
 			(project "rp2040"
 				(path "/dd12cbaa-6e17-4279-bf84-6941edc87c53"
 					(reference "#PWR?")
