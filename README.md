@@ -100,13 +100,22 @@ USB の 5V を 3.3V に変換します。出力 600mA に対し実消費は数�
 
 デュアルコア Arm Cortex-M0+、133MHz、QFN-56（7×7mm）。
 
-**電源系統が特徴的です。** RP2040 は内部に 1.1V のスイッチングレギュレータを内蔵しており、`VREG_VOUT`(45) から出た 1.1V を `DVDD`(23, 50) で自分に戻して入れるという構成をとります。基板側では 1V1 ネットにパスコンを置くだけです。
+**電源系統が特徴的です。** RP2040 は内部に 1.1V のスイッチングレギュレータを内蔵しており、`VREG_VIN`(44) に 3.3V を入れて `VREG_VOUT`(45) から出た 1.1V を、`DVDD`(23, 50) で自分に戻して入れるという構成をとります。基板側では 1V1 ネットにパスコンを置くだけです。
+
+```
++3V3 ──→ VREG_VIN (44) ──→ [内蔵1.1Vレギュレータ] ──→ VREG_VOUT (45)
+                                                            │
+                                                          1V1ネット
+                                                            │
+                                                      DVDD (23, 50)
+```
 
 | ピン | 接続 | 用途 |
 | :--- | :--- | :--- |
 | IOVDD ×6 | +3V3 | IOバッファ電源 |
 | ADC_AVDD | +3V3 | ADCアナログ電源 |
 | USB_VDD | +3V3 | USBトランシーバ電源 |
+| **VREG_VIN** | **+3V3** | **内蔵レギュレータ入力** |
 | VREG_VOUT | 1V1 | 内蔵レギュレータ出力 |
 | DVDD ×2 | 1V1 | コア電源入力 |
 | TESTEN | GND | 製造テスト用。データシート通り接地 |
@@ -259,6 +268,8 @@ https://github.com/sadaoikebe/qmk_firmware/tree/master/keyboards/ts52k
 **`Tools → Update Symbols from Library` は慎重に実行してください。** KiCad 標準ライブラリ側で `Memory_Flash:W25Q128JVS` と `Regulator_Linear:AP2112K-3.3` のピン位置が変更されているため、そのまま更新すると U3・U4 が全ネットから外れます。この2つは意図的に古いキャッシュ定義のまま維持しています。
 
 また、フィールド関連のオプション（`Update/reset field text` など）を有効にすると、電源シンボルの Value が書き換わってネット名が変わる可能性があります。
+
+**`Tools → Update PCB from Schematic` では `Link footprints using reference designators` をオフのままにしてください。** フットプリントは通常 Unique ID でシンボルと紐付いており、参照名での紐付けに切り替えると、ATmega32U4 版と RP2040 版で同じ参照名を持つ別部品（旧 SW1 リセットスイッチ ↔ 新 SW1 BOOTSEL、旧 J2 ピンヘッダ ↔ 新 J2 Tag-Connect）が誤って対応付けられます。
 
 ---
 
