@@ -5,7 +5,7 @@
 	(uuid "a46aaf04-b440-466e-8b21-108f618a37ed")
 	(paper "A4")
 	(lib_symbols
-		(symbol "Connector:USB_C_Receptacle_USB2.0"
+		(symbol "ts52k:USB_C_Receptacle_USB2.0"
 			(pin_names
 				(offset 1.016)
 			)
@@ -3510,7 +3510,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "ts52k-rescue:MX-NoLED-MX_Alps_Hybrid"
+		(symbol "ts52k:MX-NoLED-MX_Alps_Hybrid"
 			(pin_names
 				(offset 1.016)
 			)
@@ -7775,7 +7775,7 @@
 		)
 	)
 	(symbol
-		(lib_id "ts52k-rescue:MX-NoLED-MX_Alps_Hybrid")
+		(lib_id "ts52k:MX-NoLED-MX_Alps_Hybrid")
 		(at 144.78 60.96 180)
 		(unit 1)
 		(body_style 1)
@@ -7946,7 +7946,7 @@
 		)
 	)
 	(symbol
-		(lib_id "ts52k-rescue:MX-NoLED-MX_Alps_Hybrid")
+		(lib_id "ts52k:MX-NoLED-MX_Alps_Hybrid")
 		(at 153.67 60.96 0)
 		(unit 1)
 		(body_style 1)
@@ -8117,7 +8117,7 @@
 		)
 	)
 	(symbol
-		(lib_id "ts52k-rescue:MX-NoLED-MX_Alps_Hybrid")
+		(lib_id "ts52k:MX-NoLED-MX_Alps_Hybrid")
 		(at 162.56 60.96 0)
 		(unit 1)
 		(body_style 1)
@@ -8288,7 +8288,7 @@
 		)
 	)
 	(symbol
-		(lib_id "ts52k-rescue:MX-NoLED-MX_Alps_Hybrid")
+		(lib_id "ts52k:MX-NoLED-MX_Alps_Hybrid")
 		(at 171.45 60.96 0)
 		(unit 1)
 		(body_style 1)
@@ -8459,7 +8459,7 @@
 		)
 	)
 	(symbol
-		(lib_id "ts52k-rescue:MX-NoLED-MX_Alps_Hybrid")
+		(lib_id "ts52k:MX-NoLED-MX_Alps_Hybrid")
 		(at 171.45 81.28 0)
 		(unit 1)
 		(body_style 1)
@@ -8630,7 +8630,7 @@
 		)
 	)
 	(symbol
-		(lib_id "ts52k-rescue:MX-NoLED-MX_Alps_Hybrid")
+		(lib_id "ts52k:MX-NoLED-MX_Alps_Hybrid")
 		(at 180.34 60.96 0)
 		(unit 1)
 		(body_style 1)
@@ -8801,7 +8801,7 @@
 		)
 	)
 	(symbol
-		(lib_id "ts52k-rescue:MX-NoLED-MX_Alps_Hybrid")
+		(lib_id "ts52k:MX-NoLED-MX_Alps_Hybrid")
 		(at 189.23 60.96 0)
 		(unit 1)
 		(body_style 1)
@@ -8972,7 +8972,7 @@
 		)
 	)
 	(symbol
-		(lib_id "ts52k-rescue:MX-NoLED-MX_Alps_Hybrid")
+		(lib_id "ts52k:MX-NoLED-MX_Alps_Hybrid")
 		(at 189.23 81.28 0)
 		(unit 1)
 		(body_style 1)
@@ -9143,7 +9143,7 @@
 		)
 	)
 	(symbol
-		(lib_id "ts52k-rescue:MX-NoLED-MX_Alps_Hybrid")
+		(lib_id "ts52k:MX-NoLED-MX_Alps_Hybrid")
 		(at 198.12 60.96 0)
 		(unit 1)
 		(body_style 1)
@@ -9314,7 +9314,7 @@
 		)
 	)
 	(symbol
-		(lib_id "ts52k-rescue:MX-NoLED-MX_Alps_Hybrid")
+		(lib_id "ts52k:MX-NoLED-MX_Alps_Hybrid")
 		(at 207.01 60.96 0)
 		(unit 1)
 		(body_style 1)
@@ -9485,7 +9485,7 @@
 		)
 	)
 	(symbol
-		(lib_id "ts52k-rescue:MX-NoLED-MX_Alps_Hybrid")
+		(lib_id "ts52k:MX-NoLED-MX_Alps_Hybrid")
 		(at 215.9 60.96 0)
 		(unit 1)
 		(body_style 1)
@@ -9656,7 +9656,7 @@
 		)
 	)
 	(symbol
-		(lib_id "ts52k-rescue:MX-NoLED-MX_Alps_Hybrid")
+		(lib_id "ts52k:MX-NoLED-MX_Alps_Hybrid")
 		(at 224.79 60.96 0)
 		(unit 1)
 		(body_style 1)
@@ -9827,7 +9827,7 @@
 		)
 	)
 	(symbol
-		(lib_id "ts52k-rescue:MX-NoLED-MX_Alps_Hybrid")
+		(lib_id "ts52k:MX-NoLED-MX_Alps_Hybrid")
 		(at 224.79 81.28 0)
 		(unit 1)
 		(body_style 1)
@@ -9998,7 +9998,7 @@
 		)
 	)
 	(symbol
-		(lib_id "ts52k-rescue:MX-NoLED-MX_Alps_Hybrid")
+		(lib_id "ts52k:MX-NoLED-MX_Alps_Hybrid")
 		(at 233.68 60.96 0)
 		(unit 1)
 		(body_style 1)
@@ -10261,7 +10261,7 @@
 		)
 	)
 	(symbol
-		(lib_id "ts52k-rescue:MX-NoLED-MX_Alps_Hybrid")
+		(lib_id "ts52k:MX-NoLED-MX_Alps_Hybrid")
 		(at 144.78 81.28 0)
 		(unit 1)
 		(body_style 1)
@@ -10432,7 +10432,7 @@
 		)
 	)
 	(symbol
-		(lib_id "ts52k-rescue:MX-NoLED-MX_Alps_Hybrid")
+		(lib_id "ts52k:MX-NoLED-MX_Alps_Hybrid")
 		(at 153.67 81.28 0)
 		(unit 1)
 		(body_style 1)
@@ -10603,7 +10603,7 @@
 		)
 	)
 	(symbol
-		(lib_id "ts52k-rescue:MX-NoLED-MX_Alps_Hybrid")
+		(lib_id "ts52k:MX-NoLED-MX_Alps_Hybrid")
 		(at 162.56 81.28 0)
 		(unit 1)
 		(body_style 1)
@@ -10774,7 +10774,7 @@
 		)
 	)
 	(symbol
-		(lib_id "ts52k-rescue:MX-NoLED-MX_Alps_Hybrid")
+		(lib_id "ts52k:MX-NoLED-MX_Alps_Hybrid")
 		(at 162.56 101.6 0)
 		(unit 1)
 		(body_style 1)
@@ -10945,7 +10945,7 @@
 		)
 	)
 	(symbol
-		(lib_id "ts52k-rescue:MX-NoLED-MX_Alps_Hybrid")
+		(lib_id "ts52k:MX-NoLED-MX_Alps_Hybrid")
 		(at 171.45 101.6 0)
 		(unit 1)
 		(body_style 1)
@@ -11116,7 +11116,7 @@
 		)
 	)
 	(symbol
-		(lib_id "ts52k-rescue:MX-NoLED-MX_Alps_Hybrid")
+		(lib_id "ts52k:MX-NoLED-MX_Alps_Hybrid")
 		(at 180.34 81.28 0)
 		(unit 1)
 		(body_style 1)
@@ -11287,7 +11287,7 @@
 		)
 	)
 	(symbol
-		(lib_id "ts52k-rescue:MX-NoLED-MX_Alps_Hybrid")
+		(lib_id "ts52k:MX-NoLED-MX_Alps_Hybrid")
 		(at 189.23 101.6 0)
 		(unit 1)
 		(body_style 1)
@@ -11458,7 +11458,7 @@
 		)
 	)
 	(symbol
-		(lib_id "ts52k-rescue:MX-NoLED-MX_Alps_Hybrid")
+		(lib_id "ts52k:MX-NoLED-MX_Alps_Hybrid")
 		(at 198.12 121.92 0)
 		(unit 1)
 		(body_style 1)
@@ -11629,7 +11629,7 @@
 		)
 	)
 	(symbol
-		(lib_id "ts52k-rescue:MX-NoLED-MX_Alps_Hybrid")
+		(lib_id "ts52k:MX-NoLED-MX_Alps_Hybrid")
 		(at 198.12 81.28 0)
 		(unit 1)
 		(body_style 1)
@@ -11800,7 +11800,7 @@
 		)
 	)
 	(symbol
-		(lib_id "ts52k-rescue:MX-NoLED-MX_Alps_Hybrid")
+		(lib_id "ts52k:MX-NoLED-MX_Alps_Hybrid")
 		(at 207.01 81.28 0)
 		(unit 1)
 		(body_style 1)
@@ -11971,7 +11971,7 @@
 		)
 	)
 	(symbol
-		(lib_id "ts52k-rescue:MX-NoLED-MX_Alps_Hybrid")
+		(lib_id "ts52k:MX-NoLED-MX_Alps_Hybrid")
 		(at 215.9 81.28 0)
 		(unit 1)
 		(body_style 1)
@@ -12142,7 +12142,7 @@
 		)
 	)
 	(symbol
-		(lib_id "ts52k-rescue:MX-NoLED-MX_Alps_Hybrid")
+		(lib_id "ts52k:MX-NoLED-MX_Alps_Hybrid")
 		(at 224.79 121.92 0)
 		(unit 1)
 		(body_style 1)
@@ -12313,7 +12313,7 @@
 		)
 	)
 	(symbol
-		(lib_id "ts52k-rescue:MX-NoLED-MX_Alps_Hybrid")
+		(lib_id "ts52k:MX-NoLED-MX_Alps_Hybrid")
 		(at 224.79 101.6 0)
 		(unit 1)
 		(body_style 1)
@@ -12484,7 +12484,7 @@
 		)
 	)
 	(symbol
-		(lib_id "ts52k-rescue:MX-NoLED-MX_Alps_Hybrid")
+		(lib_id "ts52k:MX-NoLED-MX_Alps_Hybrid")
 		(at 233.68 81.28 0)
 		(unit 1)
 		(body_style 1)
@@ -12655,7 +12655,7 @@
 		)
 	)
 	(symbol
-		(lib_id "ts52k-rescue:MX-NoLED-MX_Alps_Hybrid")
+		(lib_id "ts52k:MX-NoLED-MX_Alps_Hybrid")
 		(at 189.23 142.24 0)
 		(unit 1)
 		(body_style 1)
@@ -12734,7 +12734,7 @@
 		)
 	)
 	(symbol
-		(lib_id "ts52k-rescue:MX-NoLED-MX_Alps_Hybrid")
+		(lib_id "ts52k:MX-NoLED-MX_Alps_Hybrid")
 		(at 144.78 101.6 0)
 		(unit 1)
 		(body_style 1)
@@ -12905,7 +12905,7 @@
 		)
 	)
 	(symbol
-		(lib_id "ts52k-rescue:MX-NoLED-MX_Alps_Hybrid")
+		(lib_id "ts52k:MX-NoLED-MX_Alps_Hybrid")
 		(at 144.78 142.24 0)
 		(unit 1)
 		(body_style 1)
@@ -13076,7 +13076,7 @@
 		)
 	)
 	(symbol
-		(lib_id "ts52k-rescue:MX-NoLED-MX_Alps_Hybrid")
+		(lib_id "ts52k:MX-NoLED-MX_Alps_Hybrid")
 		(at 153.67 101.6 0)
 		(unit 1)
 		(body_style 1)
@@ -13247,7 +13247,7 @@
 		)
 	)
 	(symbol
-		(lib_id "ts52k-rescue:MX-NoLED-MX_Alps_Hybrid")
+		(lib_id "ts52k:MX-NoLED-MX_Alps_Hybrid")
 		(at 162.56 121.92 0)
 		(unit 1)
 		(body_style 1)
@@ -13418,7 +13418,7 @@
 		)
 	)
 	(symbol
-		(lib_id "ts52k-rescue:MX-NoLED-MX_Alps_Hybrid")
+		(lib_id "ts52k:MX-NoLED-MX_Alps_Hybrid")
 		(at 171.45 121.92 0)
 		(unit 1)
 		(body_style 1)
@@ -13589,7 +13589,7 @@
 		)
 	)
 	(symbol
-		(lib_id "ts52k-rescue:MX-NoLED-MX_Alps_Hybrid")
+		(lib_id "ts52k:MX-NoLED-MX_Alps_Hybrid")
 		(at 180.34 101.6 0)
 		(unit 1)
 		(body_style 1)
@@ -13760,7 +13760,7 @@
 		)
 	)
 	(symbol
-		(lib_id "ts52k-rescue:MX-NoLED-MX_Alps_Hybrid")
+		(lib_id "ts52k:MX-NoLED-MX_Alps_Hybrid")
 		(at 180.34 121.92 0)
 		(unit 1)
 		(body_style 1)
@@ -13931,7 +13931,7 @@
 		)
 	)
 	(symbol
-		(lib_id "ts52k-rescue:MX-NoLED-MX_Alps_Hybrid")
+		(lib_id "ts52k:MX-NoLED-MX_Alps_Hybrid")
 		(at 189.23 121.92 0)
 		(unit 1)
 		(body_style 1)
@@ -14102,7 +14102,7 @@
 		)
 	)
 	(symbol
-		(lib_id "ts52k-rescue:MX-NoLED-MX_Alps_Hybrid")
+		(lib_id "ts52k:MX-NoLED-MX_Alps_Hybrid")
 		(at 198.12 101.6 0)
 		(unit 1)
 		(body_style 1)
@@ -14273,7 +14273,7 @@
 		)
 	)
 	(symbol
-		(lib_id "ts52k-rescue:MX-NoLED-MX_Alps_Hybrid")
+		(lib_id "ts52k:MX-NoLED-MX_Alps_Hybrid")
 		(at 207.01 101.6 0)
 		(unit 1)
 		(body_style 1)
@@ -14444,7 +14444,7 @@
 		)
 	)
 	(symbol
-		(lib_id "ts52k-rescue:MX-NoLED-MX_Alps_Hybrid")
+		(lib_id "ts52k:MX-NoLED-MX_Alps_Hybrid")
 		(at 215.9 121.92 0)
 		(unit 1)
 		(body_style 1)
@@ -14799,7 +14799,7 @@
 		)
 	)
 	(symbol
-		(lib_id "ts52k-rescue:MX-NoLED-MX_Alps_Hybrid")
+		(lib_id "ts52k:MX-NoLED-MX_Alps_Hybrid")
 		(at 233.68 101.6 0)
 		(unit 1)
 		(body_style 1)
@@ -14970,7 +14970,7 @@
 		)
 	)
 	(symbol
-		(lib_id "ts52k-rescue:MX-NoLED-MX_Alps_Hybrid")
+		(lib_id "ts52k:MX-NoLED-MX_Alps_Hybrid")
 		(at 242.57 142.24 0)
 		(unit 1)
 		(body_style 1)
@@ -15141,7 +15141,7 @@
 		)
 	)
 	(symbol
-		(lib_id "ts52k-rescue:MX-NoLED-MX_Alps_Hybrid")
+		(lib_id "ts52k:MX-NoLED-MX_Alps_Hybrid")
 		(at 224.79 142.24 0)
 		(unit 1)
 		(body_style 1)
@@ -15220,7 +15220,7 @@
 		)
 	)
 	(symbol
-		(lib_id "ts52k-rescue:MX-NoLED-MX_Alps_Hybrid")
+		(lib_id "ts52k:MX-NoLED-MX_Alps_Hybrid")
 		(at 144.78 121.92 0)
 		(unit 1)
 		(body_style 1)
@@ -15391,7 +15391,7 @@
 		)
 	)
 	(symbol
-		(lib_id "ts52k-rescue:MX-NoLED-MX_Alps_Hybrid")
+		(lib_id "ts52k:MX-NoLED-MX_Alps_Hybrid")
 		(at 153.67 142.24 0)
 		(unit 1)
 		(body_style 1)
@@ -15562,7 +15562,7 @@
 		)
 	)
 	(symbol
-		(lib_id "ts52k-rescue:MX-NoLED-MX_Alps_Hybrid")
+		(lib_id "ts52k:MX-NoLED-MX_Alps_Hybrid")
 		(at 162.56 142.24 0)
 		(unit 1)
 		(body_style 1)
@@ -15917,7 +15917,7 @@
 		)
 	)
 	(symbol
-		(lib_id "ts52k-rescue:MX-NoLED-MX_Alps_Hybrid")
+		(lib_id "ts52k:MX-NoLED-MX_Alps_Hybrid")
 		(at 215.9 142.24 0)
 		(unit 1)
 		(body_style 1)
@@ -16088,7 +16088,7 @@
 		)
 	)
 	(symbol
-		(lib_id "ts52k-rescue:MX-NoLED-MX_Alps_Hybrid")
+		(lib_id "ts52k:MX-NoLED-MX_Alps_Hybrid")
 		(at 233.68 142.24 0)
 		(unit 1)
 		(body_style 1)
@@ -16447,7 +16447,7 @@
 		)
 	)
 	(symbol
-		(lib_id "ts52k-rescue:MX-NoLED-MX_Alps_Hybrid")
+		(lib_id "ts52k:MX-NoLED-MX_Alps_Hybrid")
 		(at 242.57 81.28 180)
 		(unit 1)
 		(body_style 1)
@@ -16618,7 +16618,7 @@
 		)
 	)
 	(symbol
-		(lib_id "ts52k-rescue:MX-NoLED-MX_Alps_Hybrid")
+		(lib_id "ts52k:MX-NoLED-MX_Alps_Hybrid")
 		(at 233.68 121.92 0)
 		(unit 1)
 		(body_style 1)
@@ -16789,7 +16789,7 @@
 		)
 	)
 	(symbol
-		(lib_id "ts52k-rescue:MX-NoLED-MX_Alps_Hybrid")
+		(lib_id "ts52k:MX-NoLED-MX_Alps_Hybrid")
 		(at 198.12 142.24 0)
 		(unit 1)
 		(body_style 1)
@@ -16868,7 +16868,7 @@
 		)
 	)
 	(symbol
-		(lib_id "ts52k-rescue:MX-NoLED-MX_Alps_Hybrid")
+		(lib_id "ts52k:MX-NoLED-MX_Alps_Hybrid")
 		(at 207.01 142.24 0)
 		(unit 1)
 		(body_style 1)
@@ -17023,7 +17023,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:USB_C_Receptacle_USB2.0")
+		(lib_id "ts52k:USB_C_Receptacle_USB2.0")
 		(at 29.21 167.64 0)
 		(unit 1)
 		(body_style 1)
