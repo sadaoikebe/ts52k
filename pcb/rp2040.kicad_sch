@@ -300,7 +300,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Oscillator:ASE-xxxMHz"
+	(symbol "Oscillator:ASE-xxxMHz"
 			(pin_names
 				(offset 0.254)
 			)
@@ -309,7 +309,7 @@
 			(on_board yes)
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "X"
+			(property "Reference" "Y"
 				(at -5.08 6.35 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -488,10 +488,14 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "power:GND"
+	(symbol "power:GND"
 			(power global)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(offset 0)
+				(hide yes)
 			)
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -552,7 +556,7 @@
 					)
 				)
 			)
-			(property "ki_keywords" "power-flag"
+			(property "ki_keywords" "global power"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -581,8 +585,7 @@
 				(pin power_in line
 					(at 0 0 270)
 					(length 0)
-					(hide yes)
-					(name "GND"
+					(name ""
 						(effects
 							(font
 								(size 1.27 1.27)
