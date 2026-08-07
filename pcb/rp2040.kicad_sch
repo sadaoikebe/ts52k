@@ -745,7 +745,7 @@
 						(type none)
 					)
 				)
-				(pin unspecified line
+				(pin power_in line
 					(at 34.29 5.08 270)
 					(length 7.62)
 					(name "IOVDD"
@@ -907,7 +907,7 @@
 						)
 					)
 				)
-				(pin unspecified line
+				(pin power_in line
 					(at 31.75 5.08 270)
 					(length 7.62)
 					(name "IOVDD"
@@ -1069,7 +1069,7 @@
 						)
 					)
 				)
-				(pin unspecified line
+				(pin input line
 					(at 25.4 -92.71 90)
 					(length 7.62)
 					(name "TESTEN"
@@ -1087,7 +1087,7 @@
 						)
 					)
 				)
-				(pin unspecified line
+				(pin input line
 					(at 0 -38.1 0)
 					(length 7.62)
 					(name "XIN"
@@ -1123,7 +1123,7 @@
 						)
 					)
 				)
-				(pin unspecified line
+				(pin power_in line
 					(at 29.21 5.08 270)
 					(length 7.62)
 					(name "IOVDD"
@@ -1141,7 +1141,7 @@
 						)
 					)
 				)
-				(pin unspecified line
+				(pin power_in line
 					(at 13.97 5.08 270)
 					(length 7.62)
 					(name "DVDD"
@@ -1159,7 +1159,7 @@
 						)
 					)
 				)
-				(pin unspecified line
+				(pin input line
 					(at 0 -30.48 0)
 					(length 7.62)
 					(name "SWCLK"
@@ -1177,7 +1177,7 @@
 						)
 					)
 				)
-				(pin unspecified line
+				(pin bidirectional line
 					(at 0 -33.02 0)
 					(length 7.62)
 					(name "SWDIO"
@@ -1195,7 +1195,7 @@
 						)
 					)
 				)
-				(pin unspecified line
+				(pin input line
 					(at 0 -17.78 0)
 					(length 7.62)
 					(name "RUN"
@@ -1321,7 +1321,7 @@
 						)
 					)
 				)
-				(pin unspecified line
+				(pin power_in line
 					(at 26.67 5.08 270)
 					(length 7.62)
 					(name "IOVDD"
@@ -1483,7 +1483,7 @@
 						)
 					)
 				)
-				(pin unspecified line
+				(pin power_in line
 					(at 24.13 5.08 270)
 					(length 7.62)
 					(name "IOVDD"
@@ -1501,7 +1501,7 @@
 						)
 					)
 				)
-				(pin unspecified line
+				(pin power_in line
 					(at 41.91 5.08 270)
 					(length 7.62)
 					(name "ADC_AVDD"
@@ -1519,7 +1519,7 @@
 						)
 					)
 				)
-				(pin output line
+				(pin power_out line
 					(at 17.78 5.08 270)
 					(length 7.62)
 					(name "VREG_VOUT"
@@ -1537,7 +1537,7 @@
 						)
 					)
 				)
-				(pin unspecified line
+				(pin bidirectional line
 					(at 0 -22.86 0)
 					(length 7.62)
 					(name "USB_DM"
@@ -1555,7 +1555,7 @@
 						)
 					)
 				)
-				(pin unspecified line
+				(pin bidirectional line
 					(at 0 -25.4 0)
 					(length 7.62)
 					(name "USB_DP"
@@ -1573,7 +1573,7 @@
 						)
 					)
 				)
-				(pin unspecified line
+				(pin power_in line
 					(at 38.1 5.08 270)
 					(length 7.62)
 					(name "USB_VDD"
@@ -1591,7 +1591,7 @@
 						)
 					)
 				)
-				(pin unspecified line
+				(pin power_in line
 					(at 21.59 5.08 270)
 					(length 7.62)
 					(name "IOVDD"
@@ -1609,7 +1609,7 @@
 						)
 					)
 				)
-				(pin unspecified line
+				(pin power_in line
 					(at 11.43 5.08 270)
 					(length 7.62)
 					(name "DVDD"
@@ -1645,7 +1645,7 @@
 						)
 					)
 				)
-				(pin unspecified line
+				(pin output line
 					(at 0 -45.72 0)
 					(length 7.62)
 					(name "QSPI_SCLK"
@@ -1717,7 +1717,7 @@
 						)
 					)
 				)
-				(pin unspecified line
+				(pin output line
 					(at 0 -49.53 0)
 					(length 7.62)
 					(name "QSPI_SS_N"
@@ -1735,258 +1735,10 @@
 						)
 					)
 				)
-				(pin unspecified line
+				(pin power_in line
 					(at 27.94 -92.71 90)
 					(length 7.62)
 					(name "EPAD"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "57"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(symbol "RP2040_2_1"
-				(polyline
-					(pts
-						(xy 7.62 5.08) (xy 7.62 -35.56)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 7.62 -35.56) (xy 33.02 -35.56)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 33.02 5.08) (xy 7.62 5.08)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 33.02 -35.56) (xy 33.02 5.08)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin power_in line
-					(at 0 -10.16 0)
-					(length 7.62)
-					(name "IOVDD"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 0 -12.7 0)
-					(length 7.62)
-					(name "IOVDD"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "10"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 0 -15.24 0)
-					(length 7.62)
-					(name "IOVDD"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "22"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 0 -2.54 0)
-					(length 7.62)
-					(name "DVDD"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "23"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 0 -17.78 0)
-					(length 7.62)
-					(name "IOVDD"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "33"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 0 -20.32 0)
-					(length 7.62)
-					(name "IOVDD"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "42"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 0 0 0)
-					(length 7.62)
-					(name "ADC_AVDD"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "43"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 0 -27.94 0)
-					(length 7.62)
-					(name "USB_VDD"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "48"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 0 -22.86 0)
-					(length 7.62)
-					(name "IOVDD"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "49"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 0 -5.08 0)
-					(length 7.62)
-					(name "DVDD"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "50"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_out line
-					(at 0 -30.48 0)
-					(length 7.62)
-					(name "GND"
 						(effects
 							(font
 								(size 1.27 1.27)
