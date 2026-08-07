@@ -921,6 +921,24 @@
 					)
 				)
 			)
+			(pin power_in line
+				(at 44.45 5.08 270)
+				(length 7.62)
+				(name "VREG_VIN"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "44"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
 			(pin power_out line
 				(at 17.78 5.08 270)
 				(length 7.62)
