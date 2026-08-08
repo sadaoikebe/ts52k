@@ -20677,7 +20677,7 @@
 	)
 	(sheet
 		(at 55.88 41.91)
-		(size 50.8 78.74)
+		(size 50.8 62.23)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -20703,7 +20703,7 @@
 			)
 		)
 		(property "Sheetfile" "rp2040.kicad_sch"
-			(at 55.88 121.2346 0)
+			(at 55.88 104.7246 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -20883,56 +20883,6 @@
 				(justify right)
 			)
 		)
-		(pin "GPIO5" bidirectional
-			(at 106.68 57.15 0)
-			(uuid "7e204015-0000-0000-0000-000000000015")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(pin "GPIO6" bidirectional
-			(at 106.68 59.69 0)
-			(uuid "7e204016-0000-0000-0000-000000000016")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(pin "GPIO7" bidirectional
-			(at 106.68 62.23 0)
-			(uuid "7e204017-0000-0000-0000-000000000017")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(pin "GPIO8" bidirectional
-			(at 106.68 64.77 0)
-			(uuid "7e204018-0000-0000-0000-000000000018")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(pin "GPIO9" bidirectional
-			(at 106.68 67.31 0)
-			(uuid "7e204019-0000-0000-0000-000000000019")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
 		(pin "GPIO10" bidirectional
 			(at 106.68 69.85 0)
 			(uuid "7e20401a-0000-0000-0000-00000000001a")
@@ -21006,126 +20956,6 @@
 		(pin "GPIO17" bidirectional
 			(at 106.68 87.63 0)
 			(uuid "7e204031-0000-4000-8000-000000000031")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(pin "GPIO18" bidirectional
-			(at 106.68 90.17 0)
-			(uuid "7e204022-0000-0000-0000-000000000022")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(pin "GPIO19" bidirectional
-			(at 106.68 92.71 0)
-			(uuid "7e204023-0000-0000-0000-000000000023")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(pin "GPIO20" bidirectional
-			(at 106.68 95.25 0)
-			(uuid "7e204024-0000-0000-0000-000000000024")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(pin "GPIO21" bidirectional
-			(at 106.68 97.79 0)
-			(uuid "7e204025-0000-0000-0000-000000000025")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(pin "GPIO22" bidirectional
-			(at 106.68 100.33 0)
-			(uuid "7e204026-0000-0000-0000-000000000026")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(pin "GPIO23" bidirectional
-			(at 106.68 102.87 0)
-			(uuid "7e204027-0000-0000-0000-000000000027")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(pin "GPIO24" bidirectional
-			(at 106.68 105.41 0)
-			(uuid "7e204028-0000-0000-0000-000000000028")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(pin "GPIO25" bidirectional
-			(at 106.68 107.95 0)
-			(uuid "7e204029-0000-0000-0000-000000000029")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(pin "GPIO26" bidirectional
-			(at 106.68 110.49 0)
-			(uuid "7e20402a-0000-0000-0000-00000000002a")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(pin "GPIO27" bidirectional
-			(at 106.68 113.03 0)
-			(uuid "7e20402b-0000-0000-0000-00000000002b")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(pin "GPIO28" bidirectional
-			(at 106.68 115.57 0)
-			(uuid "7e20402c-0000-0000-0000-00000000002c")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(pin "GPIO29" bidirectional
-			(at 106.68 118.11 0)
-			(uuid "7e20402d-0000-0000-0000-00000000002d")
 			(effects
 				(font
 					(size 1.27 1.27)
