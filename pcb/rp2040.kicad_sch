@@ -1995,14 +1995,6 @@
 		(uuid "f9daa6b6-f594-48cf-9b0f-b0244e2f2447")
 	)
 	(no_connect
-		(at 130.81 120.65)
-		(uuid "13b15d97-2264-41c6-9d86-01f59dc276fa")
-	)
-	(no_connect
-		(at 130.81 118.11)
-		(uuid "13b15d97-2264-41c6-9d86-01f59dc276fb")
-	)
-	(no_connect
 		(at 77.47 95.25)
 		(uuid "54fd9955-dea8-421f-ae59-d83a01c4978b")
 	)
@@ -3075,54 +3067,6 @@
 			(justify left bottom)
 		)
 		(uuid "ad0f2c06-cafe-43b7-b530-3feedc07d2f2")
-	)
-	(global_label "row5"
-		(shape input)
-		(at 2.6194 3.731 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "25e420a1-2c80-4ea2-9ba4-52e75d1252e1")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 17.6738 -50.1646 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-	)
-	(global_label "row4"
-		(shape input)
-		(at 0.0794 1.191 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "ffa30bcf-ea48-47c9-ad41-4eeffc601fcc")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 15.1338 0.4766 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
 	)
 	(hierarchical_label "GPIO23"
 		(shape bidirectional)
@@ -6382,6 +6326,48 @@
 				)
 			)
 		)
+	)
+	(wire
+		(pts
+			(xy 130.81 118.11) (xy 140.97 118.11)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7e204000-0000-4000-8000-000000000000")
+	)
+	(hierarchical_label "GPIO16"
+		(shape bidirectional)
+		(at 140.97 118.11 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "7e204000-0000-4000-8000-0000000000f0")
+	)
+	(wire
+		(pts
+			(xy 130.81 120.65) (xy 140.97 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7e204001-0000-4000-8000-000000000001")
+	)
+	(hierarchical_label "GPIO17"
+		(shape bidirectional)
+		(at 140.97 120.65 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "7e204001-0000-4000-8000-0000000000f1")
 	)
 	(sheet_instances
 		(path "/"

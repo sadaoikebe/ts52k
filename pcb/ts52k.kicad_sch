@@ -8282,7 +8282,7 @@
 	)
 	(global_label "col1"
 		(shape input)
-		(at 106.68 82.55 0)
+		(at 106.68 87.63 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -20677,7 +20677,7 @@
 	)
 	(sheet
 		(at 55.88 41.91)
-		(size 50.8 73.66)
+		(size 50.8 78.74)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -20703,7 +20703,7 @@
 			)
 		)
 		(property "Sheetfile" "rp2040.kicad_sch"
-			(at 55.88 116.1546 0)
+			(at 55.88 121.2346 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -20993,8 +20993,28 @@
 				(justify right)
 			)
 		)
-		(pin "GPIO18" bidirectional
+		(pin "GPIO16" bidirectional
 			(at 106.68 85.09 0)
+			(uuid "7e204030-0000-4000-8000-000000000030")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "GPIO17" bidirectional
+			(at 106.68 87.63 0)
+			(uuid "7e204031-0000-4000-8000-000000000031")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "GPIO18" bidirectional
+			(at 106.68 90.17 0)
 			(uuid "7e204022-0000-0000-0000-000000000022")
 			(effects
 				(font
@@ -21004,7 +21024,7 @@
 			)
 		)
 		(pin "GPIO19" bidirectional
-			(at 106.68 87.63 0)
+			(at 106.68 92.71 0)
 			(uuid "7e204023-0000-0000-0000-000000000023")
 			(effects
 				(font
@@ -21014,7 +21034,7 @@
 			)
 		)
 		(pin "GPIO20" bidirectional
-			(at 106.68 90.17 0)
+			(at 106.68 95.25 0)
 			(uuid "7e204024-0000-0000-0000-000000000024")
 			(effects
 				(font
@@ -21024,7 +21044,7 @@
 			)
 		)
 		(pin "GPIO21" bidirectional
-			(at 106.68 92.71 0)
+			(at 106.68 97.79 0)
 			(uuid "7e204025-0000-0000-0000-000000000025")
 			(effects
 				(font
@@ -21034,7 +21054,7 @@
 			)
 		)
 		(pin "GPIO22" bidirectional
-			(at 106.68 95.25 0)
+			(at 106.68 100.33 0)
 			(uuid "7e204026-0000-0000-0000-000000000026")
 			(effects
 				(font
@@ -21044,7 +21064,7 @@
 			)
 		)
 		(pin "GPIO23" bidirectional
-			(at 106.68 97.79 0)
+			(at 106.68 102.87 0)
 			(uuid "7e204027-0000-0000-0000-000000000027")
 			(effects
 				(font
@@ -21054,7 +21074,7 @@
 			)
 		)
 		(pin "GPIO24" bidirectional
-			(at 106.68 100.33 0)
+			(at 106.68 105.41 0)
 			(uuid "7e204028-0000-0000-0000-000000000028")
 			(effects
 				(font
@@ -21064,7 +21084,7 @@
 			)
 		)
 		(pin "GPIO25" bidirectional
-			(at 106.68 102.87 0)
+			(at 106.68 107.95 0)
 			(uuid "7e204029-0000-0000-0000-000000000029")
 			(effects
 				(font
@@ -21074,7 +21094,7 @@
 			)
 		)
 		(pin "GPIO26" bidirectional
-			(at 106.68 105.41 0)
+			(at 106.68 110.49 0)
 			(uuid "7e20402a-0000-0000-0000-00000000002a")
 			(effects
 				(font
@@ -21084,7 +21104,7 @@
 			)
 		)
 		(pin "GPIO27" bidirectional
-			(at 106.68 107.95 0)
+			(at 106.68 113.03 0)
 			(uuid "7e20402b-0000-0000-0000-00000000002b")
 			(effects
 				(font
@@ -21094,7 +21114,7 @@
 			)
 		)
 		(pin "GPIO28" bidirectional
-			(at 106.68 110.49 0)
+			(at 106.68 115.57 0)
 			(uuid "7e20402c-0000-0000-0000-00000000002c")
 			(effects
 				(font
@@ -21104,7 +21124,7 @@
 			)
 		)
 		(pin "GPIO29" bidirectional
-			(at 106.68 113.03 0)
+			(at 106.68 118.11 0)
 			(uuid "7e20402d-0000-0000-0000-00000000002d")
 			(effects
 				(font
@@ -21117,6 +21137,52 @@
 			(project "ts52k"
 				(path "/a46aaf04-b440-466e-8b21-108f618a37ed"
 					(page "2")
+				)
+			)
+		)
+	)
+	(global_label "row4"
+		(shape input)
+		(at 106.68 82.55 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "9ad3b6f0-2ade-4000-8000-4e32c9ccdea0")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 9.525 -8.255 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "row5"
+		(shape input)
+		(at 106.68 85.09 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "9ad3b6f1-2ade-4000-8000-4e32c9ccdea1")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 9.525 -8.255 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
 				)
 			)
 		)
