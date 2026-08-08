@@ -300,7 +300,7 @@
 			)
 			(embedded_fonts no)
 		)
-	(symbol "Oscillator:ASE-xxxMHz"
+		(symbol "Oscillator:ASE-xxxMHz"
 			(pin_names
 				(offset 0.254)
 			)
@@ -488,7 +488,7 @@
 			)
 			(embedded_fonts no)
 		)
-	(symbol "power:GND"
+		(symbol "power:GND"
 			(power global)
 			(pin_numbers
 				(hide yes)
@@ -2648,6 +2648,16 @@
 	)
 	(wire
 		(pts
+			(xy 119.38 49.53) (xy 121.92 49.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9c4410ee-0000-4000-8000-000000000044")
+	)
+	(wire
+		(pts
 			(xy 74.93 110.49) (xy 77.47 110.49)
 		)
 		(stroke
@@ -2858,16 +2868,6 @@
 	)
 	(wire
 		(pts
-			(xy 119.38 49.53) (xy 121.92 49.53)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9c4410ee-0000-4000-8000-000000000044")
-	)
-	(wire
-		(pts
 			(xy 123.19 31.75) (xy 128.27 31.75)
 		)
 		(stroke
@@ -3075,6 +3075,54 @@
 			(justify left bottom)
 		)
 		(uuid "ad0f2c06-cafe-43b7-b530-3feedc07d2f2")
+	)
+	(global_label "row5"
+		(shape input)
+		(at 2.6194 3.731 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "25e420a1-2c80-4ea2-9ba4-52e75d1252e1")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 17.6738 -50.1646 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+	)
+	(global_label "row4"
+		(shape input)
+		(at 0.0794 1.191 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "ffa30bcf-ea48-47c9-ad41-4eeffc601fcc")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 15.1338 0.4766 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
 	)
 	(hierarchical_label "GPIO23"
 		(shape bidirectional)
@@ -4789,12 +4837,6 @@
 				)
 			)
 		)
-		(pin "1"
-			(uuid "39440154-0396-455d-9e94-929afc9ff6de")
-		)
-		(pin "10"
-			(uuid "8e03b941-e3eb-4b5f-a4b9-cf816263509e")
-		)
 		(pin "11"
 			(uuid "ac06d075-3bb5-4db7-9647-fb7f5d7b4c00")
 		)
@@ -4831,12 +4873,6 @@
 		(pin "21"
 			(uuid "5e480e20-7f81-4379-919c-4bc05dd604f2")
 		)
-		(pin "22"
-			(uuid "da940e78-028f-4004-b94d-a07066d7f7e8")
-		)
-		(pin "23"
-			(uuid "999f65ed-b443-4903-b4c5-b039c9008afc")
-		)
 		(pin "24"
 			(uuid "cddbcae5-8afc-4bd6-8edf-ed948da5820c")
 		)
@@ -4867,9 +4903,6 @@
 		(pin "32"
 			(uuid "969adb29-2a1e-4f6a-b1c7-1d382d568d3a")
 		)
-		(pin "33"
-			(uuid "bea3ffa2-16a3-44e1-86f5-76f5c386abdd")
-		)
 		(pin "34"
 			(uuid "77ca8dd1-9ccc-490a-b1a5-4c4fad226038")
 		)
@@ -4897,12 +4930,6 @@
 		(pin "41"
 			(uuid "9e9ff294-8908-4ad7-9e3f-dc21341b545f")
 		)
-		(pin "42"
-			(uuid "7949095c-2cf7-4ae6-90d6-164202bfc69b")
-		)
-		(pin "43"
-			(uuid "562b7fb3-8e52-4889-86a2-24aa6bed3c9d")
-		)
 		(pin "45"
 			(uuid "e144f919-97ad-43b1-a146-5a5e88f58bfb")
 		)
@@ -4912,17 +4939,8 @@
 		(pin "47"
 			(uuid "54ac37a2-affb-429a-97a4-fb611a0685e0")
 		)
-		(pin "48"
-			(uuid "869e34ea-f965-47ee-a81f-698b5e8b48ad")
-		)
-		(pin "49"
-			(uuid "779acae3-482c-4cbf-8f6f-5f618dc1e146")
-		)
 		(pin "5"
 			(uuid "df97f682-4927-4ec7-a0ce-6b30d010cd30")
-		)
-		(pin "50"
-			(uuid "73bff4cc-37be-4d7e-a917-c4d975014325")
 		)
 		(pin "51"
 			(uuid "4ed2eb68-af2a-4587-9d76-76180bb725b7")
@@ -4987,7 +5005,7 @@
 		(pin "50"
 			(uuid "73bff4cc-37be-4d7e-a917-c4d975014326")
 		)
-		(pin "57"
+		(pin "44"
 			(uuid "da27bdac-0eea-4be9-9566-f97cfd50edeb")
 		)
 		(instances
