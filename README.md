@@ -19,7 +19,7 @@
 | ブランチ | MCU | 状態 |
 | :--- | :--- | :--- |
 | `main` | ATmega32U4 | **完成・製作実績あり** |
-| `rp2040` | RP2040 | 回路図完成、**基板レイアウトは未着手** |
+| `rp2040` | RP2040 | 回路図完成、**基板レイアウト作業中** |
 
 このドキュメントは `rp2040` ブランチの内容を説明しています。
 
@@ -30,8 +30,9 @@
 ATmega32U4 版から変更した点:
 
 - MCU を RP2040 に変更（外部QSPIフラッシュ 16MB を追加）
-- 16MHz セラミックレジネータ → 12MHz 発振器モジュール
+- 16MHz セラミックレゾネータ → 12MHz 発振器モジュール
 - ISPヘッダ → Tag-Connect（SWD）
+- BOOTSEL ボタンを追加（UF2 書き込み用）
 - WS2812B RGB LED、ポリヒューズ、リセットスイッチを削除
 
 ---
@@ -83,7 +84,9 @@ Type-C は裏返して挿してもピン配置が上下反転するだけで使�
 
 `CC1`/`CC2` はそれぞれ **5.1kΩ で GND** に落としています。ホストはこの抵抗値を見て「相手はデバイス側」と判定し、VBUS に 5V を供給します。**この抵抗がないと電源が入りません。**
 
-`SBU1`/`SBU2`（オーディオ・DisplayPort 用の予備線）とシェルドは未接続です。
+`SBU1`/`SBU2`（オーディオ・DisplayPort 用の予備線）は未接続です。
+
+**シェルド（`S1`）は現状 no-connect になっていますが、これは未解決事項です。** ATmega32U4 版（`main`）ではシェルドを GND に接続しており、RP2040 版で切れています。シェルドが浮くと、コネクタ外郭に落ちた静電気の逃げ道が信号線側になり、取り付けタブ4本も GND ベタに繋がりません。詳細は [`pcb/PLACEMENT.md`](pcb/PLACEMENT.md) の「未解決事項」を参照してください。
 
 ### U2 — TPD4E1U06（ESD保護アレイ）
 
@@ -160,6 +163,18 @@ SWD 接続用のフットプリントです。**コネクタ部品は実装し�
 
 単純な 6×5 マトリクスでは30接点しか読めないため、ダイオードの向きを使い分けて容量を倍にする **duplex マトリクス**構成をとっています。各接点にダイオードを入れることで、同時押し時のゴースト（誤検出）を防いでいます。
 
+GPIO の割り当ては以下の通りです（ファームウェアはこれに合わせます）。
+
+| ネット | GPIO |
+| :--- | :--- |
+| `col1` 〜 `col6` | 17, 10, 4, 11, 12, 13 |
+| `row1` 〜 `row5` | 2, 3, 14, 15, 16 |
+| エンコーダ A相 / B相 | 0 / 1 |
+
+GPIO5–9 と GPIO18–29 の計17本は未使用で、回路図上は no-connect にしてあります。
+
+エンコーダの**押し込みスイッチはマトリクスの一部**（`col6`）で、A相/B相だけが専用の GPIO を使います。この割り当ては ATmega32U4 版の配線をできるだけ流用できるよう、基板上の既存配線の並び順に合わせて決めたものです（[`pcb/PLACEMENT.md`](pcb/PLACEMENT.md) 参照）。
+
 ### SW1 — BOOTSEL ボタン
 
 RP2040 は起動時に `QSPI_SS` が Low だと USB マスストレージのブートローダに入り、UF2 ファイルをドラッグ&ドロップで書き込めるようになります。SW1 はそのためのボタンで、`QSPI_SS_N` を **1kΩ(R14) 経由で GND** に落とします。
@@ -191,7 +206,7 @@ RP2040 は起動時に `QSPI_SS` が Low だと USB マスストレージのブ�
 | ESD保護 | TPD4E1U06 | 1 | SOT-363 |
 | USB-C | HRO TYPE-C-31-M-12 | 1 | — |
 | SWD端子 | Tag-Connect TC2030-IDC-NL | 1 | 実装部品なし |
-| BOOTSELボタン | SMDタクトスイッチ | 1 | 4.7×3.5mm（暫定） |
+| BOOTSELボタン | SMDタクトスイッチ | 1 | 4.7×3.5mm（Panasonic EVQ-PUJ 系、暫定） |
 | ダイオード | 未定（下記参照） | 53 | SOD-123 |
 | 抵抗 | 27Ω | 7 | 0402 |
 | 抵抗 | 10kΩ | 3 | 0402 |
@@ -273,6 +288,17 @@ https://github.com/sadaoikebe/qmk_firmware/tree/master/keyboards/ts52k
 また、フィールド関連のオプション（`Update/reset field text` など）を有効にすると、電源シンボルの Value が書き換わってネット名が変わる可能性があります。
 
 **`Tools → Update PCB from Schematic` では `Link footprints using reference designators` をオフのままにしてください。** フットプリントは通常 Unique ID でシンボルと紐付いており、参照名での紐付けに切り替えると、ATmega32U4 版と RP2040 版で同じ参照名を持つ別部品（旧 SW1 リセットスイッチ ↔ 新 SW1 BOOTSEL、旧 J2 ピンヘッダ ↔ 新 J2 Tag-Connect）が誤って対応付けられます。
+
+基板を編集する場合は、[`pcb/PLACEMENT.md`](pcb/PLACEMENT.md) の「やってはいけないこと」を先に読んでください。特に **`Cleanup Tracks & Vias` の "Delete dangling tracks" は実行しないでください** — MCU 近傍に意図的に残してあるマトリクスの配線末端26本が連鎖的に削られます。
+
+GUI を開かずに状態を確認するには:
+
+```sh
+kicad-cli sch erc                                   -o erc.rpt ts52k.kicad_sch
+kicad-cli pcb drc --schematic-parity --refill-zones -o drc.rpt ts52k.kicad_pcb
+```
+
+現在、ERC は 0件、`schematic parity` も 0件です。
 
 ---
 
