@@ -16,60 +16,76 @@ from pathlib import Path
 
 PCB = Path(__file__).with_name("ts52k.kicad_pcb")
 
-# ref -> (x, y, rot_deg)
-# U5 kept at rot 180 (already correct). Positions in mm, board coords (y down).
+# ref -> (x, y, rot_deg). Board coords: y increases south.
 #
-# U5 at former ATmega area, nudged NW for fanout to stubs at y=67.38 / x=27.13.
+# Packing rules used here (from measured pad/courtyard AABBs):
+#   U5  ~8.1mm square  | U4 ~9.3x5.8 | U3 ~4.1x3.4 | X2 ~3.7x3.3
+#   SW1 ~7.8x5.5       | J2 ~7x4
+#   0402 C r90 ~0.67x1.52 | r0 ~1.52x0.67
+#   0402 R r90 ~0.70x1.56 | r0 ~1.56x0.70
+#   Min centre pitch same-orientation 0402: ~1.3mm
+#   Keep ≥0.4mm courtyard gap between all MCU-side parts.
+#
+# Rotation notes (B.Cu; pad locals already layer-mirrored in the PCB file):
+#   U5 180 — USB/QSPI N, GPIO E, SWD/XIN S
+#   U4   0 — CS# west toward U5
+#   U3 180 — VOUT west, VIN east
+#   X2 180 — OUT north toward XIN
+#   J2   0 — SWD row faces north
+#   SW1 180 — pads face east
+#   0402 90 = N–S long axis; 0 = E–W long axis
+#
+# U5 nudged NW of old ATmega for fanout to stubs y=67.38 / x=27.13.
 U5 = (22.80, 62.50, 180.0)
 
-# Fixed B.Cu obstacles in this region (do not sit on):
-#   U2 (23.57, 50.36), D2 (17.74, 54.41), D3 (11.19, 66.22), R5/R6 near J1
+# Fixed B.Cu obstacles: U2 (23.57,50.36), D2 (17.74,54.41), D3 (11.19,66.22), R5/R6
 PLACEMENT: dict[str, tuple[float, float, float]] = {
-    # --- MCU ---
+    # --- MCU (body ≈ 18.7–26.9 × 58.4–66.6) ---
     "U5": U5,
-    # --- 1V1 core (★★★, <2mm of VREG/DVDD) ---
-    "C8": (20.80, 57.50, 90.0),   # 1V1 near VREG_VOUT P45
-    "C9": (23.20, 57.50, 90.0),   # 1V1 near DVDD P50
-    "C10": (21.20, 67.10, 90.0),  # 1V1 near DVDD P23 south
-    # --- QSPI series 27Ω north of P51–P55 (1.2mm pitch so 0402 don't stack) ---
-    "R9": (23.60, 56.90, 90.0),
-    "R10": (24.80, 56.90, 90.0),
-    "R11": (26.00, 56.90, 90.0),
-    "R12": (27.20, 56.90, 90.0),
-    "R13": (28.40, 56.90, 90.0),
-    # Flash further NE; rot 0 → pin-1 side west toward SS
-    "U4": (34.50, 58.50, 0.0),
-    "R2": (29.20, 58.20, 0.0),    # SS pull-up
-    "R14": (29.20, 59.50, 0.0),   # BOOTSEL series on SS_N (near QSPI)
-    "SW1": (12.50, 58.50, 180.0),  # free; case hole TBD
-    # --- USB 27Ω near P46/P47, corridor north to U2 ---
-    "R7": (20.90, 55.70, 90.0),
-    "R8": (21.90, 55.70, 90.0),
-    # --- +3V3 bypass ---
-    "C11": (24.50, 55.70, 90.0),  # near P49 north
-    "C12": (24.00, 67.30, 90.0),  # near P22 south
-    "C13": (19.60, 56.50, 90.0),  # near P48 USB_VDD
-    "C15": (27.80, 60.50, 0.0),   # near P1 east
-    "C16": (27.80, 63.80, 0.0),   # near P10 east
-    "C17": (17.20, 63.50, 0.0),   # west IOVDD (easy)
-    "C18": (17.20, 60.00, 0.0),
-    "C6": (18.40, 58.50, 0.0),    # ADC_AVDD — lowest priority
-    # --- Oscillator south of U5 ---
-    "X2": (24.50, 70.00, 180.0),
-    "R3": (26.60, 70.00, 0.0),
-    "C14": (22.40, 70.00, 0.0),   # X2 VDD bypass (one of the +3V3 caps)
-    # --- RUN RC near P26 ---
-    "C7": (18.80, 66.30, 0.0),
-    "R4": (18.80, 67.50, 0.0),
-    # --- LDO east of USB corridor (avoids D2 at 17.7,54.4) ---
-    "U3": (29.20, 53.60, 180.0),
-    "C3": (31.20, 52.80, 0.0),    # VIN bulk
-    "C4": (31.20, 54.20, 0.0),    # VIN
-    "C5": (27.20, 52.80, 0.0),    # VOUT bulk
-    "C21": (27.20, 54.20, 0.0),   # VOUT
-    "C2": (18.40, 57.20, 0.0),    # bulk near U5 west
-    # --- Tag-Connect: SW of MCU, clear of D3 (11.2,66.2) ---
-    "J2": (14.00, 71.00, 180.0),
+    # --- North strip (toward J1/U2): USB, then 1V1/QSPI — leave air from U5 y≤58.4 ---
+    # USB 27Ω — 1.4mm pitch; row y=54.8 so 1V1 row above has ≥0.4mm gap
+    "R7": (20.80, 54.80, 90.0),   # USB_DM
+    "R8": (22.20, 54.80, 90.0),   # USB_DP
+    "C13": (23.80, 54.80, 90.0),  # USB_VDD east of R8 (avoid D2 at 17.7,54.4)
+    # 1V1 + north IOVDD — y=56.6, 1.5mm pitch
+    "C8": (20.50, 56.60, 90.0),
+    "C9": (22.00, 56.60, 90.0),
+    "C11": (23.50, 56.60, 90.0),
+    # QSPI 27Ω — 1.3mm pitch, east of 1V1
+    "R9": (25.00, 56.60, 90.0),
+    "R10": (26.30, 56.60, 90.0),
+    "R11": (27.60, 56.60, 90.0),
+    "R12": (28.90, 56.60, 90.0),
+    "R13": (30.20, 56.60, 90.0),
+    # --- Flash E of QSPI row; CS west ---
+    "U4": (36.50, 60.00, 0.0),
+    # SS alley U5↔U4
+    "R2": (29.00, 58.80, 0.0),
+    "R14": (29.00, 60.20, 0.0),
+    "C15": (28.80, 62.00, 0.0),
+    "C16": (28.80, 64.50, 0.0),
+    # --- West of U5 (clear of D2 / SW1) ---
+    "C18": (16.40, 59.80, 0.0),
+    "C17": (16.40, 63.50, 0.0),
+    "C6": (15.80, 57.80, 0.0),   # further from D2
+    "C2": (15.00, 53.80, 0.0),   # bulk N of D2, W of SW1
+    # --- South of U5 ---
+    "C10": (21.50, 68.00, 90.0),
+    "C12": (23.50, 68.00, 90.0),
+    "C7": (17.20, 66.20, 0.0),
+    "R4": (17.20, 67.70, 0.0),
+    "X2": (24.50, 71.50, 180.0),
+    "C14": (28.00, 70.50, 0.0),
+    "R3": (28.00, 72.00, 0.0),
+    # --- LDO ---
+    "U3": (30.00, 51.50, 180.0),
+    "C3": (33.30, 50.80, 0.0),
+    "C4": (33.30, 52.20, 0.0),
+    "C5": (26.70, 50.80, 0.0),
+    "C21": (26.70, 52.20, 0.0),
+    # --- Free / mechanical ---
+    "SW1": (9.50, 56.00, 180.0),  # further west, clear of C2/D2
+    "J2": (12.00, 72.50, 0.0),
 }
 
 
