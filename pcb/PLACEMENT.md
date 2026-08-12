@@ -373,6 +373,26 @@ KiCad 標準ライブラリ側で `Memory_Flash:W25Q128JVS` と `Regulator_Linea
 
 ---
 
+## ツール
+
+### `clear_copper_under_parts.py`
+
+部品配置が固まったあと、**選んだフットプリントの下に食い込んでいる B.Cu トラックを切り詰め、直下のビアを消す**スクリプトです。マトリクス末端のスタブは部品の外に残るようクリップします（全体の dangling 削除はしません）。
+
+```sh
+python clear_copper_under_parts.py --dry-run          # 差分の見積もりだけ
+python clear_copper_under_parts.py                    # デフォルトは RP2040 側 35 部品
+python clear_copper_under_parts.py --refs U5,U4,C8,C9  # 配置が変わったら refs を明示
+```
+
+配置が動いている途中では使わないでください。部品を動かしたあとに、最終位置で一度だけ回す想定です。
+
+### `_place_mcu.py`
+
+MCU 側 35 部品の粗配置座標です。初期配置用。位置を直したらこの辞書か、`--refs` 側を更新してください。
+
+---
+
 ## 検証のしかた
 
 GUI を開かずに状態を確認できます。作業の区切りごとに回すと事故に早く気づけます。
