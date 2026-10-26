@@ -2334,6 +2334,140 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Regulator_Linear:XC6206PxxxMR"
+			(pin_names
+				(offset 0.254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "U"
+				(at -3.81 3.175 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "XC6206PxxxMR"
+				(at 0 3.175 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "Package_TO_SOT_SMD:SOT-23-3"
+				(at 0 5.715 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://www.torexsemi.com/file/xc6206/XC6206.pdf"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "200mA fixed 3.3V LDO, SOT-23-3, no enable pin"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "XC6206PxxxMR_0_1"
+				(rectangle
+					(start -5.08 1.905)
+					(end 5.08 -5.08)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "XC6206PxxxMR_1_1"
+				(pin power_in line
+					(at 0 -7.62 90)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_out line
+					(at 7.62 0 180)
+					(length 2.54)
+					(name "VO"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -7.62 0 0)
+					(length 2.54)
+					(name "VI"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Regulator_Linear:AP2112K-3.3"
 			(pin_names
 				(offset 0.254)
@@ -3341,9 +3475,9 @@
 		)
 		(symbol "tag-connect:TC2030_IDC_NL"
 			(exclude_from_sim no)
-			(in_bom yes)
+			(in_bom no)
 			(on_board yes)
-			(in_pos_files yes)
+			(in_pos_files no)
 			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "J"
 				(at -7.62 6.35 0)
@@ -3391,7 +3525,7 @@
 					)
 				)
 			)
-			(property "Description" "Tag-Connect TC2030-IDC-NL 6-pin pogo programming header (no-legs / surface contact)"
+			(property "Description" "Tag-Connect TC2030-IDC-NL, TC2030-CTX pinout (1 VCC, 2 SWDIO, 3 nRESET, 4 SWCLK, 5 GND, 6 SWO). No component fitted"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -3439,7 +3573,7 @@
 				(pin passive line
 					(at -7.62 2.54 0)
 					(length 2.54)
-					(name "SWCLK"
+					(name "VCC"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3457,7 +3591,7 @@
 				(pin passive line
 					(at 7.62 2.54 180)
 					(length 2.54)
-					(name "VCC"
+					(name "SWDIO"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3493,7 +3627,7 @@
 				(pin passive line
 					(at 7.62 0 180)
 					(length 2.54)
-					(name "GND"
+					(name "SWCLK"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3511,7 +3645,7 @@
 				(pin passive line
 					(at -7.62 -2.54 0)
 					(length 2.54)
-					(name "SWDIO"
+					(name "GND"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3529,7 +3663,7 @@
 				(pin no_connect line
 					(at 7.62 -2.54 180)
 					(length 2.54)
-					(name "NC"
+					(name "SWO"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -5319,7 +5453,7 @@
 	)
 	(wire
 		(pts
-			(xy 187.96 33.02) (xy 195.58 33.02)
+			(xy 187.96 33.02) (xy 203.2 33.02)
 		)
 		(stroke
 			(width 0)
@@ -5329,17 +5463,7 @@
 	)
 	(wire
 		(pts
-			(xy 195.58 33.02) (xy 195.58 30.48)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1a000000-0000-0000-0000-000000000024")
-	)
-	(wire
-		(pts
-			(xy 187.96 35.56) (xy 195.58 35.56)
+			(xy 187.96 35.56) (xy 203.2 35.56)
 		)
 		(stroke
 			(width 0)
@@ -5347,15 +5471,51 @@
 		)
 		(uuid "1a000000-0000-0000-0000-000000000025")
 	)
-	(wire
-		(pts
-			(xy 195.58 35.56) (xy 195.58 40.64)
+		(global_label "SWDIO"
+		(shape input)
+		(at 203.2 33.02 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
 		)
-		(stroke
-			(width 0)
-			(type default)
+		(uuid "1a000000-0000-0000-0000-000000000060")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 0.635 1.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
 		)
-		(uuid "1a000000-0000-0000-0000-000000000026")
+	)
+	(global_label "SWCLK"
+		(shape input)
+		(at 203.2 35.56 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "1a000000-0000-0000-0000-000000000061")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 0.635 1.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 	)
 	(wire
 		(pts
@@ -5586,16 +5746,6 @@
 			(type default)
 		)
 		(uuid "2f00d998-571e-43ef-a0ee-bb16cb59cb37")
-	)
-	(wire
-		(pts
-			(xy 73.66 140.97) (xy 74.93 140.97)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2f2bf00d-f4a0-4efc-aa1a-4c53e96b3189")
 	)
 	(wire
 		(pts
@@ -7099,7 +7249,7 @@
 	)
 	(wire
 		(pts
-			(xy 93.98 140.97) (xy 93.98 142.24)
+			(xy 93.98 140.97) (xy 93.98 143.51)
 		)
 		(stroke
 			(width 0)
@@ -7339,7 +7489,7 @@
 	)
 	(wire
 		(pts
-			(xy 90.17 140.97) (xy 93.98 140.97)
+			(xy 90.17 143.51) (xy 93.98 143.51)
 		)
 		(stroke
 			(width 0)
@@ -7667,8 +7817,8 @@
 		)
 		(uuid "fd8aa048-a65e-4f75-accf-5c23ccc2d9cd")
 	)
-	(global_label "SWCLK"
-		(shape input)
+	(global_label "+3V3"
+		(shape passive)
 		(at 165.1 33.02 180)
 		(fields_autoplaced yes)
 		(effects
@@ -7713,8 +7863,8 @@
 			)
 		)
 	)
-	(global_label "SWDIO"
-		(shape input)
+	(global_label "GND"
+		(shape passive)
 		(at 165.1 38.1 180)
 		(fields_autoplaced yes)
 		(effects
@@ -17109,7 +17259,7 @@
 				)
 			)
 		)
-		(property "MPN" "TPD4E1U06DBV"
+		(property "MPN" "TPD4E1U06DCKR"
 			(at 104.14 179.07 0)
 			(hide yes)
 			(show_name no)
@@ -18436,9 +18586,9 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
-		(in_pos_files yes)
+		(in_pos_files no)
 		(dnp no)
 		(uuid "1a000000-0000-0000-0000-000000000001")
 		(property "Reference" "J2"
@@ -18487,7 +18637,7 @@
 				)
 			)
 		)
-		(property "Description" "Tag-Connect TC2030-IDC-NL 6-pin SWD programming header"
+		(property "Description" "Tag-Connect TC2030-IDC-NL, TC2030-CTX pinout. No component fitted"
 			(at 180.34 35.56 0)
 			(hide yes)
 			(show_name no)
@@ -18520,158 +18670,6 @@
 			(project "ts52k"
 				(path "/a46aaf04-b440-466e-8b21-108f618a37ed"
 					(reference "J2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+3V3")
-		(at 195.58 30.48 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "1a000000-0000-0000-0000-000000000050")
-		(property "Reference" "#PWR0201"
-			(at 195.58 26.67 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "+3V3"
-			(at 195.961 26.0858 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 195.58 30.48 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 195.58 30.48 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 195.58 30.48 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "1a000000-0000-0000-0000-000000000051")
-		)
-		(instances
-			(project "ts52k"
-				(path "/a46aaf04-b440-466e-8b21-108f618a37ed"
-					(reference "#PWR0201")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 195.58 40.64 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "1a000000-0000-0000-0000-000000000052")
-		(property "Reference" "#PWR0202"
-			(at 195.58 46.99 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 195.58 44.45 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 195.58 40.64 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 195.58 40.64 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 195.58 40.64 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "1a000000-0000-0000-0000-000000000053")
-		)
-		(instances
-			(project "ts52k"
-				(path "/a46aaf04-b440-466e-8b21-108f618a37ed"
-					(reference "#PWR0202")
 					(unit 1)
 				)
 			)
@@ -18910,8 +18908,19 @@
 				)
 			)
 		)
-		(property "LCSC" "C1525"
+		(property "LCSC" "C23733"
 			(at 54.61 144.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CL05A475MP5NRNC"
+			(at 0 0 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19081,6 +19090,28 @@
 		)
 		(pin "2"
 			(uuid "18d69cc8-82f1-4ddf-9479-3c741db1665d")
+		)
+		(property "LCSC" "C11702"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "0402WGF1001TCE"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
 		)
 		(pin "1"
 			(uuid "aa61ea4f-874c-464b-a1ee-7a983b4d5477")
@@ -19393,8 +19424,19 @@
 				)
 			)
 		)
-		(property "LCSC" "C1525"
+		(property "LCSC" "C23733"
 			(at 93.98 144.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CL05A475MP5NRNC"
+			(at 0 0 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19795,8 +19837,19 @@
 				)
 			)
 		)
-		(property "LCSC" "C1525"
+		(property "LCSC" "C52923"
 			(at 20.32 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CL05A105KA5NQNC"
+			(at 0 0 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19978,7 +20031,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Regulator_Linear:AP2112K-3.3")
+		(lib_id "Regulator_Linear:XC6206PxxxMR")
 		(at 82.55 143.51 0)
 		(unit 1)
 		(body_style 1)
@@ -19999,7 +20052,7 @@
 				)
 			)
 		)
-		(property "Value" "AP2112K-3.3"
+		(property "Value" "XC6206P332MR-G"
 			(at 82.55 137.16 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -20009,7 +20062,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-5"
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-3"
 			(at 82.55 135.255 0)
 			(hide yes)
 			(show_name no)
@@ -20020,7 +20073,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.diodes.com/assets/Datasheets/AP2112.pdf"
+		(property "Datasheet" "https://www.torexsemi.com/file/xc6206/XC6206.pdf"
 			(at 82.55 140.97 0)
 			(hide yes)
 			(show_name no)
@@ -20031,7 +20084,7 @@
 				)
 			)
 		)
-		(property "Description" "600mA low dropout linear regulator, with enable pin, 3.8V-6V input voltage range, 3.3V fixed positive output, SOT-23-5"
+		(property "Description" "200mA fixed 3.3V LDO, SOT-23-3, Torex XC6206, no enable"
 			(at 82.55 143.51 0)
 			(hide yes)
 			(show_name no)
@@ -20045,14 +20098,30 @@
 		(pin "3"
 			(uuid "84938ad9-ba91-445e-aebc-474270965fca")
 		)
-		(pin "5"
-			(uuid "05d8f633-cddd-4fd0-a715-851c4e356e1b")
-		)
-		(pin "4"
-			(uuid "1fae2fe8-6aa6-4156-8aea-9d7cb21dc0fb")
-		)
 		(pin "2"
 			(uuid "906b3169-bd90-46cd-8414-f6c850dfec30")
+		)
+		(property "LCSC" "C5446"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "XC6206P332MR-G"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
 		)
 		(pin "1"
 			(uuid "d8915c7c-ea35-4c2e-ad2d-11fedeff0691")
@@ -20285,8 +20354,19 @@
 				)
 			)
 		)
-		(property "LCSC" "C1525"
+		(property "LCSC" "C52923"
 			(at 66.04 144.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CL05A105KA5NQNC"
+			(at 0 0 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -20369,6 +20449,28 @@
 		)
 		(property "Description" ""
 			(at 48.26 82.55 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C25744"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "0402WGF1002TCE"
+			(at 0 0 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -20656,6 +20758,28 @@
 		)
 		(pin "6"
 			(uuid "a74b7125-22f6-4c5a-bd00-8aa8c82b8367")
+		)
+		(property "LCSC" "C97521"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "W25Q128JVSIQ"
+			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
 		)
 		(pin "1"
 			(uuid "6fc2f509-49fb-4b5b-910f-6c58647c7a7a")
