@@ -1,5 +1,5 @@
 {
-  "board_sha256": "e14cf18f0c0985cb090975e70b72f962d24133db62a19f92806be0fc5c97f7c7",
+  "board_sha256": "404a6dba5b5277c70e25a0c3c631d663b3eaaad013ca1541c25a21617bc9815c",
   "fixed_unchanged": [
     "MX2",
     "MX4",
@@ -61,7 +61,6 @@
     "R8",
     "R7",
     "C19",
-    "U5",
     "C20"
   ],
   "moved": [
@@ -115,8 +114,8 @@
       },
       "after": {
         "pos": [
-          27.9,
-          63.5
+          29.8,
+          65.0
         ],
         "angle": 0.0,
         "layer": "B.Cu"
@@ -134,10 +133,29 @@
       },
       "after": {
         "pos": [
-          29.0,
-          65.599999
+          49.3,
+          46.6
         ],
-        "angle": 90.0,
+        "angle": 0.0,
+        "layer": "B.Cu"
+      }
+    },
+    {
+      "ref": "X2",
+      "before": {
+        "pos": [
+          24.5,
+          71.5
+        ],
+        "angle": 180.0,
+        "layer": "B.Cu"
+      },
+      "after": {
+        "pos": [
+          18.7,
+          70.0
+        ],
+        "angle": 180.0,
         "layer": "B.Cu"
       }
     },
@@ -153,10 +171,10 @@
       },
       "after": {
         "pos": [
-          18.4,
-          58.0
+          21.1,
+          58.9
         ],
-        "angle": 180.0,
+        "angle": 90.0,
         "layer": "B.Cu"
       }
     },
@@ -172,8 +190,8 @@
       },
       "after": {
         "pos": [
-          17.7,
-          63.5
+          19.5,
+          65.0
         ],
         "angle": 180.0,
         "layer": "B.Cu"
@@ -191,7 +209,7 @@
       },
       "after": {
         "pos": [
-          28.4,
+          29.6696,
           56.8
         ],
         "angle": -90.0,
@@ -210,10 +228,10 @@
       },
       "after": {
         "pos": [
-          28.0,
-          70.675
+          15.3,
+          72.0
         ],
-        "angle": 0.0,
+        "angle": 180.0,
         "layer": "B.Cu"
       }
     },
@@ -230,7 +248,7 @@
       "after": {
         "pos": [
           17.4,
-          51.5
+          51.9
         ],
         "angle": 0.0,
         "layer": "B.Cu"
@@ -248,8 +266,8 @@
       },
       "after": {
         "pos": [
-          20.1,
-          57.4
+          22.65,
+          58.6
         ],
         "angle": 90.0,
         "layer": "B.Cu"
@@ -267,8 +285,8 @@
       },
       "after": {
         "pos": [
-          22.2,
-          68.6
+          23.5,
+          69.9
         ],
         "angle": -90.0,
         "layer": "B.Cu"
@@ -286,8 +304,8 @@
       },
       "after": {
         "pos": [
-          24.2,
-          54.8
+          25.6696,
+          56.8
         ],
         "angle": -90.0,
         "layer": "B.Cu"
@@ -305,8 +323,8 @@
       },
       "after": {
         "pos": [
-          22.5,
-          57.0
+          24.2,
+          58.7
         ],
         "angle": 90.0,
         "layer": "B.Cu"
@@ -324,8 +342,8 @@
       },
       "after": {
         "pos": [
-          27.3,
-          56.8
+          28.6696,
+          56.85
         ],
         "angle": -90.0,
         "layer": "B.Cu"
@@ -343,8 +361,8 @@
       },
       "after": {
         "pos": [
-          35.0,
-          62.3
+          42.5,
+          48.7
         ],
         "angle": 0.0,
         "layer": "B.Cu"
@@ -381,8 +399,8 @@
       },
       "after": {
         "pos": [
-          23.8,
-          57.4
+          24.65,
+          54.8
         ],
         "angle": 90.0,
         "layer": "B.Cu"
@@ -400,8 +418,8 @@
       },
       "after": {
         "pos": [
-          26.4,
-          54.8
+          27.6696,
+          56.85
         ],
         "angle": -90.0,
         "layer": "B.Cu"
@@ -419,8 +437,8 @@
       },
       "after": {
         "pos": [
-          25.3,
-          54.8
+          26.6696,
+          56.8
         ],
         "angle": -90.0,
         "layer": "B.Cu"
@@ -438,8 +456,8 @@
       },
       "after": {
         "pos": [
-          39.5,
-          77.5
+          47.6,
+          78.2
         ],
         "angle": 180.0,
         "layer": "B.Cu"
@@ -457,8 +475,8 @@
       },
       "after": {
         "pos": [
-          23.5,
-          68.6
+          24.8,
+          69.6
         ],
         "angle": -90.0,
         "layer": "B.Cu"
@@ -533,8 +551,27 @@
       },
       "after": {
         "pos": [
-          18.5,
-          68.7
+          17.0,
+          67.3
+        ],
+        "angle": 180.0,
+        "layer": "B.Cu"
+      }
+    },
+    {
+      "ref": "U5",
+      "before": {
+        "pos": [
+          22.8,
+          62.5
+        ],
+        "angle": 180.0,
+        "layer": "B.Cu"
+      },
+      "after": {
+        "pos": [
+          24.6696,
+          64.0
         ],
         "angle": 180.0,
         "layer": "B.Cu"
@@ -552,8 +589,8 @@
       },
       "after": {
         "pos": [
-          30.8,
-          57.0
+          49.3,
+          49.6
         ],
         "angle": 0.0,
         "layer": "B.Cu"
@@ -571,10 +608,10 @@
       },
       "after": {
         "pos": [
-          27.8,
+          29.4,
           59.8
         ],
-        "angle": 0.0,
+        "angle": 90.0,
         "layer": "B.Cu"
       }
     },
@@ -609,10 +646,10 @@
       },
       "after": {
         "pos": [
-          28.0,
-          72.325
+          21.3,
+          69.0
         ],
-        "angle": 180.0,
+        "angle": 90.0,
         "layer": "B.Cu"
       }
     },
@@ -647,8 +684,8 @@
       },
       "after": {
         "pos": [
-          17.7,
-          59.9
+          19.5,
+          61.4
         ],
         "angle": 180.0,
         "layer": "B.Cu"
@@ -666,8 +703,8 @@
       },
       "after": {
         "pos": [
-          32.0,
-          66.8
+          52.3,
+          48.1
         ],
         "angle": 0.0,
         "layer": "B.Cu"
@@ -685,15 +722,226 @@
       },
       "after": {
         "pos": [
-          18.5,
-          67.5
+          19.0,
+          67.3
         ],
         "angle": 180.0,
         "layer": "B.Cu"
       }
     }
   ],
-  "mechanical_2d_checks": [],
+  "mechanical_2d_checks": [
+    {
+      "ref": "C10",
+      "nearest_front_part": "MX3",
+      "pad": "",
+      "clearance_mm": 5.8857
+    },
+    {
+      "ref": "C11",
+      "nearest_front_part": "MX11",
+      "pad": "1",
+      "clearance_mm": 1.0437
+    },
+    {
+      "ref": "C12",
+      "nearest_front_part": "MX3",
+      "pad": "",
+      "clearance_mm": 7.1894
+    },
+    {
+      "ref": "C13",
+      "nearest_front_part": "MX7",
+      "pad": "",
+      "clearance_mm": 3.8229
+    },
+    {
+      "ref": "C14",
+      "nearest_front_part": "MX3",
+      "pad": "",
+      "clearance_mm": 0.6909
+    },
+    {
+      "ref": "C15",
+      "nearest_front_part": "MX7",
+      "pad": "",
+      "clearance_mm": 3.303
+    },
+    {
+      "ref": "C16",
+      "nearest_front_part": "MX8",
+      "pad": "1",
+      "clearance_mm": 5.7078
+    },
+    {
+      "ref": "C17",
+      "nearest_front_part": "MX3",
+      "pad": "2",
+      "clearance_mm": 4.1594
+    },
+    {
+      "ref": "C18",
+      "nearest_front_part": "MX2",
+      "pad": "",
+      "clearance_mm": 6.4712
+    },
+    {
+      "ref": "C2",
+      "nearest_front_part": "MX2",
+      "pad": "",
+      "clearance_mm": 2.2368
+    },
+    {
+      "ref": "C21",
+      "nearest_front_part": "MX2",
+      "pad": "",
+      "clearance_mm": 1.2338
+    },
+    {
+      "ref": "C3",
+      "nearest_front_part": "MX2",
+      "pad": "",
+      "clearance_mm": 3.7971
+    },
+    {
+      "ref": "C4",
+      "nearest_front_part": "MX2",
+      "pad": "",
+      "clearance_mm": 3.6159
+    },
+    {
+      "ref": "C5",
+      "nearest_front_part": "MX2",
+      "pad": "2",
+      "clearance_mm": 0.3674
+    },
+    {
+      "ref": "C6",
+      "nearest_front_part": "MX2",
+      "pad": "",
+      "clearance_mm": 5.9659
+    },
+    {
+      "ref": "C7",
+      "nearest_front_part": "MX3",
+      "pad": "2",
+      "clearance_mm": 2.6488
+    },
+    {
+      "ref": "C8",
+      "nearest_front_part": "MX7",
+      "pad": "",
+      "clearance_mm": 5.044
+    },
+    {
+      "ref": "C9",
+      "nearest_front_part": "MX7",
+      "pad": "",
+      "clearance_mm": 2.2725
+    },
+    {
+      "ref": "D2",
+      "nearest_front_part": "MX2",
+      "pad": "",
+      "clearance_mm": 0.6643
+    },
+    {
+      "ref": "D8",
+      "nearest_front_part": "MX8",
+      "pad": "2",
+      "clearance_mm": 5.1433
+    },
+    {
+      "ref": "J2",
+      "nearest_front_part": "MX3",
+      "pad": "",
+      "clearance_mm": 2.3889
+    },
+    {
+      "ref": "R10",
+      "nearest_front_part": "MX7",
+      "pad": "",
+      "clearance_mm": 0.2823
+    },
+    {
+      "ref": "R11",
+      "nearest_front_part": "MX7",
+      "pad": "",
+      "clearance_mm": 0.5747
+    },
+    {
+      "ref": "R12",
+      "nearest_front_part": "MX7",
+      "pad": "",
+      "clearance_mm": 0.2763
+    },
+    {
+      "ref": "R13",
+      "nearest_front_part": "MX7",
+      "pad": "",
+      "clearance_mm": 1.5122
+    },
+    {
+      "ref": "R14",
+      "nearest_front_part": "MX11",
+      "pad": "2",
+      "clearance_mm": 0.9081
+    },
+    {
+      "ref": "R2",
+      "nearest_front_part": "MX11",
+      "pad": "1",
+      "clearance_mm": 4.0337
+    },
+    {
+      "ref": "R3",
+      "nearest_front_part": "MX3",
+      "pad": "",
+      "clearance_mm": 4.593
+    },
+    {
+      "ref": "R4",
+      "nearest_front_part": "MX3",
+      "pad": "2",
+      "clearance_mm": 0.7672
+    },
+    {
+      "ref": "R9",
+      "nearest_front_part": "MX7",
+      "pad": "",
+      "clearance_mm": 0.6943
+    },
+    {
+      "ref": "SW1",
+      "nearest_front_part": "MX8",
+      "pad": "",
+      "clearance_mm": 0.371
+    },
+    {
+      "ref": "U3",
+      "nearest_front_part": "MX2",
+      "pad": "",
+      "clearance_mm": 0.5115
+    },
+    {
+      "ref": "U4",
+      "nearest_front_part": "MX11",
+      "pad": "1",
+      "clearance_mm": 0.4356
+    },
+    {
+      "ref": "U5",
+      "nearest_front_part": "MX7",
+      "pad": "",
+      "clearance_mm": 4.2971
+    },
+    {
+      "ref": "X2",
+      "nearest_front_part": "MX3",
+      "pad": "2",
+      "clearance_mm": 1.0287
+    }
+  ],
   "tag_connect_max_body_front_pad_clearance_mm": 1.339,
   "tag_connect_nearest_front_part": [
     "MX3",
@@ -703,15 +951,209 @@
   "unconnected": 0,
   "schematic_parity": 0,
   "drc_warnings_by_type": {
-    "track_dangling": 16,
-    "via_dangling": 3,
+    "track_dangling": 2,
+    "via_dangling": 1,
     "silk_edge_clearance": 3,
     "lib_footprint_mismatch": 91,
     "silk_overlap": 11,
-    "silk_over_copper": 26
+    "silk_over_copper": 22
   },
   "usb_resistor_to_mcu_mm": {
-    "Net-(U5-USB_DM)": 6.4544,
-    "Net-(U5-USB_DP)": 6.7096
-  }
+    "Net-(U5-USB_DM)": 7.4352,
+    "Net-(U5-USB_DP)": 7.4352
+  },
+  "mechanical_courtyard_checks_count": 35,
+  "minimum_rear_to_front_pin_clearance_mm": 0.2763,
+  "new_track_octilinear_failures": [],
+  "matrix_original_tracks_modified": [],
+  "matrix_isolated_remnants_removed": [
+    {
+      "net": "col2",
+      "start": [
+        25.29386,
+        67.37837
+      ],
+      "end": [
+        25.29386,
+        69.309981
+      ],
+      "width": 0.25,
+      "layer": "B.Cu",
+      "uuid": "12d370b7-fccf-4c8d-bb79-f202ac772639",
+      "via": false
+    },
+    {
+      "net": "col4",
+      "start": [
+        24.79386,
+        69.304699
+      ],
+      "end": [
+        24.79386,
+        67.37837
+      ],
+      "width": 0.25,
+      "layer": "B.Cu",
+      "uuid": "53fcc3ef-6d33-4041-ba6b-4f367c32f3da",
+      "via": false
+    },
+    {
+      "net": "col5",
+      "start": [
+        24.29386,
+        67.37837
+      ],
+      "end": [
+        24.29386,
+        69.299758
+      ],
+      "width": 0.25,
+      "layer": "B.Cu",
+      "uuid": "6b59388c-d331-4a70-969f-b47393e3726a",
+      "via": false
+    }
+  ],
+  "mcu_to_existing_endpoints": [
+    {
+      "pin": 2,
+      "net": "rpg1",
+      "original_endpoint_mm": [
+        42.029239,
+        57.15024
+      ],
+      "back_only_connected": true
+    },
+    {
+      "pin": 3,
+      "net": "rpg2",
+      "original_endpoint_mm": [
+        42.215636,
+        57.60024
+      ],
+      "back_only_connected": true
+    },
+    {
+      "pin": 4,
+      "net": "row1",
+      "original_endpoint_mm": [
+        42.00922,
+        58.443051
+      ],
+      "back_only_connected": true
+    },
+    {
+      "pin": 5,
+      "net": "row2",
+      "original_endpoint_mm": [
+        41.870616,
+        59.218051
+      ],
+      "back_only_connected": true
+    },
+    {
+      "pin": 6,
+      "net": "col3",
+      "original_endpoint_mm": [
+        42.057012,
+        59.668051
+      ],
+      "back_only_connected": true
+    },
+    {
+      "pin": 13,
+      "net": "col2",
+      "original_endpoint_mm": [
+        42.243408,
+        60.118051
+      ],
+      "back_only_connected": true
+    },
+    {
+      "pin": 14,
+      "net": "col4",
+      "original_endpoint_mm": [
+        26.98169,
+        73.480548
+      ],
+      "back_only_connected": true
+    },
+    {
+      "pin": 15,
+      "net": "col5",
+      "original_endpoint_mm": [
+        25.95315,
+        73.619431
+      ],
+      "back_only_connected": true
+    },
+    {
+      "pin": 16,
+      "net": "col6",
+      "original_endpoint_mm": [
+        25.35114,
+        73.653817
+      ],
+      "back_only_connected": true
+    },
+    {
+      "pin": 17,
+      "net": "row3",
+      "original_endpoint_mm": [
+        24.64462,
+        73.583693
+      ],
+      "back_only_connected": true
+    },
+    {
+      "pin": 18,
+      "net": "row4",
+      "original_endpoint_mm": [
+        24.034226,
+        73.609695
+      ],
+      "back_only_connected": true
+    },
+    {
+      "pin": 27,
+      "net": "row5",
+      "original_endpoint_mm": [
+        23.432069,
+        73.643934
+      ],
+      "back_only_connected": true
+    },
+    {
+      "pin": 28,
+      "net": "col1",
+      "original_endpoint_mm": [
+        22.733716,
+        73.581977
+      ],
+      "back_only_connected": true
+    }
+  ],
+  "track_lengths_mm": {
+    "atmega_all": {
+      "F.Cu": 125.1084,
+      "B.Cu": 4651.9679
+    },
+    "previous_all": {
+      "F.Cu": 445.0063,
+      "B.Cu": 4306.9307
+    },
+    "current_all": {
+      "F.Cu": 171.9561,
+      "B.Cu": 4551.8778
+    },
+    "previous_added": {
+      "F.Cu": 378.7924,
+      "B.Cu": 393.2858
+    },
+    "current_added": {
+      "F.Cu": 105.7422,
+      "B.Cu": 637.4676
+    }
+  },
+  "new_tracks": 328,
+  "new_vias": 65
 }
