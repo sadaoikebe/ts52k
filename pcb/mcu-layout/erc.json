@@ -1,0 +1,57 @@
+{
+    "$schema": "https://schemas.kicad.org/erc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-10-27T14:50:50",
+    "ignored_checks": [
+        {
+            "description": "Global label only appears once in the schematic",
+            "key": "single_global_label"
+        },
+        {
+            "description": "Four connection points are joined together",
+            "key": "four_way_junction"
+        },
+        {
+            "description": "SPICE model issue",
+            "key": "simulation_model_issue"
+        },
+        {
+            "description": "Assigned footprint doesn't match footprint filters",
+            "key": "footprint_filter"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning"
+    ],
+    "kicad_version": "10.0.5",
+    "sheets": [
+        {
+            "path": "/",
+            "uuid_path": "/a46aaf04-b440-466e-8b21-108f618a37ed",
+            "violations": [
+                {
+                    "description": "Symbol 'XC6206PxxxMR' doesn't match copy in library 'Regulator_Linear'",
+                    "items": [
+                        {
+                            "description": "Symbol U3 [XC6206PxxxMR]",
+                            "pos": {
+                                "x": 0.8255,
+                                "y": 1.4351
+                            },
+                            "uuid": "8b431f97-cc5d-44fb-805e-27d0a8175c66"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                }
+            ]
+        },
+        {
+            "path": "/rp2040/",
+            "uuid_path": "/a46aaf04-b440-466e-8b21-108f618a37ed/9a14334a-849e-4731-b6a7-99d43fb7e05a",
+            "violations": []
+        }
+    ],
+    "source": "ts52k.kicad_sch"
+}

@@ -1,0 +1,717 @@
+{
+  "board_sha256": "e14cf18f0c0985cb090975e70b72f962d24133db62a19f92806be0fc5c97f7c7",
+  "fixed_unchanged": [
+    "MX2",
+    "MX4",
+    "MX11",
+    "MX12",
+    "MX13",
+    "MX14",
+    "MX16",
+    "MX17",
+    "MX18",
+    "MX21",
+    "MX23",
+    "MX25",
+    "MX27",
+    "MX29",
+    "MX30",
+    "MX31",
+    "MX33",
+    "MX34",
+    "MX35",
+    "MX37",
+    "MX38",
+    "MX39",
+    "MX42",
+    "MX43",
+    "MX48",
+    "MX51",
+    "MX52",
+    "MX55",
+    "MX56",
+    "MX58",
+    "MX61",
+    "MX64",
+    "MX66",
+    "MX67",
+    "MX71",
+    "MX22",
+    "MX9",
+    "MX20",
+    "MX46",
+    "MX65",
+    "MX74",
+    "MX81",
+    "MX82",
+    "MX75",
+    "MX60",
+    "MX7",
+    "MX47",
+    "MX8",
+    "MX44",
+    "MX5",
+    "MX26",
+    "SW2",
+    "MX3",
+    "J1",
+    "R5",
+    "R6",
+    "U2",
+    "R8",
+    "R7",
+    "C19",
+    "U5",
+    "C20"
+  ],
+  "moved": [
+    {
+      "ref": "D8",
+      "before": {
+        "pos": [
+          47.244,
+          60.603067
+        ],
+        "angle": 90.0,
+        "layer": "B.Cu"
+      },
+      "after": {
+        "pos": [
+          47.244,
+          63.3
+        ],
+        "angle": 90.0,
+        "layer": "B.Cu"
+      }
+    },
+    {
+      "ref": "D2",
+      "before": {
+        "pos": [
+          17.018,
+          54.411791
+        ],
+        "angle": 90.0,
+        "layer": "B.Cu"
+      },
+      "after": {
+        "pos": [
+          12.5,
+          58.5
+        ],
+        "angle": 0.0,
+        "layer": "B.Cu"
+      }
+    },
+    {
+      "ref": "C16",
+      "before": {
+        "pos": [
+          28.8,
+          64.5
+        ],
+        "angle": 0.0,
+        "layer": "B.Cu"
+      },
+      "after": {
+        "pos": [
+          27.9,
+          63.5
+        ],
+        "angle": 0.0,
+        "layer": "B.Cu"
+      }
+    },
+    {
+      "ref": "R2",
+      "before": {
+        "pos": [
+          30.2,
+          66.6
+        ],
+        "angle": -90.0,
+        "layer": "B.Cu"
+      },
+      "after": {
+        "pos": [
+          29.0,
+          65.599999
+        ],
+        "angle": 90.0,
+        "layer": "B.Cu"
+      }
+    },
+    {
+      "ref": "C6",
+      "before": {
+        "pos": [
+          16.5,
+          57.8
+        ],
+        "angle": 0.0,
+        "layer": "B.Cu"
+      },
+      "after": {
+        "pos": [
+          18.4,
+          58.0
+        ],
+        "angle": 180.0,
+        "layer": "B.Cu"
+      }
+    },
+    {
+      "ref": "C17",
+      "before": {
+        "pos": [
+          16.4,
+          63.5
+        ],
+        "angle": 0.0,
+        "layer": "B.Cu"
+      },
+      "after": {
+        "pos": [
+          17.7,
+          63.5
+        ],
+        "angle": 180.0,
+        "layer": "B.Cu"
+      }
+    },
+    {
+      "ref": "R11",
+      "before": {
+        "pos": [
+          34.036,
+          59.561
+        ],
+        "angle": 90.0,
+        "layer": "B.Cu"
+      },
+      "after": {
+        "pos": [
+          28.4,
+          56.8
+        ],
+        "angle": -90.0,
+        "layer": "B.Cu"
+      }
+    },
+    {
+      "ref": "C14",
+      "before": {
+        "pos": [
+          28.0,
+          70.5
+        ],
+        "angle": 0.0,
+        "layer": "B.Cu"
+      },
+      "after": {
+        "pos": [
+          28.0,
+          70.675
+        ],
+        "angle": 0.0,
+        "layer": "B.Cu"
+      }
+    },
+    {
+      "ref": "U3",
+      "before": {
+        "pos": [
+          20.066,
+          51.562
+        ],
+        "angle": -90.0,
+        "layer": "B.Cu"
+      },
+      "after": {
+        "pos": [
+          17.4,
+          51.5
+        ],
+        "angle": 0.0,
+        "layer": "B.Cu"
+      }
+    },
+    {
+      "ref": "C8",
+      "before": {
+        "pos": [
+          20.5,
+          56.6
+        ],
+        "angle": 90.0,
+        "layer": "B.Cu"
+      },
+      "after": {
+        "pos": [
+          20.1,
+          57.4
+        ],
+        "angle": 90.0,
+        "layer": "B.Cu"
+      }
+    },
+    {
+      "ref": "C10",
+      "before": {
+        "pos": [
+          21.5,
+          68.0
+        ],
+        "angle": 90.0,
+        "layer": "B.Cu"
+      },
+      "after": {
+        "pos": [
+          22.2,
+          68.6
+        ],
+        "angle": -90.0,
+        "layer": "B.Cu"
+      }
+    },
+    {
+      "ref": "R13",
+      "before": {
+        "pos": [
+          36.068,
+          59.561
+        ],
+        "angle": 90.0,
+        "layer": "B.Cu"
+      },
+      "after": {
+        "pos": [
+          24.2,
+          54.8
+        ],
+        "angle": -90.0,
+        "layer": "B.Cu"
+      }
+    },
+    {
+      "ref": "C13",
+      "before": {
+        "pos": [
+          23.8,
+          54.8
+        ],
+        "angle": 90.0,
+        "layer": "B.Cu"
+      },
+      "after": {
+        "pos": [
+          22.5,
+          57.0
+        ],
+        "angle": 90.0,
+        "layer": "B.Cu"
+      }
+    },
+    {
+      "ref": "R12",
+      "before": {
+        "pos": [
+          33.02,
+          59.561
+        ],
+        "angle": 90.0,
+        "layer": "B.Cu"
+      },
+      "after": {
+        "pos": [
+          27.3,
+          56.8
+        ],
+        "angle": -90.0,
+        "layer": "B.Cu"
+      }
+    },
+    {
+      "ref": "U4",
+      "before": {
+        "pos": [
+          35.306,
+          63.5
+        ],
+        "angle": 0.0,
+        "layer": "B.Cu"
+      },
+      "after": {
+        "pos": [
+          35.0,
+          62.3
+        ],
+        "angle": 0.0,
+        "layer": "B.Cu"
+      }
+    },
+    {
+      "ref": "C21",
+      "before": {
+        "pos": [
+          35.56,
+          47.244
+        ],
+        "angle": 0.0,
+        "layer": "B.Cu"
+      },
+      "after": {
+        "pos": [
+          14.2,
+          52.2
+        ],
+        "angle": 180.0,
+        "layer": "B.Cu"
+      }
+    },
+    {
+      "ref": "C9",
+      "before": {
+        "pos": [
+          22.0,
+          56.6
+        ],
+        "angle": 90.0,
+        "layer": "B.Cu"
+      },
+      "after": {
+        "pos": [
+          23.8,
+          57.4
+        ],
+        "angle": 90.0,
+        "layer": "B.Cu"
+      }
+    },
+    {
+      "ref": "R10",
+      "before": {
+        "pos": [
+          38.1,
+          59.561
+        ],
+        "angle": 90.0,
+        "layer": "B.Cu"
+      },
+      "after": {
+        "pos": [
+          26.4,
+          54.8
+        ],
+        "angle": -90.0,
+        "layer": "B.Cu"
+      }
+    },
+    {
+      "ref": "R9",
+      "before": {
+        "pos": [
+          37.084,
+          59.561
+        ],
+        "angle": 90.0,
+        "layer": "B.Cu"
+      },
+      "after": {
+        "pos": [
+          25.3,
+          54.8
+        ],
+        "angle": -90.0,
+        "layer": "B.Cu"
+      }
+    },
+    {
+      "ref": "SW1",
+      "before": {
+        "pos": [
+          46.609,
+          66.675
+        ],
+        "angle": 180.0,
+        "layer": "B.Cu"
+      },
+      "after": {
+        "pos": [
+          39.5,
+          77.5
+        ],
+        "angle": 180.0,
+        "layer": "B.Cu"
+      }
+    },
+    {
+      "ref": "C12",
+      "before": {
+        "pos": [
+          23.5,
+          68.0
+        ],
+        "angle": 90.0,
+        "layer": "B.Cu"
+      },
+      "after": {
+        "pos": [
+          23.5,
+          68.6
+        ],
+        "angle": -90.0,
+        "layer": "B.Cu"
+      }
+    },
+    {
+      "ref": "C2",
+      "before": {
+        "pos": [
+          37.592,
+          47.244
+        ],
+        "angle": 0.0,
+        "layer": "B.Cu"
+      },
+      "after": {
+        "pos": [
+          18.2,
+          56.8
+        ],
+        "angle": 0.0,
+        "layer": "B.Cu"
+      }
+    },
+    {
+      "ref": "C3",
+      "before": {
+        "pos": [
+          33.3,
+          50.8
+        ],
+        "angle": 0.0,
+        "layer": "B.Cu"
+      },
+      "after": {
+        "pos": [
+          20.0,
+          53.0
+        ],
+        "angle": 0.0,
+        "layer": "B.Cu"
+      }
+    },
+    {
+      "ref": "C5",
+      "before": {
+        "pos": [
+          35.56,
+          45.974
+        ],
+        "angle": 0.0,
+        "layer": "B.Cu"
+      },
+      "after": {
+        "pos": [
+          14.2,
+          51.0
+        ],
+        "angle": 0.0,
+        "layer": "B.Cu"
+      }
+    },
+    {
+      "ref": "R4",
+      "before": {
+        "pos": [
+          17.2,
+          67.7
+        ],
+        "angle": 0.0,
+        "layer": "B.Cu"
+      },
+      "after": {
+        "pos": [
+          18.5,
+          68.7
+        ],
+        "angle": 180.0,
+        "layer": "B.Cu"
+      }
+    },
+    {
+      "ref": "C11",
+      "before": {
+        "pos": [
+          23.5,
+          56.6
+        ],
+        "angle": 90.0,
+        "layer": "B.Cu"
+      },
+      "after": {
+        "pos": [
+          30.8,
+          57.0
+        ],
+        "angle": 0.0,
+        "layer": "B.Cu"
+      }
+    },
+    {
+      "ref": "C15",
+      "before": {
+        "pos": [
+          28.8,
+          62.0
+        ],
+        "angle": 0.0,
+        "layer": "B.Cu"
+      },
+      "after": {
+        "pos": [
+          27.8,
+          59.8
+        ],
+        "angle": 0.0,
+        "layer": "B.Cu"
+      }
+    },
+    {
+      "ref": "C4",
+      "before": {
+        "pos": [
+          33.3,
+          52.2
+        ],
+        "angle": 0.0,
+        "layer": "B.Cu"
+      },
+      "after": {
+        "pos": [
+          20.0,
+          54.1
+        ],
+        "angle": 0.0,
+        "layer": "B.Cu"
+      }
+    },
+    {
+      "ref": "R3",
+      "before": {
+        "pos": [
+          28.0,
+          72.0
+        ],
+        "angle": 0.0,
+        "layer": "B.Cu"
+      },
+      "after": {
+        "pos": [
+          28.0,
+          72.325
+        ],
+        "angle": 180.0,
+        "layer": "B.Cu"
+      }
+    },
+    {
+      "ref": "J2",
+      "before": {
+        "pos": [
+          18.034,
+          77.851
+        ],
+        "angle": 0.0,
+        "layer": "B.Cu"
+      },
+      "after": {
+        "pos": [
+          15.5,
+          80.2
+        ],
+        "angle": 0.0,
+        "layer": "B.Cu"
+      }
+    },
+    {
+      "ref": "C18",
+      "before": {
+        "pos": [
+          16.4,
+          59.8
+        ],
+        "angle": 0.0,
+        "layer": "B.Cu"
+      },
+      "after": {
+        "pos": [
+          17.7,
+          59.9
+        ],
+        "angle": 180.0,
+        "layer": "B.Cu"
+      }
+    },
+    {
+      "ref": "R14",
+      "before": {
+        "pos": [
+          35.052,
+          59.561
+        ],
+        "angle": 90.0,
+        "layer": "B.Cu"
+      },
+      "after": {
+        "pos": [
+          32.0,
+          66.8
+        ],
+        "angle": 0.0,
+        "layer": "B.Cu"
+      }
+    },
+    {
+      "ref": "C7",
+      "before": {
+        "pos": [
+          17.2,
+          66.2
+        ],
+        "angle": 0.0,
+        "layer": "B.Cu"
+      },
+      "after": {
+        "pos": [
+          18.5,
+          67.5
+        ],
+        "angle": 180.0,
+        "layer": "B.Cu"
+      }
+    }
+  ],
+  "mechanical_2d_checks": [],
+  "tag_connect_max_body_front_pad_clearance_mm": 1.339,
+  "tag_connect_nearest_front_part": [
+    "MX3",
+    ""
+  ],
+  "drc_errors": 0,
+  "unconnected": 0,
+  "schematic_parity": 0,
+  "drc_warnings_by_type": {
+    "track_dangling": 16,
+    "via_dangling": 3,
+    "silk_edge_clearance": 3,
+    "lib_footprint_mismatch": 91,
+    "silk_overlap": 11,
+    "silk_over_copper": 26
+  },
+  "usb_resistor_to_mcu_mm": {
+    "Net-(U5-USB_DM)": 6.4544,
+    "Net-(U5-USB_DP)": 6.7096
+  }
+}
