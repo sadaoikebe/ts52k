@@ -19157,7 +19157,7 @@
 				)
 			)
 		)
-		(property "Value" "SW_Push"
+		(property "Value" "TS-1187A-B-A-B"
 			(at 27.94 135.89 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19167,7 +19167,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Button_Switch_SMD:Panasonic_EVQPUJ_EVQPUA"
+		(property "Footprint" "rp2040:SW_Tactile_XKB_TS-1187A_5.1x5.1mm"
 			(at 25.4 133.35 0)
 			(hide yes)
 			(show_name no)
@@ -19178,7 +19178,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.helloxkb.com/uploads/qingchukaiguan/TS-1187A-X-X-X.pdf"
 			(at 25.4 133.35 0)
 			(hide yes)
 			(show_name no)
@@ -19199,6 +19199,16 @@
 					(size 1.27 1.27)
 				)
 			)
+		)
+		(property "LCSC" "C318884"
+			(at 25.4 133.35 0)
+			(hide yes)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "MPN" "TS-1187A-B-A-B"
+			(at 25.4 133.35 0)
+			(hide yes)
+			(effects (font (size 1.27 1.27)))
 		)
 		(pin "2"
 			(uuid "a520f173-7e3f-460f-93e3-00517a83acb9")
