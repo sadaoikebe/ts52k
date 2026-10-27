@@ -1,6 +1,7 @@
 {
-  "board_sha256": "404a6dba5b5277c70e25a0c3c631d663b3eaaad013ca1541c25a21617bc9815c",
-  "fixed_unchanged": [
+  "board_sha256": "34571204eb4b46cd8918b2d33a34009c33da0545bf9a86f45ed1b2479f8d25c6",
+  "comparison_commit": "065d150",
+  "fixed_footprints_unchanged": [
     "MX2",
     "MX4",
     "MX11",
@@ -54,1106 +55,430 @@
     "MX26",
     "SW2",
     "MX3",
+    "D14",
+    "D63",
+    "D46",
+    "D25",
+    "D16",
+    "D12",
+    "D17",
+    "D29",
+    "D30",
+    "D31",
+    "D33",
+    "D35",
+    "D37",
+    "D40",
+    "D42",
+    "D43",
+    "D44",
+    "D47",
+    "D49",
+    "D56",
+    "D58",
+    "D65",
+    "D34",
+    "D18",
+    "D53",
+    "D27",
+    "D11",
+    "D51",
+    "D26",
+    "D23",
+    "D22",
+    "D21",
+    "D20",
+    "D55",
+    "D61",
+    "D8",
+    "D7",
+    "D5",
+    "D4",
+    "D2",
+    "D38",
+    "D64",
+    "D68",
+    "D3",
+    "D52",
+    "D39",
+    "D70",
+    "D66",
+    "D9",
+    "D13",
+    "D48",
     "J1",
     "R5",
     "R6",
     "U2",
+    "D87",
+    "D88",
+    "X2",
+    "C6",
+    "C17",
+    "C14",
+    "U3",
+    "C8",
+    "SW1",
+    "C10",
+    "C13",
+    "C21",
+    "C9",
     "R8",
+    "C12",
+    "C2",
     "R7",
+    "C3",
     "C19",
-    "C20"
+    "C5",
+    "R4",
+    "U5",
+    "C4",
+    "C20",
+    "R3",
+    "J2",
+    "C18",
+    "C7"
   ],
   "moved": [
     {
-      "ref": "D8",
-      "before": {
-        "pos": [
-          47.244,
-          60.603067
-        ],
-        "angle": 90.0,
-        "layer": "B.Cu"
-      },
-      "after": {
-        "pos": [
-          47.244,
-          63.3
-        ],
-        "angle": 90.0,
-        "layer": "B.Cu"
-      }
-    },
-    {
-      "ref": "D2",
-      "before": {
-        "pos": [
-          17.018,
-          54.411791
-        ],
-        "angle": 90.0,
-        "layer": "B.Cu"
-      },
-      "after": {
-        "pos": [
-          12.5,
-          58.5
-        ],
-        "angle": 0.0,
-        "layer": "B.Cu"
-      }
-    },
-    {
       "ref": "C16",
-      "before": {
-        "pos": [
-          28.8,
-          64.5
-        ],
-        "angle": 0.0,
-        "layer": "B.Cu"
-      },
-      "after": {
-        "pos": [
-          29.8,
-          65.0
-        ],
-        "angle": 0.0,
-        "layer": "B.Cu"
-      }
+      "before": [
+        29.8,
+        65.0
+      ],
+      "after": [
+        30.1,
+        67.8
+      ],
+      "angle": 0.0
     },
     {
       "ref": "R2",
-      "before": {
-        "pos": [
-          30.2,
-          66.6
-        ],
-        "angle": -90.0,
-        "layer": "B.Cu"
-      },
-      "after": {
-        "pos": [
-          49.3,
-          46.6
-        ],
-        "angle": 0.0,
-        "layer": "B.Cu"
-      }
-    },
-    {
-      "ref": "X2",
-      "before": {
-        "pos": [
-          24.5,
-          71.5
-        ],
-        "angle": 180.0,
-        "layer": "B.Cu"
-      },
-      "after": {
-        "pos": [
-          18.7,
-          70.0
-        ],
-        "angle": 180.0,
-        "layer": "B.Cu"
-      }
-    },
-    {
-      "ref": "C6",
-      "before": {
-        "pos": [
-          16.5,
-          57.8
-        ],
-        "angle": 0.0,
-        "layer": "B.Cu"
-      },
-      "after": {
-        "pos": [
-          21.1,
-          58.9
-        ],
-        "angle": 90.0,
-        "layer": "B.Cu"
-      }
-    },
-    {
-      "ref": "C17",
-      "before": {
-        "pos": [
-          16.4,
-          63.5
-        ],
-        "angle": 0.0,
-        "layer": "B.Cu"
-      },
-      "after": {
-        "pos": [
-          19.5,
-          65.0
-        ],
-        "angle": 180.0,
-        "layer": "B.Cu"
-      }
+      "before": [
+        49.3,
+        46.6
+      ],
+      "after": [
+        36.5,
+        56.1
+      ],
+      "angle": 0.0
     },
     {
       "ref": "R11",
-      "before": {
-        "pos": [
-          34.036,
-          59.561
-        ],
-        "angle": 90.0,
-        "layer": "B.Cu"
-      },
-      "after": {
-        "pos": [
-          29.6696,
-          56.8
-        ],
-        "angle": -90.0,
-        "layer": "B.Cu"
-      }
-    },
-    {
-      "ref": "C14",
-      "before": {
-        "pos": [
-          28.0,
-          70.5
-        ],
-        "angle": 0.0,
-        "layer": "B.Cu"
-      },
-      "after": {
-        "pos": [
-          15.3,
-          72.0
-        ],
-        "angle": 180.0,
-        "layer": "B.Cu"
-      }
-    },
-    {
-      "ref": "U3",
-      "before": {
-        "pos": [
-          20.066,
-          51.562
-        ],
-        "angle": -90.0,
-        "layer": "B.Cu"
-      },
-      "after": {
-        "pos": [
-          17.4,
-          51.9
-        ],
-        "angle": 0.0,
-        "layer": "B.Cu"
-      }
-    },
-    {
-      "ref": "C8",
-      "before": {
-        "pos": [
-          20.5,
-          56.6
-        ],
-        "angle": 90.0,
-        "layer": "B.Cu"
-      },
-      "after": {
-        "pos": [
-          22.65,
-          58.6
-        ],
-        "angle": 90.0,
-        "layer": "B.Cu"
-      }
-    },
-    {
-      "ref": "C10",
-      "before": {
-        "pos": [
-          21.5,
-          68.0
-        ],
-        "angle": 90.0,
-        "layer": "B.Cu"
-      },
-      "after": {
-        "pos": [
-          23.5,
-          69.9
-        ],
-        "angle": -90.0,
-        "layer": "B.Cu"
-      }
+      "before": [
+        29.6696,
+        56.8
+      ],
+      "after": [
+        29.3696,
+        57.15
+      ],
+      "angle": -90.0
     },
     {
       "ref": "R13",
-      "before": {
-        "pos": [
-          36.068,
-          59.561
-        ],
-        "angle": 90.0,
-        "layer": "B.Cu"
-      },
-      "after": {
-        "pos": [
-          25.6696,
-          56.8
-        ],
-        "angle": -90.0,
-        "layer": "B.Cu"
-      }
-    },
-    {
-      "ref": "C13",
-      "before": {
-        "pos": [
-          23.8,
-          54.8
-        ],
-        "angle": 90.0,
-        "layer": "B.Cu"
-      },
-      "after": {
-        "pos": [
-          24.2,
-          58.7
-        ],
-        "angle": 90.0,
-        "layer": "B.Cu"
-      }
+      "before": [
+        25.6696,
+        56.8
+      ],
+      "after": [
+        25.4196,
+        57.15
+      ],
+      "angle": -90.0
     },
     {
       "ref": "R12",
-      "before": {
-        "pos": [
-          33.02,
-          59.561
-        ],
-        "angle": 90.0,
-        "layer": "B.Cu"
-      },
-      "after": {
-        "pos": [
-          28.6696,
-          56.85
-        ],
-        "angle": -90.0,
-        "layer": "B.Cu"
-      }
+      "before": [
+        28.6696,
+        56.85
+      ],
+      "after": [
+        28.4196,
+        57.2
+      ],
+      "angle": -90.0
     },
     {
       "ref": "U4",
-      "before": {
-        "pos": [
-          35.306,
-          63.5
-        ],
-        "angle": 0.0,
-        "layer": "B.Cu"
-      },
-      "after": {
-        "pos": [
-          42.5,
-          48.7
-        ],
-        "angle": 0.0,
-        "layer": "B.Cu"
-      }
-    },
-    {
-      "ref": "C21",
-      "before": {
-        "pos": [
-          35.56,
-          47.244
-        ],
-        "angle": 0.0,
-        "layer": "B.Cu"
-      },
-      "after": {
-        "pos": [
-          14.2,
-          52.2
-        ],
-        "angle": 180.0,
-        "layer": "B.Cu"
-      }
-    },
-    {
-      "ref": "C9",
-      "before": {
-        "pos": [
-          22.0,
-          56.6
-        ],
-        "angle": 90.0,
-        "layer": "B.Cu"
-      },
-      "after": {
-        "pos": [
-          24.65,
-          54.8
-        ],
-        "angle": 90.0,
-        "layer": "B.Cu"
-      }
+      "before": [
+        42.5,
+        48.7
+      ],
+      "after": [
+        35.4,
+        60.0
+      ],
+      "angle": 180.0
     },
     {
       "ref": "R10",
-      "before": {
-        "pos": [
-          38.1,
-          59.561
-        ],
-        "angle": 90.0,
-        "layer": "B.Cu"
-      },
-      "after": {
-        "pos": [
-          27.6696,
-          56.85
-        ],
-        "angle": -90.0,
-        "layer": "B.Cu"
-      }
+      "before": [
+        27.6696,
+        56.85
+      ],
+      "after": [
+        27.4196,
+        57.2
+      ],
+      "angle": -90.0
     },
     {
       "ref": "R9",
-      "before": {
-        "pos": [
-          37.084,
-          59.561
-        ],
-        "angle": 90.0,
-        "layer": "B.Cu"
-      },
-      "after": {
-        "pos": [
-          26.6696,
-          56.8
-        ],
-        "angle": -90.0,
-        "layer": "B.Cu"
-      }
-    },
-    {
-      "ref": "SW1",
-      "before": {
-        "pos": [
-          46.609,
-          66.675
-        ],
-        "angle": 180.0,
-        "layer": "B.Cu"
-      },
-      "after": {
-        "pos": [
-          47.6,
-          78.2
-        ],
-        "angle": 180.0,
-        "layer": "B.Cu"
-      }
-    },
-    {
-      "ref": "C12",
-      "before": {
-        "pos": [
-          23.5,
-          68.0
-        ],
-        "angle": 90.0,
-        "layer": "B.Cu"
-      },
-      "after": {
-        "pos": [
-          24.8,
-          69.6
-        ],
-        "angle": -90.0,
-        "layer": "B.Cu"
-      }
-    },
-    {
-      "ref": "C2",
-      "before": {
-        "pos": [
-          37.592,
-          47.244
-        ],
-        "angle": 0.0,
-        "layer": "B.Cu"
-      },
-      "after": {
-        "pos": [
-          18.2,
-          56.8
-        ],
-        "angle": 0.0,
-        "layer": "B.Cu"
-      }
-    },
-    {
-      "ref": "C3",
-      "before": {
-        "pos": [
-          33.3,
-          50.8
-        ],
-        "angle": 0.0,
-        "layer": "B.Cu"
-      },
-      "after": {
-        "pos": [
-          20.0,
-          53.0
-        ],
-        "angle": 0.0,
-        "layer": "B.Cu"
-      }
-    },
-    {
-      "ref": "C5",
-      "before": {
-        "pos": [
-          35.56,
-          45.974
-        ],
-        "angle": 0.0,
-        "layer": "B.Cu"
-      },
-      "after": {
-        "pos": [
-          14.2,
-          51.0
-        ],
-        "angle": 0.0,
-        "layer": "B.Cu"
-      }
-    },
-    {
-      "ref": "R4",
-      "before": {
-        "pos": [
-          17.2,
-          67.7
-        ],
-        "angle": 0.0,
-        "layer": "B.Cu"
-      },
-      "after": {
-        "pos": [
-          17.0,
-          67.3
-        ],
-        "angle": 180.0,
-        "layer": "B.Cu"
-      }
-    },
-    {
-      "ref": "U5",
-      "before": {
-        "pos": [
-          22.8,
-          62.5
-        ],
-        "angle": 180.0,
-        "layer": "B.Cu"
-      },
-      "after": {
-        "pos": [
-          24.6696,
-          64.0
-        ],
-        "angle": 180.0,
-        "layer": "B.Cu"
-      }
+      "before": [
+        26.6696,
+        56.8
+      ],
+      "after": [
+        26.4196,
+        57.15
+      ],
+      "angle": -90.0
     },
     {
       "ref": "C11",
-      "before": {
-        "pos": [
-          23.5,
-          56.6
-        ],
-        "angle": 90.0,
-        "layer": "B.Cu"
-      },
-      "after": {
-        "pos": [
-          49.3,
-          49.6
-        ],
-        "angle": 0.0,
-        "layer": "B.Cu"
-      }
+      "before": [
+        49.3,
+        49.6
+      ],
+      "after": [
+        29.75,
+        59.5
+      ],
+      "angle": 90.0
     },
     {
       "ref": "C15",
-      "before": {
-        "pos": [
-          28.8,
-          62.0
-        ],
-        "angle": 0.0,
-        "layer": "B.Cu"
-      },
-      "after": {
-        "pos": [
-          29.4,
-          59.8
-        ],
-        "angle": 90.0,
-        "layer": "B.Cu"
-      }
-    },
-    {
-      "ref": "C4",
-      "before": {
-        "pos": [
-          33.3,
-          52.2
-        ],
-        "angle": 0.0,
-        "layer": "B.Cu"
-      },
-      "after": {
-        "pos": [
-          20.0,
-          54.1
-        ],
-        "angle": 0.0,
-        "layer": "B.Cu"
-      }
-    },
-    {
-      "ref": "R3",
-      "before": {
-        "pos": [
-          28.0,
-          72.0
-        ],
-        "angle": 0.0,
-        "layer": "B.Cu"
-      },
-      "after": {
-        "pos": [
-          21.3,
-          69.0
-        ],
-        "angle": 90.0,
-        "layer": "B.Cu"
-      }
-    },
-    {
-      "ref": "J2",
-      "before": {
-        "pos": [
-          18.034,
-          77.851
-        ],
-        "angle": 0.0,
-        "layer": "B.Cu"
-      },
-      "after": {
-        "pos": [
-          15.5,
-          80.2
-        ],
-        "angle": 0.0,
-        "layer": "B.Cu"
-      }
-    },
-    {
-      "ref": "C18",
-      "before": {
-        "pos": [
-          16.4,
-          59.8
-        ],
-        "angle": 0.0,
-        "layer": "B.Cu"
-      },
-      "after": {
-        "pos": [
-          19.5,
-          61.4
-        ],
-        "angle": 180.0,
-        "layer": "B.Cu"
-      }
+      "before": [
+        29.4,
+        59.8
+      ],
+      "after": [
+        29.74,
+        61.0
+      ],
+      "angle": 0.0
     },
     {
       "ref": "R14",
-      "before": {
-        "pos": [
-          35.052,
-          59.561
-        ],
-        "angle": 90.0,
-        "layer": "B.Cu"
-      },
-      "after": {
-        "pos": [
-          52.3,
-          48.1
-        ],
-        "angle": 0.0,
-        "layer": "B.Cu"
-      }
-    },
-    {
-      "ref": "C7",
-      "before": {
-        "pos": [
-          17.2,
-          66.2
-        ],
-        "angle": 0.0,
-        "layer": "B.Cu"
-      },
-      "after": {
-        "pos": [
-          19.0,
-          67.3
-        ],
-        "angle": 180.0,
-        "layer": "B.Cu"
-      }
+      "before": [
+        52.3,
+        48.1
+      ],
+      "after": [
+        39.6,
+        56.4
+      ],
+      "angle": 0.0
     }
   ],
-  "mechanical_2d_checks": [
-    {
-      "ref": "C10",
-      "nearest_front_part": "MX3",
-      "pad": "",
-      "clearance_mm": 5.8857
-    },
-    {
-      "ref": "C11",
-      "nearest_front_part": "MX11",
-      "pad": "1",
-      "clearance_mm": 1.0437
-    },
-    {
-      "ref": "C12",
-      "nearest_front_part": "MX3",
-      "pad": "",
-      "clearance_mm": 7.1894
-    },
-    {
-      "ref": "C13",
-      "nearest_front_part": "MX7",
-      "pad": "",
-      "clearance_mm": 3.8229
-    },
-    {
-      "ref": "C14",
-      "nearest_front_part": "MX3",
-      "pad": "",
-      "clearance_mm": 0.6909
-    },
-    {
-      "ref": "C15",
-      "nearest_front_part": "MX7",
-      "pad": "",
-      "clearance_mm": 3.303
-    },
+  "mechanical_checks": [
     {
       "ref": "C16",
-      "nearest_front_part": "MX8",
-      "pad": "1",
-      "clearance_mm": 5.7078
-    },
-    {
-      "ref": "C17",
-      "nearest_front_part": "MX3",
-      "pad": "2",
-      "clearance_mm": 4.1594
-    },
-    {
-      "ref": "C18",
-      "nearest_front_part": "MX2",
-      "pad": "",
-      "clearance_mm": 6.4712
-    },
-    {
-      "ref": "C2",
-      "nearest_front_part": "MX2",
-      "pad": "",
-      "clearance_mm": 2.2368
-    },
-    {
-      "ref": "C21",
-      "nearest_front_part": "MX2",
-      "pad": "",
-      "clearance_mm": 1.2338
-    },
-    {
-      "ref": "C3",
-      "nearest_front_part": "MX2",
-      "pad": "",
-      "clearance_mm": 3.7971
-    },
-    {
-      "ref": "C4",
-      "nearest_front_part": "MX2",
-      "pad": "",
-      "clearance_mm": 3.6159
-    },
-    {
-      "ref": "C5",
-      "nearest_front_part": "MX2",
-      "pad": "2",
-      "clearance_mm": 0.3674
-    },
-    {
-      "ref": "C6",
-      "nearest_front_part": "MX2",
-      "pad": "",
-      "clearance_mm": 5.9659
-    },
-    {
-      "ref": "C7",
-      "nearest_front_part": "MX3",
-      "pad": "2",
-      "clearance_mm": 2.6488
-    },
-    {
-      "ref": "C8",
-      "nearest_front_part": "MX7",
-      "pad": "",
-      "clearance_mm": 5.044
-    },
-    {
-      "ref": "C9",
-      "nearest_front_part": "MX7",
-      "pad": "",
-      "clearance_mm": 2.2725
-    },
-    {
-      "ref": "D2",
-      "nearest_front_part": "MX2",
-      "pad": "",
-      "clearance_mm": 0.6643
-    },
-    {
-      "ref": "D8",
-      "nearest_front_part": "MX8",
-      "pad": "2",
-      "clearance_mm": 5.1433
-    },
-    {
-      "ref": "J2",
-      "nearest_front_part": "MX3",
-      "pad": "",
-      "clearance_mm": 2.3889
-    },
-    {
-      "ref": "R10",
-      "nearest_front_part": "MX7",
-      "pad": "",
-      "clearance_mm": 0.2823
-    },
-    {
-      "ref": "R11",
-      "nearest_front_part": "MX7",
-      "pad": "",
-      "clearance_mm": 0.5747
-    },
-    {
-      "ref": "R12",
-      "nearest_front_part": "MX7",
-      "pad": "",
-      "clearance_mm": 0.2763
-    },
-    {
-      "ref": "R13",
-      "nearest_front_part": "MX7",
-      "pad": "",
-      "clearance_mm": 1.5122
-    },
-    {
-      "ref": "R14",
-      "nearest_front_part": "MX11",
-      "pad": "2",
-      "clearance_mm": 0.9081
+      "gap_mm": 3.3339433978778765,
+      "front_ref": "MX8",
+      "front_pad": "1"
     },
     {
       "ref": "R2",
-      "nearest_front_part": "MX11",
-      "pad": "1",
-      "clearance_mm": 4.0337
+      "gap_mm": 0.40064525162765297,
+      "front_ref": "MX7",
+      "front_pad": ""
     },
     {
-      "ref": "R3",
-      "nearest_front_part": "MX3",
-      "pad": "",
-      "clearance_mm": 4.593
+      "ref": "R11",
+      "gap_mm": 0.7125015629574593,
+      "front_ref": "MX7",
+      "front_pad": ""
     },
     {
-      "ref": "R4",
-      "nearest_front_part": "MX3",
-      "pad": "2",
-      "clearance_mm": 0.7672
+      "ref": "R13",
+      "gap_mm": 1.9031611589505293,
+      "front_ref": "MX7",
+      "front_pad": ""
     },
     {
-      "ref": "R9",
-      "nearest_front_part": "MX7",
-      "pad": "",
-      "clearance_mm": 0.6943
-    },
-    {
-      "ref": "SW1",
-      "nearest_front_part": "MX8",
-      "pad": "",
-      "clearance_mm": 0.371
-    },
-    {
-      "ref": "U3",
-      "nearest_front_part": "MX2",
-      "pad": "",
-      "clearance_mm": 0.5115
+      "ref": "R12",
+      "gap_mm": 0.626250000000006,
+      "front_ref": "MX7",
+      "front_pad": ""
     },
     {
       "ref": "U4",
-      "nearest_front_part": "MX11",
-      "pad": "1",
-      "clearance_mm": 0.4356
+      "gap_mm": 0.3373500000000078,
+      "front_ref": "MX7",
+      "front_pad": ""
+    },
+    {
+      "ref": "R10",
+      "gap_mm": 0.6717058028652022,
+      "front_ref": "MX7",
+      "front_pad": ""
+    },
+    {
+      "ref": "R9",
+      "gap_mm": 1.1199847908270961,
+      "front_ref": "MX7",
+      "front_pad": ""
+    },
+    {
+      "ref": "C11",
+      "gap_mm": 2.9440385558778313,
+      "front_ref": "MX7",
+      "front_pad": ""
+    },
+    {
+      "ref": "C15",
+      "gap_mm": 4.374704261405064,
+      "front_ref": "MX7",
+      "front_pad": ""
+    },
+    {
+      "ref": "R14",
+      "gap_mm": 0.3138552640182195,
+      "front_ref": "MX7",
+      "front_pad": ""
     },
     {
       "ref": "U5",
-      "nearest_front_part": "MX7",
-      "pad": "",
-      "clearance_mm": 4.2971
+      "gap_mm": 4.297050000000006,
+      "front_ref": "MX7",
+      "front_pad": ""
     },
     {
       "ref": "X2",
-      "nearest_front_part": "MX3",
-      "pad": "2",
-      "clearance_mm": 1.0287
-    }
-  ],
-  "tag_connect_max_body_front_pad_clearance_mm": 1.339,
-  "tag_connect_nearest_front_part": [
-    "MX3",
-    ""
-  ],
-  "drc_errors": 0,
-  "unconnected": 0,
-  "schematic_parity": 0,
-  "drc_warnings_by_type": {
-    "track_dangling": 2,
-    "via_dangling": 1,
-    "silk_edge_clearance": 3,
-    "lib_footprint_mismatch": 91,
-    "silk_overlap": 11,
-    "silk_over_copper": 22
-  },
-  "usb_resistor_to_mcu_mm": {
-    "Net-(U5-USB_DM)": 7.4352,
-    "Net-(U5-USB_DP)": 7.4352
-  },
-  "mechanical_courtyard_checks_count": 35,
-  "minimum_rear_to_front_pin_clearance_mm": 0.2763,
-  "new_track_octilinear_failures": [],
-  "matrix_original_tracks_modified": [],
-  "matrix_isolated_remnants_removed": [
-    {
-      "net": "col2",
-      "start": [
-        25.29386,
-        67.37837
-      ],
-      "end": [
-        25.29386,
-        69.309981
-      ],
-      "width": 0.25,
-      "layer": "B.Cu",
-      "uuid": "12d370b7-fccf-4c8d-bb79-f202ac772639",
-      "via": false
+      "gap_mm": 1.0287000000000006,
+      "front_ref": "MX3",
+      "front_pad": "2"
     },
     {
-      "net": "col4",
-      "start": [
-        24.79386,
-        69.304699
-      ],
-      "end": [
-        24.79386,
-        67.37837
-      ],
-      "width": 0.25,
-      "layer": "B.Cu",
-      "uuid": "53fcc3ef-6d33-4041-ba6b-4f367c32f3da",
-      "via": false
+      "ref": "J2",
+      "gap_mm": 2.388878324988542,
+      "front_ref": "MX3",
+      "front_pad": ""
     },
     {
-      "net": "col5",
-      "start": [
-        24.29386,
-        67.37837
-      ],
-      "end": [
-        24.29386,
-        69.299758
-      ],
-      "width": 0.25,
-      "layer": "B.Cu",
-      "uuid": "6b59388c-d331-4a70-969f-b47393e3726a",
-      "via": false
+      "ref": "SW1",
+      "gap_mm": 0.6950000000000003,
+      "front_ref": "MX8",
+      "front_pad": ""
     }
   ],
-  "mcu_to_existing_endpoints": [
+  "original_matrix_tracks_unchanged": 603,
+  "mcu_back_connections": [
     {
       "pin": 2,
       "net": "rpg1",
-      "original_endpoint_mm": [
-        42.029239,
-        57.15024
-      ],
-      "back_only_connected": true
+      "back_only": true
     },
     {
       "pin": 3,
       "net": "rpg2",
-      "original_endpoint_mm": [
-        42.215636,
-        57.60024
-      ],
-      "back_only_connected": true
+      "back_only": true
     },
     {
       "pin": 4,
       "net": "row1",
-      "original_endpoint_mm": [
-        42.00922,
-        58.443051
-      ],
-      "back_only_connected": true
+      "back_only": true
     },
     {
       "pin": 5,
       "net": "row2",
-      "original_endpoint_mm": [
-        41.870616,
-        59.218051
-      ],
-      "back_only_connected": true
+      "back_only": true
     },
     {
       "pin": 6,
       "net": "col3",
-      "original_endpoint_mm": [
-        42.057012,
-        59.668051
-      ],
-      "back_only_connected": true
+      "back_only": true
     },
     {
       "pin": 13,
       "net": "col2",
-      "original_endpoint_mm": [
-        42.243408,
-        60.118051
-      ],
-      "back_only_connected": true
+      "back_only": true
     },
     {
       "pin": 14,
       "net": "col4",
-      "original_endpoint_mm": [
-        26.98169,
-        73.480548
-      ],
-      "back_only_connected": true
+      "back_only": true
     },
     {
       "pin": 15,
       "net": "col5",
-      "original_endpoint_mm": [
-        25.95315,
-        73.619431
-      ],
-      "back_only_connected": true
+      "back_only": true
     },
     {
       "pin": 16,
       "net": "col6",
-      "original_endpoint_mm": [
-        25.35114,
-        73.653817
-      ],
-      "back_only_connected": true
+      "back_only": true
     },
     {
       "pin": 17,
       "net": "row3",
-      "original_endpoint_mm": [
-        24.64462,
-        73.583693
-      ],
-      "back_only_connected": true
+      "back_only": true
     },
     {
       "pin": 18,
       "net": "row4",
-      "original_endpoint_mm": [
-        24.034226,
-        73.609695
-      ],
-      "back_only_connected": true
+      "back_only": true
     },
     {
       "pin": 27,
       "net": "row5",
-      "original_endpoint_mm": [
-        23.432069,
-        73.643934
-      ],
-      "back_only_connected": true
+      "back_only": true
     },
     {
       "pin": 28,
       "net": "col1",
-      "original_endpoint_mm": [
-        22.733716,
-        73.581977
-      ],
-      "back_only_connected": true
+      "back_only": true
     }
   ],
-  "track_lengths_mm": {
-    "atmega_all": {
-      "F.Cu": 125.1084,
-      "B.Cu": 4651.9679
+  "usb_tracks_unchanged": 29,
+  "usb_lengths_mm": {
+    "Net-(U5-USB_DM)": 7.435177777210907,
+    "Net-(U5-USB_DP)": 7.435178191424468
+  },
+  "new_or_modified_tracks_octilinear": true,
+  "flash_mcu_center_distance_mm": {
+    "before": 23.494960399200504,
+    "after": 11.451702238532052
+  },
+  "qspi_track_lengths_mm_excluding_resistor_body_and_via_barrels": {
+    "before": {
+      "QSPI_SCLK": 32.12824372316622,
+      "QSPI_SD0": 28.409005614730315,
+      "QSPI_SD1": 17.678853681500254,
+      "QSPI_SD2": 20.98179823507966,
+      "QSPI_SD3": 32.32616331647288
     },
-    "previous_all": {
-      "F.Cu": 445.0063,
-      "B.Cu": 4306.9307
-    },
-    "current_all": {
-      "F.Cu": 171.9561,
-      "B.Cu": 4551.8778
-    },
-    "previous_added": {
-      "F.Cu": 378.7924,
-      "B.Cu": 393.2858
-    },
-    "current_added": {
-      "F.Cu": 105.7422,
-      "B.Cu": 637.4676
+    "after": {
+      "QSPI_SCLK": 10.559916782671557,
+      "QSPI_SD0": 13.096556121069147,
+      "QSPI_SD1": 14.752159537743918,
+      "QSPI_SD2": 15.9430034375827,
+      "QSPI_SD3": 17.56439924775733
     }
   },
-  "new_tracks": 328,
-  "new_vias": 65
+  "track_lengths_mm": {
+    "before": {
+      "F.Cu": 171.95611224247875,
+      "B.Cu": 4550.500562404667
+    },
+    "after": {
+      "F.Cu": 188.48155248605215,
+      "B.Cu": 4448.295732872338
+    }
+  },
+  "right_matrix_bundle_pitch_mm": 0.4,
+  "drc_errors": 0,
+  "unconnected": 0,
+  "schematic_parity": 0,
+  "warnings": {
+    "track_dangling": 3,
+    "via_dangling": 1,
+    "silk_edge_clearance": 3,
+    "lib_footprint_mismatch": 91,
+    "silk_overlap": 11,
+    "silk_over_copper": 24
+  }
 }
