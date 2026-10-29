@@ -1,77 +1,77 @@
 {
-  "comparison_commit": "bd6012f",
+  "comparison_commit": "3f8d45b",
   "moved": [
     {
-      "ref": "C16",
+      "ref": "C8",
       "before": [
-        30.1,
-        67.8
+        22.65,
+        58.6
       ],
       "after": [
-        29.75,
-        65.75
-      ],
-      "angle": -45.0
-    },
-    {
-      "ref": "R2",
-      "before": [
-        36.5,
-        56.1
-      ],
-      "after": [
-        33.0,
-        64.28
-      ],
-      "angle": 0.0
-    },
-    {
-      "ref": "U4",
-      "before": [
-        35.4,
-        60.0
-      ],
-      "after": [
-        34.6,
-        60.9
-      ],
-      "angle": 0.0
-    },
-    {
-      "ref": "C11",
-      "before": [
-        29.75,
-        59.5
-      ],
-      "after": [
-        37.8,
-        64.29
-      ],
-      "angle": 180.0
-    },
-    {
-      "ref": "C15",
-      "before": [
-        29.74,
-        61.0
-      ],
-      "after": [
-        29.2,
-        60.09
+        22.65,
+        58.75
       ],
       "angle": 90.0
     },
     {
-      "ref": "R14",
+      "ref": "C10",
       "before": [
-        39.6,
-        56.4
+        23.5,
+        69.9
       ],
       "after": [
-        35.1,
-        64.28
+        23.74,
+        69.5
       ],
-      "angle": 0.0
+      "angle": -90.0
+    },
+    {
+      "ref": "R13",
+      "before": [
+        25.4196,
+        57.15
+      ],
+      "after": [
+        25.4196,
+        56.8
+      ],
+      "angle": -90.0
+    },
+    {
+      "ref": "C9",
+      "before": [
+        24.65,
+        54.8
+      ],
+      "after": [
+        25.13,
+        58.65
+      ],
+      "angle": 90.0
+    },
+    {
+      "ref": "R10",
+      "before": [
+        27.4196,
+        57.2
+      ],
+      "after": [
+        27.4196,
+        56.85
+      ],
+      "angle": -90.0
+    },
+    {
+      "ref": "R9",
+      "before": [
+        26.4196,
+        57.15
+      ],
+      "after": [
+        26.4196,
+        56.8
+      ],
+      "angle": -90.0
     }
   ],
   "fixed_footprints_unchanged": [
@@ -185,22 +185,19 @@
     "U2",
     "D87",
     "D88",
+    "C16",
+    "R2",
     "X2",
     "C6",
     "C17",
     "R11",
     "C14",
     "U3",
-    "C8",
     "SW1",
-    "C10",
-    "R13",
     "C13",
     "R12",
+    "U4",
     "C21",
-    "C9",
-    "R10",
-    "R9",
     "R8",
     "C12",
     "C2",
@@ -210,11 +207,14 @@
     "C5",
     "R4",
     "U5",
+    "C11",
+    "C15",
     "C4",
     "C20",
     "R3",
     "J2",
     "C18",
+    "R14",
     "C7"
   ],
   "original_matrix_tracks_unchanged": 603,
@@ -289,40 +289,40 @@
   "new_or_modified_tracks_octilinear": true,
   "mechanical_checks": [
     {
-      "ref": "C16",
-      "gap_mm": 4.667397494002027,
-      "front_ref": "MX8",
-      "front_pad": "1"
-    },
-    {
-      "ref": "R2",
-      "gap_mm": 5.414905309226568,
-      "front_ref": "MX8",
-      "front_pad": "1"
-    },
-    {
-      "ref": "U4",
-      "gap_mm": 1.2373500000000066,
+      "ref": "C8",
+      "gap_mm": 5.120150048900309,
       "front_ref": "MX7",
       "front_pad": ""
     },
     {
-      "ref": "C11",
-      "gap_mm": 3.3073237350357543,
-      "front_ref": "MX8",
-      "front_pad": "2"
+      "ref": "C10",
+      "gap_mm": 6.282693008314332,
+      "front_ref": "MX3",
+      "front_pad": ""
     },
     {
-      "ref": "C15",
-      "gap_mm": 3.562622558586858,
+      "ref": "R13",
+      "gap_mm": 1.7374552696475734,
       "front_ref": "MX7",
       "front_pad": ""
     },
     {
-      "ref": "R14",
-      "gap_mm": 4.971550981085033,
-      "front_ref": "MX8",
-      "front_pad": "2"
+      "ref": "C9",
+      "gap_mm": 3.118988519085823,
+      "front_ref": "MX7",
+      "front_pad": ""
+    },
+    {
+      "ref": "R10",
+      "gap_mm": 0.3339483579254312,
+      "front_ref": "MX7",
+      "front_pad": ""
+    },
+    {
+      "ref": "R9",
+      "gap_mm": 0.8811812620878984,
+      "front_ref": "MX7",
+      "front_pad": ""
     },
     {
       "ref": "U5",
@@ -351,35 +351,35 @@
   ],
   "qspi_lengths_mm": {
     "before": {
-      "QSPI_SCLK": 10.559916782671557,
-      "QSPI_SD0": 13.096556121069147,
-      "QSPI_SD1": 14.752159537743918,
-      "QSPI_SD2": 15.9430034375827,
-      "QSPI_SD3": 17.56439924775733
-    },
-    "after": {
       "QSPI_SCLK": 16.537895469031707,
       "QSPI_SD0": 15.500321997223015,
       "QSPI_SD1": 12.910970587477365,
       "QSPI_SD2": 12.892254533450435,
       "QSPI_SD3": 17.794708706130045
+    },
+    "after": {
+      "QSPI_SCLK": 17.443330273802463,
+      "QSPI_SD0": 16.40575680199379,
+      "QSPI_SD1": 13.010968587477365,
+      "QSPI_SD2": 12.892254533450435,
+      "QSPI_SD3": 19.015277189154254
     }
   },
   "track_lengths_mm": {
     "before": {
-      "F.Cu": 188.48155248605215,
-      "B.Cu": 4448.295732872338
-    },
-    "after": {
       "F.Cu": 170.82276451686474,
       "B.Cu": 4455.084327868399
+    },
+    "after": {
+      "F.Cu": 172.48906893117703,
+      "B.Cu": 4454.607564331576
     }
   },
   "decoupling_power_path_mm": {
     "before": {
-      "C11-U4.8": 21.189986704463173,
-      "C15-U5.1": 1.339152712132321,
-      "C16-U5.10": 3.8879738174212215,
+      "C11-U4.8": 1.5233147545195183,
+      "C15-U5.1": 1.472997256769669,
+      "C16-U5.10": 1.5098591181476493,
       "C6-U5.43": 1.6204214700769475,
       "C13-U5.48": 1.472813034319888,
       "C17-U5.33": 1.2883989999999983,
@@ -524,7 +524,19 @@
     }
   ],
   "reference_check_scope": "Three long B.Cu flash-side runs, x >= 31.8 mm; this does not assert continuous reference under all local escapes or via transitions.",
-  "board_sha256": "871dcf04238aa11243152f6b0cd908df07ebe4aef6a19c110a2c62e16e7c4dce",
+  "core_decoupling_power_path_mm": {
+    "before": {
+      "C8-U5.45": 1.6097620054047173,
+      "C9-U5.50": 5.409761298297128,
+      "C10-U5.23": 2.2547364593412738
+    },
+    "after": {
+      "C8-U5.45": 1.4597617125106936,
+      "C9-U5.50": 1.5766612116419498,
+      "C10-U5.23": 1.755325204371729
+    }
+  },
+  "board_sha256": "4565e1555cc1716f3c5d6644c38013f17335ee6d6cc05d4d964e7debe0e5f54e",
   "drc_errors": 0,
   "unconnected": 0,
   "schematic_parity": 0,
@@ -537,20 +549,26 @@
     "silk_over_copper": 24
   },
   "mcp_audit": {
-    "issues": 55,
-    "footprint_bounding_box_overlaps": 32,
+    "issues": 57,
+    "footprint_bounding_box_overlaps": 34,
     "keepout_or_boundary": 2,
     "silkscreen_over_pad": 18,
     "silkscreen_text_overlap": 3,
-    "note": "Includes front/rear projected bounding-box overlaps, intentional USB overhang, and the Tag-Connect contact keepout. Native courtyard DRC and separate rear-courtyard versus front-drilled-pad checks are used for physical placement acceptance."
+    "note": "Projected bounding boxes include opposite-side components. Actual courtyard DRC and front drilled-pad versus rear courtyard checks are recorded separately; existing silk issues remain."
   },
   "all_qspi_opposite_ground_projection": {
-    "before_uncovered_centerline_mm": 66.50851842361654,
-    "after_uncovered_centerline_mm": 36.07695146413336,
-    "note": "Includes via antipads, pad escapes, and remaining local crossings; not an SI simulation or an assertion of uninterrupted ground beneath every QSPI segment."
+    "before_uncovered_centerline_mm": 36.07695146413336,
+    "after_uncovered_centerline_mm": 38.13957958067402,
+    "note": "Includes antipads, escapes and local crossings. Long flash-side B.Cu reference corridors remain continuous; total local projection gaps increased with the revised resistor fanout."
   },
   "usb_lengths_mm": {
     "Net-(U5-USB_DM)": 7.435177777210907,
     "Net-(U5-USB_DP)": 7.435178191424468
-  }
+  },
+  "core_ground_stub_mm": {
+    "C8": 0.47,
+    "C9": 1.010243866176395,
+    "C10": 0.7604163056034262
+  },
+  "core_decoupling_scope": "Core supply capacitance and values unchanged; pad-center path length, excluding vertical via barrel length. All three capacitor-to-MCU paths are B.Cu only."
 }

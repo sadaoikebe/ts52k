@@ -1,7 +1,7 @@
 {
     "$schema": "https://schemas.kicad.org/drc.v1.json",
     "coordinate_units": "mm",
-    "date": "2026-10-30T01:44:55",
+    "date": "2026-10-30T02:03:45",
     "ignored_checks": [
         {
             "description": "Footprint has no courtyard defined",
@@ -1133,7 +1133,7 @@
                     "description": "Footprint C8",
                     "pos": {
                         "x": 22.65,
-                        "y": 58.6
+                        "y": 58.75
                     },
                     "uuid": "2653cb82-3fcb-4253-bd9d-01500c6aa431"
                 }
@@ -1147,8 +1147,8 @@
                 {
                     "description": "Footprint C10",
                     "pos": {
-                        "x": 23.5,
-                        "y": 69.9
+                        "x": 23.74,
+                        "y": 69.5
                     },
                     "uuid": "2d659a30-45a5-411d-8815-f986984dc57b"
                 }
@@ -1163,7 +1163,7 @@
                     "description": "Footprint R13",
                     "pos": {
                         "x": 25.4196,
-                        "y": 57.15
+                        "y": 56.8
                     },
                     "uuid": "2e8e1d01-3814-42d3-a378-7c27dc990ed2"
                 }
@@ -1237,8 +1237,8 @@
                 {
                     "description": "Footprint C9",
                     "pos": {
-                        "x": 24.65,
-                        "y": 54.8
+                        "x": 25.13,
+                        "y": 58.65
                     },
                     "uuid": "41a57b34-bcf6-4308-8656-0749953e7371"
                 }
@@ -1253,7 +1253,7 @@
                     "description": "Footprint R10",
                     "pos": {
                         "x": 27.4196,
-                        "y": 57.2
+                        "y": 56.85
                     },
                     "uuid": "564b1da1-7a0c-4120-8313-3706a8014843"
                 }
@@ -1268,7 +1268,7 @@
                     "description": "Footprint R9",
                     "pos": {
                         "x": 26.4196,
-                        "y": 57.15
+                        "y": 56.8
                     },
                     "uuid": "57ce0b28-52c2-4f2f-9ffa-1cfa997bfa2a"
                 }
@@ -1635,12 +1635,12 @@
                     "uuid": "60afee1a-9631-448d-8238-6e222c2ef5ea"
                 },
                 {
-                    "description": "Reference field of R7",
+                    "description": "Segment of R8 on B.Silkscreen",
                     "pos": {
-                        "x": 21.7916,
-                        "y": 52.7812
+                        "x": 23.5976,
+                        "y": 52.627559
                     },
-                    "uuid": "80f09c77-fba3-40cb-b443-7fd2387cf382"
+                    "uuid": "b69156ee-5855-4745-8c62-4eb27b95a876"
                 }
             ],
             "severity": "warning",
@@ -1658,12 +1658,12 @@
                     "uuid": "60afee1a-9631-448d-8238-6e222c2ef5ea"
                 },
                 {
-                    "description": "Segment of R8 on B.Silkscreen",
+                    "description": "Reference field of R7",
                     "pos": {
-                        "x": 23.5976,
-                        "y": 52.627559
+                        "x": 21.7916,
+                        "y": 52.7812
                     },
-                    "uuid": "b69156ee-5855-4745-8c62-4eb27b95a876"
+                    "uuid": "80f09c77-fba3-40cb-b443-7fd2387cf382"
                 }
             ],
             "severity": "warning",
@@ -2187,12 +2187,12 @@
                     "uuid": "60afee1a-9631-448d-8238-6e222c2ef5ea"
                 },
                 {
-                    "description": "Pad 1 [D-] of R7 on B.Cu",
+                    "description": "Pad 2 [Net-(U5-USB_DM)] of R7 on B.Cu",
                     "pos": {
                         "x": 22.9616,
-                        "y": 52.2712
+                        "y": 53.2912
                     },
-                    "uuid": "7e02a879-4ccf-4988-b13f-9d4661872a82"
+                    "uuid": "9abb7408-d85c-49d7-96c5-4fcd5256cb1e"
                 }
             ],
             "severity": "warning",
@@ -2210,12 +2210,12 @@
                     "uuid": "60afee1a-9631-448d-8238-6e222c2ef5ea"
                 },
                 {
-                    "description": "Pad 2 [Net-(U5-USB_DM)] of R7 on B.Cu",
+                    "description": "Pad 1 [D-] of R7 on B.Cu",
                     "pos": {
                         "x": 22.9616,
-                        "y": 53.2912
+                        "y": 52.2712
                     },
-                    "uuid": "9abb7408-d85c-49d7-96c5-4fcd5256cb1e"
+                    "uuid": "7e02a879-4ccf-4988-b13f-9d4661872a82"
                 }
             ],
             "severity": "warning",
@@ -2230,7 +2230,7 @@
                         "x": 29.1098,
                         "y": 61.2
                     },
-                    "uuid": "0c20898a-45d7-4103-abde-38947a793abd"
+                    "uuid": "707482e7-7d06-47cc-a1d1-ce9458f97fda"
                 },
                 {
                     "description": "Pad 1 [+3V3] of C15 on B.Cu",
@@ -2253,7 +2253,7 @@
                         "x": 29.1098,
                         "y": 61.2
                     },
-                    "uuid": "707482e7-7d06-47cc-a1d1-ce9458f97fda"
+                    "uuid": "0c20898a-45d7-4103-abde-38947a793abd"
                 },
                 {
                     "description": "Pad 1 [+3V3] of C15 on B.Cu",
