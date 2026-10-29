@@ -3,6 +3,7 @@
 !.gitignore
 !README.md
 !final.png
+!ground-reference.png
 !final-drc.json
 !before-drc.json
 !erc.json

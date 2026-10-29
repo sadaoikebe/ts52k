@@ -1,6 +1,79 @@
 {
-  "board_sha256": "34571204eb4b46cd8918b2d33a34009c33da0545bf9a86f45ed1b2479f8d25c6",
-  "comparison_commit": "065d150",
+  "comparison_commit": "bd6012f",
+  "moved": [
+    {
+      "ref": "C16",
+      "before": [
+        30.1,
+        67.8
+      ],
+      "after": [
+        29.75,
+        65.75
+      ],
+      "angle": -45.0
+    },
+    {
+      "ref": "R2",
+      "before": [
+        36.5,
+        56.1
+      ],
+      "after": [
+        33.0,
+        64.28
+      ],
+      "angle": 0.0
+    },
+    {
+      "ref": "U4",
+      "before": [
+        35.4,
+        60.0
+      ],
+      "after": [
+        34.6,
+        60.9
+      ],
+      "angle": 0.0
+    },
+    {
+      "ref": "C11",
+      "before": [
+        29.75,
+        59.5
+      ],
+      "after": [
+        37.8,
+        64.29
+      ],
+      "angle": 180.0
+    },
+    {
+      "ref": "C15",
+      "before": [
+        29.74,
+        61.0
+      ],
+      "after": [
+        29.2,
+        60.09
+      ],
+      "angle": 90.0
+    },
+    {
+      "ref": "R14",
+      "before": [
+        39.6,
+        56.4
+      ],
+      "after": [
+        35.1,
+        64.28
+      ],
+      "angle": 0.0
+    }
+  ],
   "fixed_footprints_unchanged": [
     "MX2",
     "MX4",
@@ -115,14 +188,19 @@
     "X2",
     "C6",
     "C17",
+    "R11",
     "C14",
     "U3",
     "C8",
     "SW1",
     "C10",
+    "R13",
     "C13",
+    "R12",
     "C21",
     "C9",
+    "R10",
+    "R9",
     "R8",
     "C12",
     "C2",
@@ -139,233 +217,8 @@
     "C18",
     "C7"
   ],
-  "moved": [
-    {
-      "ref": "C16",
-      "before": [
-        29.8,
-        65.0
-      ],
-      "after": [
-        30.1,
-        67.8
-      ],
-      "angle": 0.0
-    },
-    {
-      "ref": "R2",
-      "before": [
-        49.3,
-        46.6
-      ],
-      "after": [
-        36.5,
-        56.1
-      ],
-      "angle": 0.0
-    },
-    {
-      "ref": "R11",
-      "before": [
-        29.6696,
-        56.8
-      ],
-      "after": [
-        29.3696,
-        57.15
-      ],
-      "angle": -90.0
-    },
-    {
-      "ref": "R13",
-      "before": [
-        25.6696,
-        56.8
-      ],
-      "after": [
-        25.4196,
-        57.15
-      ],
-      "angle": -90.0
-    },
-    {
-      "ref": "R12",
-      "before": [
-        28.6696,
-        56.85
-      ],
-      "after": [
-        28.4196,
-        57.2
-      ],
-      "angle": -90.0
-    },
-    {
-      "ref": "U4",
-      "before": [
-        42.5,
-        48.7
-      ],
-      "after": [
-        35.4,
-        60.0
-      ],
-      "angle": 180.0
-    },
-    {
-      "ref": "R10",
-      "before": [
-        27.6696,
-        56.85
-      ],
-      "after": [
-        27.4196,
-        57.2
-      ],
-      "angle": -90.0
-    },
-    {
-      "ref": "R9",
-      "before": [
-        26.6696,
-        56.8
-      ],
-      "after": [
-        26.4196,
-        57.15
-      ],
-      "angle": -90.0
-    },
-    {
-      "ref": "C11",
-      "before": [
-        49.3,
-        49.6
-      ],
-      "after": [
-        29.75,
-        59.5
-      ],
-      "angle": 90.0
-    },
-    {
-      "ref": "C15",
-      "before": [
-        29.4,
-        59.8
-      ],
-      "after": [
-        29.74,
-        61.0
-      ],
-      "angle": 0.0
-    },
-    {
-      "ref": "R14",
-      "before": [
-        52.3,
-        48.1
-      ],
-      "after": [
-        39.6,
-        56.4
-      ],
-      "angle": 0.0
-    }
-  ],
-  "mechanical_checks": [
-    {
-      "ref": "C16",
-      "gap_mm": 3.3339433978778765,
-      "front_ref": "MX8",
-      "front_pad": "1"
-    },
-    {
-      "ref": "R2",
-      "gap_mm": 0.40064525162765297,
-      "front_ref": "MX7",
-      "front_pad": ""
-    },
-    {
-      "ref": "R11",
-      "gap_mm": 0.7125015629574593,
-      "front_ref": "MX7",
-      "front_pad": ""
-    },
-    {
-      "ref": "R13",
-      "gap_mm": 1.9031611589505293,
-      "front_ref": "MX7",
-      "front_pad": ""
-    },
-    {
-      "ref": "R12",
-      "gap_mm": 0.626250000000006,
-      "front_ref": "MX7",
-      "front_pad": ""
-    },
-    {
-      "ref": "U4",
-      "gap_mm": 0.3373500000000078,
-      "front_ref": "MX7",
-      "front_pad": ""
-    },
-    {
-      "ref": "R10",
-      "gap_mm": 0.6717058028652022,
-      "front_ref": "MX7",
-      "front_pad": ""
-    },
-    {
-      "ref": "R9",
-      "gap_mm": 1.1199847908270961,
-      "front_ref": "MX7",
-      "front_pad": ""
-    },
-    {
-      "ref": "C11",
-      "gap_mm": 2.9440385558778313,
-      "front_ref": "MX7",
-      "front_pad": ""
-    },
-    {
-      "ref": "C15",
-      "gap_mm": 4.374704261405064,
-      "front_ref": "MX7",
-      "front_pad": ""
-    },
-    {
-      "ref": "R14",
-      "gap_mm": 0.3138552640182195,
-      "front_ref": "MX7",
-      "front_pad": ""
-    },
-    {
-      "ref": "U5",
-      "gap_mm": 4.297050000000006,
-      "front_ref": "MX7",
-      "front_pad": ""
-    },
-    {
-      "ref": "X2",
-      "gap_mm": 1.0287000000000006,
-      "front_ref": "MX3",
-      "front_pad": "2"
-    },
-    {
-      "ref": "J2",
-      "gap_mm": 2.388878324988542,
-      "front_ref": "MX3",
-      "front_pad": ""
-    },
-    {
-      "ref": "SW1",
-      "gap_mm": 0.6950000000000003,
-      "front_ref": "MX8",
-      "front_pad": ""
-    }
-  ],
   "original_matrix_tracks_unchanged": 603,
+  "usb_tracks_unchanged": 29,
   "mcu_back_connections": [
     {
       "pin": 2,
@@ -433,43 +286,245 @@
       "back_only": true
     }
   ],
-  "usb_tracks_unchanged": 29,
-  "usb_lengths_mm": {
-    "Net-(U5-USB_DM)": 7.435177777210907,
-    "Net-(U5-USB_DP)": 7.435178191424468
-  },
   "new_or_modified_tracks_octilinear": true,
-  "flash_mcu_center_distance_mm": {
-    "before": 23.494960399200504,
-    "after": 11.451702238532052
-  },
-  "qspi_track_lengths_mm_excluding_resistor_body_and_via_barrels": {
-    "before": {
-      "QSPI_SCLK": 32.12824372316622,
-      "QSPI_SD0": 28.409005614730315,
-      "QSPI_SD1": 17.678853681500254,
-      "QSPI_SD2": 20.98179823507966,
-      "QSPI_SD3": 32.32616331647288
+  "mechanical_checks": [
+    {
+      "ref": "C16",
+      "gap_mm": 4.667397494002027,
+      "front_ref": "MX8",
+      "front_pad": "1"
     },
-    "after": {
+    {
+      "ref": "R2",
+      "gap_mm": 5.414905309226568,
+      "front_ref": "MX8",
+      "front_pad": "1"
+    },
+    {
+      "ref": "U4",
+      "gap_mm": 1.2373500000000066,
+      "front_ref": "MX7",
+      "front_pad": ""
+    },
+    {
+      "ref": "C11",
+      "gap_mm": 3.3073237350357543,
+      "front_ref": "MX8",
+      "front_pad": "2"
+    },
+    {
+      "ref": "C15",
+      "gap_mm": 3.562622558586858,
+      "front_ref": "MX7",
+      "front_pad": ""
+    },
+    {
+      "ref": "R14",
+      "gap_mm": 4.971550981085033,
+      "front_ref": "MX8",
+      "front_pad": "2"
+    },
+    {
+      "ref": "U5",
+      "gap_mm": 4.297050000000006,
+      "front_ref": "MX7",
+      "front_pad": ""
+    },
+    {
+      "ref": "X2",
+      "gap_mm": 1.0287000000000006,
+      "front_ref": "MX3",
+      "front_pad": "2"
+    },
+    {
+      "ref": "J2",
+      "gap_mm": 2.388878324988542,
+      "front_ref": "MX3",
+      "front_pad": ""
+    },
+    {
+      "ref": "SW1",
+      "gap_mm": 0.6950000000000003,
+      "front_ref": "MX8",
+      "front_pad": ""
+    }
+  ],
+  "qspi_lengths_mm": {
+    "before": {
       "QSPI_SCLK": 10.559916782671557,
       "QSPI_SD0": 13.096556121069147,
       "QSPI_SD1": 14.752159537743918,
       "QSPI_SD2": 15.9430034375827,
       "QSPI_SD3": 17.56439924775733
+    },
+    "after": {
+      "QSPI_SCLK": 16.537895469031707,
+      "QSPI_SD0": 15.500321997223015,
+      "QSPI_SD1": 12.910970587477365,
+      "QSPI_SD2": 12.892254533450435,
+      "QSPI_SD3": 17.794708706130045
     }
   },
   "track_lengths_mm": {
     "before": {
-      "F.Cu": 171.95611224247875,
-      "B.Cu": 4550.500562404667
-    },
-    "after": {
       "F.Cu": 188.48155248605215,
       "B.Cu": 4448.295732872338
+    },
+    "after": {
+      "F.Cu": 170.82276451686474,
+      "B.Cu": 4455.084327868399
     }
   },
-  "right_matrix_bundle_pitch_mm": 0.4,
+  "decoupling_power_path_mm": {
+    "before": {
+      "C11-U4.8": 21.189986704463173,
+      "C15-U5.1": 1.339152712132321,
+      "C16-U5.10": 3.8879738174212215,
+      "C6-U5.43": 1.6204214700769475,
+      "C13-U5.48": 1.472813034319888,
+      "C17-U5.33": 1.2883989999999983,
+      "C18-U5.42": 1.2883999999999993
+    },
+    "after": {
+      "C11-U4.8": 1.5233147545195183,
+      "C15-U5.1": 1.472997256769669,
+      "C16-U5.10": 1.5098591181476493,
+      "C6-U5.43": 1.6204214700769475,
+      "C13-U5.48": 1.472813034319888,
+      "C17-U5.33": 1.2883989999999983,
+      "C18-U5.42": 1.2883999999999993
+    }
+  },
+  "main_qspi_reference_checks": [
+    {
+      "net": "/rp2040/QSPI_SD3",
+      "start": [
+        37.0,
+        61.535
+      ],
+      "end": [
+        38.1875,
+        61.535
+      ],
+      "checked_length_mm": 1.1875,
+      "reference_centerline_gap_mm": 0.0,
+      "reference_0_35_mm_corridor_missing_mm2": 0.0
+    },
+    {
+      "net": "/rp2040/QSPI_SD3",
+      "start": [
+        30.45,
+        58.25
+      ],
+      "end": [
+        33.715,
+        58.25
+      ],
+      "checked_length_mm": 1.9150000000000027,
+      "reference_centerline_gap_mm": 0.0,
+      "reference_0_35_mm_corridor_missing_mm2": 0.0
+    },
+    {
+      "net": "/rp2040/QSPI_SD3",
+      "start": [
+        33.715,
+        58.25
+      ],
+      "end": [
+        37.0,
+        61.535
+      ],
+      "checked_length_mm": 4.645691552395612,
+      "reference_centerline_gap_mm": 0.0,
+      "reference_0_35_mm_corridor_missing_mm2": 0.0
+    },
+    {
+      "net": "/rp2040/QSPI_SD0",
+      "start": [
+        37.0,
+        58.995
+      ],
+      "end": [
+        38.1875,
+        58.995
+      ],
+      "checked_length_mm": 1.1875,
+      "reference_centerline_gap_mm": 0.0,
+      "reference_0_35_mm_corridor_missing_mm2": 0.0
+    },
+    {
+      "net": "/rp2040/QSPI_SD0",
+      "start": [
+        31.1,
+        57.3
+      ],
+      "end": [
+        35.305,
+        57.3
+      ],
+      "checked_length_mm": 3.504999999999999,
+      "reference_centerline_gap_mm": 0.0,
+      "reference_0_35_mm_corridor_missing_mm2": 0.0
+    },
+    {
+      "net": "/rp2040/QSPI_SD0",
+      "start": [
+        35.305,
+        57.3
+      ],
+      "end": [
+        37.0,
+        58.995
+      ],
+      "checked_length_mm": 2.3970919882223964,
+      "reference_centerline_gap_mm": 0.0,
+      "reference_0_35_mm_corridor_missing_mm2": 0.0
+    },
+    {
+      "net": "/rp2040/QSPI_SCLK",
+      "start": [
+        37.0,
+        60.265
+      ],
+      "end": [
+        38.1875,
+        60.265
+      ],
+      "checked_length_mm": 1.1875,
+      "reference_centerline_gap_mm": 0.0,
+      "reference_0_35_mm_corridor_missing_mm2": 0.0
+    },
+    {
+      "net": "/rp2040/QSPI_SCLK",
+      "start": [
+        30.7,
+        57.7
+      ],
+      "end": [
+        34.435,
+        57.7
+      ],
+      "checked_length_mm": 2.6350000000000016,
+      "reference_centerline_gap_mm": 0.0,
+      "reference_0_35_mm_corridor_missing_mm2": 0.0
+    },
+    {
+      "net": "/rp2040/QSPI_SCLK",
+      "start": [
+        34.435,
+        57.7
+      ],
+      "end": [
+        37.0,
+        60.265
+      ],
+      "checked_length_mm": 3.6274577874869856,
+      "reference_centerline_gap_mm": 0.0,
+      "reference_0_35_mm_corridor_missing_mm2": 0.0
+    }
+  ],
+  "reference_check_scope": "Three long B.Cu flash-side runs, x >= 31.8 mm; this does not assert continuous reference under all local escapes or via transitions.",
+  "board_sha256": "871dcf04238aa11243152f6b0cd908df07ebe4aef6a19c110a2c62e16e7c4dce",
   "drc_errors": 0,
   "unconnected": 0,
   "schematic_parity": 0,
@@ -480,5 +535,22 @@
     "lib_footprint_mismatch": 91,
     "silk_overlap": 11,
     "silk_over_copper": 24
+  },
+  "mcp_audit": {
+    "issues": 55,
+    "footprint_bounding_box_overlaps": 32,
+    "keepout_or_boundary": 2,
+    "silkscreen_over_pad": 18,
+    "silkscreen_text_overlap": 3,
+    "note": "Includes front/rear projected bounding-box overlaps, intentional USB overhang, and the Tag-Connect contact keepout. Native courtyard DRC and separate rear-courtyard versus front-drilled-pad checks are used for physical placement acceptance."
+  },
+  "all_qspi_opposite_ground_projection": {
+    "before_uncovered_centerline_mm": 66.50851842361654,
+    "after_uncovered_centerline_mm": 36.07695146413336,
+    "note": "Includes via antipads, pad escapes, and remaining local crossings; not an SI simulation or an assertion of uninterrupted ground beneath every QSPI segment."
+  },
+  "usb_lengths_mm": {
+    "Net-(U5-USB_DM)": 7.435177777210907,
+    "Net-(U5-USB_DP)": 7.435178191424468
   }
 }
