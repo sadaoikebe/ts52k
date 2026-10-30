@@ -3501,7 +3501,7 @@
 					(justify right)
 				)
 			)
-			(property "Footprint" "tag-connect:Tag-Connect_TC2030-IDC-NL_2x03_P1.27mm_Vertical"
+			(property "Footprint" "Connector:Tag-Connect_TC2030-IDC-NL_2x03_P1.27mm_Vertical"
 				(at 0 -7.62 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -4541,7 +4541,7 @@
 							)
 						)
 					)
-					(number "S1"
+					(number "SH"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -4559,6 +4559,7 @@
   (property "Reference" "U" (at 0 7.62 0) (effects (font (size 1.27 1.27))))
   (property "Value" "TPD4E1U06DCKR" (at 0 10.16 0) (effects (font (size 1.27 1.27))))
   (property "Footprint" "Package_TO_SOT_SMD:SOT-363_SC-70-6" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+  (property "ki_fp_filters" "SOT*363*" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
   (property "Datasheet" "https://www.ti.com/lit/ds/symlink/tpd4e1u06.pdf" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
   (property "Description" "Four-channel ESD protector; pin 5 has no internal connection" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
   (symbol "TPD4E1U06DCKR_0_1" (rectangle (start -7.62 10.16) (end 7.62 -10.16) (stroke (width 0.254) (type default)) (fill (type background))))
@@ -18319,7 +18320,7 @@
 		(pin "B9"
 			(uuid "480c69c9-bade-4b9c-a82d-82c95614531c")
 		)
-		(pin "S1"
+		(pin "SH"
 			(uuid "c8cd8067-d455-4453-ad71-9e5cd8bef78f")
 		)
 		(instances
@@ -18850,7 +18851,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "tag-connect:Tag-Connect_TC2030-IDC-NL_2x03_P1.27mm_Vertical"
+		(property "Footprint" "Connector:Tag-Connect_TC2030-IDC-NL_2x03_P1.27mm_Vertical"
 			(at 180.34 43.18 0)
 			(hide yes)
 			(show_name no)

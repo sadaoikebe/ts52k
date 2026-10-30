@@ -862,7 +862,7 @@
 						)
 					)
 				)
-				(number "S1"
+				(number "SH"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -880,6 +880,7 @@
   (property "Reference" "U" (at 0 7.62 0) (effects (font (size 1.27 1.27))))
   (property "Value" "TPD4E1U06DCKR" (at 0 10.16 0) (effects (font (size 1.27 1.27))))
   (property "Footprint" "Package_TO_SOT_SMD:SOT-363_SC-70-6" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+  (property "ki_fp_filters" "SOT*363*" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
   (property "Datasheet" "https://www.ti.com/lit/ds/symlink/tpd4e1u06.pdf" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
   (property "Description" "Four-channel ESD protector; pin 5 has no internal connection" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
   (symbol "TPD4E1U06DCKR_0_1" (rectangle (start -7.62 10.16) (end 7.62 -10.16) (stroke (width 0.254) (type default)) (fill (type background))))

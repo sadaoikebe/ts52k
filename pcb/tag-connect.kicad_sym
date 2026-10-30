@@ -30,7 +30,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "tag-connect:Tag-Connect_TC2030-IDC-NL_2x03_P1.27mm_Vertical"
+		(property "Footprint" "Connector:Tag-Connect_TC2030-IDC-NL_2x03_P1.27mm_Vertical"
 			(at 0 -7.62 0)
 			(show_name no)
 			(do_not_autoplace no)

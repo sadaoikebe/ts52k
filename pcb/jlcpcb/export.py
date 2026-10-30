@@ -80,7 +80,7 @@ def main():
         plotted = temp / "gerbers"
         plotted.mkdir()
 
-        run(cli, "pcb", "drc", "--schematic-parity", "--refill-zones", "--format", "json", "-o", drc_file, BOARD)
+        run(cli, "pcb", "drc", "--all-track-errors", "--schematic-parity", "--refill-zones", "--format", "json", "-o", drc_file, BOARD)
         drc = json.loads(drc_file.read_text(encoding="utf-8"))
         shutil.copyfile(drc_file, assembly_dir / "drc.json")
         drc_errors = [item for item in drc["violations"] if item["severity"] == "error"]
@@ -96,7 +96,7 @@ def main():
 
         run(cli, "sch", "export", "bom", "--fields", "Reference,Value,Footprint,LCSC,MPN",
             "--labels", "Reference,Value,Footprint,LCSC,MPN", "-o", raw_bom, SCHEMATIC)
-        # Do not use --smd-only: J1 is mixed SMD/PTH and would be silently omitted.
+        # Include mixed SMD/PTH J1 regardless of the footprint assembly attribute.
         run(cli, "pcb", "export", "pos", "--side", "back", "--format", "csv", "--units", "mm",
             "-o", raw_positions, BOARD)
         with raw_bom.open(encoding="utf-8-sig", newline="") as source:
@@ -151,7 +151,9 @@ def main():
                 if path.is_file():
                     archive.write(path, path.name)
         sources = [BOARD, PROJECT, SCHEMATIC, PCB_DIR / "rp2040.kicad_sch", PCB_DIR / "ts52k.kicad_dru",
-                   PCB_DIR / "ts52k.kicad_sym", PCB_DIR / "sym-lib-table",
+                   PCB_DIR / "ts52k.kicad_sym", PCB_DIR / "sym-lib-table", PCB_DIR / "fp-lib-table",
+                   PCB_DIR / "tag-connect.kicad_sym",
+                   PCB_DIR / "rp2040.pretty" / "IC57_RP2040.kicad_mod",
                    PCB_DIR / "rp2040.pretty" / "SW_Tactile_XKB_TS-1187A_5.1x5.1mm.kicad_mod"]
         manifest = {
             "source_sha256": {str(path.relative_to(PCB_DIR)): sha256(path) for path in sources},
