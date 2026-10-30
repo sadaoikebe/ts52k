@@ -4552,6 +4552,64 @@
 			)
 			(embedded_fonts no)
 		)
+
+		(symbol "ts52k:TPD4E1U06DCKR"
+  (pin_names (offset 0.254))
+  (exclude_from_sim no) (in_bom yes) (on_board yes)
+  (property "Reference" "U" (at 0 7.62 0) (effects (font (size 1.27 1.27))))
+  (property "Value" "TPD4E1U06DCKR" (at 0 10.16 0) (effects (font (size 1.27 1.27))))
+  (property "Footprint" "Package_TO_SOT_SMD:SOT-363_SC-70-6" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+  (property "Datasheet" "https://www.ti.com/lit/ds/symlink/tpd4e1u06.pdf" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+  (property "Description" "Four-channel ESD protector; pin 5 has no internal connection" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+  (symbol "TPD4E1U06DCKR_0_1" (rectangle (start -7.62 10.16) (end 7.62 -10.16) (stroke (width 0.254) (type default)) (fill (type background))))
+  (symbol "TPD4E1U06DCKR_1_1"
+      (pin passive line (at -12.7 2.54 0) (length 5.08)
+        (name "D1+" (effects (font (size 1.0 1.0))))
+        (number "1" (effects (font (size 1.0 1.0)))))
+      (pin power_in line (at 0 -12.7 90) (length 2.54)
+        (name "GND" (effects (font (size 1.0 1.0))))
+        (number "2" (effects (font (size 1.0 1.0)))))
+      (pin passive line (at -12.7 -2.54 0) (length 5.08)
+        (name "D2+" (effects (font (size 1.0 1.0))))
+        (number "3" (effects (font (size 1.0 1.0)))))
+      (pin passive line (at 12.7 2.54 180) (length 5.08)
+        (name "D2-" (effects (font (size 1.0 1.0))))
+        (number "4" (effects (font (size 1.0 1.0)))))
+      (pin passive line (at 0 12.7 270) (length 2.54)
+        (name "NC" (effects (font (size 1.0 1.0))))
+        (number "5" (effects (font (size 1.0 1.0)))))
+      (pin passive line (at 12.7 -2.54 180) (length 5.08)
+        (name "D1-" (effects (font (size 1.0 1.0))))
+        (number "6" (effects (font (size 1.0 1.0)))))
+  )
+ )
+		(symbol "ts52k:TPS7A2433DBVR"
+  (pin_names (offset 0.254))
+  (exclude_from_sim no) (in_bom yes) (on_board yes)
+  (property "Reference" "U" (at 0 7.62 0) (effects (font (size 1.27 1.27))))
+  (property "Value" "TPS7A2433DBVR" (at 0 10.16 0) (effects (font (size 1.27 1.27))))
+  (property "Footprint" "Package_TO_SOT_SMD:SOT-23-5" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+  (property "Datasheet" "https://www.ti.com/lit/gpn/TPS7A24" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+  (property "Description" "200mA 3.3V LDO; pin 4 NC may be tied to GND for thermal performance" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+  (symbol "TPS7A2433DBVR_0_1" (rectangle (start -5.08 5.08) (end 5.08 -5.08) (stroke (width 0.254) (type default)) (fill (type background))))
+  (symbol "TPS7A2433DBVR_1_1"
+      (pin power_in line (at -7.62 0 0) (length 2.54)
+        (name "IN" (effects (font (size 1.0 1.0))))
+        (number "1" (effects (font (size 1.0 1.0)))))
+      (pin power_in line (at 0 -7.62 90) (length 2.54)
+        (name "GND" (effects (font (size 1.0 1.0))))
+        (number "2" (effects (font (size 1.0 1.0)))))
+      (pin input line (at -7.62 -2.54 0) (length 2.54)
+        (name "EN" (effects (font (size 1.0 1.0))))
+        (number "3" (effects (font (size 1.0 1.0)))))
+      (pin passive line (at 2.54 -7.62 90) (length 2.54)
+        (name "NC" (effects (font (size 1.0 1.0))))
+        (number "4" (effects (font (size 1.0 1.0)))))
+      (pin power_out line (at 7.62 0 180) (length 2.54)
+        (name "OUT" (effects (font (size 1.0 1.0))))
+        (number "5" (effects (font (size 1.0 1.0)))))
+  )
+ )
 	)
 	(junction
 		(at 228.6 59.69)
@@ -5162,10 +5220,6 @@
 	(no_connect
 		(at 44.45 182.88)
 		(uuid "0cd3740e-4c16-4bad-9ebf-1b7a952373e0")
-	)
-	(no_connect
-		(at 91.44 181.61)
-		(uuid "293dac19-0b22-4bcd-b5e6-7832f2730c88")
 	)
 	(no_connect
 		(at 44.45 180.34)
@@ -17379,7 +17433,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Power_Protection:SRV05-4")
+		(lib_id "ts52k:TPD4E1U06DCKR")
 		(at 104.14 179.07 0)
 		(unit 1)
 		(body_style 1)
@@ -17431,8 +17485,9 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Four-channel ESD protector; pin 5 has no internal connection"
 			(at 104.14 179.07 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -18068,7 +18123,7 @@
 	)
 	(symbol
 		(lib_id "power:+5V")
-		(at 104.14 166.37 0)
+		(at 88.90000 184.15000 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -18078,7 +18133,7 @@
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-000061b1a6c9")
 		(property "Reference" "#PWR0129"
-			(at 104.14 170.18 0)
+			(at 88.90000 187.96000 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18089,7 +18144,7 @@
 			)
 		)
 		(property "Value" "+5V"
-			(at 104.521 161.9758 0)
+			(at 89.28100 179.75580 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -18099,7 +18154,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 104.14 166.37 0)
+			(at 88.90000 184.15000 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18110,7 +18165,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 104.14 166.37 0)
+			(at 88.90000 184.15000 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18121,7 +18176,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 104.14 166.37 0)
+			(at 88.90000 184.15000 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -18982,7 +19037,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 54.61 144.78 0)
 			(hide yes)
 			(show_name no)
@@ -19014,7 +19069,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C23733"
+		(property "LCSC" "C69335"
 			(at 54.61 144.78 0)
 			(hide yes)
 			(show_name no)
@@ -19025,7 +19080,7 @@
 				)
 			)
 		)
-		(property "MPN" "CL05A475MP5NRNC"
+		(property "MPN" "CL10A475KA8NQNC"
 			(at 0 0 0)
 			(hide yes)
 			(show_name no)
@@ -20159,7 +20214,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Regulator_Linear:XC6206PxxxMR")
+		(lib_id "ts52k:TPS7A2433DBVR")
 		(at 82.55 143.51 0)
 		(unit 1)
 		(body_style 1)
@@ -20180,7 +20235,7 @@
 				)
 			)
 		)
-		(property "Value" "XC6206P332MR-G"
+		(property "Value" "TPS7A2433DBVR"
 			(at 82.55 137.16 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -20190,7 +20245,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-3"
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-5"
 			(at 82.55 135.255 0)
 			(hide yes)
 			(show_name no)
@@ -20201,7 +20256,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.torexsemi.com/file/xc6206/XC6206.pdf"
+		(property "Datasheet" "https://www.ti.com/lit/gpn/TPS7A24"
 			(at 82.55 140.97 0)
 			(hide yes)
 			(show_name no)
@@ -20212,7 +20267,7 @@
 				)
 			)
 		)
-		(property "Description" "200mA fixed 3.3V LDO, SOT-23-3, Torex XC6206, no enable"
+		(property "Description" "200mA 3.3V LDO; EN to IN; NC pin 4 to GND"
 			(at 82.55 143.51 0)
 			(hide yes)
 			(show_name no)
@@ -20223,7 +20278,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C5446"
+		(property "LCSC" "C2866134"
 			(at 0 0 0)
 			(hide yes)
 			(show_name no)
@@ -20234,7 +20289,7 @@
 				)
 			)
 		)
-		(property "MPN" "XC6206P332MR-G"
+		(property "MPN" "TPS7A2433DBVR"
 			(at 0 0 0)
 			(hide yes)
 			(show_name no)
@@ -20253,6 +20308,12 @@
 		)
 		(pin "1"
 			(uuid "d8915c7c-ea35-4c2e-ad2d-11fedeff0691")
+		)
+		(pin "4"
+			(uuid "be49ebce-49d0-44ed-b8d8-2bc208398a2f")
+		)
+		(pin "5"
+			(uuid "50fd0286-d575-4a95-810a-015060a5559a")
 		)
 		(instances
 			(project "ts52k"
@@ -21291,4 +21352,13 @@
 	(wire (pts (xy 269.24 71.12) (xy 278.13 71.12)) (stroke (width 0) (type default)) (uuid "a34ea67f-57b2-4528-ac4a-fdb805f5d1c3"))
 
 	(junction (at 278.13 71.12) (diameter 0) (color 0 0 0 0) (uuid "b8d2797a-8814-49e2-b61e-519c24761da6"))
+
+	(wire (pts (xy 88.9 184.15) (xy 88.9 181.61)) (stroke (width 0) (type default)) (uuid "4f759ab2-454e-4c40-9c44-aae72cde5b0a"))
+	(wire (pts (xy 88.9 181.61) (xy 91.44 181.61)) (stroke (width 0) (type default)) (uuid "d345a118-a2db-44b1-8be2-8d505eccabb2"))
+	(no_connect (at 104.14 166.37) (uuid "e2a1d946-133f-4715-b94a-c92c265024ea"))
+	(wire (pts (xy 73.66 143.51) (xy 73.66 146.05)) (stroke (width 0) (type default)) (uuid "9b81361b-1737-40aa-8147-8af5dc38a55e"))
+	(wire (pts (xy 73.66 146.05) (xy 74.93 146.05)) (stroke (width 0) (type default)) (uuid "d7cde103-439f-4d77-ab59-cb78258adc1f"))
+	(junction (at 73.66 143.51) (diameter 0) (color 0 0 0 0) (uuid "af872edf-d219-4dbd-8d53-59ff1f4930e2"))
+	(wire (pts (xy 82.55 151.13) (xy 85.09 151.13)) (stroke (width 0) (type default)) (uuid "9391adee-4cf1-43ca-9f31-1d308707a0a8"))
+	(junction (at 82.55 151.13) (diameter 0) (color 0 0 0 0) (uuid "064bd8a5-edb9-48ed-9719-30c540af8778"))
 )
