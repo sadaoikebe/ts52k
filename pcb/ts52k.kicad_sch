@@ -7599,16 +7599,7 @@
 		)
 		(uuid "f77773cd-f90e-4ddc-b522-2997511f9659")
 	)
-	(wire
-		(pts
-			(xy 273.05 62.23) (xy 266.7 62.23)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f8bd68fd-6cd5-4a68-baaf-c10baf85dd91")
-	)
+	(wire (pts (xy 270.51 62.23) (xy 266.7 62.23)) (stroke (width 0) (type default)) (uuid "f8bd68fd-6cd5-4a68-baaf-c10baf85dd91"))
 	(wire
 		(pts
 			(xy 166.37 52.07) (xy 166.37 53.34)
@@ -8351,30 +8342,7 @@
 			)
 		)
 	)
-	(global_label "rpg1"
-		(shape input)
-		(at 269.24 71.12 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "721abeb1-5da7-498d-bdbe-d20b2d689bcf")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 275.59 71.12 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-	)
+	(global_label "rpg1" (shape input) (at 278.13 71.12 0) (fields_autoplaced yes) (effects (font (size 1.27 1.27)) (justify left)) (uuid "721abeb1-5da7-498d-bdbe-d20b2d689bcf") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 284.48 71.12 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left))))
 	(global_label "col3"
 		(shape input)
 		(at 184.15 52.07 90)
@@ -18889,83 +18857,7 @@
 			)
 		)
 	)
-	(symbol
-		(lib_id "power:GND")
-		(at 273.05 62.23 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "2983acb4-4148-45be-8ccc-b527db14442c")
-		(property "Reference" "#PWR0160"
-			(at 279.4 62.23 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 275.59 62.23 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" ""
-			(at 273.05 62.23 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 273.05 62.23 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 273.05 62.23 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "5f772d14-0919-436f-9340-d47f7620fb15")
-		)
-		(instances
-			(project "ts52k"
-				(path "/a46aaf04-b440-466e-8b21-108f618a37ed"
-					(reference "#PWR0160")
-					(unit 1)
-				)
-			)
-		)
-	)
+	(symbol (lib_id "power:GND") (at 270.51 62.23 90) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (uuid "2983acb4-4148-45be-8ccc-b527db14442c") (property "Reference" "#PWR0160" (at 276.86 62.23 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) (property "Value" "GND" (at 273.05 62.23 90) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify right))) (property "Footprint" "" (at 270.51 62.23 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) (property "Datasheet" "" (at 270.51 62.23 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) (property "Description" "" (at 270.51 62.23 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) (pin "1" (uuid "5f772d14-0919-436f-9340-d47f7620fb15")) (instances (project "ts52k" (path "/a46aaf04-b440-466e-8b21-108f618a37ed" (reference "#PWR0160") (unit 1)))))
 	(symbol
 		(lib_id "Device:C_Small")
 		(at 266.7 66.04 180)
@@ -21387,4 +21279,16 @@
 		)
 	)
 	(embedded_fonts no)
+
+	(symbol (lib_id "Device:R") (at 278.13 64.77 0) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (fields_autoplaced yes) (uuid "49b62150-af0a-4d9b-938e-11b226450848") (property "Reference" "R15" (at 279.4 63.4999 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.0 1.0)) (justify left))) (property "Value" "10k" (at 279.4 66.0399 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.0 1.0)) (justify left))) (property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 276.352 64.77 90) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) (property "Datasheet" "https://www.lcsc.com/product-detail/C25744.html" (at 278.13 64.77 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) (property "Description" "" (at 278.13 64.77 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) (property "LCSC" "C25744" (at 229.87 -17.78 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) (property "MPN" "0402WGF1002TCE" (at 229.87 -17.78 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) (pin "1" (uuid "40d29628-f1f2-455f-960c-a8d592fb2acf")) (pin "2" (uuid "e58347c5-bbe7-4f2d-8cd4-42b2322655bc")) (instances (project "ts52k" (path "/a46aaf04-b440-466e-8b21-108f618a37ed" (reference "R15") (unit 1)))))
+	(symbol (lib_id "power:+3V3") (at 278.13 59.69 0) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (uuid "bd427eff-89f4-4ade-97f4-563ece5ffde7") (property "Reference" "#PWR0205" (at 278.13 63.5 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) (property "Value" "+3V3" (at 278.511 55.2958 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) (property "Footprint" "" (at 278.13 59.69 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) (property "Datasheet" "" (at 278.13 59.69 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) (property "Description" "" (at 278.13 59.69 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) (pin "1" (uuid "431ede80-7085-4026-a268-33f308a2d61e")) (instances (project "ts52k" (path "/a46aaf04-b440-466e-8b21-108f618a37ed" (reference "#PWR0205") (unit 1)))))
+	(symbol (lib_id "Device:R") (at 266.7 48.26 0) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (fields_autoplaced yes) (uuid "9e55f7f7-f897-4db1-afac-b663c1f42a4b") (property "Reference" "R16" (at 269.24 46.9899 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left))) (property "Value" "10k" (at 269.24 49.5299 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left))) (property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 264.922 48.26 90) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) (property "Datasheet" "https://www.lcsc.com/product-detail/C25744.html" (at 266.7 48.26 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) (property "Description" "" (at 266.7 48.26 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) (property "LCSC" "C25744" (at 218.44 -34.29 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) (property "MPN" "0402WGF1002TCE" (at 218.44 -34.29 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) (pin "1" (uuid "9760d38f-7fd9-484e-8627-59c7df6ac70f")) (pin "2" (uuid "5fc5bbb2-7f7e-498b-a3e5-e0958b6e82dd")) (instances (project "ts52k" (path "/a46aaf04-b440-466e-8b21-108f618a37ed" (reference "R16") (unit 1)))))
+	(symbol (lib_id "power:+3V3") (at 266.7 41.91 0) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (uuid "065c596f-08ae-463c-8021-0a99f4730a9b") (property "Reference" "#PWR0206" (at 266.7 45.72 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) (property "Value" "+3V3" (at 267.081 37.5158 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) (property "Footprint" "" (at 266.7 41.91 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) (property "Datasheet" "" (at 266.7 41.91 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) (property "Description" "" (at 266.7 41.91 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) (pin "1" (uuid "b56992ff-a5e1-405c-be40-35ee6818eb7b")) (instances (project "ts52k" (path "/a46aaf04-b440-466e-8b21-108f618a37ed" (reference "#PWR0206") (unit 1)))))
+	(wire (pts (xy 278.13 59.69) (xy 278.13 60.96)) (stroke (width 0) (type default)) (uuid "b0520764-ec4d-4631-b1ed-2339f8ad7501"))
+	(wire (pts (xy 278.13 68.58) (xy 278.13 71.12)) (stroke (width 0) (type default)) (uuid "87d4453a-9105-4f1c-b9bf-5b9ab35d6123"))
+	(wire (pts (xy 266.7 41.91) (xy 266.7 44.45)) (stroke (width 0) (type default)) (uuid "c2288ed4-d670-493f-95d5-e9c7ce5f8fc9"))
+	(wire (pts (xy 266.7 52.07) (xy 266.7 54.61)) (stroke (width 0) (type default)) (uuid "1e01f385-92c0-4143-99f8-4060367dc8ea"))
+	(wire (pts (xy 269.24 71.12) (xy 278.13 71.12)) (stroke (width 0) (type default)) (uuid "a34ea67f-57b2-4528-ac4a-fdb805f5d1c3"))
+
+	(junction (at 278.13 71.12) (diameter 0) (color 0 0 0 0) (uuid "b8d2797a-8814-49e2-b61e-519c24761da6"))
 )
