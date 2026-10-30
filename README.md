@@ -23,6 +23,8 @@
 
 このドキュメントは `rp2040` ブランチの内容を説明しています。
 
+USBのESD保護3個と配線は検討中の仮配置です。製造データはこの変更後に再生成していません。
+
 キーマトリクスは 6 列 × 10 行で配線済みです。KiCad のDRCで未接続0件、回路図との不一致0件です。過去の配線検討は[マトリックスの記録](pcb/matrix-layout/README.md)を参照してください。
 
 `rp2040` ブランチは ATmega32U4 版からの設計変更版です。基板はDRCエラー0件、フットプリント差異0件で、シルク関連の警告20件が残っています。[JLCPCB 向け出力](pcb/jlcpcb/README.md)は基板を保存するたびに再生成してください。RP2040 版のファームウェアとケースへの収まりは未検証です。
@@ -52,7 +54,7 @@ case/    FreeCAD ソース、3Dプリント用 3MF、プレート加工用 DXF
 | ライブラリ | 内容 |
 | :--- | :--- |
 | `MX_Only.pretty` | Cherry MX キースイッチのフットプリント（1U〜3U、7種） |
-| `ts52k.kicad_sym` | キースイッチ、USB-Cレセプタクルのシンボル |
+| `ts52k.kicad_sym` | キースイッチ、USB-Cレセプタクル、USB用ESD保護素子のシンボル |
 | `rp2040.kicad_sym` / `.pretty` | RP2040 のシンボルとフットプリント |
 | `tag-connect.kicad_sym` / `.pretty` | Tag-Connect TC2030 のシンボルと旧ローカルフットプリント（J2にはKiCad標準を使用） |
 
@@ -61,11 +63,12 @@ case/    FreeCAD ソース、3Dプリント用 3MF、プレート加工用 DXF
 ## 回路の構成
 
 ```
-USB-C (J1) ─┬─ VBUS 5V ─→ TPS7A2433 (U3) ─→ 3.3V ─┬─→ RP2040 IOVDD
-            │                                    ├─→ フラッシュ (U4)
-            │                                    └─→ 発振器 (X2)
-            │
-            └─ D+/D- ──→ ESD保護 (U2) ─→ 22Ω ──→ RP2040 USB
+USB-C (J1) ─┬─ VBUS 5V ─┬─→ TPS7A2433 (U3) ─→ 3.3V ─┬─→ RP2040 IOVDD
+            │           │                            ├─→ フラッシュ (U4)
+            │           │                            └─→ 発振器 (X2)
+            │           └─ D91 (ESD441) ─→ GND
+            └─ D+/D− ───┬─→ 22Ω ──→ RP2040 USB
+                        └─ D89/D90 (ESD321) ─→ GND
 
 発振器 (X2) ── 12MHz ──→ RP2040 XIN ──→ 内蔵PLL ──→ 133MHz / 48MHz(USB)
 
@@ -92,13 +95,11 @@ Type-C は裏返して挿してもピン配置が上下反転するだけで使�
 
 USB D+/D− の直列抵抗 R7/R8 は、QSPI にも使う **22Ω・C25092** に共通化しています。JLCPCB の Basic 部品を使い、少量 PCBA で部品種と段取り費を増やさないための意図的な選択です。Raspberry Pi の RP2040 設計資料は 27Ω を指定しており、本基板の 22Ω はその値からの設計上の変更です。USB 信号品質と互換性の実測はまだ行っていません。
 
-### U2 — TPD4E1U06（ESD保護アレイ）
+### D89・D90・D91 — USB ESD保護（仮配置）
 
-USB の D+/D− と VBUS に入る静電気を、GND 側へ逃がすための保護アレイです。
+U2を個別のESD保護素子3個へ置き換えています。D89とD90は **ESD321DPYR / C2868952** で、それぞれD−とD+に接続します。D91はVBUS用の **ESD441DPYR / C53161160** です。各素子は1番を信号またはVBUS、2番をGNDに接続し、信号線とGNDの間に並列に入れます。[ESD321](https://www.ti.com/lit/gpn/esd321) / [ESD441](https://www.ti.com/lit/gpn/esd441)
 
-低容量の保護素子を選び、USB 信号線への負荷を抑えます。TPD4E1U06 の端子容量は典型 0.8 pF です。[TI データシート](https://www.ti.com/lit/ds/symlink/tpd4e1u06.pdf)
-
-4チャンネル品のうち3チャンネルを使用します。1番=D+、2番=GND、3番=VBUS、4番=D−、5番と6番は未接続です。
+フットプリントはすべてKiCad標準の `Package_SON:Texas_DPY0002A_0.6x1mm_P0.65mm` です。D+・D−の両外側へD89/D90を仮配置し、USB-C端子の合流後は隣り合わせに配線しています。ESDとUSB信号品質は未測定で、[JLCPCB向け出力](pcb/jlcpcb/README.md)はこの変更後に再生成していません。
 
 ### U3 — TPS7A2433DBVR（LDOレギュレータ）
 
@@ -216,7 +217,8 @@ RP2040 の内蔵プルアップは 50〜80kΩ なので、100nF だけを組み�
 | フラッシュ | W25Q128JVSIQ / C97521 | 1 | SOIC-8 5.3mm |
 | 発振器 | OC2EL89CJO-113YLC-12M / C27636964 | 1 | 3.2×2.5mm 4pin |
 | LDO | TPS7A2433DBVR / C2866134 | 1 | SOT-23-5 |
-| ESD保護 | TPD4E1U06DCKR / C194628 | 1 | SOT-363 |
+| USB D+/D− ESD保護 | ESD321DPYR / C2868952 | 2 | X1SON-2 1.0×0.6mm |
+| USB VBUS ESD保護 | ESD441DPYR / C53161160 | 1 | X1SON-2 1.0×0.6mm |
 | USB-C | HRO TYPE-C-31-M-12 / C165948 | 1 | SMD端子・スルーホール固定脚 |
 | BOOTSELボタン | TS-1187A-B-A-B / C318884 | 1 | 上押し、5.1×5.1×1.5mm |
 | ダイオード | 1N4148W / C81598 | 53 | SOD-123 |
