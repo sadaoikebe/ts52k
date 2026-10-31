@@ -1,8 +1,8 @@
 {
   "source_sha256": {
-    "ts52k.kicad_pcb": "2efe03ed162cbf93f5834b50d5bfe3dcab3e89391689051fafd7ea849ce3163b",
+    "ts52k.kicad_pcb": "c1771ed61714747d6ffffb2c37a9708d56b6423c4ae71202e7416998c48afe5e",
     "ts52k.kicad_pro": "69d7618b3f6216b394b2539931810b7840adcae72a1a1c0b690e7976b781abfd",
-    "ts52k.kicad_sch": "d31d570a0ea1737842bdc9d6a7da2200ee91b9c1319587d21fd3cce19d09745e",
+    "ts52k.kicad_sch": "db6ea784f0d6e7fa4dc2b3d0483e2cf25028cc5533ce15ccb6e40bfc195157b6",
     "rp2040.kicad_sch": "5a04994e8f10efad66605b43f03eaa62993dc8862e6340972a1c79dd012e8d74",
     "ts52k.kicad_dru": "0566d7bbb6352a3b6d66f2dec08288be5d3704398844c45a1fab795702fe57b9",
     "ts52k.kicad_sym": "acc16a380158501a96479d3abee1495e168133543c488806f464868663fc06c7",
@@ -13,9 +13,9 @@
     "rp2040.pretty\\SW_Tactile_XKB_TS-1187A_5.1x5.1mm.kicad_mod": "4b692e5fbd9bc5822af8cca4c166c9c9773f4d8ab855c27a16479ab579437daf"
   },
   "output_sha256": {
-    "gerber\\ts52k-gerbers.zip": "c7dbe859ffe61665febc3b1e1e54b0426a3f48fd0772ec7efd570f6cabba4d49",
+    "gerber\\ts52k-gerbers.zip": "fcaea88a4b63b1820918d347e3146c329e15b2f96d2fb74076b5a78741c8a218",
     "assembly\\ts52k-bom.csv": "52bb0e4e391f723d77f1d555cfb4e45947720b388c788cd36db12efe463cfd60",
-    "assembly\\ts52k-cpl.csv": "ec6be9ea49cd87c37aae5326938390ae83d865f209bffda2dd38568b58a1a0cf"
+    "assembly\\ts52k-cpl.csv": "4f8444a9d1b69d4004ca9dafc34239a62d5292a5b2ee3e7b635a20b8f88bace9"
   },
   "assembly_references": 96,
   "bom_line_items": 16,

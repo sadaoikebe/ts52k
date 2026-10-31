@@ -51,12 +51,22 @@ python pcb/jlcpcb/export.py
 
 実装面は **Bottom のみ、96 点 / 部品番号16種、BOM 16行**です。C13は同じ標準フットプリントと部品番号を使うコンデンサと同じ行です。USB コネクタ J1 と BOOTSEL の SW1 は JLCPCB に実装してもらいます。キースイッチ 52 個とロータリーエンコーダ SW2 は手付け、Tag-Connect J2 は接点と穴だけで部品実装なしです。J1は固定脚にPTHがあるため、スクリプトはSMDのみに限定せず座標を出力し、J1を含むBOMと配置座標の参照番号を照合します。
 
+## RP2040 のパッドと JLCPCB の製造実例
+
+**結論：この基板の RP2040 のパッドと中央パッド内ビアは、JLCPCB の2層・1 ozで製造・実装できる設計と判断しています。パッド幅や中央パッド内ビアを理由にガーバー出力を止める必要はありません。**
+
+この基板の U5（RP2040）は、端子パッドの幅が **0.20 mm** です。中央の GND パッドには、ペースト開口と重なる **穴径 0.30 mm の貫通ビアが4個**あります。
+
+参考となる実例として、[RP2040 Advanced Breakout Board の発注手順](https://github.com/OpenStickCommunity/Hardware/blob/main/Boards/GP2040-CE%20Official%20Boards/RP2040%20Advanced%20Breakout%20Board/RP2040%20Advanced%20Breakout%20Board/README.md)では、JLCPCB に発注した基板について、2層・1.6 mm厚・1 oz・Tented ビアが指定されています。[公開 BOM・実装座標・ガーバー](https://github.com/OpenStickCommunity/Hardware/tree/main/Boards/GP2040-CE%20Official%20Boards/RP2040%20Advanced%20Breakout%20Board/RP2040%20Advanced%20Breakout%20Board/Hardware%20files/RP2040%20Advanced%20Breakout%20Board%20-%20USB-C)を確認すると、RP2040 は C2040、端子パッド幅は 0.20 mm、中央パッド内にはペースト開口と重なる穴径 0.305 mm のビアが9個あります。
+
+この実例は、同様のパッド幅と中央パッド内ビアを持つ基板が JLCPCB に発注されている根拠です。中央パッド内ビアの実装については、[JLCPCB のビア・イン・パッド資料](https://jlcpcb.com/help/article/via-in-pad-pofv-guide)も参照できます。
+
 ## 発注画面で確認すること
 
 1. 2 層、板厚 1.6 mm、銅厚 **1 oz** を選ぶ。基板外形は約 307.23 × 80.41 mm。最小配線幅 0.15 mm は JLCPCB の 2 層 1 oz の公表能力内ですが、2 oz の公表最小値 0.16 mm は満たしません。
 2. BOM をアップロードし、各部品の**現在の実装在庫と見積額**を確認する。2026-10-31の照会では製造候補BOMの16種類すべてに実装用在庫がありました。部品区分や在庫は変動します。
 3. JLCPCB の配置プレビューで Bottom 側の J1・SW1、U3/U4/U5 の向き、D89/D90/D91を含むダイオードの極性を確認する。配置データの角度は KiCad の値であり、部品ライブラリごとの回転補正はプレビューで確認が必要です。
-4. U5 の中央 GND パッドにはペースト開口と重なる 4 個の貫通ビアがあります。はんだの流入を防ぐ実装方法やビア充填の可否・費用を JLCPCB に確認する。U5 の約 0.20 mm 幅の端子パッドは同社能力表の最小 SMD パッド寸法と異なるため、この点も Gerber に基づく DFM 確認を取る。[ビア・イン・パッド](https://jlcpcb.com/help/article/via-in-pad-pofv-guide)
+4. U5 のパッドとビアについては、上記の製造実例を参照する。今回の基板の実装状態は試作後に確認する。
 5. ケース底板と SW1 の高さ・押下経路、Tag-Connect の実際の挿入性を確認する。RP2040 用ファームウェアは未完成です。試作後に全キー、同時押し、USB の両向き、繰り返し起動を検証します。
 
 JLCPCB へのアップロード、メーカーの DFM 確認、基板製造、USB 信号品質の実測・シミュレーションはまだ行っていません。
