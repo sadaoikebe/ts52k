@@ -952,6 +952,25 @@
       (pin passive line (at 0 -3.81 90) (length 2.54) (name "GND" (effects (font (size 1 1)))) (number "2" (effects (font (size 1 1)))))
     )
   )
+(symbol "H5VU10U"
+    (pin_names (offset 0.508) (hide yes))
+    (exclude_from_sim no) (in_bom yes) (on_board yes)
+    (property "Reference" "D" (at 2.54 1.27 0) (effects (font (size 1 1)) (justify left)))
+    (property "Value" "H5VU10U" (at 2.54 -1.27 0) (effects (font (size 1 1)) (justify left)))
+    (property "Footprint" "Diode_SMD:D_SOD-882D" (at 0 0 0) (effects (font (size 1 1)) (hide yes)))
+    (property "Datasheet" "https://datasheet.lcsc.com/datasheet/pdf/c39c364bc61f363e0e429e5dec391fd3.pdf?productCode=C22395519" (at 0 0 0) (effects (font (size 1 1)) (hide yes)))
+    (property "Description" "H5VU10U unidirectional ESD protection, pin 1 cathode/IO, pin 2 anode/GND" (at 0 0 0) (effects (font (size 1 1)) (hide yes)))
+    (property "ki_fp_filters" "D_SOD-882D*" (at 0 0 0) (effects (font (size 1 1)) (hide yes)))
+    (symbol "H5VU10U_0_1"
+      (polyline (pts (xy -1.27 1.27) (xy 1.27 1.27) (xy 1.27 0.762)) (stroke (width 0.254) (type default)) (fill (type none)))
+      (polyline (pts (xy 0 -1.27) (xy 0 1.27)) (stroke (width 0) (type default)) (fill (type none)))
+      (polyline (pts (xy -1.27 -1.27) (xy 1.27 -1.27) (xy 0 1.27) (xy -1.27 -1.27)) (stroke (width 0.254) (type default)) (fill (type none)))
+    )
+    (symbol "H5VU10U_1_1"
+      (pin passive line (at 0 3.81 270) (length 2.54) (name "IO" (effects (font (size 1 1)))) (number "1" (effects (font (size 1 1)))))
+      (pin passive line (at 0 -3.81 90) (length 2.54) (name "GND" (effects (font (size 1 1)))) (number "2" (effects (font (size 1 1)))))
+    )
+  )
 (symbol "ESD441DPYR"
     (pin_names (offset 0.508) (hide yes))
     (exclude_from_sim no) (in_bom yes) (on_board yes)

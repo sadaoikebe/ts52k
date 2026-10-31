@@ -1,0 +1,24 @@
+{
+  "source_sha256": {
+    "ts52k.kicad_pcb": "2efe03ed162cbf93f5834b50d5bfe3dcab3e89391689051fafd7ea849ce3163b",
+    "ts52k.kicad_pro": "69d7618b3f6216b394b2539931810b7840adcae72a1a1c0b690e7976b781abfd",
+    "ts52k.kicad_sch": "d31d570a0ea1737842bdc9d6a7da2200ee91b9c1319587d21fd3cce19d09745e",
+    "rp2040.kicad_sch": "5a04994e8f10efad66605b43f03eaa62993dc8862e6340972a1c79dd012e8d74",
+    "ts52k.kicad_dru": "0566d7bbb6352a3b6d66f2dec08288be5d3704398844c45a1fab795702fe57b9",
+    "ts52k.kicad_sym": "acc16a380158501a96479d3abee1495e168133543c488806f464868663fc06c7",
+    "sym-lib-table": "2f4dfbc72401c13eebc3530a7e03ece14b2225cb81288764c1f71d2538f1dd3d",
+    "fp-lib-table": "a0093d0321fdc9e5dd4177e604c5d1b713455f6171989feeaa0cf8b1c88fd184",
+    "tag-connect.kicad_sym": "bbaf82030c2749a0db7f803e1a1a1ca1ac26c85e117aac4ddf80565e6fd3abc7",
+    "rp2040.pretty\\IC57_RP2040.kicad_mod": "3d896909666dab7cd25657cf2676b4b0e6e5163e104f4898cbcbbfdff864f4cd",
+    "rp2040.pretty\\SW_Tactile_XKB_TS-1187A_5.1x5.1mm.kicad_mod": "4b692e5fbd9bc5822af8cca4c166c9c9773f4d8ab855c27a16479ab579437daf"
+  },
+  "output_sha256": {
+    "gerber\\ts52k-gerbers.zip": "c7dbe859ffe61665febc3b1e1e54b0426a3f48fd0772ec7efd570f6cabba4d49",
+    "assembly\\ts52k-bom.csv": "52bb0e4e391f723d77f1d555cfb4e45947720b388c788cd36db12efe463cfd60",
+    "assembly\\ts52k-cpl.csv": "ec6be9ea49cd87c37aae5326938390ae83d865f209bffda2dd38568b58a1a0cf"
+  },
+  "assembly_references": 96,
+  "bom_line_items": 16,
+  "drc_warnings": 25,
+  "erc_warnings": 0
+}
