@@ -1,0 +1,429 @@
+{
+  "stage": "continuous matrix; only MCU-area connections remain",
+  "fixed_components_verified": 94,
+  "diode_changes": [
+    {
+      "ref": "D14",
+      "dx_mm": 0.0,
+      "dy_mm": 1.209543,
+      "rotation_180": true
+    },
+    {
+      "ref": "D63",
+      "dx_mm": 0.0,
+      "dy_mm": -0.225812,
+      "rotation_180": false
+    },
+    {
+      "ref": "D46",
+      "dx_mm": 0.0,
+      "dy_mm": -0.119811,
+      "rotation_180": false
+    },
+    {
+      "ref": "D25",
+      "dx_mm": 0.0,
+      "dy_mm": -0.119811,
+      "rotation_180": false
+    },
+    {
+      "ref": "D16",
+      "dx_mm": 0.0,
+      "dy_mm": 0.310189,
+      "rotation_180": true
+    },
+    {
+      "ref": "D12",
+      "dx_mm": 0.0,
+      "dy_mm": 0.304913,
+      "rotation_180": false
+    },
+    {
+      "ref": "D17",
+      "dx_mm": 0.0,
+      "dy_mm": -0.223001,
+      "rotation_180": false
+    },
+    {
+      "ref": "D29",
+      "dx_mm": 0.0,
+      "dy_mm": 0.310189,
+      "rotation_180": true
+    },
+    {
+      "ref": "D30",
+      "dx_mm": 0.0,
+      "dy_mm": 0.437408,
+      "rotation_180": true
+    },
+    {
+      "ref": "D31",
+      "dx_mm": 0.0,
+      "dy_mm": 0.255795,
+      "rotation_180": false
+    },
+    {
+      "ref": "D33",
+      "dx_mm": 0.0,
+      "dy_mm": 0.777936,
+      "rotation_180": true
+    },
+    {
+      "ref": "D35",
+      "dx_mm": 0.0,
+      "dy_mm": 0.725795,
+      "rotation_180": true
+    },
+    {
+      "ref": "D37",
+      "dx_mm": 0.0,
+      "dy_mm": -0.119811,
+      "rotation_180": false
+    },
+    {
+      "ref": "D40",
+      "dx_mm": 0.0,
+      "dy_mm": 1.209543,
+      "rotation_180": true
+    },
+    {
+      "ref": "D42",
+      "dx_mm": 0.0,
+      "dy_mm": 0.296609,
+      "rotation_180": true
+    },
+    {
+      "ref": "D43",
+      "dx_mm": 0.0,
+      "dy_mm": 0.750173,
+      "rotation_180": true
+    },
+    {
+      "ref": "D44",
+      "dx_mm": 0.0,
+      "dy_mm": 0.222714,
+      "rotation_180": true
+    },
+    {
+      "ref": "D47",
+      "dx_mm": 0.0,
+      "dy_mm": 0.304913,
+      "rotation_180": false
+    },
+    {
+      "ref": "D49",
+      "dx_mm": 0.0,
+      "dy_mm": 0.739543,
+      "rotation_180": false
+    },
+    {
+      "ref": "D56",
+      "dx_mm": 0.0,
+      "dy_mm": 0.617,
+      "rotation_180": true
+    },
+    {
+      "ref": "D58",
+      "dx_mm": 0.0,
+      "dy_mm": 0.309543,
+      "rotation_180": false
+    },
+    {
+      "ref": "D34",
+      "dx_mm": 0.0,
+      "dy_mm": 0.289559,
+      "rotation_180": false
+    },
+    {
+      "ref": "D18",
+      "dx_mm": 0.0,
+      "dy_mm": 0.255795,
+      "rotation_180": false
+    },
+    {
+      "ref": "D53",
+      "dx_mm": 0.0,
+      "dy_mm": 1.209543,
+      "rotation_180": true
+    },
+    {
+      "ref": "D27",
+      "dx_mm": 0.0,
+      "dy_mm": -0.256765,
+      "rotation_180": false
+    },
+    {
+      "ref": "D11",
+      "dx_mm": 0.0,
+      "dy_mm": -0.119811,
+      "rotation_180": false
+    },
+    {
+      "ref": "D51",
+      "dx_mm": 0.0,
+      "dy_mm": 0.310189,
+      "rotation_180": true
+    },
+    {
+      "ref": "D26",
+      "dx_mm": 0.0,
+      "dy_mm": 0.304913,
+      "rotation_180": false
+    },
+    {
+      "ref": "D23",
+      "dx_mm": 0.0,
+      "dy_mm": 0.739543,
+      "rotation_180": false
+    },
+    {
+      "ref": "D22",
+      "dx_mm": 0.0,
+      "dy_mm": 0.725795,
+      "rotation_180": true
+    },
+    {
+      "ref": "D21",
+      "dx_mm": 0.0,
+      "dy_mm": 0.45,
+      "rotation_180": true
+    },
+    {
+      "ref": "D20",
+      "dx_mm": 0.0,
+      "dy_mm": 0.763937,
+      "rotation_180": true
+    },
+    {
+      "ref": "D55",
+      "dx_mm": 0.0,
+      "dy_mm": 0.777936,
+      "rotation_180": true
+    },
+    {
+      "ref": "D61",
+      "dx_mm": 0.0,
+      "dy_mm": 1.16698,
+      "rotation_180": true
+    },
+    {
+      "ref": "D8",
+      "dx_mm": 0.0,
+      "dy_mm": -2.006648,
+      "rotation_180": true
+    },
+    {
+      "ref": "D7",
+      "dx_mm": 0.0,
+      "dy_mm": -0.080934,
+      "rotation_180": true
+    },
+    {
+      "ref": "D5",
+      "dx_mm": 0.0,
+      "dy_mm": -0.970137,
+      "rotation_180": false
+    },
+    {
+      "ref": "D4",
+      "dx_mm": 0.0,
+      "dy_mm": -0.80948,
+      "rotation_180": false
+    },
+    {
+      "ref": "D38",
+      "dx_mm": 0.0,
+      "dy_mm": 0.304913,
+      "rotation_180": false
+    },
+    {
+      "ref": "D64",
+      "dx_mm": 0.0,
+      "dy_mm": 0.16111,
+      "rotation_180": false
+    },
+    {
+      "ref": "D68",
+      "dx_mm": 0.0,
+      "dy_mm": 0.023425,
+      "rotation_180": true
+    },
+    {
+      "ref": "D52",
+      "dx_mm": 0.0,
+      "dy_mm": 0.725795,
+      "rotation_180": true
+    },
+    {
+      "ref": "D39",
+      "dx_mm": 0.0,
+      "dy_mm": -0.276765,
+      "rotation_180": false
+    },
+    {
+      "ref": "D70",
+      "dx_mm": 0.0,
+      "dy_mm": 0.0,
+      "rotation_180": true
+    },
+    {
+      "ref": "D66",
+      "dx_mm": 0.0,
+      "dy_mm": -0.753,
+      "rotation_180": false
+    },
+    {
+      "ref": "D9",
+      "dx_mm": 0.0,
+      "dy_mm": 0.739543,
+      "rotation_180": false
+    },
+    {
+      "ref": "D13",
+      "dx_mm": 0.0,
+      "dy_mm": 0.416235,
+      "rotation_180": true
+    },
+    {
+      "ref": "D48",
+      "dx_mm": -0.35,
+      "dy_mm": 0.2857,
+      "rotation_180": false
+    },
+    {
+      "ref": "D87",
+      "dx_mm": 0.0,
+      "dy_mm": 0.300173,
+      "rotation_180": true
+    },
+    {
+      "ref": "D88",
+      "dx_mm": 0.0,
+      "dy_mm": 0.937795,
+      "rotation_180": false
+    }
+  ],
+  "maximum_diode_horizontal_shift_mm": 0.35,
+  "maximum_diode_vertical_shift_mm": 2.006648,
+  "diode_switch_links_connected": 53,
+  "matrix_external_connectivity": {
+    "col1": {
+      "external_pads": 5,
+      "external_components": 1
+    },
+    "col2": {
+      "external_pads": 9,
+      "external_components": 1
+    },
+    "col3": {
+      "external_pads": 9,
+      "external_components": 1
+    },
+    "col4": {
+      "external_pads": 9,
+      "external_components": 1
+    },
+    "col5": {
+      "external_pads": 9,
+      "external_components": 1
+    },
+    "col6": {
+      "external_pads": 8,
+      "external_components": 1
+    },
+    "rpg1": {
+      "external_pads": 2,
+      "external_components": 1
+    },
+    "rpg2": {
+      "external_pads": 2,
+      "external_components": 1
+    },
+    "row10": {
+      "external_pads": 5,
+      "external_components": 1
+    },
+    "row1": {
+      "external_pads": 5,
+      "external_components": 1
+    },
+    "row6": {
+      "external_pads": 6,
+      "external_components": 1
+    },
+    "row2": {
+      "external_pads": 5,
+      "external_components": 1
+    },
+    "row3": {
+      "external_pads": 5,
+      "external_components": 1
+    },
+    "row8": {
+      "external_pads": 5,
+      "external_components": 1
+    },
+    "row4": {
+      "external_pads": 6,
+      "external_components": 1
+    },
+    "row7": {
+      "external_pads": 6,
+      "external_components": 1
+    },
+    "row9": {
+      "external_pads": 3,
+      "external_components": 1
+    },
+    "row5": {
+      "external_pads": 5,
+      "external_components": 1
+    }
+  },
+  "unconnected_items_outside_MCU": 0,
+  "unconnected_items_inside_MCU": 19,
+  "MCU_region_mm": {
+    "x": [
+      8,
+      42.6
+    ],
+    "y": [
+      49,
+      80
+    ]
+  },
+  "trunk_order_verified": true,
+  "upper_order": [
+    "rpg1",
+    "rpg2",
+    "row1",
+    "row6",
+    "row2",
+    "row7",
+    "col3",
+    "col2"
+  ],
+  "lower_order": [
+    "col4",
+    "col5",
+    "col6",
+    "row3",
+    "row8",
+    "row4",
+    "row9",
+    "row5",
+    "row10"
+  ],
+  "drc_errors": 0,
+  "drc_warnings": 146,
+  "warning_types": {
+    "track_dangling": 17,
+    "via_dangling": 3,
+    "silk_edge_clearance": 3,
+    "lib_footprint_mismatch": 91,
+    "silk_overlap": 11,
+    "silk_over_copper": 21
+  },
+  "schematic_parity_issues": 0,
+  "unmodified_power_USB_clock_QSPI_other_copper": 447
+}

@@ -1,0 +1,14 @@
+# Scratch candidates, downloaded routers, logs, and local original backup.
+*
+!.gitignore
+!README.md
+!final.png
+!ground-reference.png
+!final-drc.json
+!before-drc.json
+!erc.json
+!validation.json
+!c14/
+!c14/README.md
+!c14/after.png
+!c14/validation.json

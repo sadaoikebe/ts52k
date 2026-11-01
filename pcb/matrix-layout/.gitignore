@@ -1,0 +1,6 @@
+# Local routing experiments stay out of the design history.
+*
+!.gitignore
+!README.md
+!preview.png
+!validation.json

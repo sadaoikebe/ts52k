@@ -1,0 +1,574 @@
+{
+  "comparison_commit": "3f8d45b",
+  "moved": [
+    {
+      "ref": "C8",
+      "before": [
+        22.65,
+        58.6
+      ],
+      "after": [
+        22.65,
+        58.75
+      ],
+      "angle": 90.0
+    },
+    {
+      "ref": "C10",
+      "before": [
+        23.5,
+        69.9
+      ],
+      "after": [
+        23.74,
+        69.5
+      ],
+      "angle": -90.0
+    },
+    {
+      "ref": "R13",
+      "before": [
+        25.4196,
+        57.15
+      ],
+      "after": [
+        25.4196,
+        56.8
+      ],
+      "angle": -90.0
+    },
+    {
+      "ref": "C9",
+      "before": [
+        24.65,
+        54.8
+      ],
+      "after": [
+        25.13,
+        58.65
+      ],
+      "angle": 90.0
+    },
+    {
+      "ref": "R10",
+      "before": [
+        27.4196,
+        57.2
+      ],
+      "after": [
+        27.4196,
+        56.85
+      ],
+      "angle": -90.0
+    },
+    {
+      "ref": "R9",
+      "before": [
+        26.4196,
+        57.15
+      ],
+      "after": [
+        26.4196,
+        56.8
+      ],
+      "angle": -90.0
+    }
+  ],
+  "fixed_footprints_unchanged": [
+    "MX2",
+    "MX4",
+    "MX11",
+    "MX12",
+    "MX13",
+    "MX14",
+    "MX16",
+    "MX17",
+    "MX18",
+    "MX21",
+    "MX23",
+    "MX25",
+    "MX27",
+    "MX29",
+    "MX30",
+    "MX31",
+    "MX33",
+    "MX34",
+    "MX35",
+    "MX37",
+    "MX38",
+    "MX39",
+    "MX42",
+    "MX43",
+    "MX48",
+    "MX51",
+    "MX52",
+    "MX55",
+    "MX56",
+    "MX58",
+    "MX61",
+    "MX64",
+    "MX66",
+    "MX67",
+    "MX71",
+    "MX22",
+    "MX9",
+    "MX20",
+    "MX46",
+    "MX65",
+    "MX74",
+    "MX81",
+    "MX82",
+    "MX75",
+    "MX60",
+    "MX7",
+    "MX47",
+    "MX8",
+    "MX44",
+    "MX5",
+    "MX26",
+    "SW2",
+    "MX3",
+    "D14",
+    "D63",
+    "D46",
+    "D25",
+    "D16",
+    "D12",
+    "D17",
+    "D29",
+    "D30",
+    "D31",
+    "D33",
+    "D35",
+    "D37",
+    "D40",
+    "D42",
+    "D43",
+    "D44",
+    "D47",
+    "D49",
+    "D56",
+    "D58",
+    "D65",
+    "D34",
+    "D18",
+    "D53",
+    "D27",
+    "D11",
+    "D51",
+    "D26",
+    "D23",
+    "D22",
+    "D21",
+    "D20",
+    "D55",
+    "D61",
+    "D8",
+    "D7",
+    "D5",
+    "D4",
+    "D2",
+    "D38",
+    "D64",
+    "D68",
+    "D3",
+    "D52",
+    "D39",
+    "D70",
+    "D66",
+    "D9",
+    "D13",
+    "D48",
+    "J1",
+    "R5",
+    "R6",
+    "U2",
+    "D87",
+    "D88",
+    "C16",
+    "R2",
+    "X2",
+    "C6",
+    "C17",
+    "R11",
+    "C14",
+    "U3",
+    "SW1",
+    "C13",
+    "R12",
+    "U4",
+    "C21",
+    "R8",
+    "C12",
+    "C2",
+    "R7",
+    "C3",
+    "C19",
+    "C5",
+    "R4",
+    "U5",
+    "C11",
+    "C15",
+    "C4",
+    "C20",
+    "R3",
+    "J2",
+    "C18",
+    "R14",
+    "C7"
+  ],
+  "original_matrix_tracks_unchanged": 603,
+  "usb_tracks_unchanged": 29,
+  "mcu_back_connections": [
+    {
+      "pin": 2,
+      "net": "rpg1",
+      "back_only": true
+    },
+    {
+      "pin": 3,
+      "net": "rpg2",
+      "back_only": true
+    },
+    {
+      "pin": 4,
+      "net": "row1",
+      "back_only": true
+    },
+    {
+      "pin": 5,
+      "net": "row2",
+      "back_only": true
+    },
+    {
+      "pin": 6,
+      "net": "col3",
+      "back_only": true
+    },
+    {
+      "pin": 13,
+      "net": "col2",
+      "back_only": true
+    },
+    {
+      "pin": 14,
+      "net": "col4",
+      "back_only": true
+    },
+    {
+      "pin": 15,
+      "net": "col5",
+      "back_only": true
+    },
+    {
+      "pin": 16,
+      "net": "col6",
+      "back_only": true
+    },
+    {
+      "pin": 17,
+      "net": "row3",
+      "back_only": true
+    },
+    {
+      "pin": 18,
+      "net": "row4",
+      "back_only": true
+    },
+    {
+      "pin": 27,
+      "net": "row5",
+      "back_only": true
+    },
+    {
+      "pin": 28,
+      "net": "col1",
+      "back_only": true
+    }
+  ],
+  "new_or_modified_tracks_octilinear": true,
+  "mechanical_checks": [
+    {
+      "ref": "C8",
+      "gap_mm": 5.120150048900309,
+      "front_ref": "MX7",
+      "front_pad": ""
+    },
+    {
+      "ref": "C10",
+      "gap_mm": 6.282693008314332,
+      "front_ref": "MX3",
+      "front_pad": ""
+    },
+    {
+      "ref": "R13",
+      "gap_mm": 1.7374552696475734,
+      "front_ref": "MX7",
+      "front_pad": ""
+    },
+    {
+      "ref": "C9",
+      "gap_mm": 3.118988519085823,
+      "front_ref": "MX7",
+      "front_pad": ""
+    },
+    {
+      "ref": "R10",
+      "gap_mm": 0.3339483579254312,
+      "front_ref": "MX7",
+      "front_pad": ""
+    },
+    {
+      "ref": "R9",
+      "gap_mm": 0.8811812620878984,
+      "front_ref": "MX7",
+      "front_pad": ""
+    },
+    {
+      "ref": "U5",
+      "gap_mm": 4.297050000000006,
+      "front_ref": "MX7",
+      "front_pad": ""
+    },
+    {
+      "ref": "X2",
+      "gap_mm": 1.0287000000000006,
+      "front_ref": "MX3",
+      "front_pad": "2"
+    },
+    {
+      "ref": "J2",
+      "gap_mm": 2.388878324988542,
+      "front_ref": "MX3",
+      "front_pad": ""
+    },
+    {
+      "ref": "SW1",
+      "gap_mm": 0.6950000000000003,
+      "front_ref": "MX8",
+      "front_pad": ""
+    }
+  ],
+  "qspi_lengths_mm": {
+    "before": {
+      "QSPI_SCLK": 16.537895469031707,
+      "QSPI_SD0": 15.500321997223015,
+      "QSPI_SD1": 12.910970587477365,
+      "QSPI_SD2": 12.892254533450435,
+      "QSPI_SD3": 17.794708706130045
+    },
+    "after": {
+      "QSPI_SCLK": 17.443330273802463,
+      "QSPI_SD0": 16.40575680199379,
+      "QSPI_SD1": 13.010968587477365,
+      "QSPI_SD2": 12.892254533450435,
+      "QSPI_SD3": 19.015277189154254
+    }
+  },
+  "track_lengths_mm": {
+    "before": {
+      "F.Cu": 170.82276451686474,
+      "B.Cu": 4455.084327868399
+    },
+    "after": {
+      "F.Cu": 172.48906893117703,
+      "B.Cu": 4454.607564331576
+    }
+  },
+  "decoupling_power_path_mm": {
+    "before": {
+      "C11-U4.8": 1.5233147545195183,
+      "C15-U5.1": 1.472997256769669,
+      "C16-U5.10": 1.5098591181476493,
+      "C6-U5.43": 1.6204214700769475,
+      "C13-U5.48": 1.472813034319888,
+      "C17-U5.33": 1.2883989999999983,
+      "C18-U5.42": 1.2883999999999993
+    },
+    "after": {
+      "C11-U4.8": 1.5233147545195183,
+      "C15-U5.1": 1.472997256769669,
+      "C16-U5.10": 1.5098591181476493,
+      "C6-U5.43": 1.6204214700769475,
+      "C13-U5.48": 1.472813034319888,
+      "C17-U5.33": 1.2883989999999983,
+      "C18-U5.42": 1.2883999999999993
+    }
+  },
+  "main_qspi_reference_checks": [
+    {
+      "net": "/rp2040/QSPI_SD3",
+      "start": [
+        37.0,
+        61.535
+      ],
+      "end": [
+        38.1875,
+        61.535
+      ],
+      "checked_length_mm": 1.1875,
+      "reference_centerline_gap_mm": 0.0,
+      "reference_0_35_mm_corridor_missing_mm2": 0.0
+    },
+    {
+      "net": "/rp2040/QSPI_SD3",
+      "start": [
+        30.45,
+        58.25
+      ],
+      "end": [
+        33.715,
+        58.25
+      ],
+      "checked_length_mm": 1.9150000000000027,
+      "reference_centerline_gap_mm": 0.0,
+      "reference_0_35_mm_corridor_missing_mm2": 0.0
+    },
+    {
+      "net": "/rp2040/QSPI_SD3",
+      "start": [
+        33.715,
+        58.25
+      ],
+      "end": [
+        37.0,
+        61.535
+      ],
+      "checked_length_mm": 4.645691552395612,
+      "reference_centerline_gap_mm": 0.0,
+      "reference_0_35_mm_corridor_missing_mm2": 0.0
+    },
+    {
+      "net": "/rp2040/QSPI_SD0",
+      "start": [
+        37.0,
+        58.995
+      ],
+      "end": [
+        38.1875,
+        58.995
+      ],
+      "checked_length_mm": 1.1875,
+      "reference_centerline_gap_mm": 0.0,
+      "reference_0_35_mm_corridor_missing_mm2": 0.0
+    },
+    {
+      "net": "/rp2040/QSPI_SD0",
+      "start": [
+        31.1,
+        57.3
+      ],
+      "end": [
+        35.305,
+        57.3
+      ],
+      "checked_length_mm": 3.504999999999999,
+      "reference_centerline_gap_mm": 0.0,
+      "reference_0_35_mm_corridor_missing_mm2": 0.0
+    },
+    {
+      "net": "/rp2040/QSPI_SD0",
+      "start": [
+        35.305,
+        57.3
+      ],
+      "end": [
+        37.0,
+        58.995
+      ],
+      "checked_length_mm": 2.3970919882223964,
+      "reference_centerline_gap_mm": 0.0,
+      "reference_0_35_mm_corridor_missing_mm2": 0.0
+    },
+    {
+      "net": "/rp2040/QSPI_SCLK",
+      "start": [
+        37.0,
+        60.265
+      ],
+      "end": [
+        38.1875,
+        60.265
+      ],
+      "checked_length_mm": 1.1875,
+      "reference_centerline_gap_mm": 0.0,
+      "reference_0_35_mm_corridor_missing_mm2": 0.0
+    },
+    {
+      "net": "/rp2040/QSPI_SCLK",
+      "start": [
+        30.7,
+        57.7
+      ],
+      "end": [
+        34.435,
+        57.7
+      ],
+      "checked_length_mm": 2.6350000000000016,
+      "reference_centerline_gap_mm": 0.0,
+      "reference_0_35_mm_corridor_missing_mm2": 0.0
+    },
+    {
+      "net": "/rp2040/QSPI_SCLK",
+      "start": [
+        34.435,
+        57.7
+      ],
+      "end": [
+        37.0,
+        60.265
+      ],
+      "checked_length_mm": 3.6274577874869856,
+      "reference_centerline_gap_mm": 0.0,
+      "reference_0_35_mm_corridor_missing_mm2": 0.0
+    }
+  ],
+  "reference_check_scope": "Three long B.Cu flash-side runs, x >= 31.8 mm; this does not assert continuous reference under all local escapes or via transitions.",
+  "core_decoupling_power_path_mm": {
+    "before": {
+      "C8-U5.45": 1.6097620054047173,
+      "C9-U5.50": 5.409761298297128,
+      "C10-U5.23": 2.2547364593412738
+    },
+    "after": {
+      "C8-U5.45": 1.4597617125106936,
+      "C9-U5.50": 1.5766612116419498,
+      "C10-U5.23": 1.755325204371729
+    }
+  },
+  "board_sha256": "4565e1555cc1716f3c5d6644c38013f17335ee6d6cc05d4d964e7debe0e5f54e",
+  "drc_errors": 0,
+  "unconnected": 0,
+  "schematic_parity": 0,
+  "warnings": {
+    "track_dangling": 3,
+    "via_dangling": 1,
+    "silk_edge_clearance": 3,
+    "lib_footprint_mismatch": 91,
+    "silk_overlap": 11,
+    "silk_over_copper": 24
+  },
+  "mcp_audit": {
+    "issues": 57,
+    "footprint_bounding_box_overlaps": 34,
+    "keepout_or_boundary": 2,
+    "silkscreen_over_pad": 18,
+    "silkscreen_text_overlap": 3,
+    "note": "Projected bounding boxes include opposite-side components. Actual courtyard DRC and front drilled-pad versus rear courtyard checks are recorded separately; existing silk issues remain."
+  },
+  "all_qspi_opposite_ground_projection": {
+    "before_uncovered_centerline_mm": 36.07695146413336,
+    "after_uncovered_centerline_mm": 38.13957958067402,
+    "note": "Includes antipads, escapes and local crossings. Long flash-side B.Cu reference corridors remain continuous; total local projection gaps increased with the revised resistor fanout."
+  },
+  "usb_lengths_mm": {
+    "Net-(U5-USB_DM)": 7.435177777210907,
+    "Net-(U5-USB_DP)": 7.435178191424468
+  },
+  "core_ground_stub_mm": {
+    "C8": 0.47,
+    "C9": 1.010243866176395,
+    "C10": 0.7604163056034262
+  },
+  "core_decoupling_scope": "Core supply capacitance and values unchanged; pad-center path length, excluding vertical via barrel length. All three capacitor-to-MCU paths are B.Cu only."
+}

@@ -12,6 +12,7 @@
 *.sch#
 *.sch.swp
 **/ts52k-backups/*
+**/.history/
 **/jlcpcb/assembly/*
 **/jlcpcb/gerber/*
 ts52k-rescue.*

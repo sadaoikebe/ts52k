@@ -1,0 +1,19 @@
+(version 1)
+
+# Existing fine-pitch RP2040 routing and pad clearances.
+# ROW/COL tracks and vias use the stricter rule below.
+(rule "RP2040 local 0.15 mm clearance"
+  (condition "A.intersectsArea('MCU_FANOUT') && B.intersectsArea('MCU_FANOUT')")
+  (constraint clearance (min 0.15mm)))
+
+# New ROW/COL tracks/vias retain 0.20 mm inside MCU_FANOUT too.
+# Existing MCU pad-to-power clearances retain their original local rule.
+(rule "Matrix routing 0.20 mm clearance"
+  (condition "((A.Type == 'Track' || A.Type == 'Via') && (A.NetName == 'row*' || A.NetName == 'col*')) || ((B.Type == 'Track' || B.Type == 'Via') && (B.NetName == 'row*' || B.NetName == 'col*'))")
+  (constraint clearance (min 0.20mm)))
+
+# TC2030-IDC-NL datasheet rev. B: 0.020 inch to other exposed-side signals.
+(rule "Tag-Connect contact clearance"
+ (layer "B.Cu")
+ (condition "(A.Type == 'Pad' && A.memberOfFootprint('J2') && B.Type != 'Pad') || (B.Type == 'Pad' && B.memberOfFootprint('J2') && A.Type != 'Pad')")
+ (constraint clearance (min 0.508mm)))
