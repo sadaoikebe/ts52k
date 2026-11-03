@@ -1,0 +1,167 @@
+{
+  "kicad_version": "10.0.5",
+  "assets": [
+    {
+      "asset": "ts52k:Raytac_MDBT50Q",
+      "source": "RF_Module:Raytac_MDBT50Q",
+      "source_sha256": "4eabf381cae5f43c2f7c2a1e798ed3b5522117505b66a855398b397ad1b10d2f"
+    },
+    {
+      "asset": "ts52k:VQFN-16-1EP_3x3mm_P0.5mm_EP1.68x1.68mm",
+      "source": "Package_DFN_QFN:VQFN-16-1EP_3x3mm_P0.5mm_EP1.68x1.68mm",
+      "source_sha256": "5ba888ea16e9e71dcb8f8721071d4d3e71be7682de9939899eff5567c3331caf"
+    },
+    {
+      "asset": "ts52k:L_0603_1608Metric",
+      "source": "Inductor_SMD:L_0603_1608Metric",
+      "source_sha256": "3fcbaea27d33b968bc9da19e1fb7973635671eb634e8d84dbc897255cfda1478"
+    },
+    {
+      "asset": "ts52k:C_0402_1005Metric",
+      "source": "Capacitor_SMD:C_0402_1005Metric",
+      "source_sha256": "3d8a1dc70b71dbc3a5786560f7f9d0cabe99f1182653b072cde5046e4e3f6fc4"
+    },
+    {
+      "asset": "ts52k:C_0603_1608Metric",
+      "source": "Capacitor_SMD:C_0603_1608Metric",
+      "source_sha256": "d45eebd5cb9faace255d4ec95a0f9484efde898359507b02e2ba9bbb3ef6d857"
+    },
+    {
+      "asset": "ts52k:C_0805_2012Metric",
+      "source": "Capacitor_SMD:C_0805_2012Metric",
+      "source_sha256": "e890bdf55fa18fc6df6878eb1b5251a991e1b93985509175eb269d3d002880b4"
+    },
+    {
+      "asset": "ts52k:R_0603_1608Metric",
+      "source": "Resistor_SMD:R_0603_1608Metric",
+      "source_sha256": "03fc7902b2661df01b4d828fdb6eab9eddf974e7130ed2b98892607387a50c4b"
+    },
+    {
+      "asset": "ts52k:USB_C_Receptacle_HRO_TYPE-C-31-M-12",
+      "source": "Connector_USB:USB_C_Receptacle_HRO_TYPE-C-31-M-12",
+      "source_sha256": "8d292db4e16dbd391bfc6c79366047ce1799e687d970810736a41426e88619b3"
+    },
+    {
+      "asset": "ts52k:D_SOD-123",
+      "source": "Diode_SMD:D_SOD-123",
+      "source_sha256": "1594c737edf4922415ffb3768701c033c5cd3288f99bb0e2a6d273f83d843a35"
+    },
+    {
+      "asset": "ts52k:JST_PH_S2B-PH-SM4-TB_1x02-1MP_P2.00mm_Horizontal",
+      "source": "Connector_JST:JST_PH_S2B-PH-SM4-TB_1x02-1MP_P2.00mm_Horizontal",
+      "source_sha256": "57261c42d07b35ddb8d0b9049e24dbeadae7011f1a7aec2584d1e44b2d584c2a"
+    },
+    {
+      "asset": "ts52k:Tag-Connect_TC2030-IDC-NL_2x03_P1.27mm_Vertical",
+      "source": "Connector:Tag-Connect_TC2030-IDC-NL_2x03_P1.27mm_Vertical",
+      "source_sha256": "179156b6af7a42f45f70c4be2a365fae03ec7299e5396299cf34afa07a99e502"
+    },
+    {
+      "asset": "ts52k:Crystal_Epson_FC-12M_2.05x1.2mm",
+      "source": "Crystal:Crystal_SMD_2012-2Pin_2.0x1.2mm",
+      "source_sha256": "2ba294cd131785621729b3922e862e6a1b78deeebe3f3e05a8e13f27973a7d01"
+    },
+    {
+      "asset": "ts52k:H5VU10U_DFN1006-2L",
+      "source": "Diode_SMD:D_SOD-882D",
+      "source_sha256": "0a1041c636a575e8d478030710799bb2d3824bec2232e8b1b900667cdb3b2228"
+    },
+    {
+      "asset": "ts52k:SW_Tactile_XKB_TS-1187A_5.1x5.1mm",
+      "source": "project rp2040:SW_Tactile_XKB_TS-1187A_5.1x5.1mm",
+      "source_sha256": "4b692e5fbd9bc5822af8cca4c166c9c9773f4d8ab855c27a16479ab579437daf"
+    },
+    {
+      "asset": "ts52k:MDBT50Q-1MV2",
+      "source": "RF_Module:MDBT50Q-1MV2",
+      "source_sha256": "4729266f50d22561a41c6e868e66457f3c8eaf05106c8f3c75d1be375adc8d00"
+    },
+    {
+      "asset": "ts52k:BQ24072RGTR",
+      "source": "Battery_Management:BQ24072RGT",
+      "source_sha256": "57b6c19288119a00dae45629b30e76fecb8eab3586543863ba5647bede8a8451"
+    },
+    {
+      "asset": "ts52k:LQM18DN100M70L",
+      "source": "Device:L",
+      "source_sha256": "6bebebb163b6c1747053dcf1272b51373ce718d7043243ac58a680543d2c833f"
+    },
+    {
+      "asset": "ts52k:X1A0000610008",
+      "source": "Device:Crystal",
+      "source_sha256": "6bebebb163b6c1747053dcf1272b51373ce718d7043243ac58a680543d2c833f"
+    },
+    {
+      "asset": "ts52k:0402CG120J500NT",
+      "source": "Device:C",
+      "source_sha256": "6bebebb163b6c1747053dcf1272b51373ce718d7043243ac58a680543d2c833f"
+    },
+    {
+      "asset": "ts52k:CL10A105KB8NNNC",
+      "source": "Device:C",
+      "source_sha256": "6bebebb163b6c1747053dcf1272b51373ce718d7043243ac58a680543d2c833f"
+    },
+    {
+      "asset": "ts52k:CL10A475KO8NNNC",
+      "source": "Device:C",
+      "source_sha256": "6bebebb163b6c1747053dcf1272b51373ce718d7043243ac58a680543d2c833f"
+    },
+    {
+      "asset": "ts52k:CC0603KRX7R9BB104",
+      "source": "Device:C",
+      "source_sha256": "6bebebb163b6c1747053dcf1272b51373ce718d7043243ac58a680543d2c833f"
+    },
+    {
+      "asset": "ts52k:CL21A106KAYNNNE",
+      "source": "Device:C",
+      "source_sha256": "6bebebb163b6c1747053dcf1272b51373ce718d7043243ac58a680543d2c833f"
+    },
+    {
+      "asset": "ts52k:0603WAF8201T5E",
+      "source": "Device:R",
+      "source_sha256": "6bebebb163b6c1747053dcf1272b51373ce718d7043243ac58a680543d2c833f"
+    },
+    {
+      "asset": "ts52k:0603WAF1501T5E",
+      "source": "Device:R",
+      "source_sha256": "6bebebb163b6c1747053dcf1272b51373ce718d7043243ac58a680543d2c833f"
+    },
+    {
+      "asset": "ts52k:0603WAF1002T5E",
+      "source": "Device:R",
+      "source_sha256": "6bebebb163b6c1747053dcf1272b51373ce718d7043243ac58a680543d2c833f"
+    },
+    {
+      "asset": "ts52k:0603WAF5101T5E",
+      "source": "Device:R",
+      "source_sha256": "6bebebb163b6c1747053dcf1272b51373ce718d7043243ac58a680543d2c833f"
+    },
+    {
+      "asset": "ts52k:0603WAF220KT5E",
+      "source": "Device:R",
+      "source_sha256": "6bebebb163b6c1747053dcf1272b51373ce718d7043243ac58a680543d2c833f"
+    },
+    {
+      "asset": "ts52k:TS-1187A-B-A-B",
+      "source": "Switch:SW_Push",
+      "source_sha256": "1506ba399393ecbc8f57f7f84a31c6cbec4354dc0cd5151acbd1677db81ca5c8"
+    },
+    {
+      "asset": "ts52k:1N4148W",
+      "source": "Device:D",
+      "source_sha256": "6bebebb163b6c1747053dcf1272b51373ce718d7043243ac58a680543d2c833f"
+    },
+    {
+      "asset": "ts52k:S2B-PH-SM4-TB(LF)(SN)",
+      "source": "Connector_Generic:Conn_01x02",
+      "source_sha256": "1ae3b346fe1c4e874fecb72abc7df4e94a253780db183439dbfefc4e2ff3a0be"
+    }
+  ],
+  "modifications": {
+    "ts52k:Raytac_MDBT50Q": "Antenna keepout 3.8 mm long, all copper layers; Raytac Version L p9 and p11.",
+    "ts52k:Crystal_Epson_FC-12M_2.05x1.2mm": "Epson lands 0.7 x 1.4 mm at +/-0.75 mm; same-side inter-pad copper keepout; 2.05 x 1.2 mm Fab; generic 3D model removed.",
+    "ts52k:H5VU10U_DFN1006-2L": "Hongjiacheng Rev 2.0 lands 0.55 x 0.60 mm at +/-0.425 mm; matching paste; generic 3D model removed.",
+    "ts52k:BQ24072RGTR": "MPN suffix and metadata; default footprint changed from EP1.6 to selected EP1.68.",
+    "selected_symbols": "Value, MPN, Manufacturer, LCSC, JLCClass, local footprint and footprint filters set from selected BOM."
+  }
+}

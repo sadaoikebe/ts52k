@@ -1,5 +1,4 @@
 (sym_lib_table
-  (lib (name "ts52k")(type "KiCad")(uri "${KIPRJMOD}/ts52k.kicad_sym")(options "")(descr "Project-local symbols: MX keyswitch, USB-C receptacle"))
-  (lib (name "rp2040")(type "KiCad")(uri "${KIPRJMOD}/rp2040.kicad_sym")(options "")(descr ""))
-  (lib (name "tag-connect")(type "KiCad")(uri "${KIPRJMOD}/tag-connect.kicad_sym")(options "")(descr "Tag-Connect TC2030/TC2050 programming headers"))
+  (lib (name "ts52k")(type "KiCad")(uri "${KIPRJMOD}/ts52k.kicad_sym")(options "")(descr "Selected wireless TS52K parts with MPN, LCSC and local footprint defaults"))
+  (lib (name "tag-connect")(type "KiCad")(uri "${KIPRJMOD}/tag-connect.kicad_sym")(options "")(descr "TC2030-CTX SWD contact symbol; no fitted component"))
 )

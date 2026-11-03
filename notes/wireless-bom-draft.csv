@@ -1,0 +1,20 @@
+Item,Manufacturer,MPN,LCSC,Quantity,Package,JLCClass,Use
+MCU module,Raytac,MDBT50Q-1MV2,C5118826,1,15.5x10.5mm,Extended,MCU and BLE
+Battery charger,Texas Instruments,BQ24072RGTR,C140288,1,VQFN-16 RGT 3x3mm,Extended,USB100 fixed charging and power path
+REG0 inductor,Murata,LQM18DN100M70L,C713281,1,0603,Extended,DCCH to VDD 10uH
+LF crystal,Epson,X1A0000610008,C96341,1,SMD2012-2P,Extended,32.768kHz CL9pF
+LF load capacitors,FH,0402CG120J500NT,C1547,2,0402,Basic,12pF on XL1 and XL2
+1uF capacitors,Samsung,CL10A105KB8NNNC,C15849,2,0603,Basic,1uF each on BQ24072 IN and VDD
+Power capacitors,Samsung,CL10A475KO8NNNC,C19666,4,0603,Basic,4.7uF each on VDD VBUS OUT BAT
+VDD bypass capacitors,YAGEO,CC0603KRX7R9BB104,C14663,3,0603,Basic,100nF x3 on VDD
+VDDH capacitor,Samsung,CL21A106KAYNNNE,C15850,1,0805,Basic,10uF on VDDH
+ISET resistor,UNI-ROYAL,0603WAF8201T5E,C25981,1,0603,Basic,8.2kOhm ISET to GND
+ILIM resistor,UNI-ROYAL,0603WAF1501T5E,C22843,1,0603,Basic,1.5kOhm ILIM to GND
+TS resistor,UNI-ROYAL,0603WAF1002T5E,C25804,1,0603,Basic,10kOhm TS to GND
+USB CC resistors,UNI-ROYAL,0603WAF5101T5E,C23186,2,0603,Basic,5.1kOhm each on CC1 and CC2
+USB VBUS series resistor,UNI-ROYAL,0603WAF220KT5E,C22939,1,0603,Basic,2.2Ohm on module VBUS branch only
+USB receptacle,HRO,TYPE-C-31-M-12,C165948,1,USB-C 16P SMT,Extended,USB connector
+USB ESD,hongjiacheng,H5VU10U,C22395519,3,DFN1006-2L,Extended,D- D+ VBUS
+Reset switch,XKB,TS-1187A-B-A-B,C318884,1,5.1x5.1x1.5mm SMT,Basic,P0.18 to GND
+Matrix diodes,ST Semtech,1N4148W,C81598,53,SOD-123,Basic,52 keys and encoder push switch
+Battery connector,JST,S2B-PH-SM4-TB(LF)(SN),C295747,1,PH 2P 2mm right-angle SMT,Extended,Pin1 BAT+ Pin2 GND

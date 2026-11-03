@@ -1,5 +1,7 @@
 # Revision 0.2 — JLCPCB 向け出力
 
+この文書と既存の製造出力は旧RP2040版の記録。以下のERC/DRC・部品数・製造可能性は当時の回路とライブラリ構成に対するもの。無線版のライブラリ整理後や未作成の無線版回路図・PCBを検査した結果ではない。現在の部品表は[無線版仮BOM](../../notes/wireless-bom-draft.csv)、進捗は[決定事項](../../notes/wireless-decisions.md)を参照する。
+
 **Revision 0.2 のガーバー・ドリル・BOM・実装座標を同梱しています。**
 
 ## 電源・USB ESD保護

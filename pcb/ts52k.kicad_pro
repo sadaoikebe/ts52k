@@ -521,8 +521,8 @@
     }
   },
   "libraries": {
-    "pinned_footprint_libs": [],
-    "pinned_symbol_libs": []
+    "pinned_footprint_libs": ["ts52k", "MX_Only"],
+    "pinned_symbol_libs": ["ts52k", "tag-connect"]
   },
   "meta": {
     "filename": "ts52k.kicad_pro",
