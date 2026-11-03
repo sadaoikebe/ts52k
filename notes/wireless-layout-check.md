@@ -1,6 +1,6 @@
 # 無線版のランド・配置条件
 
-2026-11-03。メーカー図とKiCad 10.0ライブラリ、旧RP2040版PCBを照合し、以下の専用ランド作成と[登録](../pcb/LIBRARIES.md)を完了した。BOMは19品種・81点。回路図へのランド割当てと端子の照合も[完了](../pcb/schematic-review/validation.json)。PCBへの反映と実機検証は次工程。
+2026-11-03。メーカー図とKiCad 10.0ライブラリ、旧RP2040版PCBを照合し、以下の専用ランド作成と[登録](../pcb/LIBRARIES.md)を完了した。BOMは19品種・81点。回路図へのランド割当てと端子の照合も[完了](../pcb/schematic-review/validation.json)。PCBには[仮配置](../pcb/placement-review/README.md)まで反映した。配線と実機検証は未実施。
 
 ## 使用するランド
 
@@ -68,5 +68,7 @@ USB-Cは[HROのTYPE-C-31-M-12](https://www.krhro.com/Product-Details/726.html)�
 追加の実装部品を増やさず、GND、USB入力、充電IC OUT/VDDH、VDD、抵抗後のモジュールVBUSへプローブを当てられる箇所を確保する。初回はUSB給電、各電圧測定、SWD接続、確認済みブートローダー書き込み、VDD/UICR読戻し、USB認識、最小ZMKの順で試す。
 
 ## PCBへの引き継ぎ
+
+仮配置でGPIO方針を更新した。ダイオードの向きを維持し、行10本とエンコーダ2本の入力を南側パッド3〜14へ集める。列6本は既存の制限なしGPIOを使い、ZMKで高駆動を明示する。[採用方針](wireless-pin-assignment.md)を参照。現在の回路図・PCBのパッドネットは旧表のままで、方針を反映した接続順の確定とネット変更は未実施。南側を入力の引き込み口として空けた[配置案](../pcb/placement-review/README.md)を先に作った。
 
 部品・GPIO・初回SWD経路を回路図へ反映し、ERCと主要ネット・BOM・ランド参照の照合を完了した。基板上での禁止領域の拡張と実際の配置確認はPCB工程へ引き継ぐ。実機の起動、LF精度、USB挿抜波形、ESD、通信距離は試作後の確認であり、ビルドやERCで実証したとはしない。

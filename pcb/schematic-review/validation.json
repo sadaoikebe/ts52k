@@ -9,7 +9,7 @@
   "retained_component_coordinates": 114,
   "matrix_connectivity": "unchanged",
   "baseline_commit": "a82fe3d",
-  "pcb": "unchanged",
+  "pcb": "checked_separately_in_placement_review",
   "physical_boot": "not_tested",
   "checks": [
     "power_nets_exact_membership",
@@ -34,6 +34,6 @@
     "pcb/tag-connect.kicad_sym": "ae4f4163bf06169f4015e0683927256debc21972c7a236feaaea2f134c6d4fd4",
     "notes/wireless-bom-draft.csv": "d8b285757e6535568a93d7f089f4d320f99ca293dfbb70fe9ad861c4dc16d92e",
     "pcb/wireless-library.csv": "3bcd8edb338146556a2b1e88cb3ee430326ed2cb4646419e64361e4621483df7",
-    "pcb/check_schematic.py": "83f71f0ad49369db95f213c419b6476328c7a90732e8a6af5819eb5d2d167cf6"
+    "pcb/check_schematic.py": "060d9217726a09b1336f2ef3654fd6e6988a3d79404773744fe442836b9624b2"
   }
 }

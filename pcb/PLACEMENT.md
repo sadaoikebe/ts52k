@@ -1,5 +1,7 @@
 # Revision 0.2 基板レイアウト
 
+現在のPCBは無線版の仮配置段階。[配置画像・変更記録](placement-review/README.md)を参照。以下のRP2040配置・配線・DRCの記述は移行前の記録。
+
 この文書は旧RP2040版の配置・出力時の記録。無線版のライブラリ整理後のERC/DRC結果ではない。無線版の現状は[決定事項](../notes/wireless-decisions.md)と[ライブラリ](LIBRARIES.md)を参照する。
 
 Revision 0.2 は RP2040 を搭載した52キー基板です。回路と基板の設計・配置・配線は完了しています。基板の詳細は [回路図](ts52k.kicad_sch)、[基板データ](ts52k.kicad_pcb)、[設計ルール](ts52k.kicad_dru)を参照してください。ケースとプレートは既存版と共通です。
