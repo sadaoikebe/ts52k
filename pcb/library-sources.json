@@ -133,7 +133,7 @@
     },
     {
       "asset": "ts52k:0603WAF5101T5E",
-      "source": "Device:R",
+      "source": "Device:R_Small",
       "source_sha256": "6bebebb163b6c1747053dcf1272b51373ce718d7043243ac58a680543d2c833f"
     },
     {
@@ -148,7 +148,7 @@
     },
     {
       "asset": "ts52k:1N4148W",
-      "source": "Device:D",
+      "source": "Device:D_Small",
       "source_sha256": "6bebebb163b6c1747053dcf1272b51373ce718d7043243ac58a680543d2c833f"
     },
     {
@@ -162,6 +162,8 @@
     "ts52k:Crystal_Epson_FC-12M_2.05x1.2mm": "Epson lands 0.7 x 1.4 mm at +/-0.75 mm; same-side inter-pad copper keepout; 2.05 x 1.2 mm Fab; generic 3D model removed.",
     "ts52k:H5VU10U_DFN1006-2L": "Hongjiacheng Rev 2.0 lands 0.55 x 0.60 mm at +/-0.425 mm; matching paste; generic 3D model removed.",
     "ts52k:BQ24072RGTR": "MPN suffix and metadata; default footprint changed from EP1.6 to selected EP1.68.",
-    "selected_symbols": "Value, MPN, Manufacturer, LCSC, JLCClass, local footprint and footprint filters set from selected BOM."
+    "selected_symbols": "Value, MPN, Manufacturer, LCSC, JLCClass, local footprint and footprint filters set from selected BOM.",
+    "compact_schematic_glyphs": "1N4148W and CC resistor use official D_Small / R_Small graphics to preserve existing matrix and USB symbol positions and wire endpoints; electrical pin numbers and selected parts unchanged.",
+    "tag_connect_pin_text": "Pin name text reduced to 1 mm for readable VTref/SWDIO and nRESET/SWCLK pairs; pin positions and electrical types unchanged."
   }
 }

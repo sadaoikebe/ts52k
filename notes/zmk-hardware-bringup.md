@@ -1,6 +1,6 @@
 # ZMKと対応するハードウェア起動条件
 
-2026-11-03更新。現在の決定と検証済み範囲を記載する。[現行決定事項](wireless-decisions.md)と[部品BOM](wireless-bom-draft.csv)に従う。最小ZMKのビルドと出力設定の照合は完了、実機起動は未検証。回路図・PCBは旧RP2040版のまま。
+2026-11-03更新。[現行決定事項](wireless-decisions.md)と[部品BOM](wireless-bom-draft.csv)に従う。最小ZMKのビルドと出力設定の照合、無線版回路図への反映・ERC・ネット検査は完了。PCBは旧RP2040版のまま、実機起動は未検証。
 
 ## 基準にする版と成果物
 
@@ -53,4 +53,4 @@ SWDランドは必須。機材の機種・購入時期・モジュール購入�
 - [Adafruit 0.11.0](https://github.com/adafruit/Adafruit_nRF52_Bootloader/releases/tag/0.11.0)と[固定ソース](https://github.com/adafruit/Adafruit_nRF52_Bootloader/tree/c67f0bcf0fa8e841426335b1bbde91cda6ca1f50/src)：REGOUT0、RCクロック、LED、フラッシュ領域。[nrfx初期化](https://github.com/NordicSemiconductor/nrfx/blob/7a4c9d946cf1801771fc180acdbf7b878f270093/mdk/system_nrf52840.c)：P0.18リセット設定。
 - [Nordic UICR](https://docs.nordicsemi.com/r/bundle/ps_nrf52840/page/uicr.html)、[デバッグ仕様](https://docs.nordicsemi.com/r/bundle/ps_nrf52840/page/dif.html)：消去後電圧とCTRL-AP復旧。採用末尾は-1MV2で固定し、別末尾への自動置換をしない。
 
-MDBTMicroの未製造・未試験版を動作実績として扱わない。独自の温度範囲や水晶省略を設計要件にしない。部品・GPIO・ライブラリは決定済みで、次の回路図作成時に結線とERCを確認する。電源波形、水晶精度、USB/BLEの動作は試作後に検証する。
+MDBTMicroの未製造・未試験版を動作実績として扱わない。独自の温度範囲や水晶省略を設計要件にしない。部品・GPIOを回路図へ反映し、[結線・ERCを確認済み](../pcb/schematic-review/validation.json)。電源波形、水晶精度、USB/BLEの動作は試作後に検証する。

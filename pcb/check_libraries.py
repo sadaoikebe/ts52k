@@ -164,7 +164,7 @@ def main():
         'extended_types': 7, 'extended_quantity': 9,
         'ts52k_symbols': 20, 'swd_symbols': 1, 'ts52k_footprints': 14,
         'checks': ['registered_paths', 'obsolete_libraries_removed', 'bom_fields_and_quantities', 'symbol_pin_to_pad_numbers', 'module_critical_pin_names', 'crystal_and_esd_pad_dimensions', 'antenna_3_8mm_all_copper_keepout', 'charger_ep_size', 'swd_no_paste_and_no_assembly', 'kicad_read_and_svg_export'],
-        'schematic_erc': 'not_run_for_wireless_revision',
+        'schematic_erc': 'separate_check_see_pcb/schematic-review/validation.json',
         'pcb_drc_and_parity': 'not_run_for_wireless_revision',
         'physical_boot': 'not_tested',
         'source_sha256': {str(p.relative_to(ROOT)).replace('\\', '/'): hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(set(inputs))},

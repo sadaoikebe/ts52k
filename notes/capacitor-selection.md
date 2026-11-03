@@ -1,6 +1,6 @@
 # 電源コンデンサの採用部品
 
-2026-11-03更新。[現行決定事項](wireless-decisions.md)に対応する確定済みの初版構成。部品探索・型番選定は完了しており、試作確認を理由に選定停止へ戻さない。
+2026-11-03更新。[現行決定事項](wireless-decisions.md)に対応する初版構成。選定した12個を無線版回路図へ反映し、[BOMと電源ネットを照合済み](../pcb/schematic-review/validation.json)。試作確認を理由に選定停止へ戻さない。
 
 ## 採用構成
 
@@ -24,7 +24,7 @@
 - Raytac [Version K p38](https://cdn.sparkfun.com/assets/4/7/4/3/8/_nRF52840__MDBT50Q-1MV2___MDBT50Q-P1MV2_Ver.K_spec.pdf)、[Version L](https://www.raytac.com/download/index.php?index_id=43) p36のVDD参考値は10 µF。今回はnice!nano/Nordicの5個構成を採用した差分として記録する。
 - 上表の完全型番は安いBasic品から選んだもので、先行基板の非公開BOMと同一だとは説明しない。
 
-## 回路図・配置へ引き継ぐ条件
+## 回路図に反映した条件とPCBへの引継ぎ
 
 VDDの5個はモジュール28番とGNDの間に実装し、短い配線と帰路を確保する。OUTとVDDHは同じネットだが、IC直近・モジュール直近へそれぞれ容量を設ける。モジュールVBUSの4.7 µFは2.2 Ωの後に置く。USBへつながる外付け容量は1＋4.7=5.7 µF。[電源の結線](wireless-power-input.md)を参照。
 

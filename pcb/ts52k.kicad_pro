@@ -275,7 +275,7 @@
       "internal_id": "",
       "mfg": "",
       "mpn": "",
-      "sch_revision": ""
+      "sch_revision": "Wireless draft"
     },
     "layer_pairs": [],
     "layer_presets": [],
@@ -521,8 +521,14 @@
     }
   },
   "libraries": {
-    "pinned_footprint_libs": ["ts52k", "MX_Only"],
-    "pinned_symbol_libs": ["ts52k", "tag-connect"]
+    "pinned_footprint_libs": [
+      "ts52k",
+      "MX_Only"
+    ],
+    "pinned_symbol_libs": [
+      "ts52k",
+      "tag-connect"
+    ]
   },
   "meta": {
     "filename": "ts52k.kicad_pro",
@@ -749,7 +755,7 @@
     ],
     [
       "9a14334a-849e-4731-b6a7-99d43fb7e05a",
-      "rp2040"
+      "MCU / BLE"
     ]
   ],
   "text_variables": {},

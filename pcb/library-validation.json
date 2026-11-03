@@ -22,7 +22,7 @@
     "swd_no_paste_and_no_assembly",
     "kicad_read_and_svg_export"
   ],
-  "schematic_erc": "not_run_for_wireless_revision",
+  "schematic_erc": "separate_check_see_pcb/schematic-review/validation.json",
   "pcb_drc_and_parity": "not_run_for_wireless_revision",
   "physical_boot": "not_tested",
   "source_sha256": {
@@ -36,9 +36,9 @@
     "pcb/MX_Only.pretty/MXOnly-2.75U-ReversedStabilizers-NoLED.kicad_mod": "8ab408f37000dab9216d2496d27f65d38bec8f3f86f7f84cf6845709c40a7b34",
     "pcb/MX_Only.pretty/MXOnly-3U-ReversedStabilizers-NoLED.kicad_mod": "0de630a379354e82904a90790b2a5991aa9f7e7dc0dcd4a60fc73312f5630d27",
     "pcb/sym-lib-table": "13e9e8401ba7398c975e021c5279fee6818989e3b7a0851289a93029105591fd",
-    "pcb/tag-connect.kicad_sym": "297236ea5a95e59a39866f963e000192c68ce4b639fc5393d79e40305a97e5f0",
-    "pcb/ts52k.kicad_pro": "18c985fdb0ea60c136909d5321010ffcb5ed1802bc0a40cd83eb529bc729b6d3",
-    "pcb/ts52k.kicad_sym": "9166fe96e4a1b9497a07d39e53978733573eadabb70722103f75ab11c9d80fbc",
+    "pcb/tag-connect.kicad_sym": "ae4f4163bf06169f4015e0683927256debc21972c7a236feaaea2f134c6d4fd4",
+    "pcb/ts52k.kicad_pro": "f58f5794beeb883ff2648fd00f5910f5f371f731b7e3b47663863107284784b5",
+    "pcb/ts52k.kicad_sym": "39ab550be58b95ef9cd1a3dfea41897852759890eb27a3559e36dc4b4901396d",
     "pcb/ts52k.pretty/C_0402_1005Metric.kicad_mod": "0403382fc4583ed510b461b1fa4a36dfaec6f4c0d9b1a67e6b0027837a54e1b5",
     "pcb/ts52k.pretty/C_0603_1608Metric.kicad_mod": "fe0dbfefbb181a0466f93a8de52d84ba7b00fcd9acdbb69575f4128a0af4e405",
     "pcb/ts52k.pretty/C_0805_2012Metric.kicad_mod": "62775a51fe74ba7f1b572de327bdbd3fc92582721b2abcaa47787865590d89cb",

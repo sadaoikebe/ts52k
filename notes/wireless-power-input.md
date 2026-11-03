@@ -1,6 +1,6 @@
 # 初版の電源とUSB入力
 
-2026-11-03更新。[現行決定事項](wireless-decisions.md)の電源部分を具体化したもの。部品選定は完了し、[仮BOM](wireless-bom-draft.csv)と[ライブラリ](../pcb/LIBRARIES.md)へ反映済み。回路図・PCBへの反映と実機評価はこれから。
+2026-11-03更新。[現行決定事項](wireless-decisions.md)の電源部分。部品選定・ライブラリ登録と回路図への反映を完了し、[ネットリスト検査](../pcb/schematic-review/validation.json)で結線を照合済み。PCBへの反映と実機評価は次工程。
 
 ## USB100固定充電で決定
 

@@ -105,7 +105,7 @@
 				(name "VTref"
 					(effects
 						(font
-							(size 1.27 1.27)
+							(size 1 1)
 						)
 					)
 				)
@@ -123,7 +123,7 @@
 				(name "SWDIO"
 					(effects
 						(font
-							(size 1.27 1.27)
+							(size 1 1)
 						)
 					)
 				)
@@ -141,7 +141,7 @@
 				(name "~{RESET}"
 					(effects
 						(font
-							(size 1.27 1.27)
+							(size 1 1)
 						)
 					)
 				)
@@ -159,7 +159,7 @@
 				(name "SWCLK"
 					(effects
 						(font
-							(size 1.27 1.27)
+							(size 1 1)
 						)
 					)
 				)
@@ -177,7 +177,7 @@
 				(name "GND"
 					(effects
 						(font
-							(size 1.27 1.27)
+							(size 1 1)
 						)
 					)
 				)
@@ -195,7 +195,7 @@
 				(name "NC"
 					(effects
 						(font
-							(size 1.27 1.27)
+							(size 1 1)
 						)
 					)
 				)

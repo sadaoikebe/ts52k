@@ -19,20 +19,21 @@
 
 ## このブランチ
 
-`pcb/` に入っている回路図と基板は、まだ RP2040 版です。下の「回路図で変えるもの」が、次に手を入れる内容です。基板の銅箔は、回路図のあとにします。
+回路図は無線版へ更新しました。既存の配置を引き継いだ親シートと、MDBT50Q・電源容量・LF水晶の子シートの2枚です。[回路図PDF](pcb/schematic-review/ts52k-wireless.pdf)と[配置元・確認記録](notes/wireless-schematic-layout.md)を参照してください。PCBは旧RP2040版のままで、次の工程で移行します。
 
-現行の決定は[無線版の決定事項](notes/wireless-decisions.md)に集約しています。部品BOMは19品種・81点で仮確定し、シンボル・フットプリント登録まで完了しました。電池・ケース、SWD機材の購入判断は後日です。
+現行の決定は[無線版の決定事項](notes/wireless-decisions.md)に集約しています。BOMは19品種・81点で、回路図から参照番号付きで照合済みです。ERCはエラー・警告とも0件。電池・ケース、SWD機材の購入判断は後日です。
 
 ## リポジトリ構成
 
 ```
-pcb/     KiCad 10 プロジェクト。中身はまだ RP2040 版
-         子シート pcb/rp2040.kicad_sch
+pcb/     KiCad 10 プロジェクト。回路図は無線版、PCBは旧RP2040版
+         子シート pcb/mdbt50q.kicad_sch
+         schematic-review/ — PDF、画像、ERC、参照番号付きBOMと検査結果
          PLACEMENT.md — RP2040 版の基板レイアウトガイド
 case/    FreeCAD ソース、3Dプリント用 3MF、プレート加工用 DXF
 ```
 
-`pcb/` は無線版で使うシンボルとフットプリントを同梱しています。旧回路図・PCBには削除済みRP2040ライブラリへのIDが残っており、次の回路移行で取り除きます。
+`pcb/` は無線版で使うシンボルとフットプリントを同梱しています。回路図の旧ライブラリ参照は除去済み。旧PCBに残るRP2040等の部品とIDはPCB移行時に取り除きます。
 
 | ライブラリ | 内容 |
 | :--- | :--- |
@@ -40,7 +41,7 @@ case/    FreeCAD ソース、3Dプリント用 3MF、プレート加工用 DXF
 | `ts52k.kicad_sym` / `.pretty` | 無線版の選定済み19品種とMXシンボル。採用ランド14種を同梱 |
 | `tag-connect.kicad_sym` | Tag-Connect TC2030のSWDシンボル。既定ランドは`ts52k.pretty`に同梱 |
 
-選定済み部品の登録は完了しています。[ライブラリの出典・変更・削除内容](pcb/LIBRARIES.md)と[部品ごとのシンボル／ランド対応表](pcb/wireless-library.csv)を参照してください。回路図・PCBの部品はまだ置き換えていません。
+選定済み部品の登録と回路図への反映は完了しています。[ライブラリの出典・変更・削除内容](pcb/LIBRARIES.md)と[部品ごとのシンボル／ランド対応表](pcb/wireless-library.csv)を参照してください。PCBの部品はまだ置き換えていません。
 
 ---
 
@@ -146,7 +147,7 @@ SW2 は型番未確定の EC11 互換です。押し込みは `col6` に入っ�
 
 ## 部品リスト
 
-回路図着手用の仮BOMは**19品種・81点**です。型番・JLC番号・数量の一覧は[仮BOM CSV](notes/wireless-bom-draft.csv)、選定根拠は[候補と先行例の対応](notes/wireless-bom-candidates.md)、実装条件は[ランド・配置の照合](notes/wireless-layout-check.md)にまとめています。参照番号はいまのRP2040版のもので、新規部品の参照番号は回路図作成時に割り振ります。
+回路図の実装対象BOMは**19品種・81点**です。[参照番号付きBOM](pcb/schematic-review/bom.csv)を回路図から生成し、[選定済みBOM](notes/wireless-bom-draft.csv)と一致することを確認しました。選定根拠は[先行例との対応](notes/wireless-bom-candidates.md)、実装条件は[ランド・配置の照合](notes/wireless-layout-check.md)にまとめています。実装座標はPCB移行後です。
 
 ### 残すもの、足すもの
 
@@ -203,18 +204,18 @@ Tag-ConnectのJ2はランドだけです。電源コンデンサの構成と選�
 
 ---
 
-## 回路図で変えるもの
+## 回路図に反映した変更
 
-### 残す
+### 維持したもの
 
 - キー、1N4148W が 53 個、6列×10行。回路図のネット名は `col1`〜`col6`、`row1`〜`row10`。ダイオードのカソードは行側。エンコーダの押し込みは6列目。エンコーダ本体 SW2。
 - J1。R5 と R6（5.1 kΩ）。シールドは GND。D89、D90、D91（H5VU10U）。
 - J2 のランド。上のピン表。
 - SW1 の部品。つなぎ先は P0.18。
 
-### 外す
+### 除去したもの
 
-子シート `pcb/rp2040.kicad_sch` ごと外します。
+旧RP2040子シートごと除去しました。
 
 - U5 RP2040
 - X2。12 MHz の OC2EL89CJO-113YLC-12M
@@ -223,7 +224,7 @@ Tag-ConnectのJ2はランドだけです。電源コンデンサの構成と選�
 - R9〜R13。QSPI の直列 22 Ω
 - C6〜C10、C12〜C18、C21。1 µF
 
-ルートシートから外します。
+親シートから除去しました。
 
 - U4 W25Q128。R2（CS の 10 kΩ）
 - R14（1 kΩ）。SW1 には残しません
@@ -231,7 +232,7 @@ Tag-ConnectのJ2はランドだけです。電源コンデンサの構成と選�
 - C2、C4。その 3.3 V の 1 µF
 - R15、R16（エンコーダの 10 kΩ）、C19、C20（100 nF）
 
-### 足す
+### 追加したもの
 
 - MDBT50Q-1MV2 と GND。6列×10行の16本と、エンコーダの回転2本は[GPIO接続表](notes/wireless-pin-assignment.md)の割当てを使う
 - VDD（パッド28）–GNDに4.7 µF＋1 µF＋100 nF×3。[電源コンデンサの現行選定](notes/capacitor-selection.md)を使う
@@ -241,9 +242,9 @@ Tag-ConnectのJ2はランドだけです。電源コンデンサの構成と選�
 - OUTをVDDH（30）へ。USB 5 Vは別枝の2.2 Ωを介してVBUS（32）へ、4.7 µFは抵抗の後
 - D− をパッド 34、D+ をパッド 35 へ
 - 電池コネクタS2B-PH-SM4-TB(LF)(SN)。1=BAT+、2=GND
-- アンテナ位置の全層銅箔抜きと局所的な実装面禁止領域。[寸法と配置条件](notes/wireless-layout-check.md)に従う
+- アンテナの全層禁止領域と局所的な実装面禁止領域を登録ランドへ含めた。PCBでの拡張・配置は[寸法と配置条件](notes/wireless-layout-check.md)に従う
 
-### 足さない
+### 採用しないもの
 
 - NFC
 - 外の 3.3 V で VDD と VDDH を短絡する結線
@@ -308,7 +309,7 @@ https://github.com/sadaoikebe/qmk_firmware/tree/master/keyboards/ts52k
 
 - **KiCad 10.0** 以降
 
-現在確認済みなのは、採用部品のライブラリ読み込みとBOM・端子・ランドの照合です。[検査記録](pcb/LIBRARIES.md)を参照してください。無線版回路図のERCとPCBのDRC・schematic parityはまだ実施していません。RP2040版の0件という結果は当時の回路・ライブラリ構成に対する履歴で、現在のツリーの検査結果ではありません。
+無線版回路図のERCはエラー0・警告0です。[検査スクリプト](pcb/check_schematic.py)で電源・信号・BOM・旧マトリクスとの一致を確認し、[結果](pcb/schematic-review/validation.json)を保存しました。ライブラリ検査は[別記録](pcb/LIBRARIES.md)です。PCBは旧版なので、無線版DRC・schematic parityの検査はこれからです。RP2040版の0件という過去結果を現在のPCB整合の結果として使いません。
 
 **`Tools → Update PCB from Schematic` では `Link footprints using reference designators` をオフのままにしてください。** フットプリントは Unique ID で回路図と紐付いています。
 

@@ -6,7 +6,7 @@
 
 ts52kはハードウェア用。ファームウェアは`C:\Users\marur\zmk-config`等の別リポジトリで扱う。NICOLAの内部実装とQMKのRP2040移植は今回の作業に含めない。ZMKの調査対象は基板の起動に必要な条件に限る。
 
-現在は**部品選定とライブラリ登録まで完了**。回路図とPCBは旧RP2040版のまま。旧部品のライブラリ登録は削除済みで、旧回路図・PCBの埋め込み定義とライブラリIDは今後の回路移行で更新する。旧回路図との互換性維持を理由に旧ライブラリを復活させない。
+現在は**無線版回路図の作成・検査まで完了**。親シートとMDBT50Q子シートの2枚。旧RP2040子シートと不採用の埋め込みシンボルを削除した。既存の部品配置と追加ブロックの先行例は[配置記録](wireless-schematic-layout.md)を参照。PCBは旧RP2040版のままで、PCBとの整合検査・移行は次工程。旧PCBとの互換性維持を理由に旧ライブラリを復活させない。
 
 メーカー参考回路と実績あるキーボードの構成を基準にする。新たな仕様や最適化を先に作り、そのために高価な部品・追加回路・検討工程を増やさない。抵抗・容量は必要条件を満たす安いBasic品を優先する。
 
@@ -27,7 +27,7 @@ ts52kはハードウェア用。ファームウェアは`C:\Users\marur\zmk-conf
 | SWD / リセット | TC2030-NL接点を必ず設ける。VTref=VDD(28)、SWDIO=51、SWCLK=53、nRESET=P0.18(40)。6番NC。消去直後1.8 Vと初期化後3.3 Vへ対応する経路を確保 |
 | マトリクス等 | 6列×10行、53接点、カソード行側、エンコーダA/Bは独立。18本は[GPIO表](wireless-pin-assignment.md)で決定済み |
 
-発注型番・JLC番号・数量は[仮BOM](wireless-bom-draft.csv)、シンボルとランドは[登録表](../pcb/wireless-library.csv)。**19品種・81点、Basic 12品種72点、Extended 7品種9点**。参照番号と実装座標は回路図・PCB作成後に付ける。現時点のCSVをJLC製造用BOMとして使わない。
+発注型番・JLC番号・数量は[仮BOM](wireless-bom-draft.csv)、シンボルとランドは[登録表](../pcb/wireless-library.csv)。**19品種・81点、Basic 12品種72点、Extended 7品種9点**。[参照番号付きBOM](../pcb/schematic-review/bom.csv)を回路図から生成・照合済み。実装座標はPCB作成後で、現時点のCSVをJLC製造用BOMとして使わない。
 
 ExtendedのREG0インダクタはBasic対案との電流特性比較後に了承済み。電池コネクタも廉価対案との比較後にSMTを了承済み。比較結果は[選定根拠](wireless-bom-candidates.md)に残す。
 
@@ -38,6 +38,7 @@ BQ24072の選定理由は当初READMEにあったOUTの電池電圧追従とBQ24
 - ZMK main `4dd95d7840eb3d5a3f59bb29fbf1ab054715ef85` / Zephyr `10ba6d0cb38bc3d258775d27982f707599320085`で1×1最小構成をビルド済み。両DC/DC、XTAL/50 ppm、USB/BLE、P0.18、フラッシュ領域を出力設定で照合した。
 - ブートローダ候補はAdafruit 0.11.0のnice_nano用SoftDevice結合HEX。初期化ソースとファイル領域を照合済み。初回実機でVDD/UICRを読戻す。[起動条件](zmk-hardware-bringup.md)を参照。
 - 採用部品のライブラリはKiCadで読み込み、BOMとの一致、ピン・パッド番号、専用ランド寸法を検査済み。[検査記録](../pcb/LIBRARIES.md)を参照。
+- 無線版回路図はERCエラー0・警告0。ネットリストで電源・USB・SWD・LF水晶・18 GPIO・BOMを照合し、既存マトリクス105部品の座標と接続も確認した。[検査結果](../pcb/schematic-review/validation.json)と[PDF](../pcb/schematic-review/ts52k-wireless.pdf)を参照。
 
 REG0 LDOは以前の検証用の暫定設定。ZMKの版を変えるたびに回路を変更する要求ではなく、実装回路と基板定義の対応を維持する。UF2生成は実機起動の証明ではない。旧RP2040版のERC/DRC結果は当時の回路・ライブラリ構成に対する履歴で、現在の検査結果ではない。
 

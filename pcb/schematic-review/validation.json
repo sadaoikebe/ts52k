@@ -1,0 +1,39 @@
+{
+  "result": "pass",
+  "kicad_version": "10.0.5",
+  "erc_errors": 0,
+  "erc_warnings": 0,
+  "assembly_part_types": 19,
+  "assembly_quantity": 81,
+  "retained_matrix_parts": 105,
+  "retained_component_coordinates": 114,
+  "matrix_connectivity": "unchanged",
+  "baseline_commit": "a82fe3d",
+  "pcb": "unchanged",
+  "physical_boot": "not_tested",
+  "checks": [
+    "power_nets_exact_membership",
+    "usb_data_and_cc",
+    "usb_data_contacts_explicit_wire_endpoints",
+    "all_module_ground_pads",
+    "charger_control_and_ep",
+    "fixed_usb100",
+    "swd_and_reset",
+    "lf_crystal_and_loads",
+    "18_gpio_assignments",
+    "nc_pins",
+    "selected_parts_metadata_and_footprints",
+    "old_matrix_graph_and_coordinates",
+    "kicad_erc"
+  ],
+  "source_sha256": {
+    "pcb/ts52k.kicad_sch": "02c6b6a9c7a63f7e33a1b82db5f64cc48f31582a56a99b3516b87aa35d7a9420",
+    "pcb/mdbt50q.kicad_sch": "aa71a0198a2b0b17696f26713109e1feff594d6dc9d8f97b0caa6b4a27518ed6",
+    "pcb/ts52k.kicad_pro": "f58f5794beeb883ff2648fd00f5910f5f371f731b7e3b47663863107284784b5",
+    "pcb/ts52k.kicad_sym": "39ab550be58b95ef9cd1a3dfea41897852759890eb27a3559e36dc4b4901396d",
+    "pcb/tag-connect.kicad_sym": "ae4f4163bf06169f4015e0683927256debc21972c7a236feaaea2f134c6d4fd4",
+    "notes/wireless-bom-draft.csv": "d8b285757e6535568a93d7f089f4d320f99ca293dfbb70fe9ad861c4dc16d92e",
+    "pcb/wireless-library.csv": "3bcd8edb338146556a2b1e88cb3ee430326ed2cb4646419e64361e4621483df7",
+    "pcb/check_schematic.py": "83f71f0ad49369db95f213c419b6476328c7a90732e8a6af5819eb5d2d167cf6"
+  }
+}
