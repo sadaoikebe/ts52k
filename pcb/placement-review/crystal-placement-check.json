@@ -1,0 +1,390 @@
+{
+  "date": "2026-11-06",
+  "before_sha256": "23bc5bda99268d169617295f24a841e5e28722bf078db8bc77d8c78dd665fcf3",
+  "after_sha256": "1c9ca203faba06022ba9f46f997a2b1af65f4a0289ab62425eb4eb1674d641d4",
+  "pad_and_courtyard_shapes_unchanged": true,
+  "power_bank_relative_placement_unchanged": true,
+  "crystal_mirror_axis_y_mm": 65.8,
+  "crystal_traces_exactly_mirrored": true,
+  "solder_clearance_method": "Distance from component courtyard envelope to MX plated pad copper; circles polygonized at 512 sides, other shapes conservatively bounded by rectangles. Not a guaranteed soldering-tool clearance.",
+  "solder_clearance": {
+    "before": {
+      "C32": {
+        "nearest_switch_pad": "MX3.2",
+        "courtyard_to_copper_mm": 0.0888
+      },
+      "C33": {
+        "nearest_switch_pad": "MX3.2",
+        "courtyard_to_copper_mm": 1.4847
+      },
+      "X3": {
+        "nearest_switch_pad": "MX3.2",
+        "courtyard_to_copper_mm": 1.6297
+      },
+      "U5": {
+        "nearest_switch_pad": "MX8.1",
+        "courtyard_to_copper_mm": 1.4038
+      },
+      "C27": {
+        "nearest_switch_pad": "MX3.2",
+        "courtyard_to_copper_mm": 3.3
+      },
+      "C31": {
+        "nearest_switch_pad": "MX3.2",
+        "courtyard_to_copper_mm": 4.3432
+      },
+      "D2": {
+        "nearest_switch_pad": "MX8.2",
+        "courtyard_to_copper_mm": 5.4637
+      }
+    },
+    "after": {
+      "C32": {
+        "nearest_switch_pad": "MX3.2",
+        "courtyard_to_copper_mm": 1.6291
+      },
+      "C33": {
+        "nearest_switch_pad": "MX3.2",
+        "courtyard_to_copper_mm": 2.7509
+      },
+      "X3": {
+        "nearest_switch_pad": "MX3.2",
+        "courtyard_to_copper_mm": 3.2709
+      },
+      "U5": {
+        "nearest_switch_pad": "MX8.1",
+        "courtyard_to_copper_mm": 1.4038
+      },
+      "C27": {
+        "nearest_switch_pad": "MX3.2",
+        "courtyard_to_copper_mm": 4.7072
+      },
+      "C31": {
+        "nearest_switch_pad": "MX3.2",
+        "courtyard_to_copper_mm": 5.9167
+      },
+      "D2": {
+        "nearest_switch_pad": "MX8.2",
+        "courtyard_to_copper_mm": 1.4637
+      }
+    }
+  },
+  "positions": {
+    "D2": {
+      "before": {
+        "position_mm": [
+          38.8,
+          61.0
+        ],
+        "angle": 180.0
+      },
+      "after": {
+        "position_mm": [
+          40.4,
+          63.8
+        ],
+        "angle": 90.0
+      }
+    },
+    "C26": {
+      "before": {
+        "position_mm": [
+          17.9,
+          56.6
+        ],
+        "angle": 180.0
+      },
+      "after": {
+        "position_mm": [
+          20.25,
+          56.6
+        ],
+        "angle": 90.0
+      }
+    },
+    "C29": {
+      "before": {
+        "position_mm": [
+          13.95,
+          63.3
+        ],
+        "angle": -90.0
+      },
+      "after": {
+        "position_mm": [
+          15.45,
+          62.6
+        ],
+        "angle": -90.0
+      }
+    },
+    "R20": {
+      "before": {
+        "position_mm": [
+          20.2,
+          55.5
+        ],
+        "angle": -90.0
+      },
+      "after": {
+        "position_mm": [
+          17.8,
+          56.6
+        ],
+        "angle": 0.0
+      }
+    },
+    "U5": {
+      "before": {
+        "position_mm": [
+          28.0,
+          63.0
+        ],
+        "angle": 90.0
+      },
+      "after": {
+        "position_mm": [
+          29.5,
+          63.0
+        ],
+        "angle": 90.0
+      }
+    },
+    "C28": {
+      "before": {
+        "position_mm": [
+          15.6,
+          63.3
+        ],
+        "angle": -90.0
+      },
+      "after": {
+        "position_mm": [
+          17.1,
+          62.6
+        ],
+        "angle": -90.0
+      }
+    },
+    "C31": {
+      "before": {
+        "position_mm": [
+          19.0,
+          63.35
+        ],
+        "angle": -90.0
+      },
+      "after": {
+        "position_mm": [
+          20.5,
+          62.65
+        ],
+        "angle": -90.0
+      }
+    },
+    "C25": {
+      "before": {
+        "position_mm": [
+          16.1,
+          60.35
+        ],
+        "angle": 180.0
+      },
+      "after": {
+        "position_mm": [
+          17.6,
+          59.65
+        ],
+        "angle": 180.0
+      }
+    },
+    "C27": {
+      "before": {
+        "position_mm": [
+          17.25,
+          63.35
+        ],
+        "angle": -90.0
+      },
+      "after": {
+        "position_mm": [
+          18.75,
+          62.65
+        ],
+        "angle": -90.0
+      }
+    },
+    "C33": {
+      "before": {
+        "position_mm": [
+          16.0,
+          65.75
+        ],
+        "angle": 180.0
+      },
+      "after": {
+        "position_mm": [
+          17.5,
+          65.05
+        ],
+        "angle": 180.0
+      }
+    },
+    "X3": {
+      "before": {
+        "position_mm": [
+          18.2,
+          66.5
+        ],
+        "angle": -90.0
+      },
+      "after": {
+        "position_mm": [
+          19.7,
+          65.8
+        ],
+        "angle": -90.0
+      }
+    },
+    "L1": {
+      "before": {
+        "position_mm": [
+          18.8,
+          60.35
+        ],
+        "angle": 90.0
+      },
+      "after": {
+        "position_mm": [
+          20.3,
+          59.65
+        ],
+        "angle": 90.0
+      }
+    },
+    "C32": {
+      "before": {
+        "position_mm": [
+          16.0,
+          67.25
+        ],
+        "angle": 180.0
+      },
+      "after": {
+        "position_mm": [
+          17.5,
+          66.55
+        ],
+        "angle": 180.0
+      }
+    },
+    "C30": {
+      "before": {
+        "position_mm": [
+          12.3,
+          63.3
+        ],
+        "angle": -90.0
+      },
+      "after": {
+        "position_mm": [
+          13.8,
+          62.6
+        ],
+        "angle": -90.0
+      }
+    }
+  },
+  "path_method": "Shortest track centreline path, pad centre to pad centre; excludes plane spreading and via barrels.",
+  "paths": [
+    {
+      "from": "U5.30",
+      "to": "C25.1",
+      "after_mm": 4.194,
+      "before_mm": 3.904
+    },
+    {
+      "from": "U5.31",
+      "to": "L1.2",
+      "after_mm": 2.438,
+      "before_mm": 2.148
+    },
+    {
+      "from": "L1.1",
+      "to": "U5.28",
+      "after_mm": 2.449,
+      "before_mm": 2.159
+    },
+    {
+      "from": "L1.1",
+      "to": "C27.1",
+      "after_mm": 2.145,
+      "before_mm": 2.145
+    },
+    {
+      "from": "U5.28",
+      "to": "C27.1",
+      "after_mm": 3.797,
+      "before_mm": 4.087
+    },
+    {
+      "from": "U5.28",
+      "to": "C31.1",
+      "after_mm": 2.047,
+      "before_mm": 2.337
+    },
+    {
+      "from": "U5.32",
+      "to": "C26.1",
+      "after_mm": 3.007,
+      "before_mm": 4.077
+    },
+    {
+      "from": "U5.17",
+      "to": "X3.2",
+      "after_mm": 2.795,
+      "before_mm": 3.085
+    },
+    {
+      "from": "U5.18",
+      "to": "X3.1",
+      "after_mm": 2.795,
+      "before_mm": 2.795
+    }
+  ],
+  "ground_return_geometry": {
+    "front_ground_polygons": 2,
+    "nets": {
+      "D+": {
+        "track_centerline_length_mm": 15.326965,
+        "without_F_GND_below_mm": 0.0,
+        "uncovered_centerline_geometry": "LINESTRING EMPTY",
+        "uncovered_plusminus_0_25_mm_band_area_mm2": 0.0
+      },
+      "D-": {
+        "track_centerline_length_mm": 14.579923,
+        "without_F_GND_below_mm": 0.0,
+        "uncovered_centerline_geometry": "LINESTRING EMPTY",
+        "uncovered_plusminus_0_25_mm_band_area_mm2": 0.0
+      },
+      "DCCH": {
+        "track_centerline_length_mm": 2.438325,
+        "without_F_GND_below_mm": 0.0,
+        "uncovered_centerline_geometry": "LINESTRING EMPTY",
+        "uncovered_plusminus_0_25_mm_band_area_mm2": 0.0
+      },
+      "Net-(U5-P0.00)": {
+        "track_centerline_length_mm": 4.514975,
+        "without_F_GND_below_mm": 0.0,
+        "uncovered_centerline_geometry": "LINESTRING EMPTY",
+        "uncovered_plusminus_0_25_mm_band_area_mm2": 0.0
+      },
+      "Net-(U5-P0.01)": {
+        "track_centerline_length_mm": 4.514975,
+        "without_F_GND_below_mm": 0.0,
+        "uncovered_centerline_geometry": "LINESTRING EMPTY",
+        "uncovered_plusminus_0_25_mm_band_area_mm2": 0.0
+      }
+    }
+  }
+}

@@ -23,8 +23,8 @@ def label(x,y,text,size=1.1):
         'fill':'#101820','stroke':'none'})
     node.text = text
 
-label(2.0,55.0,'WEST POWER LAYOUT / B.Cu routing trial',1.25)
-label(2.0,57.0,'Power / USB / SWD connected; matrix routing remains',.85)
+label(2.0,55.0,'POWER / CRYSTAL PLACEMENT / 2026-11-06',1.25)
+label(2.0,57.0,'Tag-Connect restored; SWD and matrix routing remain',.85)
 annotated=ET.tostring(svg,encoding='utf-8',xml_declaration=True)
 doc=pymupdf.open(stream=annotated,filetype='svg')
 pdf=pymupdf.open('pdf',doc.convert_to_pdf())

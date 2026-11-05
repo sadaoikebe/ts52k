@@ -1,0 +1,286 @@
+{
+  "board_sha256": "dce7b7a401a93ed7670850a6636a002001f2f25e529583d94a995f25f26f362f",
+  "method": "Shortest track-centreline graph paths. Excludes travel through pad interiors, plane spreading and via barrel length. Null is not proof of disconnection; consult DRC.",
+  "paths": [
+    {
+      "from": "J1.A6",
+      "to": "U5.35",
+      "net": "D+",
+      "track_path_mm": 11.098
+    },
+    {
+      "from": "J1.B6",
+      "to": "U5.35",
+      "net": "D+",
+      "track_path_mm": 12.298
+    },
+    {
+      "from": "J1.A7",
+      "to": "U5.34",
+      "net": "D-",
+      "track_path_mm": 13.959
+    },
+    {
+      "from": "J1.B7",
+      "to": "U5.34",
+      "net": "D-",
+      "track_path_mm": 11.222
+    },
+    {
+      "from": "U5.17",
+      "to": "X3.2",
+      "net": "Net-(U5-P0.00)",
+      "track_path_mm": 2.961
+    },
+    {
+      "from": "U5.18",
+      "to": "X3.1",
+      "net": "Net-(U5-P0.01)",
+      "track_path_mm": 2.671
+    },
+    {
+      "from": "U5.31",
+      "to": "L1.2",
+      "net": "DCCH",
+      "track_path_mm": 2.594
+    },
+    {
+      "from": "L1.1",
+      "to": "U5.28",
+      "net": "nRF_VDD",
+      "track_path_mm": 9.645
+    },
+    {
+      "from": "U6.10",
+      "to": "U5.30",
+      "net": "VDDH",
+      "track_path_mm": 21.595
+    },
+    {
+      "from": "J3.1",
+      "to": "U6.3",
+      "net": "BAT",
+      "track_path_mm": 17.53
+    },
+    {
+      "from": "J1.A4",
+      "to": "U6.13",
+      "net": "USB_VBUS",
+      "track_path_mm": 5.258
+    },
+    {
+      "from": "U5.28",
+      "to": "C31.1",
+      "net": "nRF_VDD",
+      "track_path_mm": 2.348
+    },
+    {
+      "from": "U5.28",
+      "to": "C27.1",
+      "net": "nRF_VDD",
+      "track_path_mm": 3.898
+    },
+    {
+      "from": "U6.17",
+      "to": "C22.2",
+      "net": "GND",
+      "track_path_mm": 3.281
+    },
+    {
+      "from": "U6.17",
+      "to": "C23.2",
+      "net": "GND",
+      "track_path_mm": null
+    }
+  ],
+  "unconnected": [
+    {
+      "items": [
+        "PTH pad 1 [Net-(D2-A)] of MX2",
+        "Pad 2 [Net-(D2-A)] of D2 on B.Cu"
+      ]
+    },
+    {
+      "items": [
+        "PTH pad 2 [col1] of MX2",
+        "Pad 22 [col1] of U5 on B.Cu"
+      ]
+    },
+    {
+      "items": [
+        "Track [col1] on B.Cu, length 4.8712 mm",
+        "Pad 22 [col1] of U5 on B.Cu"
+      ]
+    },
+    {
+      "items": [
+        "Track [col1] on B.Cu, length 0.6489 mm",
+        "PTH pad 1 [col1] of MX8"
+      ]
+    },
+    {
+      "items": [
+        "PTH pad 1 [col1] of MX8",
+        "Track [col1] on F.Cu, length 0.6140 mm"
+      ]
+    },
+    {
+      "items": [
+        "Pad 23 [col2] of U5 on B.Cu",
+        "Track [col2] on B.Cu, length 6.9941 mm"
+      ]
+    },
+    {
+      "items": [
+        "Track [col3] on B.Cu, length 3.0764 mm",
+        "Pad 20 [col3] of U5 on B.Cu"
+      ]
+    },
+    {
+      "items": [
+        "Pad 21 [col4] of U5 on B.Cu",
+        "Track [col4] on B.Cu, length 0.4385 mm"
+      ]
+    },
+    {
+      "items": [
+        "Pad 19 [col5] of U5 on B.Cu",
+        "Track [col5] on B.Cu, length 0.6435 mm"
+      ]
+    },
+    {
+      "items": [
+        "Track [col6] on B.Cu, length 0.8485 mm",
+        "Pad 16 [col6] of U5 on B.Cu"
+      ]
+    },
+    {
+      "items": [
+        "Track [Net-(D8-A)] on B.Cu, length 4.6630 mm",
+        "PTH pad 2 [Net-(D8-A)] of MX8"
+      ]
+    },
+    {
+      "items": [
+        "Pad 45 [rpg1] of U5 on B.Cu",
+        "Track [rpg1] on B.Cu, length 1.3370 mm"
+      ]
+    },
+    {
+      "items": [
+        "Pad 46 [rpg2] of U5 on B.Cu",
+        "Track [rpg2] on B.Cu, length 2.4865 mm"
+      ]
+    },
+    {
+      "items": [
+        "Track [Net-(D3-A)] on B.Cu, length 0.8537 mm",
+        "Track [Net-(D3-A)] on B.Cu, length 0.3293 mm"
+      ]
+    },
+    {
+      "items": [
+        "Pad 44 [row10] of U5 on B.Cu",
+        "Track [row10] on B.Cu, length 0.1844 mm"
+      ]
+    },
+    {
+      "items": [
+        "Pad 1 [row1] of D2 on B.Cu",
+        "Track [row1] on B.Cu, length 3.2937 mm"
+      ]
+    },
+    {
+      "items": [
+        "Pad 1 [row1] of D2 on B.Cu",
+        "Pad 24 [row1] of U5 on B.Cu"
+      ]
+    },
+    {
+      "items": [
+        "Pad 37 [row6] of U5 on B.Cu",
+        "Track [row6] on B.Cu, length 4.5311 mm"
+      ]
+    },
+    {
+      "items": [
+        "Pad 25 [row2] of U5 on B.Cu",
+        "Track [row2] on B.Cu, length 0.4439 mm"
+      ]
+    },
+    {
+      "items": [
+        "Track [row2] on B.Cu, length 0.4439 mm",
+        "Track [row2] on B.Cu, length 2.1920 mm"
+      ]
+    },
+    {
+      "items": [
+        "Pad 27 [row3] of U5 on B.Cu",
+        "Track [row3] on B.Cu, length 0.9192 mm"
+      ]
+    },
+    {
+      "items": [
+        "Pad 42 [row8] of U5 on B.Cu",
+        "Track [row8] on B.Cu, length 1.4142 mm"
+      ]
+    },
+    {
+      "items": [
+        "Pad 29 [row4] of U5 on B.Cu",
+        "Track [row4] on B.Cu, length 1.9092 mm"
+      ]
+    },
+    {
+      "items": [
+        "Pad 41 [row7] of U5 on B.Cu",
+        "Track [row7] on B.Cu, length 7.2299 mm"
+      ]
+    },
+    {
+      "items": [
+        "Pad 43 [row9] of U5 on B.Cu",
+        "Track [row9] on B.Cu, length 2.4042 mm"
+      ]
+    },
+    {
+      "items": [
+        "Pad 36 [row5] of U5 on B.Cu",
+        "Track [row5] on B.Cu, length 0.0394 mm"
+      ]
+    },
+    {
+      "items": [
+        "Pad 3 [nRESET] of J2 on B.Cu",
+        "Track [nRESET] on B.Cu, length 4.0000 mm"
+      ]
+    },
+    {
+      "items": [
+        "Track [nRF_VDD] on B.Cu, length 1.5500 mm",
+        "Pad 1 [nRF_VDD] of J2 on B.Cu"
+      ]
+    },
+    {
+      "items": [
+        "Pad 2 [SWDIO] of J2 on B.Cu",
+        "Pad 51 [SWDIO] of U5 on B.Cu"
+      ]
+    },
+    {
+      "items": [
+        "Pad 4 [SWCLK] of J2 on B.Cu",
+        "Pad 53 [SWCLK] of U5 on B.Cu"
+      ]
+    }
+  ],
+  "drc_violations": {
+    "track_dangling": 25,
+    "silk_edge_clearance": 3,
+    "text_height": 25,
+    "silk_overlap": 23,
+    "silk_over_copper": 27
+  },
+  "schematic_parity": 0
+}

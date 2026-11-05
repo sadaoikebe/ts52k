@@ -1,0 +1,76 @@
+{
+  "date": "2026-11-05",
+  "method": "Projection of B.Cu track centrelines and +/-0.25 mm bands onto refilled F.Cu GND polygons, including polygon holes. Not an impedance, field, or loop-inductance simulation.",
+  "before_sha256": "05e5d2a0d6858382396a0192dee383cd9375af64ee050483aecd11bbab3ed7bf",
+  "after_sha256": "dce7b7a401a93ed7670850a6636a002001f2f25e529583d94a995f25f26f362f",
+  "before": {
+    "front_ground_polygons": 2,
+    "nets": {
+      "D+": {
+        "track_centerline_length_mm": 14.705644,
+        "without_F_GND_below_mm": 2.416843,
+        "uncovered_centerline_geometry": "MULTILINESTRING ((24.570919 48.3165, 24.570919 48.65), (23.570919 48.65, 23.470919 48.75), (23.470919 48.75, 23.470919 49.4835), (23.570919 48.3165, 23.570919 48.65), (24.570919 48.65, 24.670919 48.75), (24.670919 48.75, 24.670919 49.4835))",
+        "uncovered_plusminus_0_25_mm_band_area_mm2": 1.206596
+      },
+      "D-": {
+        "track_centerline_length_mm": 13.958603,
+        "without_F_GND_below_mm": 1.818931,
+        "uncovered_centerline_geometry": "MULTILINESTRING ((23.070919 48.65, 22.02056050154638 49.700358498453625), (23.070919 48.3165, 23.070919 48.65))",
+        "uncovered_plusminus_0_25_mm_band_area_mm2": 0.93009
+      },
+      "DCCH": {
+        "track_centerline_length_mm": 2.593655,
+        "without_F_GND_below_mm": 0.378288,
+        "uncovered_centerline_geometry": "MULTILINESTRING ((20.293392999999995 59.8, 20.2 59.8), (20.2 59.8, 19.998549021150946 59.598549021150944))",
+        "uncovered_plusminus_0_25_mm_band_area_mm2": 0.453998
+      },
+      "Net-(U5-P0.00)": {
+        "track_centerline_length_mm": 4.68066,
+        "without_F_GND_below_mm": 0.0,
+        "uncovered_centerline_geometry": "LINESTRING EMPTY",
+        "uncovered_plusminus_0_25_mm_band_area_mm2": 0.0
+      },
+      "Net-(U5-P0.01)": {
+        "track_centerline_length_mm": 4.390711,
+        "without_F_GND_below_mm": 0.0,
+        "uncovered_centerline_geometry": "LINESTRING EMPTY",
+        "uncovered_plusminus_0_25_mm_band_area_mm2": 0.0
+      }
+    }
+  },
+  "after": {
+    "front_ground_polygons": 2,
+    "nets": {
+      "D+": {
+        "track_centerline_length_mm": 14.705644,
+        "without_F_GND_below_mm": 0.0,
+        "uncovered_centerline_geometry": "LINESTRING EMPTY",
+        "uncovered_plusminus_0_25_mm_band_area_mm2": 0.0
+      },
+      "D-": {
+        "track_centerline_length_mm": 13.958603,
+        "without_F_GND_below_mm": 0.0,
+        "uncovered_centerline_geometry": "LINESTRING EMPTY",
+        "uncovered_plusminus_0_25_mm_band_area_mm2": 0.0
+      },
+      "DCCH": {
+        "track_centerline_length_mm": 2.593655,
+        "without_F_GND_below_mm": 0.0,
+        "uncovered_centerline_geometry": "LINESTRING EMPTY",
+        "uncovered_plusminus_0_25_mm_band_area_mm2": 0.0
+      },
+      "Net-(U5-P0.00)": {
+        "track_centerline_length_mm": 4.68066,
+        "without_F_GND_below_mm": 0.0,
+        "uncovered_centerline_geometry": "LINESTRING EMPTY",
+        "uncovered_plusminus_0_25_mm_band_area_mm2": 0.0
+      },
+      "Net-(U5-P0.01)": {
+        "track_centerline_length_mm": 4.390711,
+        "without_F_GND_below_mm": 0.0,
+        "uncovered_centerline_geometry": "LINESTRING EMPTY",
+        "uncovered_plusminus_0_25_mm_band_area_mm2": 0.0
+      }
+    }
+  }
+}

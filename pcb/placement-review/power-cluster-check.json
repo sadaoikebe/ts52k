@@ -1,0 +1,111 @@
+{
+  "date": "2026-11-05",
+  "before_sha256": "be10625a94e8194457965744fb6cdfc0da9e35aac98e4fadb094b663b4a82812",
+  "after_sha256": "23bc5bda99268d169617295f24a841e5e28722bf078db8bc77d8c78dd665fcf3",
+  "pad_and_courtyard_shapes_unchanged": true,
+  "USB_tracks_unchanged": true,
+  "path_method": "Shortest copper track centreline paths; excludes pad/plane spreading and via barrels. Not measured SI/PI.",
+  "paths": [
+    {
+      "from": "U5.30",
+      "to": "C25.1",
+      "after_mm": 3.904,
+      "before_mm": 6.382
+    },
+    {
+      "from": "U5.31",
+      "to": "L1.2",
+      "after_mm": 2.148,
+      "before_mm": 2.594
+    },
+    {
+      "from": "L1.1",
+      "to": "U5.28",
+      "after_mm": 2.159,
+      "before_mm": 6.895
+    },
+    {
+      "from": "L1.1",
+      "to": "C27.1",
+      "after_mm": 2.145,
+      "before_mm": 6.097
+    },
+    {
+      "from": "U5.28",
+      "to": "C27.1",
+      "after_mm": 4.087,
+      "before_mm": 3.898
+    },
+    {
+      "from": "U5.28",
+      "to": "C31.1",
+      "after_mm": 2.337,
+      "before_mm": 2.348
+    },
+    {
+      "from": "U5.28",
+      "to": "C28.1",
+      "after_mm": 5.757,
+      "before_mm": 6.567
+    },
+    {
+      "from": "U5.28",
+      "to": "C29.1",
+      "after_mm": 7.407,
+      "before_mm": 8.117
+    },
+    {
+      "from": "U5.28",
+      "to": "C30.1",
+      "after_mm": 9.057,
+      "before_mm": 9.667
+    },
+    {
+      "from": "U5.17",
+      "to": "X3.2",
+      "after_mm": 3.085,
+      "before_mm": 2.961
+    },
+    {
+      "from": "U5.18",
+      "to": "X3.1",
+      "after_mm": 2.795,
+      "before_mm": 2.671
+    }
+  ],
+  "return_geometry": {
+    "front_ground_polygons": 2,
+    "nets": {
+      "D+": {
+        "track_centerline_length_mm": 14.705644,
+        "without_F_GND_below_mm": 0.0,
+        "uncovered_centerline_geometry": "LINESTRING EMPTY",
+        "uncovered_plusminus_0_25_mm_band_area_mm2": 0.0
+      },
+      "D-": {
+        "track_centerline_length_mm": 13.958603,
+        "without_F_GND_below_mm": 0.0,
+        "uncovered_centerline_geometry": "LINESTRING EMPTY",
+        "uncovered_plusminus_0_25_mm_band_area_mm2": 0.0
+      },
+      "DCCH": {
+        "track_centerline_length_mm": 2.148376,
+        "without_F_GND_below_mm": 0.0,
+        "uncovered_centerline_geometry": "LINESTRING EMPTY",
+        "uncovered_plusminus_0_25_mm_band_area_mm2": 0.0
+      },
+      "Net-(U5-P0.00)": {
+        "track_centerline_length_mm": 4.804924,
+        "without_F_GND_below_mm": 0.0,
+        "uncovered_centerline_geometry": "LINESTRING EMPTY",
+        "uncovered_plusminus_0_25_mm_band_area_mm2": 0.0
+      },
+      "Net-(U5-P0.01)": {
+        "track_centerline_length_mm": 4.514975,
+        "without_F_GND_below_mm": 0.0,
+        "uncovered_centerline_geometry": "LINESTRING EMPTY",
+        "uncovered_plusminus_0_25_mm_band_area_mm2": 0.0
+      }
+    }
+  }
+}

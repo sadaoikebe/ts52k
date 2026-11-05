@@ -1,0 +1,78 @@
+{
+  "date": "2026-11-05",
+  "scope": "Wireless placement snapshots: ed33d81, 519750e and current board. Geometry normalized by position/orientation. This does not audit every historical RP2040/ATmega commit.",
+  "comparisons": [
+    {
+      "from": "ed33d81",
+      "to": "519750e",
+      "compared_footprints": 135,
+      "geometry_changes": []
+    },
+    {
+      "from": "519750e",
+      "to": "working",
+      "compared_footprints": 135,
+      "geometry_changes": []
+    }
+  ],
+  "library_files_since_registration": [
+    {
+      "file": "C_0402_1005Metric.kicad_mod",
+      "same_as_registration": true
+    },
+    {
+      "file": "C_0603_1608Metric.kicad_mod",
+      "same_as_registration": true
+    },
+    {
+      "file": "C_0805_2012Metric.kicad_mod",
+      "same_as_registration": true
+    },
+    {
+      "file": "Crystal_Epson_FC-12M_2.05x1.2mm.kicad_mod",
+      "same_as_registration": true
+    },
+    {
+      "file": "D_SOD-123.kicad_mod",
+      "same_as_registration": true
+    },
+    {
+      "file": "H5VU10U_DFN1006-2L.kicad_mod",
+      "same_as_registration": true
+    },
+    {
+      "file": "JST_PH_S2B-PH-SM4-TB_1x02-1MP_P2.00mm_Horizontal.kicad_mod",
+      "same_as_registration": true
+    },
+    {
+      "file": "L_0603_1608Metric.kicad_mod",
+      "same_as_registration": true
+    },
+    {
+      "file": "R_0603_1608Metric.kicad_mod",
+      "same_as_registration": true
+    },
+    {
+      "file": "Raytac_MDBT50Q.kicad_mod",
+      "same_as_registration": true
+    },
+    {
+      "file": "SW_Tactile_XKB_TS-1187A_5.1x5.1mm.kicad_mod",
+      "same_as_registration": true
+    },
+    {
+      "file": "Tag-Connect_TC2030-IDC-NL_2x03_P1.27mm_Vertical.kicad_mod",
+      "same_as_registration": true
+    },
+    {
+      "file": "USB_C_Receptacle_HRO_TYPE-C-31-M-12.kicad_mod",
+      "same_as_registration": true
+    },
+    {
+      "file": "VQFN-16-1EP_3x3mm_P0.5mm_EP1.68x1.68mm.kicad_mod",
+      "same_as_registration": true
+    }
+  ],
+  "board_sha256": "dce7b7a401a93ed7670850a6636a002001f2f25e529583d94a995f25f26f362f",
+  "return_path_revision_geometry_unchanged": true
+}

@@ -1,0 +1,89 @@
+{
+  "date": "2026-11-06",
+  "length_definition": "Shortest track centreline path, pad centre to pad centre; excludes zone spreading and via barrel length. Before/after on saved boards.",
+  "capacitor_paths": [
+    {
+      "from": "U5.28",
+      "to": "C27.1",
+      "before_mm": 3.457,
+      "after_mm": 3.797
+    },
+    {
+      "from": "U5.28",
+      "to": "C28.1",
+      "before_mm": 7.981,
+      "after_mm": 5.467
+    },
+    {
+      "from": "U5.28",
+      "to": "C29.1",
+      "before_mm": 11.456,
+      "after_mm": 7.117
+    },
+    {
+      "from": "U5.28",
+      "to": "C30.1",
+      "before_mm": 5.981,
+      "after_mm": 8.767
+    },
+    {
+      "from": "U5.28",
+      "to": "C31.1",
+      "before_mm": 1.726,
+      "after_mm": 2.047
+    },
+    {
+      "from": "U5.30",
+      "to": "C25.1",
+      "before_mm": 5.149,
+      "after_mm": 4.194
+    },
+    {
+      "from": "U5.32",
+      "to": "C26.1",
+      "before_mm": 4.575,
+      "after_mm": 3.007
+    },
+    {
+      "from": "U6.13",
+      "to": "C22.1",
+      "before_mm": 1.382,
+      "after_mm": 1.846
+    },
+    {
+      "from": "U6.10",
+      "to": "C23.1",
+      "before_mm": 1.304,
+      "after_mm": 2.862
+    },
+    {
+      "from": "U6.3",
+      "to": "C24.1",
+      "before_mm": 2.701,
+      "after_mm": 1.648
+    }
+  ],
+  "preserved_tracks": {
+    "D+": false,
+    "D-": false,
+    "Net-(U5-P0.00)": false,
+    "Net-(U5-P0.01)": false
+  },
+  "new_non_octilinear_tracks": [],
+  "tag_connect": {
+    "position_mm": [
+      26.435,
+      79.95
+    ],
+    "rotation_deg": -90,
+    "unrouted_nets": [
+      "SWDIO",
+      "SWCLK",
+      "nRESET",
+      "nRF_VDD"
+    ],
+    "ground": "connected by pour"
+  },
+  "baseline_commit": "519750e",
+  "ground_return_note": "Paths above measure supply only; GND uses adjacent stitches and filled planes, not a loop-inductance simulation."
+}
