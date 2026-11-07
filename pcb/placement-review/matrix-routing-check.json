@@ -1,0 +1,127 @@
+{
+  "date": "2026-11-07",
+  "before_sha256": "2e29ff06519f47c817438ca9d4f3b76e4a587e65434c02cb3b9328456ce2b806",
+  "after_sha256": "6a4dc4d72f9cc22a66915dd376b8de5c604859327fac63ddc94416465d0f3dd5",
+  "schematic_sha256": "0c7fb4d0bbcee97848a78eb17ee627ccb2b455fdd5145f562641d4d993660a04",
+  "method": "Remove all matrix/encoder tracks and vias, then regenerate using the previous row and local-switch topology as a template; replace remote column feeds with upper horizontal lanes; normalize widths and octilinear geometry. No footprint or pad edits.",
+  "stripped_items": 2138,
+  "old_feed_items_omitted": 311,
+  "before": {
+    "segments": 2107,
+    "vias": 31,
+    "length_mm": {
+      "B.Cu": 5071.94,
+      "F.Cu": 74.42
+    },
+    "front_length_percent": 1.446,
+    "width_counts_mm": {
+      "0.15": 259,
+      "0.25": 220,
+      "0.2": 1628
+    }
+  },
+  "after": {
+    "segments": 3301,
+    "vias": 31,
+    "length_mm": {
+      "B.Cu": 5087.54,
+      "F.Cu": 86.557
+    },
+    "front_length_percent": 1.673,
+    "width_counts_mm": {
+      "0.15": 3301
+    }
+  },
+  "new_column_lanes_y_mm": {
+    "col6": 60.45,
+    "col5": 60.8,
+    "col4": 61.15,
+    "col3": 61.5,
+    "col2": 61.85
+  },
+  "diode_underpasses": {
+    "D12": [
+      "col6",
+      "col5",
+      "col4",
+      "col3"
+    ],
+    "D43": [
+      "col6",
+      "col5"
+    ],
+    "D47": [
+      "col6"
+    ],
+    "D26": [
+      "col6",
+      "col5",
+      "col4"
+    ],
+    "D8": [
+      "col6",
+      "col5",
+      "col4",
+      "col3",
+      "col2"
+    ],
+    "D38": [
+      "col6",
+      "col5"
+    ]
+  },
+  "matrix_octilinear_tolerance_nm": 3,
+  "physical_footprints_and_pad_nets_unchanged": true,
+  "non_matrix_copper_unchanged": true,
+  "baseline_drc": {
+    "track_dangling": 34,
+    "silk_edge_clearance": 3,
+    "text_height": 25,
+    "silk_overlap": 21,
+    "silk_over_copper": 26
+  },
+  "current_drc": {
+    "track_dangling": 34,
+    "silk_edge_clearance": 3,
+    "text_height": 25,
+    "silk_overlap": 21,
+    "silk_over_copper": 26
+  },
+  "unconnected": 24,
+  "schematic_parity_issues": 0,
+  "return_geometry": {
+    "front_ground_polygons": 2,
+    "nets": {
+      "D+": {
+        "track_centerline_length_mm": 13.774802,
+        "without_F_GND_below_mm": 0.0,
+        "uncovered_centerline_geometry": "LINESTRING EMPTY",
+        "uncovered_plusminus_0_25_mm_band_area_mm2": 0.0
+      },
+      "D-": {
+        "track_centerline_length_mm": 14.579923,
+        "without_F_GND_below_mm": 0.0,
+        "uncovered_centerline_geometry": "LINESTRING EMPTY",
+        "uncovered_plusminus_0_25_mm_band_area_mm2": 0.0
+      },
+      "DCCH": {
+        "track_centerline_length_mm": 2.438325,
+        "without_F_GND_below_mm": 0.0,
+        "uncovered_centerline_geometry": "LINESTRING EMPTY",
+        "uncovered_plusminus_0_25_mm_band_area_mm2": 0.0
+      },
+      "Net-(U5-P0.00)": {
+        "track_centerline_length_mm": 4.514975,
+        "without_F_GND_below_mm": 0.0,
+        "uncovered_centerline_geometry": "LINESTRING EMPTY",
+        "uncovered_plusminus_0_25_mm_band_area_mm2": 0.0
+      },
+      "Net-(U5-P0.01)": {
+        "track_centerline_length_mm": 4.514975,
+        "without_F_GND_below_mm": 0.0,
+        "uncovered_centerline_geometry": "LINESTRING EMPTY",
+        "uncovered_plusminus_0_25_mm_band_area_mm2": 0.0
+      }
+    }
+  }
+}

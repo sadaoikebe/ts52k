@@ -1,0 +1,120 @@
+{
+  "date": "2026-11-07",
+  "before_sha256": "edd7d54620308aef0b6b26d0e2e49e9529f07dcc7e7816ee15c91ec9add9641c",
+  "after_sha256": "0c86c6117712cb38a05802bbee206519e9038d6889088fb110c2d0ce49d4bbef",
+  "schematic_sha256": "00d78572223374d0b6976dd58d3b3b683342e6fc8986abfece4011992cf5ba42",
+  "mapping": {
+    "3": "rpg1",
+    "4": "row1",
+    "5": "rpg2",
+    "6": "row6",
+    "7": "row10",
+    "8": "row7",
+    "9": "row5",
+    "10": "row2",
+    "11": "row9",
+    "12": "row3",
+    "13": "row4",
+    "14": "row8",
+    "41": "col1",
+    "42": "col2",
+    "44": "col3",
+    "46": "col4",
+    "48": "col5",
+    "49": "col6"
+  },
+  "gpio": {
+    "3": "P1.10",
+    "4": "P1.11",
+    "5": "P1.12",
+    "6": "P1.13",
+    "7": "P1.14",
+    "8": "P1.15",
+    "9": "P0.03",
+    "10": "P0.29",
+    "11": "P0.02",
+    "12": "P0.31",
+    "13": "P0.28",
+    "14": "P0.30",
+    "41": "P0.17",
+    "42": "P0.19",
+    "44": "P0.20",
+    "46": "P0.22",
+    "48": "P0.24",
+    "49": "P0.25"
+  },
+  "removed_track_count": 62,
+  "added_tracks": 68,
+  "added_vias": 10,
+  "physical_footprints_and_pads_unchanged": true,
+  "protected_routes_unchanged": [
+    "D+",
+    "D-",
+    "DCCH",
+    "VDDH",
+    "MCU_VBUS",
+    "USB_VBUS",
+    "Net-(U5-P0.00)",
+    "Net-(U5-P0.01)"
+  ],
+  "new_tracks_octilinear": true,
+  "schematic_netlist_matches": true,
+  "baseline_drc": {
+    "clearance": 24,
+    "track_dangling": 25,
+    "silk_edge_clearance": 3,
+    "text_height": 25,
+    "silk_overlap": 21,
+    "silk_over_copper": 25
+  },
+  "current_drc": {
+    "track_dangling": 36,
+    "silk_edge_clearance": 3,
+    "text_height": 25,
+    "silk_overlap": 21,
+    "silk_over_copper": 25
+  },
+  "unconnected": 26,
+  "schematic_parity_issues": 0,
+  "return_geometry": {
+    "front_ground_polygons": 2,
+    "nets": {
+      "D+": {
+        "track_centerline_length_mm": 15.326965,
+        "without_F_GND_below_mm": 0.0,
+        "uncovered_centerline_geometry": "LINESTRING EMPTY",
+        "uncovered_plusminus_0_25_mm_band_area_mm2": 0.0
+      },
+      "D-": {
+        "track_centerline_length_mm": 14.579923,
+        "without_F_GND_below_mm": 0.0,
+        "uncovered_centerline_geometry": "LINESTRING EMPTY",
+        "uncovered_plusminus_0_25_mm_band_area_mm2": 0.0
+      },
+      "DCCH": {
+        "track_centerline_length_mm": 2.438325,
+        "without_F_GND_below_mm": 0.0,
+        "uncovered_centerline_geometry": "LINESTRING EMPTY",
+        "uncovered_plusminus_0_25_mm_band_area_mm2": 0.0
+      },
+      "Net-(U5-P0.00)": {
+        "track_centerline_length_mm": 4.514975,
+        "without_F_GND_below_mm": 0.0,
+        "uncovered_centerline_geometry": "LINESTRING EMPTY",
+        "uncovered_plusminus_0_25_mm_band_area_mm2": 0.0
+      },
+      "Net-(U5-P0.01)": {
+        "track_centerline_length_mm": 4.514975,
+        "without_F_GND_below_mm": 0.0,
+        "uncovered_centerline_geometry": "LINESTRING EMPTY",
+        "uncovered_plusminus_0_25_mm_band_area_mm2": 0.0
+      }
+    }
+  },
+  "front_track_lengths_mm": {
+    "nRESET": 5.411,
+    "SWDIO": 2.7,
+    "SWCLK": 6.531,
+    "nRF_VDD": 3.05
+  }
+}

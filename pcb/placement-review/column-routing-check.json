@@ -1,0 +1,92 @@
+{
+  "date": "2026-11-07",
+  "before_sha256": "ed566d44c17811a54fd6c07016ca424a15b219c9218e84bc5c18f3a87c40611c",
+  "after_sha256": "2e29ff06519f47c817438ca9d4f3b76e4a587e65434c02cb3b9328456ce2b806",
+  "schematic_sha256": "0c7fb4d0bbcee97848a78eb17ee627ccb2b455fdd5145f562641d4d993660a04",
+  "columns": {
+    "41": "col3",
+    "42": "col2",
+    "44": "col1",
+    "46": "col4",
+    "48": "col5",
+    "49": "col6"
+  },
+  "D91": {
+    "user_position_mm": [
+      25.9588,
+      49.6316
+    ],
+    "adjusted_position_mm": [
+      25.9588,
+      49.9816
+    ],
+    "angle": -135.0,
+    "reason": "0.35 mm south to remove pre-existing overlap with J1 courtyard"
+  },
+  "removed_column_segments": 8,
+  "added_column_segments": 46,
+  "added_column_vias": 0,
+  "column_layers": [
+    "B.Cu"
+  ],
+  "new_column_route_length_mm": {
+    "col1": 10.8612,
+    "col2": 15.9249,
+    "col3": 15.524,
+    "col4": 13.2062,
+    "col5": 12.3198,
+    "col6": 12.4991
+  },
+  "baseline_drc": {
+    "courtyards_overlap": 1,
+    "track_dangling": 36,
+    "silk_edge_clearance": 3,
+    "text_height": 25,
+    "silk_overlap": 21,
+    "silk_over_copper": 26
+  },
+  "current_drc": {
+    "track_dangling": 34,
+    "silk_edge_clearance": 3,
+    "text_height": 25,
+    "silk_overlap": 21,
+    "silk_over_copper": 26
+  },
+  "unconnected": 24,
+  "schematic_parity_issues": 0,
+  "return_geometry": {
+    "front_ground_polygons": 2,
+    "nets": {
+      "D+": {
+        "track_centerline_length_mm": 13.774802,
+        "without_F_GND_below_mm": 0.0,
+        "uncovered_centerline_geometry": "LINESTRING EMPTY",
+        "uncovered_plusminus_0_25_mm_band_area_mm2": 0.0
+      },
+      "D-": {
+        "track_centerline_length_mm": 14.579923,
+        "without_F_GND_below_mm": 0.0,
+        "uncovered_centerline_geometry": "LINESTRING EMPTY",
+        "uncovered_plusminus_0_25_mm_band_area_mm2": 0.0
+      },
+      "DCCH": {
+        "track_centerline_length_mm": 2.438325,
+        "without_F_GND_below_mm": 0.0,
+        "uncovered_centerline_geometry": "LINESTRING EMPTY",
+        "uncovered_plusminus_0_25_mm_band_area_mm2": 0.0
+      },
+      "Net-(U5-P0.00)": {
+        "track_centerline_length_mm": 4.514975,
+        "without_F_GND_below_mm": 0.0,
+        "uncovered_centerline_geometry": "LINESTRING EMPTY",
+        "uncovered_plusminus_0_25_mm_band_area_mm2": 0.0
+      },
+      "Net-(U5-P0.01)": {
+        "track_centerline_length_mm": 4.514975,
+        "without_F_GND_below_mm": 0.0,
+        "uncovered_centerline_geometry": "LINESTRING EMPTY",
+        "uncovered_plusminus_0_25_mm_band_area_mm2": 0.0
+      }
+    }
+  }
+}
