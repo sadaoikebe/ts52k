@@ -1,0 +1,87 @@
+diff --git a/src/kicad_mcp/utils/pcbnew_bridge.py b/src/kicad_mcp/utils/pcbnew_bridge.py
+index 8027196..efb4793 100644
+--- a/src/kicad_mcp/utils/pcbnew_bridge.py
++++ b/src/kicad_mcp/utils/pcbnew_bridge.py
+@@ -61,7 +61,14 @@ def _get_kicad_python() -> Optional[str]:
+     elif system == "Linux":
+         candidates = ["/usr/bin/python3"]
+     elif system == "Windows":
+-        candidates = [r"C:\Program Files\KiCad\bin\python.exe"]
++        # A configured CLI lives alongside KiCad's bundled Python, including
++        # in versioned Windows installs such as KiCad\10.0\bin.  Keep the
++        # legacy location as a fallback for unversioned installations.
++        cli_path = os.environ.get("KICAD_CLI_PATH")
++        candidates = []
++        if cli_path:
++            candidates.append(os.path.join(os.path.dirname(cli_path), "python.exe"))
++        candidates.append(r"C:\Program Files\KiCad\bin\python.exe")
+     else:
+         candidates = []
+ 
+@@ -213,7 +220,9 @@ def run_pcbnew_script(
+         )
+ 
+     # Write script to a temp file
+-    with tempfile.NamedTemporaryFile(mode="w", suffix=".py", delete=False) as f:
++    with tempfile.NamedTemporaryFile(
++        mode="w", suffix=".py", delete=False, encoding="utf-8"
++    ) as f:
+         f.write(script)
+         script_path = f.name
+ 
+diff --git a/tests/test_pcbnew_bridge.py b/tests/test_pcbnew_bridge.py
+index 1efcdd4..7835fe5 100644
+--- a/tests/test_pcbnew_bridge.py
++++ b/tests/test_pcbnew_bridge.py
+@@ -6,6 +6,7 @@ Tests the bridge functions that manage subprocess execution to KiCad's Python.
+ 
+ import logging
+ import os
++import sys
+ from unittest.mock import patch, MagicMock
+ 
+ import pytest
+@@ -76,6 +77,27 @@ class TestGetKicadPython:
+         result = _get_kicad_python()
+         assert result == "/usr/bin/python3"
+ 
++    def test_windows_uses_python_next_to_configured_cli(self, tmp_path, monkeypatch):
++        bin_dir = tmp_path / "KiCad" / "10.0" / "bin"
++        bin_dir.mkdir(parents=True)
++        python_path = bin_dir / "python.exe"
++        python_path.touch()
++        monkeypatch.setattr("kicad_mcp.utils.pcbnew_bridge.platform.system", lambda: "Windows")
++        monkeypatch.setenv("KICAD_CLI_PATH", str(bin_dir / "kicad-cli.exe"))
++
++        assert _get_kicad_python() == str(python_path)
++
++    def test_windows_falls_back_when_configured_python_is_missing(self, tmp_path, monkeypatch):
++        legacy_python = r"C:\Program Files\KiCad\bin\python.exe"
++        monkeypatch.setattr("kicad_mcp.utils.pcbnew_bridge.platform.system", lambda: "Windows")
++        monkeypatch.setenv("KICAD_CLI_PATH", str(tmp_path / "kicad-cli.exe"))
++        monkeypatch.setattr(
++            "kicad_mcp.utils.pcbnew_bridge.os.path.isfile",
++            lambda path: path == legacy_python,
++        )
++
++        assert _get_kicad_python() == legacy_python
++
+     @patch("kicad_mcp.utils.pcbnew_bridge.platform.system", return_value="UnknownOS")
+     def test_unknown_os(self, mock_system):
+         result = _get_kicad_python()
+@@ -86,6 +108,15 @@ class TestGetKicadPython:
+ 
+ class TestRunPcbnewScript:
+ 
++    def test_executes_script_with_non_ascii_source(self, monkeypatch):
++        monkeypatch.setattr(
++            "kicad_mcp.utils.pcbnew_bridge._get_kicad_python", lambda: sys.executable
++        )
++
++        result = run_pcbnew_script('import json; print(json.dumps({"text": "a → b"}))')
++
++        assert result == {"text": "a → b"}
++
+     @patch("kicad_mcp.utils.pcbnew_bridge._get_kicad_python", return_value=None)
+     def test_raises_when_no_kicad_python(self, mock_get_python):
+         with pytest.raises(RuntimeError, match="KiCad Python interpreter not found"):

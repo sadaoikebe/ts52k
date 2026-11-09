@@ -7,7 +7,20 @@
 - MCPサーバーは Brian Wong 氏の [blwfish/kicad-mcp](https://github.com/blwfish/kicad-mcp)（MITライセンス）。Codex上の接続名は `kicad`。
 - 確認時のローカルコピーは `C:\Users\marur\kicad-mcp`、`main` のコミット [`fc143f9fe6b16ae64f1dbc0a6ef3df233db96634`](https://github.com/blwfish/kicad-mcp/commit/fc143f9fe6b16ae64f1dbc0a6ef3df233db96634)。パッケージのバージョンは `0.18.1`。
 - このコピーは仮想環境にeditableインストールされており、`C:\Users\marur\kicad-mcp\.venv\Scripts\python.exe -m kicad_mcp.server` で起動する設定。KiCadは10.0.5、`KICAD_CLI_PATH` は `C:\Program Files\KiCad\10.0\bin\kicad-cli.exe`。`PYTHONUTF8=1` と、同じKiCadインストール内のシンボル・フットプリントディレクトリも設定されている。
-- 上記コミットからの**ローカル未コミット変更**が `src/kicad_mcp/utils/pcbnew_bridge.py` と `tests/test_pcbnew_bridge.py` にある。前者は、Windowsで `KICAD_CLI_PATH` と同じディレクトリのKiCad付属Pythonを探す変更と、一時PythonスクリプトをUTF-8で書く変更。後者はそのテストを追加している。これらの差分はTS52Kリポジトリに含まれないため、上記コミットだけでは確認時の環境を完全には再現できない。
+- 上記コミットからの**ローカル未コミット変更**は[パッチ](patches/kicad-mcp-windows-utf8.patch)に保存している。対象は `src/kicad_mcp/utils/pcbnew_bridge.py` とそのテスト。
+
+このパッチのWindows向け変更は、`KICAD_CLI_PATH` と同じディレクトリにある `python.exe` を優先して探すもの。KiCad 10のようなバージョン付きインストール先に対応し、見つからなければ従来の場所を試す。LinuxのPython探索には影響しない。
+
+もう一つの変更は、生成した一時PythonスクリプトをUTF-8で保存する指定。Pythonのソースは既定でUTF-8として読み込まれるため、書き込み側の既定文字コードが異なる環境では、日本語などを含むスクリプトの書き込みや実行に失敗しうる。UTF-8環境では通常は挙動を変えないが、OSに依存しない明示的な指定としている。設定済みの `PYTHONUTF8=1` も書き込み側の既定をUTF-8にするが、このパッチはその環境変数に依存しない。
+
+再現するときはMCPリポジトリの指定コミットをチェックアウトし、未変更の状態で次を実行する（TS52Kのパッチへのパスは環境に合わせる）。すでに適用済みの現在のローカルコピーへ重ねて適用しない。
+
+```powershell
+git -C C:/Users/marur/kicad-mcp apply --check C:/Users/marur/ts52k/pcb/patches/kicad-mcp-windows-utf8.patch
+git -C C:/Users/marur/kicad-mcp apply C:/Users/marur/ts52k/pcb/patches/kicad-mcp-windows-utf8.patch
+```
+
+これはMCPのソース差分を再現するもので、Python依存パッケージやKiCad本体のバージョンを固定するものではない。別バージョンのMCPに適用する場合は内容を照合する。
 
 導入方法や操作の詳細は、MCP本体の [README](https://github.com/blwfish/kicad-mcp/blob/fc143f9fe6b16ae64f1dbc0a6ef3df233db96634/README.md) と [AGENT-INSTALL.md](https://github.com/blwfish/kicad-mcp/blob/fc143f9fe6b16ae64f1dbc0a6ef3df233db96634/AGENT-INSTALL.md) を参照する。上記のパスはこのPCの実例であり、他の環境では異なる。
 
