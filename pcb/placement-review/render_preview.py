@@ -23,8 +23,8 @@ def label(x,y,text,size=1.1):
         'fill':'#101820','stroke':'none'})
     node.text = text
 
-label(2.0,55.0,'MATRIX BUS REWORK / 2026-11-07',1.25)
-label(2.0,57.0,'0.15 mm matrix; col2-col6 upper bus; MCU joins remain',.85)
+label(2.0,55.0,'MATRIX JOINS / 2026-11-08',1.25)
+label(2.0,57.0,'column lanes revised; col4 / col2 / col1 joined; 13 remain',.85)
 annotated=ET.tostring(svg,encoding='utf-8',xml_declaration=True)
 doc=pymupdf.open(stream=annotated,filetype='svg')
 pdf=pymupdf.open('pdf',doc.convert_to_pdf())

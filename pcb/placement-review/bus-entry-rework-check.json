@@ -1,0 +1,59 @@
+{
+  "date": "2026-11-08",
+  "baseline": "previous uncommitted col5 connection",
+  "footprints_and_pad_nets_unchanged": true,
+  "non_target_tracks_unchanged": true,
+  "new_tracks_octilinear": true,
+  "new_track_width_mm": 0.15,
+  "merged_collinear_segments": 1,
+  "added_vias": 2,
+  "added_front_track_mm": 3.6112698372208096,
+  "board_sha256": "df3810e57b0845e0e9468e565abacdd53dd23572a6a8dcbca7259812ab444eef",
+  "return_path_projection": {
+    "front_ground_polygons": 2,
+    "nets": {
+      "D+": {
+        "track_centerline_length_mm": 13.774802,
+        "without_F_GND_below_mm": 0.0,
+        "uncovered_centerline_geometry": "LINESTRING EMPTY",
+        "uncovered_plusminus_0_25_mm_band_area_mm2": 0.0
+      },
+      "D-": {
+        "track_centerline_length_mm": 14.579923,
+        "without_F_GND_below_mm": 0.0,
+        "uncovered_centerline_geometry": "LINESTRING EMPTY",
+        "uncovered_plusminus_0_25_mm_band_area_mm2": 0.0
+      },
+      "DCCH": {
+        "track_centerline_length_mm": 2.438325,
+        "without_F_GND_below_mm": 0.0,
+        "uncovered_centerline_geometry": "LINESTRING EMPTY",
+        "uncovered_plusminus_0_25_mm_band_area_mm2": 0.0
+      },
+      "Net-(U5-P0.00)": {
+        "track_centerline_length_mm": 4.514975,
+        "without_F_GND_below_mm": 0.0,
+        "uncovered_centerline_geometry": "LINESTRING EMPTY",
+        "uncovered_plusminus_0_25_mm_band_area_mm2": 0.0
+      },
+      "Net-(U5-P0.01)": {
+        "track_centerline_length_mm": 4.514975,
+        "without_F_GND_below_mm": 0.0,
+        "uncovered_centerline_geometry": "LINESTRING EMPTY",
+        "uncovered_plusminus_0_25_mm_band_area_mm2": 0.0
+      }
+    }
+  },
+  "before_sha256": "6a6447f03c49a9c9c21ff6f8756595fa63822d5c077b83e61ae403468bb3fd48",
+  "drc": {
+    "unconnected": 16,
+    "violations_by_type": {
+      "track_dangling": 22,
+      "silk_edge_clearance": 3,
+      "text_height": 25,
+      "silk_overlap": 21,
+      "silk_over_copper": 26
+    },
+    "schematic_parity": 0
+  }
+}
