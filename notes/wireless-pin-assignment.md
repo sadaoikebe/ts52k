@@ -49,7 +49,7 @@ SW2のCはGND。押し込み接点はcol6を含む既存マトリクス内に維
 | SWDのVTref | nRF_VDD | 28のネットから分岐 |
 | USBデータ | D−、D+ | 34、35 |
 
-nRESET・SWDIO・SWCLKは南へ引き出す案を実装中。必要な交差には短いF.Cuとビアを使う。VTrefは近傍のVDDコンデンサから分岐する。
+nRESET・SWDIO・SWCLKはモジュール南西角からB.Cuで引き出してJ2へ接続済み。VTrefは近傍のVDDコンデンサから分岐し、F.Cu 11.32 mmを経てJ2へ入る。経路は[配線記録](../pcb/placement-review/README.md)を参照。
 
 ## 電気条件・根拠
 

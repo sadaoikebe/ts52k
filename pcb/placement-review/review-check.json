@@ -1,0 +1,110 @@
+{
+ "date": "2026-11-10",
+ "kicad": "10.0.8",
+ "base_commit": "85376c9",
+ "branch": "claude-fable-review-2026-11-10",
+ "command": "kicad-cli pcb drc --refill-zones --severity-all --schematic-parity / kicad-cli sch erc --severity-all",
+ "drc": {
+  "base": {
+   "violations": 75,
+   "unconnected": 0,
+   "parity": 0,
+   "by_type": {
+    "silk_over_copper": 26,
+    "text_height": 25,
+    "silk_overlap": 21,
+    "silk_edge_clearance": 3
+   }
+  },
+  "now": {
+   "violations": 9,
+   "unconnected": 0,
+   "parity": 0,
+   "by_type": {
+    "silk_overlap": 7,
+    "silk_edge_clearance": 2
+   }
+  }
+ },
+ "erc": {
+  "base": 0,
+  "now": 0,
+  "note": "schematic unchanged; global KiCad library tables installed from /usr/share/kicad/template before the run"
+ },
+ "f_cu_track_mm": {
+  "base": 230.17,
+  "now": 174.87,
+  "swd_group_base": {
+   "SWDIO": 21.13,
+   "SWCLK": 24.59,
+   "nRESET": 18.71,
+   "nRF_VDD": 17.83
+  },
+  "swd_group_now": {
+   "SWDIO": 3.7,
+   "SWCLK": 2.6,
+   "nRESET": 6.63,
+   "nRF_VDD": 11.32
+  },
+  "Net-(D3-A)_now": 2.66
+ },
+ "vias": {
+  "signal": {
+   "base": 67,
+   "now": 63
+  },
+  "signal_under_module_body": {
+   "base": 5,
+   "now": 2
+  },
+  "gnd": {
+   "base": 173,
+   "now": 180
+  }
+ },
+ "gnd_fill": {
+  "f_cu_polygons": {
+   "base": 2,
+   "now": 2
+  },
+  "f_cu_area_mm2": {
+   "base": 20589.95,
+   "now": 20588.32
+  },
+  "b_cu_polygons": {
+   "base": 30,
+   "now": 28
+  },
+  "b_cu_area_mm2": {
+   "base": 17150.76,
+   "now": 17149.98
+  },
+  "b_cu_islands_ge_5mm2_with_single_via": {
+   "base": 10,
+   "now": 1,
+   "remaining": "5.83 mm2 at x=26.4..29.3, y=52.9..57.6; no legal spot for a second via"
+  }
+ },
+ "return_path_f_cu_gnd_under_b_cu_tracks": {
+  "method": "centre and +-0.25 mm, 0.05 mm step",
+  "samples": {
+   "D+": 846,
+   "D-": 894,
+   "DCCH": 153,
+   "Net-(U5-P0.00)": 279,
+   "Net-(U5-P0.01)": 279
+  },
+  "missing": 0
+ },
+ "margins_measured_with_temporary_stricter_rules": {
+  "copper_to_board_edge_min_mm": 0.25,
+  "edge_fence_via_copper_to_edge_mm": 0.3,
+  "copper_to_npth_min_mm": 0.25,
+  "hole_to_hole_min_mm": 0.444
+ },
+ "not_done": [
+  "hardware bring-up",
+  "fabrication outputs",
+  "RF measurement"
+ ]
+}
