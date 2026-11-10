@@ -1,6 +1,6 @@
 # ZMKと対応するハードウェア起動条件
 
-2026-11-03更新。[現行決定事項](wireless-decisions.md)と[部品BOM](wireless-bom-draft.csv)に従う。最小ZMKのビルドと出力設定の照合、無線版回路図への反映・ERC・ネット検査は完了。PCBは旧RP2040版のまま、実機起動は未検証。
+2026-11-10更新。[現行決定事項](wireless-decisions.md)と[部品BOM](wireless-bom-draft.csv)に従う。従来の最小ZMKのビルド・出力設定照合と、無線版回路図・PCBへの反映は別工程。PCBはU5を西端へ移した無線版で、18信号の新割当てを反映済み。ZMK側の同期・再ビルドと実機起動は未実施。[同期チェックリスト](zmk-pin-sync-checklist.md)を参照。
 
 ## 基準にする版と成果物
 
@@ -29,8 +29,8 @@ UF2 SHA-256は`fb828611ee074e82a9c90dda64dc1209e44b9cac1bbc338699ea9bfe5b71d467`
 | USB | アプリ・ブートローダの既存申告設定を維持。USB100固定充電。USB状態連動の追加制御は初版で実施しない |
 | リセット | P0.18 / モジュール40番。SW1でGNDへ。ブートローダ初期化にCONFIG_GPIO_AS_PINRESETの経路あり |
 | 初回SWD | VTref=VDD(28)、SWDIO=51、SWCLK=53、nRESET=40、GND。6番NC。1.8 Vと3.3 Vへ対応 |
-| 入力 | UF2はP0.06列・P0.08行の1接点だけ。本番18本の割当ては[GPIO表](wireless-pin-assignment.md)で決定済み |
-| 未使用機能 | P0.13のEXT_POWER制御を置かずrow6に使う。ブートローダのLED端子P0.15はNC |
+| 入力 | 既存UF2はP0.06列・P0.08行の旧1接点検証用。現PCBではそれぞれcol4・col3の出力側であり、このUF2を現PCBの走査確認に流用しない。本番18本は[GPIO表](wireless-pin-assignment.md)に従って同期する |
+| 未使用機能 | P0.13のEXT_POWER制御を置かずrow3に使う。row6はP0.29。ブートローダのLED端子P0.15はNC |
 
 電源回路をZMKの版ごとに変える要求ではない。実装回路に適合する基板定義を維持する。インダクタ実装回路でブートローダがLDO、アプリがDC/DCでも矛盾しない。ブートローダとアプリのLF源も同じである必要はなく、それぞれが実装回路に適合すればよい。
 

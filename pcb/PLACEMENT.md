@@ -1,6 +1,6 @@
 # Revision 0.2 基板レイアウト
 
-現在のPCBは無線版の仮配置段階。[配置画像・変更記録](placement-review/README.md)を参照。以下のRP2040配置・配線・DRCの記述は移行前の記録。
+現在のPCBは無線版で、2026-11-10にU5を西端へ移し、GPIO割当てと西側の配置・配線を更新済み。[配置画像・変更記録](placement-review/README.md)と[現在のGPIO表](../notes/wireless-pin-assignment.md)を参照。取り込み判断・実機検証・無線版製造データ作成は未了。`pcb/jlcpcb/` は旧RP2040版の出力のまま。以下のRP2040配置・配線・DRCの記述は移行前の記録。
 
 この文書は旧RP2040版の配置・出力時の記録。無線版のライブラリ整理後のERC/DRC結果ではない。無線版の現状は[決定事項](../notes/wireless-decisions.md)と[ライブラリ](LIBRARIES.md)を参照する。
 

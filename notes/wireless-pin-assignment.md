@@ -59,7 +59,7 @@ SWDIO・SWCLKはモジュール南側のパッドからB.CuだけでJ2へ届く�
 
 ## 電気条件・根拠
 
-[Raytac Version K](https://cdn.sparkfun.com/assets/4/7/4/3/8/_nRF52840__MDBT50Q-1MV2___MDBT50Q-P1MV2_Ver.K_spec.pdf) §2.5–2.6を基準とする。入力用3〜14には「standard drive, low frequency I/O only」の制限がある。列用41・42・44・46・48・49にはこの指定がない。
+[Raytac Version K](https://cdn.sparkfun.com/assets/4/7/4/3/8/_nRF52840__MDBT50Q-1MV2___MDBT50Q-P1MV2_Ver.K_spec.pdf) §2.5–2.6を基準とする。パッド3〜14には「standard drive, low frequency I/O only」の制限があり、現在はそのうち4・6・8・10・12・14を入力に使う。列用16・20・22・24・26・49にはこの指定がない。
 
 列の最大9接点同時押し負荷を考慮して高駆動を使う。標準駆動では絶対に動かないと判定したという意味ではない。内部プルダウン以外の抵抗は追加しない。
 
@@ -67,6 +67,7 @@ SWDIO・SWCLKはモジュール南側のパッドからB.CuだけでJ2へ届く�
 
 ## ファームウェアへの引き継ぎ
 
+- Windows側の変更対象・新旧対照・確認手順は[ZMK同期チェックリスト](zmk-pin-sync-checklist.md)を参照。このVMでは別リポジトリの編集・ビルドは行っていない。
 - `col-gpios`、`row-gpios`をそれぞれcol1〜6、row1〜10の順に、上の表のGPIOで設定する。エンコーダはA=P1.11、B=P1.13。2026-11-10の表は回路図ネットリストとPCB（DRCの回路図照合）で一致を確認済み。旧表で作った設定があれば全18本を差し替える。
 - 列の高駆動指定には[ZephyrのNordic GPIO定義](https://github.com/zephyrproject-rtos/zephyr/blob/main/include/zephyr/dt-bindings/gpio/nordic-nrf-gpio.h)を使う。
 - QSPI等の周辺機能として使わず通常のGPIOとする。nice!nanoの外部電源制御も追加しない。
