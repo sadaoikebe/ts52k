@@ -28,5 +28,10 @@ if STAGE>=1 and '-p' in sys.argv:
         f=b.FindFootprintByReference(r); print(r,[(p.GetNumber(),p.GetNetname()[-8:],round(mm(p.GetPosition().x),3),round(mm(p.GetPosition().y),3),round(mm(p.GetBoundingBox().GetWidth()),2),round(mm(p.GetBoundingBox().GetHeight()),2)) for p in f.Pads()])
 exec(open('/home/hatch/workspace/ts52k-fable/pcb/placement-review/scripts-2026-11-10-antenna/route.py').read())
 e.save()
+if STAGE>=8:
+    import json
+    moved=['C25','C26','C27','C28','C29','C30','C31','C32','C33','X3','L1','D2','D3','J2','J3','SW1','R20','U5']
+    json.dump({'violations':[{'type':'silk_overlap','items':[{'description':'Reference field of %s'%r}]} for r in moved]},open('/tmp/w/silk_targets.json','w'))
+    print(subprocess.run(['python3','/home/hatch/workspace/ts52k-fable/pcb/placement-review/scripts-2026-11-10-review/r3_silk_refs.py','/tmp/w/silk_targets.json'],capture_output=True,text=True).stdout[-1500:])
 d=drc.run(); drc.show(d,box=BOX if 'BOX' in dir() else None)
 if '-u' in sys.argv: drc.unconn(d)
