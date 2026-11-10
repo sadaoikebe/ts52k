@@ -70753,7 +70753,7 @@
 		(keepout
 			(tracks not_allowed)
 			(vias not_allowed)
-			(pads allowed)
+			(pads not_allowed)
 			(copperpour not_allowed)
 			(footprints allowed)
 		)
