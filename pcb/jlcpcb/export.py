@@ -150,11 +150,9 @@ def main():
             for path in sorted(plotted.iterdir()):
                 if path.is_file():
                     archive.write(path, path.name)
-        sources = [BOARD, PROJECT, SCHEMATIC, PCB_DIR / "rp2040.kicad_sch", PCB_DIR / "ts52k.kicad_dru",
+        sources = [BOARD, PROJECT, SCHEMATIC, PCB_DIR / "mdbt50q.kicad_sch", PCB_DIR / "ts52k.kicad_dru",
                    PCB_DIR / "ts52k.kicad_sym", PCB_DIR / "sym-lib-table", PCB_DIR / "fp-lib-table",
-                   PCB_DIR / "tag-connect.kicad_sym",
-                   PCB_DIR / "rp2040.pretty" / "IC57_RP2040.kicad_mod",
-                   PCB_DIR / "rp2040.pretty" / "SW_Tactile_XKB_TS-1187A_5.1x5.1mm.kicad_mod"]
+                   PCB_DIR / "tag-connect.kicad_sym"]
         manifest = {
             "source_sha256": {str(path.relative_to(PCB_DIR)): sha256(path) for path in sources},
             "output_sha256": {str(path.relative_to(JLC_DIR)): sha256(path) for path in [output_zip, output_bom, output_cpl]},
