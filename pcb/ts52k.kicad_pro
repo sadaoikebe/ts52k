@@ -599,6 +599,10 @@
       },
       {
         "netclass": "Power",
+        "pattern": "/BAT_CONN"
+      },
+      {
+        "netclass": "Power",
         "pattern": "VDDH"
       },
       {
