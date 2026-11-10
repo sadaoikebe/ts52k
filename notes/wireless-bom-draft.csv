@@ -18,3 +18,4 @@ USB ESD,hongjiacheng,H5VU10U,C22395519,3,DFN1006-2L,Extended,D- D+ VBUS
 Reset switch,XKB,TS-1187A-B-A-B,C318884,1,5.1x5.1x1.5mm SMT,Basic,P0.18 to GND
 Matrix diodes,ST Semtech,1N4148W,C81598,53,SOD-123,Basic,52 keys and encoder push switch
 Battery connector,JST,S2B-PH-SM4-TB(LF)(SN),C295747,1,PH 2P 2mm right-angle SMT,Extended,Pin1 BAT+ Pin2 GND
+Reverse-battery MOSFET,Alpha & Omega Semiconductor,AO3401A,C15127,1,SOT-23,Basic,P-channel in series between J3 pin 1 and BQ24072 BAT; gate to GND

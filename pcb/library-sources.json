@@ -155,6 +155,18 @@
       "asset": "ts52k:S2B-PH-SM4-TB(LF)(SN)",
       "source": "Connector_Generic:Conn_01x02",
       "source_sha256": "1ae3b346fe1c4e874fecb72abc7df4e94a253780db183439dbfefc4e2ff3a0be"
+    },
+    {
+      "asset": "ts52k:SOT-23",
+      "source": "Package_TO_SOT_SMD:SOT-23",
+      "source_sha256": "0d88c86c1b6d8c1aae4aa8c09386264c089d4451a128b6ccd63ed253f4300b15",
+      "source_kicad_version": "10.0.8"
+    },
+    {
+      "asset": "ts52k:AO3401A",
+      "source": "Transistor_FET:AO3401A",
+      "source_sha256": "4fffc88e10091df229ea6ff032afa8ca8f1c2f3d72c8dabf25c6d31704ac6b50",
+      "source_kicad_version": "10.0.8"
     }
   ],
   "modifications": {
