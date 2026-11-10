@@ -1,8 +1,8 @@
 # Revision 0.2 — JLCPCB 向け出力
 
-この文書と既存の製造出力は旧RP2040版の記録。以下のERC/DRC・部品数・製造可能性は当時の回路とライブラリ構成に対するもの。現在の無線版回路図の検査は[別記録](../schematic-review/validation.json)。PCBは西端移設後の無線版へ移行済みだが、無線版の製造出力はまだ生成していない。[参照番号付き回路BOM](../schematic-review/bom.csv)と[決定事項](../../notes/wireless-decisions.md)を参照する。
+この文書の本文は旧RP2040版（Revision 0.2）の記録。以下のERC/DRC・部品数・製造可能性は当時の回路とライブラリ構成に対するもの。現在の無線版回路図の検査は[別記録](../schematic-review/validation.json)。[参照番号付き回路BOM](../schematic-review/bom.csv)と[決定事項](../../notes/wireless-decisions.md)も参照する。
 
-**Revision 0.2 のガーバー・ドリル・BOM・実装座標を同梱しています。**
+**同梱の製造出力（ガーバー・ドリル・BOM・実装座標）は、2026-11-11に西端移設後の無線版基板（wireless 9986174）から再生成したもの。**
 
 ## 電源・USB ESD保護
 
