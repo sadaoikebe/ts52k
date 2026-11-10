@@ -1,6 +1,6 @@
 # 無線版のランド・配置条件
 
-2026-11-03。メーカー図とKiCad 10.0ライブラリ、旧RP2040版PCBを照合し、以下の専用ランド作成と[登録](../pcb/LIBRARIES.md)を完了した。BOMは19品種・81点。回路図へのランド割当てと端子の照合も[完了](../pcb/schematic-review/validation.json)。PCBには[仮配置](../pcb/placement-review/README.md)まで反映した。配線と実機検証は未実施。
+2026-11-03にメーカー図とKiCad 10.0ライブラリ、旧RP2040版PCBを照合し、以下の専用ランド作成と[登録](../pcb/LIBRARIES.md)を完了した。BOMは19品種・81点。回路図へのランド割当てと端子の照合も[完了](../pcb/schematic-review/validation.json)。2026-11-10時点ではPCBにも[西端移設後の配置・配線](../pcb/placement-review/README.md)を反映済み。実機検証は未実施。
 
 ## 使用するランド
 
