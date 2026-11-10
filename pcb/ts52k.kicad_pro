@@ -583,23 +583,31 @@
     "netclass_patterns": [
       {
         "netclass": "Power",
-        "pattern": "+5V"
-      },
-      {
-        "netclass": "Power",
         "pattern": "GND"
       },
       {
         "netclass": "Power",
-        "pattern": "VCC"
+        "pattern": "USB_VBUS"
       },
       {
         "netclass": "Power",
-        "pattern": "+3V3"
+        "pattern": "MCU_VBUS"
       },
       {
         "netclass": "Power",
-        "pattern": "1V1"
+        "pattern": "BAT"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "VDDH"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "nRF_VDD"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "DCCH"
       }
     ]
   },
