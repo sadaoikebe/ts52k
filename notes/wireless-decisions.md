@@ -25,7 +25,7 @@ ts52kはハードウェア用。ファームウェアは`C:\Users\marur\zmk-conf
 | USB | 既存HRO USB-C、CC各5.1 kΩ、H5VU10U×3を継続。モジュールVBUS枝だけに2.2 Ω / C22939。BQ INは抵抗の手前で分岐。D−=34、D+=35、データ線直列抵抗なし |
 | 電池コネクタ | JST S2B-PH-SM4-TB(LF)(SN) / C295747、横挿しSMT。1=BAT+、2=GND |
 | SWD / リセット | TC2030-NL接点を必ず設ける。VTref=VDD(28)、SWDIO=51、SWCLK=53、nRESET=P0.18(40)。6番NC。消去直後1.8 Vと初期化後3.3 Vへ対応する経路を確保 |
-| マトリクス等 | 6列×10行、53接点、カソード行側、`col2row`を維持。行10本＋エンコーダA/Bは南側パッド3〜14の入力へ移す。列6本は既存の制限なしGPIOを維持し、ZMKで高駆動を指定。[採用方針と現在の実装表](wireless-pin-assignment.md)を区別する。新方針のネット変更は未実施 |
+| マトリクス等 | 6列×10行、53接点、カソード行側、`col2row`を維持。2026-11-10にモジュールを基板左端へ移し、GPIO割当てを組み直した。入力12本のうち上段6本は低周波専用のパッド4〜14、列6本は制限なしGPIOで、ZMKで高駆動を指定。[現在の割当て表](wireless-pin-assignment.md)を参照 |
 
 発注型番・JLC番号・数量は[仮BOM](wireless-bom-draft.csv)、シンボルとランドは[登録表](../pcb/wireless-library.csv)。**19品種・81点、Basic 12品種72点、Extended 7品種9点**。[参照番号付きBOM](../pcb/schematic-review/bom.csv)を回路図から生成・照合済み。実装座標はPCB作成後で、現時点のCSVをJLC製造用BOMとして使わない。
 

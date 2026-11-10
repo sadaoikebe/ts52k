@@ -58,8 +58,8 @@ def main():
         'SWDIO': N(('J2',2), ('U5',51)),
         'SWCLK': N(('J2',4), ('U5',53)),
         'nRESET': N(('J2',3), ('SW1',2), ('U5',40)),
-        'rpg1': N(('SW2','A'), ('U5',45)),
-        'rpg2': N(('SW2','B'), ('U5',46)),
+        'rpg1': N(('SW2','A'), ('U5',4)),
+        'rpg2': N(('SW2','B'), ('U5',6)),
     }
     for name, expected in required.items():
         assert nets[name] == expected, (name, nets[name] ^ expected)
@@ -76,9 +76,9 @@ def main():
     for ref, pin in [('J2',6), ('J1','A8'), ('J1','B8'), ('U6',7), ('U6',9), ('U6',14), ('U5',39)]:
         assert len(nets[node_net[(ref,str(pin))]]) == 1, (ref,pin)
 
-    gpio = dict(zip([f'col{i}' for i in range(1,7)], [22,23,20,21,19,16]))
-    gpio.update(zip([f'row{i}' for i in range(1,11)], [24,25,27,29,36,37,41,42,43,44]))
-    gpio.update(rpg1=45, rpg2=46)
+    gpio = dict(zip([f'col{i}' for i in range(1,7)], [49,26,24,22,20,16]))
+    gpio.update(zip([f'row{i}' for i in range(1,11)], [8,12,37,43,46,10,14,41,44,48]))
+    gpio.update(rpg1=4, rpg2=6)
     for name, pin in gpio.items():
         assert ('U5',str(pin)) in nets[name]
         assert sum(ref=='U5' for ref,p in nets[name]) == 1

@@ -1,0 +1,167 @@
+{
+ "date": "2026-11-10",
+ "kicad": "10.0.8",
+ "base_commit": "891e14f",
+ "U5": {
+  "before": [
+   29.5,
+   63.0,
+   90.0
+  ],
+  "after": [
+   4.45,
+   63.4,
+   -90.0
+  ]
+ },
+ "F_Cu_mm": {
+  "before": 174.87,
+  "after": 176.15
+ },
+ "F_Cu_matrix_mm": {
+  "before": 117.07,
+  "after": 78.89
+ },
+ "F_Cu_by_net_after": {
+  "BAT": 9.25,
+  "D+": 7.08,
+  "D-": 7.22,
+  "Net-(U6-ILIM)": 3.17,
+  "Net-(U6-TS)": 5.31,
+  "USB_VBUS": 20.4,
+  "VDDH": 20.29,
+  "col1": 8.8,
+  "col2": 17.92,
+  "col3": 19.48,
+  "col4": 12.57,
+  "col5": 12.03,
+  "col6": 8.09,
+  "nRESET": 9.97,
+  "nRF_VDD": 14.56
+ },
+ "F_Cu_by_net_before": {
+  "BAT": 2.24,
+  "Net-(D3-A)": 2.66,
+  "Net-(U6-ILIM)": 3.17,
+  "Net-(U6-TS)": 5.31,
+  "SWCLK": 2.6,
+  "SWDIO": 3.7,
+  "USB_VBUS": 13.42,
+  "VDDH": 6.76,
+  "col1": 14.67,
+  "col2": 17.92,
+  "col3": 19.48,
+  "col4": 17.66,
+  "col5": 16.13,
+  "col6": 11.08,
+  "nRESET": 6.63,
+  "nRF_VDD": 11.32,
+  "row1": 6.9,
+  "row7": 13.24
+ },
+ "signal_vias": {
+  "before": 63,
+  "after": 50
+ },
+ "gnd_vias": {
+  "before": 180,
+  "after": 247
+ },
+ "signal_vias_under_module": {
+  "before": 2,
+  "after": 1
+ },
+ "signal_vias_matrix": {
+  "before": 37,
+  "after": 26
+ },
+ "usb_len_mm": {
+  "D+": {
+   "before": [
+    13.8,
+    0
+   ],
+   "after": [
+    46.0,
+    7.1
+   ]
+  },
+  "D-": {
+   "before": [
+    14.6,
+    0
+   ],
+   "after": [
+    44.6,
+    7.2
+   ]
+  }
+ },
+ "matrix_B_Cu_mm": {
+  "before": 4782.0,
+  "after": 5067.1
+ },
+ "drc": {
+  "before": {
+   "violations": 9,
+   "unconnected": 0,
+   "parity": 0
+  },
+  "after": {
+   "violations": 9,
+   "unconnected": 0,
+   "parity": 0,
+   "types": {
+    "silk_overlap": 7,
+    "silk_edge_clearance": 2
+   }
+  }
+ },
+ "erc": 0,
+ "antenna": {
+  "edge_x": -3.572,
+  "module_keepout": [
+   -3.3,
+   57.2,
+   0.5,
+   69.6
+  ],
+  "ANT_EDGE": [
+   -3.8,
+   45.0,
+   0.23,
+   82.0
+  ],
+  "gnd_fill_min_x_F": 0.23,
+  "gnd_fill_min_x_B": 0.23,
+  "copper_free_depth_from_edge_mm": 3.8,
+  "copper_free_length_along_edge_mm": 36.7,
+  "tracks_vias_inside_strip": 0
+ },
+ "return_path_F_Cu_missing_samples": {
+  "D+": [
+   246,
+   2796
+  ],
+  "D-": [
+   370,
+   2709
+  ],
+  "DCCH": [
+   0,
+   105
+  ],
+  "XL1": [
+   0,
+   294
+  ],
+  "XL2": [
+   0,
+   276
+  ]
+ },
+ "gnd_islands_single_via_ge_5mm2": {
+  "before": 1,
+  "after": 0
+ }
+}
