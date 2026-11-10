@@ -54,7 +54,7 @@
 | 5 | GND | GND系。ケーブル図では3／5／9 |
 | 6 | SWOは未接続 | 6 |
 
-READMEで予定している無線版J2配列と一致。既存RP2040版PCBもCTX配列の6接点と3位置決め穴を使っていることを確認した。ただし既存PCBのJ2-1はRP2040用の+3V3ネットであり、無線版へ流用する際は必ずMDBT50QのVDDへ接続する。接点番号は基板実装面とメーカー図の向きを合わせ、改版時に再照合する。クリップを使う場合はJ2周辺の反対面にも保持具の空間を残す。
+READMEで予定している無線版J2配列と一致。既存RP2040版PCBもCTX配列の6接点と3位置決め穴を使っていることを確認した。ただし既存PCBのJ2-1はRP2040用の+3V3ネットであり、無線版へ流用する際は必ずMDBT50QのVDDへ接続する。接点番号は基板実装面とメーカー図の向きを合わせ、改版時に再照合する。クリップを使う場合はJ2周辺の反対面にも保持具の空間を残す。2026-11-11にJ2を(12.0, 83.3)・0°へ移した。旧位置(11.0, 82.0)では位置決め穴の1つが表面のMX3本体の真下にあり、スイッチ実装後にプラグが入らない配置だった。現在は3穴ともMX3とMX4の本体の間にある。スイッチとプレートを付けた後は表面側へクリップを入れられないので、手で押さえて使う。
 
 ## 電源と初回起動の扱い
 
@@ -64,4 +64,4 @@ TS52KはUSBから給電する。J2-1のVTrefは基板が出しているVDDを読
 
 Windows側はSEGGER J-Link Software and Documentation Packを使い、対象を`nRF52840_xxAA`、インターフェースをSWDに指定する。[J-Link Commander](https://kb.segger.com/J-Link_Commander)はHEX書き込みと検証に対応する。保護解除を伴う全消去には[Nordic nRF Utilのdevice recover](https://docs.nordicsemi.com/bundle/nrfutil/page/nrfutil-device/guides/programming_recovery.html)を使う経路を予定する。機材選定のための確認で、今回インストールや消去コマンドの実行はしていない。
 
-初回用ファイルは検査済みの`nice_nano_bootloader-0.11.0_s140_6.1.1.hex`。以後の最小ZMK UF2と領域の関係は`C:\Users\marur\zmk-config\docs\ts52k-main-bringup.md`に記録済み。実機では、給電とVDD測定、SWD接続、消去、HEX書き込み・検証、再起動後のVDD／UICR読戻し、USBブートローダ認識、ZMK UF2書き込みの順に確認する。
+初回用ファイルは検査済みの`nice_nano_bootloader-0.11.0_s140_6.1.1.hex`。以後の最小ZMK UF2と領域の関係は`C:\Users\marur\zmk-config\docs\ts52k-main-bringup.md`に記録済み。実機では、給電とVDD測定、SWD接続、消去、HEX書き込み・検証、**リセット前の**UICR読戻し、リセット、VDD測定（3.3 V）とUSBブートローダ認識、ZMK UF2書き込みの順に確認する。リセット後のSWD読戻しは、保護強化版のチップではブートローダ単体の間つながらないので手順に入れない（つながらないことを理由に再消去しない）。詳細は[文鎮化回避の運用ルールと手順](brick-avoidance.md)。
