@@ -90,11 +90,11 @@ def main():
         bom = list(csv.DictReader(f))
     with (PCB / 'wireless-library.csv').open(encoding='utf-8', newline='') as f:
         manifest = list(csv.DictReader(f))
-    assert len(bom) == len(manifest) == 19
-    assert len({r['MPN'] for r in bom}) == 19
-    assert sum(int(r['Quantity']) for r in bom) == 81
+    assert len(bom) == len(manifest) == 20
+    assert len({r['MPN'] for r in bom}) == 20
+    assert sum(int(r['Quantity']) for r in bom) == 82
     basic = [r for r in bom if r['JLCClass'] == 'Basic']
-    assert (len(basic), sum(int(r['Quantity']) for r in basic)) == (12, 72)
+    assert (len(basic), sum(int(r['Quantity']) for r in basic)) == (13, 73)
 
     fps = {}
     for path in sorted((PCB / 'ts52k.pretty').glob('*.kicad_mod')):
@@ -102,7 +102,7 @@ def main():
         assert fp[1] == path.stem
         assert pcbnew.FootprintLoad(str(path.parent), path.stem) is not None
         fps[path.stem] = fp
-    assert len(fps) == 14
+    assert len(fps) == 15
     for row, selected in zip(manifest, bom):
         assert all(row[k] == selected[k] for k in ['MPN', 'LCSC', 'Quantity'])
         lib, name = row['Symbol'].split(':')
@@ -155,14 +155,14 @@ def main():
         dest = out / 'footprints'
         dest.mkdir()
         run_cli(args.kicad_cli, ['fp', 'export', 'svg', PCB / 'ts52k.pretty', '-o', dest])
-        assert len(list(dest.glob('*.svg'))) == 14
+        assert len(list(dest.glob('*.svg'))) == 15
     result = {
         'result': 'pass',
         'kicad_version': subprocess.check_output([str(args.kicad_cli), '--version'], text=True).strip(),
-        'part_types': 19, 'assembly_quantity': 81,
-        'basic_types': 12, 'basic_quantity': 72,
+        'part_types': 20, 'assembly_quantity': 82,
+        'basic_types': 13, 'basic_quantity': 73,
         'extended_types': 7, 'extended_quantity': 9,
-        'ts52k_symbols': 20, 'swd_symbols': 1, 'ts52k_footprints': 14,
+        'ts52k_symbols': 21, 'swd_symbols': 1, 'ts52k_footprints': 15,
         'checks': ['registered_paths', 'obsolete_libraries_removed', 'bom_fields_and_quantities', 'symbol_pin_to_pad_numbers', 'module_critical_pin_names', 'crystal_and_esd_pad_dimensions', 'antenna_3_8mm_all_copper_keepout', 'charger_ep_size', 'swd_no_paste_and_no_assembly', 'kicad_read_and_svg_export'],
         'schematic_erc': 'separate_check_see_pcb/schematic-review/validation.json',
         'pcb_drc_and_parity': 'not_run_for_wireless_revision',
@@ -171,7 +171,7 @@ def main():
     }
     if args.report:
         args.report.write_text(json.dumps(result, indent=2) + '\n', encoding='utf-8')
-    print('PASS: 19 selected types / 81 parts; 20 symbols + SWD; 14 footprints')
+    print('PASS: 20 selected types / 82 parts; 21 symbols + SWD; 15 footprints')
 
 
 if __name__ == '__main__':

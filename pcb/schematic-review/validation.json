@@ -3,8 +3,8 @@
   "kicad_version": "10.0.8",
   "erc_errors": 0,
   "erc_warnings": 0,
-  "assembly_part_types": 19,
-  "assembly_quantity": 81,
+  "assembly_part_types": 20,
+  "assembly_quantity": 82,
   "retained_matrix_parts": 105,
   "retained_component_coordinates": 114,
   "matrix_connectivity": "unchanged",
@@ -13,6 +13,7 @@
   "physical_boot": "not_tested",
   "checks": [
     "power_nets_exact_membership",
+    "reverse_battery_fet_in_series_gate_to_gnd",
     "usb_data_and_cc",
     "usb_data_contacts_explicit_wire_endpoints",
     "all_module_ground_pads",
@@ -27,13 +28,13 @@
     "kicad_erc"
   ],
   "source_sha256": {
-    "pcb/ts52k.kicad_sch": "02c6b6a9c7a63f7e33a1b82db5f64cc48f31582a56a99b3516b87aa35d7a9420",
+    "pcb/ts52k.kicad_sch": "66b119ad18ba57cfab34db89721cc3fbc9a64d165c01420691324004ad5ffa18",
     "pcb/mdbt50q.kicad_sch": "80db280ec42eca85cf541feca4eb6e8e0dc3f4b50cf2221616d1b10f17812821",
-    "pcb/ts52k.kicad_pro": "d806fb751e3890fc27f5ac6c4a4c024236278a504e33944dab75fac6e0b785f6",
-    "pcb/ts52k.kicad_sym": "39ab550be58b95ef9cd1a3dfea41897852759890eb27a3559e36dc4b4901396d",
+    "pcb/ts52k.kicad_pro": "6c31c99bf71308ea18cad53844d45162582b08600e685bd4d7a00dbe69ac1e10",
+    "pcb/ts52k.kicad_sym": "c47d304d137ad7bbf393246f68df399421eeda99f37aae9e3a5da24e2f88639b",
     "pcb/tag-connect.kicad_sym": "ae4f4163bf06169f4015e0683927256debc21972c7a236feaaea2f134c6d4fd4",
-    "notes/wireless-bom-draft.csv": "d8b285757e6535568a93d7f089f4d320f99ca293dfbb70fe9ad861c4dc16d92e",
-    "pcb/wireless-library.csv": "48b07e359e08d98e75cf50f0f7c3018bc76f150fb70fe3c22f509da7d44f3b0b",
-    "pcb/check_schematic.py": "7b0ea8d4911cd9f9b6af1097020cdc35877b9c813f3bca6fa94205b0bba57601"
+    "notes/wireless-bom-draft.csv": "5d7f69d519af3b5b69af103981837afb8a44f4f556824339965d36d9a369dc8f",
+    "pcb/wireless-library.csv": "8428a72896ec21d19ce2891e59f32348c46c53049abb8107b753e4ffe0ac44da",
+    "pcb/check_schematic.py": "efb0051c4c660f35e6eb0339d997bfd25280279ac88975a1f9c35129de67c4d3"
   }
 }

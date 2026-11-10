@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <export version="E">
   <design>
-    <source>/home/hatch/workspace/ts52k-fable/pcb/ts52k.kicad_sch</source>
-    <date>2026-11-10T14:21:43</date>
+    <source>/home/hatch/workspace/ts52k-mosfet/pcb/ts52k.kicad_sch</source>
+    <date>2026-11-10T23:57:44</date>
     <tool>Eeschema 10.0.8-10.0.8~ubuntu24.04.1</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -3460,6 +3460,40 @@
         </unit>
       </units>
     </comp>
+    <comp ref="Q1">
+      <value>AO3401A</value>
+      <footprint>ts52k:SOT-23</footprint>
+      <datasheet>https://www.aosmd.com/pdfs/datasheet/AO3401A.pdf</datasheet>
+      <description>AO3401A P-channel MOSFET, -30 V, SOT-23; 1 G, 2 S, 3 D; reverse-battery protection</description>
+      <fields>
+        <field name="MPN">AO3401A</field>
+        <field name="Manufacturer">Alpha &amp; Omega Semiconductor</field>
+        <field name="LCSC">C15127</field>
+        <field name="JLCClass">Basic</field>
+        <field name="Footprint">ts52k:SOT-23</field>
+        <field name="Datasheet">https://www.aosmd.com/pdfs/datasheet/AO3401A.pdf</field>
+        <field name="Description">AO3401A P-channel MOSFET, -30 V, SOT-23; 1 G, 2 S, 3 D; reverse-battery protection</field>
+      </fields>
+      <libsource lib="ts52k" part="AO3401A" description="AO3401A P-channel MOSFET, -30 V, SOT-23; 1 G, 2 S, 3 D; reverse-battery protection"/>
+      <property name="MPN" value="AO3401A"/>
+      <property name="Manufacturer" value="Alpha &amp; Omega Semiconductor"/>
+      <property name="LCSC" value="C15127"/>
+      <property name="JLCClass" value="Basic"/>
+      <property name="Sheetname" value="ts52k"/>
+      <property name="Sheetfile" value="ts52k.kicad_sch"/>
+      <property name="ki_fp_filters" value="SOT?23*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>10b01f4d-a549-4121-8f70-cfe7f9401909</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="3"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
     <comp ref="R5">
       <value>5.1k</value>
       <footprint>ts52k:R_0603_1608Metric</footprint>
@@ -4419,6 +4453,29 @@
         <pin num="2" name="A" type="passive"/>
       </pins>
     </libpart>
+    <libpart lib="ts52k" part="AO3401A">
+      <description>AO3401A P-channel MOSFET, -30 V, SOT-23; 1 G, 2 S, 3 D; reverse-battery protection</description>
+      <docs>https://www.aosmd.com/pdfs/datasheet/AO3401A.pdf</docs>
+      <footprints>
+        <fp>SOT?23*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">AO3401A</field>
+        <field name="Footprint">ts52k:SOT-23</field>
+        <field name="Datasheet">https://www.aosmd.com/pdfs/datasheet/AO3401A.pdf</field>
+        <field name="Description">AO3401A P-channel MOSFET, -30 V, SOT-23; 1 G, 2 S, 3 D; reverse-battery protection</field>
+        <field name="MPN">AO3401A</field>
+        <field name="Manufacturer">Alpha &amp; Omega Semiconductor</field>
+        <field name="LCSC">C15127</field>
+        <field name="JLCClass">Basic</field>
+      </fields>
+      <pins>
+        <pin num="1" name="G" type="input"/>
+        <pin num="2" name="S" type="passive"/>
+        <pin num="3" name="D" type="passive"/>
+      </pins>
+    </libpart>
     <libpart lib="ts52k" part="BQ24072RGTR">
       <description>USB-Friendly Li-Ion Battery Charger and Power-Path Management, VQFN-16</description>
       <docs>https://www.ti.com/lit/ds/symlink/bq24072.pdf</docs>
@@ -4792,29 +4849,33 @@
     </library>
   </libraries>
   <nets>
-    <net code="1" name="BAT" class="Power">
-      <node ref="C24" pin="1" pintype="passive"/>
+    <net code="1" name="/BAT_CONN" class="Power">
       <node ref="J3" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="Q1" pin="3" pinfunction="D_3" pintype="passive"/>
+    </net>
+    <net code="2" name="BAT" class="Power">
+      <node ref="C24" pin="1" pintype="passive"/>
+      <node ref="Q1" pin="2" pinfunction="S_2" pintype="passive"/>
       <node ref="U6" pin="2" pinfunction="BAT_2" pintype="power_out"/>
       <node ref="U6" pin="3" pinfunction="BAT_3" pintype="passive"/>
     </net>
-    <net code="2" name="D+" class="Default">
+    <net code="3" name="D+" class="Default">
       <node ref="D90" pin="1" pinfunction="IO_1" pintype="passive"/>
       <node ref="J1" pin="A6" pinfunction="D+_A6" pintype="bidirectional"/>
       <node ref="J1" pin="B6" pinfunction="D+_B6" pintype="bidirectional"/>
       <node ref="U5" pin="35" pinfunction="D+_35" pintype="bidirectional"/>
     </net>
-    <net code="3" name="D-" class="Default">
+    <net code="4" name="D-" class="Default">
       <node ref="D89" pin="1" pinfunction="IO_1" pintype="passive"/>
       <node ref="J1" pin="A7" pinfunction="D-_A7" pintype="bidirectional"/>
       <node ref="J1" pin="B7" pinfunction="D-_B7" pintype="bidirectional"/>
       <node ref="U5" pin="34" pinfunction="D-_34" pintype="bidirectional"/>
     </net>
-    <net code="4" name="DCCH" class="Power">
+    <net code="5" name="DCCH" class="Power">
       <node ref="L1" pin="2" pinfunction="2_2" pintype="passive"/>
       <node ref="U5" pin="31" pinfunction="DCCH_31" pintype="power_out"/>
     </net>
-    <net code="5" name="GND" class="Power">
+    <net code="6" name="GND" class="Power">
       <node ref="C22" pin="2" pintype="passive"/>
       <node ref="C23" pin="2" pintype="passive"/>
       <node ref="C24" pin="2" pintype="passive"/>
@@ -4837,6 +4898,7 @@
       <node ref="J1" pin="SH" pinfunction="SHIELD_SH" pintype="passive"/>
       <node ref="J2" pin="5" pinfunction="GND_5" pintype="passive"/>
       <node ref="J3" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+      <node ref="Q1" pin="1" pinfunction="G_1" pintype="input"/>
       <node ref="R17" pin="2" pintype="passive"/>
       <node ref="R18" pin="2" pintype="passive"/>
       <node ref="R19" pin="2" pintype="passive"/>
@@ -4857,262 +4919,262 @@
       <node ref="U6" pin="6" pinfunction="EN1_6" pintype="input"/>
       <node ref="U6" pin="8" pinfunction="VSS_8" pintype="power_in"/>
     </net>
-    <net code="6" name="MCU_VBUS" class="Power">
+    <net code="7" name="MCU_VBUS" class="Power">
       <node ref="C26" pin="1" pintype="passive"/>
       <node ref="R20" pin="2" pintype="passive"/>
       <node ref="U5" pin="32" pinfunction="VBUS_32" pintype="power_in"/>
     </net>
-    <net code="7" name="Net-(D2-A)" class="Default">
+    <net code="8" name="Net-(D2-A)" class="Default">
       <node ref="D2" pin="2" pinfunction="A_2" pintype="passive"/>
       <node ref="MX2" pin="1" pinfunction="COL_1" pintype="passive"/>
     </net>
-    <net code="8" name="Net-(D3-A)" class="Default">
+    <net code="9" name="Net-(D3-A)" class="Default">
       <node ref="D3" pin="2" pinfunction="A_2" pintype="passive"/>
       <node ref="MX3" pin="2" pinfunction="ROW_2" pintype="passive"/>
     </net>
-    <net code="9" name="Net-(D4-A)" class="Default">
+    <net code="10" name="Net-(D4-A)" class="Default">
       <node ref="D4" pin="2" pinfunction="A_2" pintype="passive"/>
       <node ref="MX4" pin="2" pinfunction="ROW_2" pintype="passive"/>
     </net>
-    <net code="10" name="Net-(D5-A)" class="Default">
+    <net code="11" name="Net-(D5-A)" class="Default">
       <node ref="D5" pin="2" pinfunction="A_2" pintype="passive"/>
       <node ref="MX5" pin="2" pinfunction="ROW_2" pintype="passive"/>
     </net>
-    <net code="11" name="Net-(D7-A)" class="Default">
+    <net code="12" name="Net-(D7-A)" class="Default">
       <node ref="D7" pin="2" pinfunction="A_2" pintype="passive"/>
       <node ref="MX7" pin="2" pinfunction="ROW_2" pintype="passive"/>
     </net>
-    <net code="12" name="Net-(D8-A)" class="Default">
+    <net code="13" name="Net-(D8-A)" class="Default">
       <node ref="D8" pin="2" pinfunction="A_2" pintype="passive"/>
       <node ref="MX8" pin="2" pinfunction="ROW_2" pintype="passive"/>
     </net>
-    <net code="13" name="Net-(D9-A)" class="Default">
+    <net code="14" name="Net-(D9-A)" class="Default">
       <node ref="D9" pin="2" pinfunction="A_2" pintype="passive"/>
       <node ref="MX9" pin="2" pinfunction="ROW_2" pintype="passive"/>
     </net>
-    <net code="14" name="Net-(D11-A)" class="Default">
+    <net code="15" name="Net-(D11-A)" class="Default">
       <node ref="D11" pin="2" pinfunction="A_2" pintype="passive"/>
       <node ref="MX11" pin="2" pinfunction="ROW_2" pintype="passive"/>
     </net>
-    <net code="15" name="Net-(D12-A)" class="Default">
+    <net code="16" name="Net-(D12-A)" class="Default">
       <node ref="D12" pin="2" pinfunction="A_2" pintype="passive"/>
       <node ref="MX12" pin="2" pinfunction="ROW_2" pintype="passive"/>
     </net>
-    <net code="16" name="Net-(D13-A)" class="Default">
+    <net code="17" name="Net-(D13-A)" class="Default">
       <node ref="D13" pin="2" pinfunction="A_2" pintype="passive"/>
       <node ref="MX13" pin="2" pinfunction="ROW_2" pintype="passive"/>
     </net>
-    <net code="17" name="Net-(D14-A)" class="Default">
+    <net code="18" name="Net-(D14-A)" class="Default">
       <node ref="D14" pin="2" pinfunction="A_2" pintype="passive"/>
       <node ref="MX14" pin="2" pinfunction="ROW_2" pintype="passive"/>
     </net>
-    <net code="18" name="Net-(D16-A)" class="Default">
+    <net code="19" name="Net-(D16-A)" class="Default">
       <node ref="D16" pin="2" pinfunction="A_2" pintype="passive"/>
       <node ref="MX16" pin="2" pinfunction="ROW_2" pintype="passive"/>
     </net>
-    <net code="19" name="Net-(D17-A)" class="Default">
+    <net code="20" name="Net-(D17-A)" class="Default">
       <node ref="D17" pin="2" pinfunction="A_2" pintype="passive"/>
       <node ref="MX17" pin="2" pinfunction="ROW_2" pintype="passive"/>
     </net>
-    <net code="20" name="Net-(D18-A)" class="Default">
+    <net code="21" name="Net-(D18-A)" class="Default">
       <node ref="D18" pin="2" pinfunction="A_2" pintype="passive"/>
       <node ref="MX18" pin="2" pinfunction="ROW_2" pintype="passive"/>
     </net>
-    <net code="21" name="Net-(D20-A)" class="Default">
+    <net code="22" name="Net-(D20-A)" class="Default">
       <node ref="D20" pin="2" pinfunction="A_2" pintype="passive"/>
       <node ref="MX20" pin="2" pinfunction="ROW_2" pintype="passive"/>
     </net>
-    <net code="22" name="Net-(D21-A)" class="Default">
+    <net code="23" name="Net-(D21-A)" class="Default">
       <node ref="D21" pin="2" pinfunction="A_2" pintype="passive"/>
       <node ref="MX21" pin="2" pinfunction="ROW_2" pintype="passive"/>
     </net>
-    <net code="23" name="Net-(D22-A)" class="Default">
+    <net code="24" name="Net-(D22-A)" class="Default">
       <node ref="D22" pin="2" pinfunction="A_2" pintype="passive"/>
       <node ref="MX22" pin="2" pinfunction="ROW_2" pintype="passive"/>
     </net>
-    <net code="24" name="Net-(D23-A)" class="Default">
+    <net code="25" name="Net-(D23-A)" class="Default">
       <node ref="D23" pin="2" pinfunction="A_2" pintype="passive"/>
       <node ref="MX23" pin="2" pinfunction="ROW_2" pintype="passive"/>
     </net>
-    <net code="25" name="Net-(D25-A)" class="Default">
+    <net code="26" name="Net-(D25-A)" class="Default">
       <node ref="D25" pin="2" pinfunction="A_2" pintype="passive"/>
       <node ref="MX25" pin="2" pinfunction="ROW_2" pintype="passive"/>
     </net>
-    <net code="26" name="Net-(D26-A)" class="Default">
+    <net code="27" name="Net-(D26-A)" class="Default">
       <node ref="D26" pin="2" pinfunction="A_2" pintype="passive"/>
       <node ref="MX26" pin="2" pinfunction="ROW_2" pintype="passive"/>
     </net>
-    <net code="27" name="Net-(D27-A)" class="Default">
+    <net code="28" name="Net-(D27-A)" class="Default">
       <node ref="D27" pin="2" pinfunction="A_2" pintype="passive"/>
       <node ref="MX27" pin="2" pinfunction="ROW_2" pintype="passive"/>
     </net>
-    <net code="28" name="Net-(D29-A)" class="Default">
+    <net code="29" name="Net-(D29-A)" class="Default">
       <node ref="D29" pin="2" pinfunction="A_2" pintype="passive"/>
       <node ref="MX29" pin="2" pinfunction="ROW_2" pintype="passive"/>
     </net>
-    <net code="29" name="Net-(D30-A)" class="Default">
+    <net code="30" name="Net-(D30-A)" class="Default">
       <node ref="D30" pin="2" pinfunction="A_2" pintype="passive"/>
       <node ref="MX30" pin="2" pinfunction="ROW_2" pintype="passive"/>
     </net>
-    <net code="30" name="Net-(D31-A)" class="Default">
+    <net code="31" name="Net-(D31-A)" class="Default">
       <node ref="D31" pin="2" pinfunction="A_2" pintype="passive"/>
       <node ref="MX31" pin="2" pinfunction="ROW_2" pintype="passive"/>
     </net>
-    <net code="31" name="Net-(D33-A)" class="Default">
+    <net code="32" name="Net-(D33-A)" class="Default">
       <node ref="D33" pin="2" pinfunction="A_2" pintype="passive"/>
       <node ref="MX33" pin="2" pinfunction="ROW_2" pintype="passive"/>
     </net>
-    <net code="32" name="Net-(D34-A)" class="Default">
+    <net code="33" name="Net-(D34-A)" class="Default">
       <node ref="D34" pin="2" pinfunction="A_2" pintype="passive"/>
       <node ref="MX34" pin="2" pinfunction="ROW_2" pintype="passive"/>
     </net>
-    <net code="33" name="Net-(D35-A)" class="Default">
+    <net code="34" name="Net-(D35-A)" class="Default">
       <node ref="D35" pin="2" pinfunction="A_2" pintype="passive"/>
       <node ref="MX35" pin="2" pinfunction="ROW_2" pintype="passive"/>
     </net>
-    <net code="34" name="Net-(D37-A)" class="Default">
+    <net code="35" name="Net-(D37-A)" class="Default">
       <node ref="D37" pin="2" pinfunction="A_2" pintype="passive"/>
       <node ref="MX37" pin="2" pinfunction="ROW_2" pintype="passive"/>
     </net>
-    <net code="35" name="Net-(D38-A)" class="Default">
+    <net code="36" name="Net-(D38-A)" class="Default">
       <node ref="D38" pin="2" pinfunction="A_2" pintype="passive"/>
       <node ref="MX38" pin="2" pinfunction="ROW_2" pintype="passive"/>
     </net>
-    <net code="36" name="Net-(D39-A)" class="Default">
+    <net code="37" name="Net-(D39-A)" class="Default">
       <node ref="D39" pin="2" pinfunction="A_2" pintype="passive"/>
       <node ref="MX39" pin="2" pinfunction="ROW_2" pintype="passive"/>
     </net>
-    <net code="37" name="Net-(D40-A)" class="Default">
+    <net code="38" name="Net-(D40-A)" class="Default">
       <node ref="D40" pin="2" pinfunction="A_2" pintype="passive"/>
       <node ref="MX60" pin="2" pinfunction="ROW_2" pintype="passive"/>
     </net>
-    <net code="38" name="Net-(D42-A)" class="Default">
+    <net code="39" name="Net-(D42-A)" class="Default">
       <node ref="D42" pin="2" pinfunction="A_2" pintype="passive"/>
       <node ref="MX42" pin="2" pinfunction="ROW_2" pintype="passive"/>
     </net>
-    <net code="39" name="Net-(D43-A)" class="Default">
+    <net code="40" name="Net-(D43-A)" class="Default">
       <node ref="D43" pin="2" pinfunction="A_2" pintype="passive"/>
       <node ref="MX43" pin="2" pinfunction="ROW_2" pintype="passive"/>
     </net>
-    <net code="40" name="Net-(D44-A)" class="Default">
+    <net code="41" name="Net-(D44-A)" class="Default">
       <node ref="D44" pin="2" pinfunction="A_2" pintype="passive"/>
       <node ref="MX44" pin="2" pinfunction="ROW_2" pintype="passive"/>
     </net>
-    <net code="41" name="Net-(D46-A)" class="Default">
+    <net code="42" name="Net-(D46-A)" class="Default">
       <node ref="D46" pin="2" pinfunction="A_2" pintype="passive"/>
       <node ref="MX46" pin="2" pinfunction="ROW_2" pintype="passive"/>
     </net>
-    <net code="42" name="Net-(D47-A)" class="Default">
+    <net code="43" name="Net-(D47-A)" class="Default">
       <node ref="D47" pin="2" pinfunction="A_2" pintype="passive"/>
       <node ref="MX47" pin="2" pinfunction="ROW_2" pintype="passive"/>
     </net>
-    <net code="43" name="Net-(D48-A)" class="Default">
+    <net code="44" name="Net-(D48-A)" class="Default">
       <node ref="D48" pin="2" pinfunction="A_2" pintype="passive"/>
       <node ref="MX48" pin="2" pinfunction="ROW_2" pintype="passive"/>
     </net>
-    <net code="44" name="Net-(D49-A)" class="Default">
+    <net code="45" name="Net-(D49-A)" class="Default">
       <node ref="D49" pin="2" pinfunction="A_2" pintype="passive"/>
       <node ref="MX81" pin="2" pinfunction="ROW_2" pintype="passive"/>
     </net>
-    <net code="45" name="Net-(D51-A)" class="Default">
+    <net code="46" name="Net-(D51-A)" class="Default">
       <node ref="D51" pin="2" pinfunction="A_2" pintype="passive"/>
       <node ref="MX51" pin="2" pinfunction="ROW_2" pintype="passive"/>
     </net>
-    <net code="46" name="Net-(D52-A)" class="Default">
+    <net code="47" name="Net-(D52-A)" class="Default">
       <node ref="D52" pin="2" pinfunction="A_2" pintype="passive"/>
       <node ref="MX52" pin="2" pinfunction="ROW_2" pintype="passive"/>
     </net>
-    <net code="47" name="Net-(D53-A)" class="Default">
+    <net code="48" name="Net-(D53-A)" class="Default">
       <node ref="D53" pin="2" pinfunction="A_2" pintype="passive"/>
       <node ref="MX82" pin="2" pinfunction="ROW_2" pintype="passive"/>
     </net>
-    <net code="48" name="Net-(D55-A)" class="Default">
+    <net code="49" name="Net-(D55-A)" class="Default">
       <node ref="D55" pin="2" pinfunction="A_2" pintype="passive"/>
       <node ref="MX55" pin="2" pinfunction="ROW_2" pintype="passive"/>
     </net>
-    <net code="49" name="Net-(D56-A)" class="Default">
+    <net code="50" name="Net-(D56-A)" class="Default">
       <node ref="D56" pin="2" pinfunction="A_2" pintype="passive"/>
       <node ref="MX56" pin="2" pinfunction="ROW_2" pintype="passive"/>
     </net>
-    <net code="50" name="Net-(D58-A)" class="Default">
+    <net code="51" name="Net-(D58-A)" class="Default">
       <node ref="D58" pin="2" pinfunction="A_2" pintype="passive"/>
       <node ref="MX58" pin="2" pinfunction="ROW_2" pintype="passive"/>
     </net>
-    <net code="51" name="Net-(D61-A)" class="Default">
+    <net code="52" name="Net-(D61-A)" class="Default">
       <node ref="D61" pin="2" pinfunction="A_2" pintype="passive"/>
       <node ref="MX61" pin="2" pinfunction="ROW_2" pintype="passive"/>
     </net>
-    <net code="52" name="Net-(D63-A)" class="Default">
+    <net code="53" name="Net-(D63-A)" class="Default">
       <node ref="D63" pin="2" pinfunction="A_2" pintype="passive"/>
       <node ref="MX64" pin="2" pinfunction="ROW_2" pintype="passive"/>
     </net>
-    <net code="53" name="Net-(D64-A)" class="Default">
+    <net code="54" name="Net-(D64-A)" class="Default">
       <node ref="D64" pin="2" pinfunction="A_2" pintype="passive"/>
       <node ref="MX65" pin="2" pinfunction="ROW_2" pintype="passive"/>
     </net>
-    <net code="54" name="Net-(D65-A)" class="Default">
+    <net code="55" name="Net-(D65-A)" class="Default">
       <node ref="D65" pin="2" pinfunction="A_2" pintype="passive"/>
       <node ref="MX66" pin="2" pinfunction="ROW_2" pintype="passive"/>
     </net>
-    <net code="55" name="Net-(D66-A)" class="Default">
+    <net code="56" name="Net-(D66-A)" class="Default">
       <node ref="D66" pin="2" pinfunction="A_2" pintype="passive"/>
       <node ref="MX67" pin="2" pinfunction="ROW_2" pintype="passive"/>
     </net>
-    <net code="56" name="Net-(D68-A)" class="Default">
+    <net code="57" name="Net-(D68-A)" class="Default">
       <node ref="D68" pin="2" pinfunction="A_2" pintype="passive"/>
       <node ref="SW2" pin="S1" pinfunction="S1_S1" pintype="passive"/>
     </net>
-    <net code="57" name="Net-(D70-A)" class="Default">
+    <net code="58" name="Net-(D70-A)" class="Default">
       <node ref="D70" pin="2" pinfunction="A_2" pintype="passive"/>
       <node ref="MX71" pin="2" pinfunction="ROW_2" pintype="passive"/>
     </net>
-    <net code="58" name="Net-(D87-A)" class="Default">
+    <net code="59" name="Net-(D87-A)" class="Default">
       <node ref="D87" pin="2" pinfunction="A_2" pintype="passive"/>
       <node ref="MX74" pin="1" pinfunction="COL_1" pintype="passive"/>
     </net>
-    <net code="59" name="Net-(D88-A)" class="Default">
+    <net code="60" name="Net-(D88-A)" class="Default">
       <node ref="D88" pin="2" pinfunction="A_2" pintype="passive"/>
       <node ref="MX75" pin="2" pinfunction="ROW_2" pintype="passive"/>
     </net>
-    <net code="60" name="Net-(J1-CC1)" class="Default">
+    <net code="61" name="Net-(J1-CC1)" class="Default">
       <node ref="J1" pin="A5" pinfunction="CC1_A5" pintype="bidirectional"/>
       <node ref="R5" pin="2" pintype="passive"/>
     </net>
-    <net code="61" name="Net-(J1-CC2)" class="Default">
+    <net code="62" name="Net-(J1-CC2)" class="Default">
       <node ref="J1" pin="B5" pinfunction="CC2_B5" pintype="bidirectional"/>
       <node ref="R6" pin="2" pintype="passive"/>
     </net>
-    <net code="62" name="Net-(U5-P0.00)" class="Default">
+    <net code="63" name="Net-(U5-P0.00)" class="Default">
       <node ref="C32" pin="1" pintype="passive"/>
       <node ref="U5" pin="17" pinfunction="P0.00_17" pintype="bidirectional"/>
       <node ref="X3" pin="2" pinfunction="2_2" pintype="passive"/>
     </net>
-    <net code="63" name="Net-(U5-P0.01)" class="Default">
+    <net code="64" name="Net-(U5-P0.01)" class="Default">
       <node ref="C33" pin="1" pintype="passive"/>
       <node ref="U5" pin="18" pinfunction="P0.01_18" pintype="bidirectional"/>
       <node ref="X3" pin="1" pinfunction="1_1" pintype="passive"/>
     </net>
-    <net code="64" name="Net-(U6-ILIM)" class="Default">
+    <net code="65" name="Net-(U6-ILIM)" class="Default">
       <node ref="R18" pin="1" pintype="passive"/>
       <node ref="U6" pin="12" pinfunction="ILIM_12" pintype="passive"/>
     </net>
-    <net code="65" name="Net-(U6-ISET)" class="Default">
+    <net code="66" name="Net-(U6-ISET)" class="Default">
       <node ref="R17" pin="1" pintype="passive"/>
       <node ref="U6" pin="16" pinfunction="ISET_16" pintype="passive"/>
     </net>
-    <net code="66" name="Net-(U6-TS)" class="Default">
+    <net code="67" name="Net-(U6-TS)" class="Default">
       <node ref="R19" pin="1" pintype="passive"/>
       <node ref="U6" pin="1" pinfunction="TS_1" pintype="passive"/>
     </net>
-    <net code="67" name="SWCLK" class="Default">
+    <net code="68" name="SWCLK" class="Default">
       <node ref="J2" pin="4" pinfunction="SWCLK_4" pintype="passive"/>
       <node ref="U5" pin="53" pinfunction="SWDCLK_53" pintype="input"/>
     </net>
-    <net code="68" name="SWDIO" class="Default">
+    <net code="69" name="SWDIO" class="Default">
       <node ref="J2" pin="2" pinfunction="SWDIO_2" pintype="passive"/>
       <node ref="U5" pin="51" pinfunction="SWDIO_51" pintype="bidirectional"/>
     </net>
-    <net code="69" name="USB_VBUS" class="Power">
+    <net code="70" name="USB_VBUS" class="Power">
       <node ref="C22" pin="1" pintype="passive"/>
       <node ref="D91" pin="1" pinfunction="IO_1" pintype="passive"/>
       <node ref="J1" pin="A4" pinfunction="VBUS_A4" pintype="passive"/>
@@ -5122,14 +5184,14 @@
       <node ref="R20" pin="1" pintype="passive"/>
       <node ref="U6" pin="13" pinfunction="IN_13" pintype="power_in"/>
     </net>
-    <net code="70" name="VDDH" class="Power">
+    <net code="71" name="VDDH" class="Power">
       <node ref="C23" pin="1" pintype="passive"/>
       <node ref="C25" pin="1" pintype="passive"/>
       <node ref="U5" pin="30" pinfunction="VDDH_30" pintype="power_in"/>
       <node ref="U6" pin="10" pinfunction="OUT_10" pintype="power_out"/>
       <node ref="U6" pin="11" pinfunction="OUT_11" pintype="passive"/>
     </net>
-    <net code="71" name="col1" class="Default">
+    <net code="72" name="col1" class="Default">
       <node ref="MX13" pin="1" pinfunction="COL_1" pintype="passive"/>
       <node ref="MX14" pin="1" pinfunction="COL_1" pintype="passive"/>
       <node ref="MX2" pin="2" pinfunction="ROW_2" pintype="passive"/>
@@ -5141,7 +5203,7 @@
       <node ref="MX9" pin="1" pinfunction="COL_1" pintype="passive"/>
       <node ref="U5" pin="49" pinfunction="P0.25_49" pintype="bidirectional"/>
     </net>
-    <net code="72" name="col2" class="Default">
+    <net code="73" name="col2" class="Default">
       <node ref="MX11" pin="1" pinfunction="COL_1" pintype="passive"/>
       <node ref="MX12" pin="1" pinfunction="COL_1" pintype="passive"/>
       <node ref="MX16" pin="1" pinfunction="COL_1" pintype="passive"/>
@@ -5153,7 +5215,7 @@
       <node ref="MX23" pin="1" pinfunction="COL_1" pintype="passive"/>
       <node ref="U5" pin="26" pinfunction="P1.09_26" pintype="bidirectional"/>
     </net>
-    <net code="73" name="col3" class="Default">
+    <net code="74" name="col3" class="Default">
       <node ref="MX25" pin="1" pinfunction="COL_1" pintype="passive"/>
       <node ref="MX26" pin="1" pinfunction="COL_1" pintype="passive"/>
       <node ref="MX27" pin="1" pinfunction="COL_1" pintype="passive"/>
@@ -5165,7 +5227,7 @@
       <node ref="MX60" pin="1" pinfunction="COL_1" pintype="passive"/>
       <node ref="U5" pin="24" pinfunction="P0.08_24" pintype="bidirectional"/>
     </net>
-    <net code="74" name="col4" class="Default">
+    <net code="75" name="col4" class="Default">
       <node ref="MX34" pin="1" pinfunction="COL_1" pintype="passive"/>
       <node ref="MX37" pin="1" pinfunction="COL_1" pintype="passive"/>
       <node ref="MX38" pin="1" pinfunction="COL_1" pintype="passive"/>
@@ -5177,7 +5239,7 @@
       <node ref="MX82" pin="1" pinfunction="COL_1" pintype="passive"/>
       <node ref="U5" pin="22" pinfunction="P0.06_22" pintype="bidirectional"/>
     </net>
-    <net code="75" name="col5" class="Default">
+    <net code="76" name="col5" class="Default">
       <node ref="MX46" pin="1" pinfunction="COL_1" pintype="passive"/>
       <node ref="MX47" pin="1" pinfunction="COL_1" pintype="passive"/>
       <node ref="MX48" pin="1" pinfunction="COL_1" pintype="passive"/>
@@ -5189,7 +5251,7 @@
       <node ref="MX61" pin="1" pinfunction="COL_1" pintype="passive"/>
       <node ref="U5" pin="20" pinfunction="P0.04_20" pintype="bidirectional"/>
     </net>
-    <net code="76" name="col6" class="Default">
+    <net code="77" name="col6" class="Default">
       <node ref="MX64" pin="1" pinfunction="COL_1" pintype="passive"/>
       <node ref="MX65" pin="1" pinfunction="COL_1" pintype="passive"/>
       <node ref="MX66" pin="1" pinfunction="COL_1" pintype="passive"/>
@@ -5200,12 +5262,12 @@
       <node ref="SW2" pin="S2" pinfunction="S2_S2" pintype="passive"/>
       <node ref="U5" pin="16" pinfunction="P0.27_16" pintype="bidirectional"/>
     </net>
-    <net code="77" name="nRESET" class="Default">
+    <net code="78" name="nRESET" class="Default">
       <node ref="J2" pin="3" pinfunction="~{RESET}_3" pintype="passive"/>
       <node ref="SW1" pin="2" pinfunction="2_2" pintype="passive"/>
       <node ref="U5" pin="40" pinfunction="P0.18_40" pintype="bidirectional"/>
     </net>
-    <net code="78" name="nRF_VDD" class="Power">
+    <net code="79" name="nRF_VDD" class="Power">
       <node ref="C27" pin="1" pintype="passive"/>
       <node ref="C28" pin="1" pintype="passive"/>
       <node ref="C29" pin="1" pintype="passive"/>
@@ -5215,7 +5277,7 @@
       <node ref="L1" pin="1" pinfunction="1_1" pintype="passive"/>
       <node ref="U5" pin="28" pinfunction="VDD_28" pintype="power_in"/>
     </net>
-    <net code="79" name="row1" class="Default">
+    <net code="80" name="row1" class="Default">
       <node ref="D11" pin="1" pinfunction="K_1" pintype="passive"/>
       <node ref="D2" pin="1" pinfunction="K_1" pintype="passive"/>
       <node ref="D25" pin="1" pinfunction="K_1" pintype="passive"/>
@@ -5224,7 +5286,7 @@
       <node ref="D63" pin="1" pinfunction="K_1" pintype="passive"/>
       <node ref="U5" pin="8" pinfunction="P1.15_8" pintype="bidirectional"/>
     </net>
-    <net code="80" name="row2" class="Default">
+    <net code="81" name="row2" class="Default">
       <node ref="D12" pin="1" pinfunction="K_1" pintype="passive"/>
       <node ref="D26" pin="1" pinfunction="K_1" pintype="passive"/>
       <node ref="D3" pin="1" pinfunction="K_1" pintype="passive"/>
@@ -5233,7 +5295,7 @@
       <node ref="D64" pin="1" pinfunction="K_1" pintype="passive"/>
       <node ref="U5" pin="12" pinfunction="P0.31_12" pintype="bidirectional"/>
     </net>
-    <net code="81" name="row3" class="Default">
+    <net code="82" name="row3" class="Default">
       <node ref="D17" pin="1" pinfunction="K_1" pintype="passive"/>
       <node ref="D27" pin="1" pinfunction="K_1" pintype="passive"/>
       <node ref="D39" pin="1" pinfunction="K_1" pintype="passive"/>
@@ -5241,7 +5303,7 @@
       <node ref="D65" pin="1" pinfunction="K_1" pintype="passive"/>
       <node ref="U5" pin="37" pinfunction="P0.13_37" pintype="bidirectional"/>
     </net>
-    <net code="82" name="row4" class="Default">
+    <net code="83" name="row4" class="Default">
       <node ref="D18" pin="1" pinfunction="K_1" pintype="passive"/>
       <node ref="D31" pin="1" pinfunction="K_1" pintype="passive"/>
       <node ref="D34" pin="1" pinfunction="K_1" pintype="passive"/>
@@ -5250,7 +5312,7 @@
       <node ref="D88" pin="1" pinfunction="K_1" pintype="passive"/>
       <node ref="U5" pin="43" pinfunction="P0.21_43" pintype="bidirectional"/>
     </net>
-    <net code="83" name="row5" class="Default">
+    <net code="84" name="row5" class="Default">
       <node ref="D23" pin="1" pinfunction="K_1" pintype="passive"/>
       <node ref="D49" pin="1" pinfunction="K_1" pintype="passive"/>
       <node ref="D58" pin="1" pinfunction="K_1" pintype="passive"/>
@@ -5258,7 +5320,7 @@
       <node ref="D9" pin="1" pinfunction="K_1" pintype="passive"/>
       <node ref="U5" pin="46" pinfunction="P0.22_46" pintype="bidirectional"/>
     </net>
-    <net code="84" name="row6" class="Default">
+    <net code="85" name="row6" class="Default">
       <node ref="D16" pin="1" pinfunction="K_1" pintype="passive"/>
       <node ref="D29" pin="1" pinfunction="K_1" pintype="passive"/>
       <node ref="D42" pin="1" pinfunction="K_1" pintype="passive"/>
@@ -5267,7 +5329,7 @@
       <node ref="D7" pin="1" pinfunction="K_1" pintype="passive"/>
       <node ref="U5" pin="10" pinfunction="P0.29_10" pintype="bidirectional"/>
     </net>
-    <net code="85" name="row7" class="Default">
+    <net code="86" name="row7" class="Default">
       <node ref="D20" pin="1" pinfunction="K_1" pintype="passive"/>
       <node ref="D33" pin="1" pinfunction="K_1" pintype="passive"/>
       <node ref="D43" pin="1" pinfunction="K_1" pintype="passive"/>
@@ -5276,7 +5338,7 @@
       <node ref="D87" pin="1" pinfunction="K_1" pintype="passive"/>
       <node ref="U5" pin="14" pinfunction="P0.30_14" pintype="bidirectional"/>
     </net>
-    <net code="86" name="row8" class="Default">
+    <net code="87" name="row8" class="Default">
       <node ref="D13" pin="1" pinfunction="K_1" pintype="passive"/>
       <node ref="D21" pin="1" pinfunction="K_1" pintype="passive"/>
       <node ref="D30" pin="1" pinfunction="K_1" pintype="passive"/>
@@ -5284,13 +5346,13 @@
       <node ref="D56" pin="1" pinfunction="K_1" pintype="passive"/>
       <node ref="U5" pin="41" pinfunction="P0.17_41" pintype="bidirectional"/>
     </net>
-    <net code="87" name="row9" class="Default">
+    <net code="88" name="row9" class="Default">
       <node ref="D22" pin="1" pinfunction="K_1" pintype="passive"/>
       <node ref="D35" pin="1" pinfunction="K_1" pintype="passive"/>
       <node ref="D52" pin="1" pinfunction="K_1" pintype="passive"/>
       <node ref="U5" pin="44" pinfunction="P0.20_44" pintype="bidirectional"/>
     </net>
-    <net code="88" name="row10" class="Default">
+    <net code="89" name="row10" class="Default">
       <node ref="D14" pin="1" pinfunction="K_1" pintype="passive"/>
       <node ref="D40" pin="1" pinfunction="K_1" pintype="passive"/>
       <node ref="D53" pin="1" pinfunction="K_1" pintype="passive"/>
@@ -5298,111 +5360,111 @@
       <node ref="D70" pin="1" pinfunction="K_1" pintype="passive"/>
       <node ref="U5" pin="48" pinfunction="P0.24_48" pintype="bidirectional"/>
     </net>
-    <net code="89" name="rpg1" class="Default">
+    <net code="90" name="rpg1" class="Default">
       <node ref="SW2" pin="A" pinfunction="A_A" pintype="passive"/>
       <node ref="U5" pin="4" pinfunction="P1.11_4" pintype="bidirectional"/>
     </net>
-    <net code="90" name="rpg2" class="Default">
+    <net code="91" name="rpg2" class="Default">
       <node ref="SW2" pin="B" pinfunction="B_B" pintype="passive"/>
       <node ref="U5" pin="6" pinfunction="P1.13_6" pintype="bidirectional"/>
     </net>
-    <net code="91" name="unconnected-(J1-SBU1-PadA8)" class="Default">
+    <net code="92" name="unconnected-(J1-SBU1-PadA8)" class="Default">
       <node ref="J1" pin="A8" pinfunction="SBU1_A8" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="92" name="unconnected-(J1-SBU2-PadB8)" class="Default">
+    <net code="93" name="unconnected-(J1-SBU2-PadB8)" class="Default">
       <node ref="J1" pin="B8" pinfunction="SBU2_B8" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="93" name="unconnected-(J2-NC-Pad6)" class="Default">
+    <net code="94" name="unconnected-(J2-NC-Pad6)" class="Default">
       <node ref="J2" pin="6" pinfunction="NC_6" pintype="no_connect"/>
     </net>
-    <net code="94" name="unconnected-(U5-P0.02-Pad11)" class="Default">
+    <net code="95" name="unconnected-(U5-P0.02-Pad11)" class="Default">
       <node ref="U5" pin="11" pinfunction="P0.02_11" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="95" name="unconnected-(U5-P0.03-Pad9)" class="Default">
+    <net code="96" name="unconnected-(U5-P0.03-Pad9)" class="Default">
       <node ref="U5" pin="9" pinfunction="P0.03_9" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="96" name="unconnected-(U5-P0.05-Pad21)" class="Default">
+    <net code="97" name="unconnected-(U5-P0.05-Pad21)" class="Default">
       <node ref="U5" pin="21" pinfunction="P0.05_21" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="97" name="unconnected-(U5-P0.07-Pad23)" class="Default">
+    <net code="98" name="unconnected-(U5-P0.07-Pad23)" class="Default">
       <node ref="U5" pin="23" pinfunction="P0.07_23" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="98" name="unconnected-(U5-P0.09-Pad52)" class="Default">
+    <net code="99" name="unconnected-(U5-P0.09-Pad52)" class="Default">
       <node ref="U5" pin="52" pinfunction="P0.09_52" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="99" name="unconnected-(U5-P0.10-Pad54)" class="Default">
+    <net code="100" name="unconnected-(U5-P0.10-Pad54)" class="Default">
       <node ref="U5" pin="54" pinfunction="P0.10_54" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="100" name="unconnected-(U5-P0.11-Pad27)" class="Default">
+    <net code="101" name="unconnected-(U5-P0.11-Pad27)" class="Default">
       <node ref="U5" pin="27" pinfunction="P0.11_27" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="101" name="unconnected-(U5-P0.12-Pad29)" class="Default">
+    <net code="102" name="unconnected-(U5-P0.12-Pad29)" class="Default">
       <node ref="U5" pin="29" pinfunction="P0.12_29" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="102" name="unconnected-(U5-P0.14-Pad36)" class="Default">
+    <net code="103" name="unconnected-(U5-P0.14-Pad36)" class="Default">
       <node ref="U5" pin="36" pinfunction="P0.14_36" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="103" name="unconnected-(U5-P0.15-Pad39)" class="Default">
+    <net code="104" name="unconnected-(U5-P0.15-Pad39)" class="Default">
       <node ref="U5" pin="39" pinfunction="P0.15_39" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="104" name="unconnected-(U5-P0.16-Pad38)" class="Default">
+    <net code="105" name="unconnected-(U5-P0.16-Pad38)" class="Default">
       <node ref="U5" pin="38" pinfunction="P0.16_38" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="105" name="unconnected-(U5-P0.19-Pad42)" class="Default">
+    <net code="106" name="unconnected-(U5-P0.19-Pad42)" class="Default">
       <node ref="U5" pin="42" pinfunction="P0.19_42" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="106" name="unconnected-(U5-P0.23-Pad45)" class="Default">
+    <net code="107" name="unconnected-(U5-P0.23-Pad45)" class="Default">
       <node ref="U5" pin="45" pinfunction="P0.23_45" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="107" name="unconnected-(U5-P0.26-Pad19)" class="Default">
+    <net code="108" name="unconnected-(U5-P0.26-Pad19)" class="Default">
       <node ref="U5" pin="19" pinfunction="P0.26_19" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="108" name="unconnected-(U5-P0.28-Pad13)" class="Default">
+    <net code="109" name="unconnected-(U5-P0.28-Pad13)" class="Default">
       <node ref="U5" pin="13" pinfunction="P0.28_13" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="109" name="unconnected-(U5-P1.00-Pad47)" class="Default">
+    <net code="110" name="unconnected-(U5-P1.00-Pad47)" class="Default">
       <node ref="U5" pin="47" pinfunction="P1.00_47" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="110" name="unconnected-(U5-P1.01-Pad61)" class="Default">
+    <net code="111" name="unconnected-(U5-P1.01-Pad61)" class="Default">
       <node ref="U5" pin="61" pinfunction="P1.01_61" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="111" name="unconnected-(U5-P1.02-Pad50)" class="Default">
+    <net code="112" name="unconnected-(U5-P1.02-Pad50)" class="Default">
       <node ref="U5" pin="50" pinfunction="P1.02_50" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="112" name="unconnected-(U5-P1.03-Pad60)" class="Default">
+    <net code="113" name="unconnected-(U5-P1.03-Pad60)" class="Default">
       <node ref="U5" pin="60" pinfunction="P1.03_60" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="113" name="unconnected-(U5-P1.04-Pad56)" class="Default">
+    <net code="114" name="unconnected-(U5-P1.04-Pad56)" class="Default">
       <node ref="U5" pin="56" pinfunction="P1.04_56" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="114" name="unconnected-(U5-P1.05-Pad59)" class="Default">
+    <net code="115" name="unconnected-(U5-P1.05-Pad59)" class="Default">
       <node ref="U5" pin="59" pinfunction="P1.05_59" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="115" name="unconnected-(U5-P1.06-Pad57)" class="Default">
+    <net code="116" name="unconnected-(U5-P1.06-Pad57)" class="Default">
       <node ref="U5" pin="57" pinfunction="P1.06_57" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="116" name="unconnected-(U5-P1.07-Pad58)" class="Default">
+    <net code="117" name="unconnected-(U5-P1.07-Pad58)" class="Default">
       <node ref="U5" pin="58" pinfunction="P1.07_58" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="117" name="unconnected-(U5-P1.08-Pad25)" class="Default">
+    <net code="118" name="unconnected-(U5-P1.08-Pad25)" class="Default">
       <node ref="U5" pin="25" pinfunction="P1.08_25" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="118" name="unconnected-(U5-P1.10-Pad3)" class="Default">
+    <net code="119" name="unconnected-(U5-P1.10-Pad3)" class="Default">
       <node ref="U5" pin="3" pinfunction="P1.10_3" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="119" name="unconnected-(U5-P1.12-Pad5)" class="Default">
+    <net code="120" name="unconnected-(U5-P1.12-Pad5)" class="Default">
       <node ref="U5" pin="5" pinfunction="P1.12_5" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="120" name="unconnected-(U5-P1.14-Pad7)" class="Default">
+    <net code="121" name="unconnected-(U5-P1.14-Pad7)" class="Default">
       <node ref="U5" pin="7" pinfunction="P1.14_7" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="121" name="unconnected-(U6-TMR-Pad14)" class="Default">
+    <net code="122" name="unconnected-(U6-TMR-Pad14)" class="Default">
       <node ref="U6" pin="14" pinfunction="TMR_14" pintype="input+no_connect"/>
     </net>
-    <net code="122" name="unconnected-(U6-~{CHG}-Pad9)" class="Default">
+    <net code="123" name="unconnected-(U6-~{CHG}-Pad9)" class="Default">
       <node ref="U6" pin="9" pinfunction="~{CHG}_9" pintype="open_collector+no_connect"/>
     </net>
-    <net code="123" name="unconnected-(U6-~{PGOOD}-Pad7)" class="Default">
+    <net code="124" name="unconnected-(U6-~{PGOOD}-Pad7)" class="Default">
       <node ref="U6" pin="7" pinfunction="~{PGOOD}_7" pintype="open_collector+no_connect"/>
     </net>
   </nets>
