@@ -1,0 +1,116 @@
+{
+ "date": "2026-11-10",
+ "kicad": "10.0.8",
+ "base_commit": "5ea75d5",
+ "pcb_sha256": "6af5196481e2c6e4db6aec0f94a37c2da6de8b5b9324334aeb09b258c47bcb1d",
+ "sch_sha256": "02c6b6a9c7a63f7e33a1b82db5f64cc48f31582a56a99b3516b87aa35d7a9420",
+ "drc_command": "kicad-cli pcb drc --refill-zones --severity-all --schematic-parity --format json",
+ "drc_before": {
+  "unconnected": 13,
+  "violations": 93,
+  "track_dangling": 17,
+  "parity": 0
+ },
+ "drc_after": {
+  "unconnected": 0,
+  "violations": 76,
+  "by_type": {
+   "silk_overlap": 21,
+   "silk_over_copper": 26,
+   "text_height": 25,
+   "lib_footprint_issues": 1,
+   "silk_edge_clearance": 3
+  },
+  "parity": 0
+ },
+ "copper": {
+  "before": {
+   "F_Cu_mm": 149.799,
+   "B_Cu_mm": 5385.8,
+   "signal_vias": 63,
+   "gnd_vias": 173
+  },
+  "after": {
+   "F_Cu_mm": 230.175,
+   "B_Cu_mm": 5570.7,
+   "signal_vias": 67,
+   "gnd_vias": 173
+  },
+  "F_Cu_by_net_after_mm": {
+   "SWCLK": 24.59,
+   "SWDIO": 21.13,
+   "nRESET": 18.71,
+   "nRF_VDD": 17.83,
+   "row7": 13.24,
+   "row1": 6.85,
+   "col1": 14.67,
+   "col4": 17.66,
+   "col5": 16.13,
+   "col6": 11.08
+  },
+  "F_Cu_by_net_before_mm": {
+   "SWCLK": 6.53,
+   "SWDIO": 2.7,
+   "nRESET": 5.41,
+   "nRF_VDD": 3.05,
+   "row1": 4.23,
+   "col1": 15.41,
+   "col4": 16.89,
+   "col5": 15.58,
+   "col6": 11.71
+  }
+ },
+ "gnd_fill": {
+  "note": "pcbnew ZONE_FILLERで再充填して計測。同じプロジェクト設定で比較",
+  "before": {
+   "F_Cu_polygons": 2,
+   "F_Cu_area_mm2": 20652.71,
+   "B_Cu_polygons": 24,
+   "B_Cu_area_mm2": 17291.42
+  },
+  "after": {
+   "F_Cu_polygons": 2,
+   "F_Cu_area_mm2": 20589.95,
+   "B_Cu_polygons": 30,
+   "B_Cu_area_mm2": 17150.76
+  }
+ },
+ "return_path": {
+  "method": "D+/D-/DCCH/Net-(U5-P0.00)/Net-(U5-P0.01)のB.Cu配線中心と左右0.25 mmを0.05 mm刻みでF.Cu GND充填へ投影",
+  "samples": {
+   "D+": 846,
+   "D-": 894,
+   "DCCH": 153,
+   "Net-(U5-P0.00)": 279,
+   "Net-(U5-P0.01)": 279
+  },
+  "missing": 0
+ },
+ "angles": {
+  "non_45_segments_in_matrix_swd_nets": 0
+ },
+ "moved_parts": {
+  "D2": {
+   "from": [
+    40.4,
+    63.8,
+    90
+   ],
+   "to": [
+    23.0,
+    72.6,
+    180
+   ]
+  }
+ },
+ "pad_zone_connection_solid": [
+  "U5.2 (GND)",
+  "J2.5 (GND)"
+ ],
+ "not_done": [
+  "実機起動・USB・BLE・SWD書き込みの検証",
+  "ERCの再実行（回路図は未変更）",
+  "製造データ",
+  "シルク・文字の76件"
+ ]
+}
