@@ -1,5 +1,7 @@
 # CPL回転監査の根拠データ（2026-11-11）
 
+全件の判定・最終検査は[監査報告書](report.md)、実装点ごとの角度は[全82点CSV](instance-audit.csv)を参照。
+
 対象：wireless `6e3c3ec` のBOM 21行・20 LCSC種類・82実装点。基板・回路図は変更しない。
 
 **ランド図の出典：JLCEDA/EasyEDA Official Library（嘉立创EDA/EasyEDA官方库）**。

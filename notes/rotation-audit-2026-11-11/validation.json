@@ -1,0 +1,38 @@
+{
+  "base": "6e3c3ec",
+  "kicad_version": "10.0.8",
+  "assembly_references": 82,
+  "bom_rows": 21,
+  "lcsc_parts": 20,
+  "source_files_byte_identical": true,
+  "bom_and_cpl_byte_identical": true,
+  "cpl_angles_verified": 82,
+  "gerber_members_equal_except_dates": 12,
+  "drc": {
+    "errors": 0,
+    "unconnected": 0,
+    "parity": 0,
+    "warnings": {
+      "silk_overlap": 7,
+      "silk_edge_clearance": 2
+    }
+  },
+  "erc_violations": 0,
+  "manifest_hashes_verified": true,
+  "baseline_manifest_mismatches": {
+    "assembly/ts52k-cpl.csv": {
+      "recorded": "8d42bada9513c6c919c91fc0f264e2d9b510890ef087de40aa7480cb3b1354c1",
+      "actual": "aed416db821aa71ef7df9182309a9ff0b044ca739fc955c51e34e9e0a30686da"
+    }
+  },
+  "output_sha256": {
+    "gerber/ts52k-gerbers.zip": "7166ad49f20d81b01838e70e2b4f2427ad3a2abb5ea2d29f409d5330ee9e04b2",
+    "assembly/ts52k-bom.csv": "ceff20a31fae2e1bc59f6bca868a38dd1965d9e8d2d0035a9a2a84bde995b6be",
+    "assembly/ts52k-cpl.csv": "aed416db821aa71ef7df9182309a9ff0b044ca739fc955c51e34e9e0a30686da"
+  },
+  "decisions": {
+    "回転無意味（180°）": 20,
+    "補正不要（確認済み）": 61,
+    "補正あり（既存+180°維持）": 1
+  }
+}
