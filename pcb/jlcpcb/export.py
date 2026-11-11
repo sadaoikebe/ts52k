@@ -23,15 +23,19 @@ BOARD = PCB_DIR / "ts52k.kicad_pcb"
 SCHEMATIC = PCB_DIR / "ts52k.kicad_sch"
 PROJECT = PCB_DIR / "ts52k.kicad_pro"
 
-# CPL rotation offsets (degrees) keyed by LCSC part number, for parts whose
-# JLCPCB library orientation has been verified against the EasyEDA/manufacturer
-# data and differs from KiCad's footprint orientation. Only add an entry with
-# that evidence; everything else keeps the raw KiCad rotation and relies on
-# the order-time placement preview.
-# - C15127 (AO3401A, SOT-23): the EasyEDA land definition is rotated 180
-#   degrees vs KiCad's SOT-23, with identical pin numbering (1=G, 2=S, 3=D).
-#   A 180 degree offset is unaffected by the bottom-side board flip.
-ROTATION_CORRECTIONS = {"C15127": 180.0}
+# CPL rotation offsets (degrees) keyed by LCSC part number. Add an entry only
+# after comparing BOTH numbered pads and land geometry against the public
+# JLCPCB/EasyEDA library. The 2026-11-11 audit covers all 20 LCSC parts / 82
+# placements; evidence and per-part decisions: notes/rotation-audit-2026-11-11/.
+# All other BOM parts were verified at zero offset, or are non-polar two-pin
+# parts with equivalent 0/180-degree orientation. Order preview remains the
+# final visual check, including XY alignment (library origins can differ).
+ROTATION_CORRECTIONS = {
+    # C15127 (AO3401A): KiCad 1/2 on left, 3 on right; EasyEDA 1/2 on
+    # right, 3 on left. Both use 1=G, 2=S, 3=D. Retain the existing +180;
+    # its sign is unaffected by the bottom-side flip.
+    "C15127": 180.0,
+}
 
 
 def cli_path(override):
