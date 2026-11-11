@@ -1,0 +1,6 @@
+__pycache__/
+# Full downloaded HTML/PDFs are retained locally; hashes/URLs are tracked.
+raw/*-jlc.html
+raw/*-datasheet.html
+raw/*-datasheet.pdf
+raw/*-datasheet.txt

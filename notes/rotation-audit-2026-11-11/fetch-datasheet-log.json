@@ -1,0 +1,66 @@
+[
+  {
+    "part": "C140288",
+    "url": "https://www.lcsc.com/datasheet/lcsc_datasheet_1806131014_Texas-Instruments-BQ24072RGTR_C140288.pdf",
+    "status": "200",
+    "file": "C140288-datasheet.pdf",
+    "sha256": "bba58fbd1010b8700fb92404e24c9e298f3e4bff72fbd828a5062b1de87b7883",
+    "pdf": false
+  },
+  {
+    "part": "C15127",
+    "url": "https://www.lcsc.com/datasheet/lcsc_datasheet_2412061733_Alpha---Omega-Semicon-AO3401A_C15127.pdf",
+    "status": "200",
+    "file": "C15127-datasheet.pdf",
+    "sha256": "5e14352f8fa8459d1bb9bec47699a79e4330e0adec790f7ca2104d44c33497e1",
+    "pdf": false
+  },
+  {
+    "part": "C165948",
+    "url": "https://www.lcsc.com/datasheet/lcsc_datasheet_2205251630_Korean-Hroparts-Elec-TYPE-C-31-M-12_C165948.pdf",
+    "status": "200",
+    "file": "C165948-datasheet.pdf",
+    "sha256": "9966b68e03b2b292f86f9414407b4eae475757cd23f00ef7c0b8d872485d5ce8",
+    "pdf": false
+  },
+  {
+    "part": "C22395519",
+    "url": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2405091603_hongjiacheng-H5VU10U_C22395519.pdf",
+    "status": "200",
+    "file": "C22395519-datasheet.pdf",
+    "sha256": "3e8548cec1ec3b227ffea83ba961ed876c03dc5f639a023e908a01f9ebc7e902",
+    "pdf": false
+  },
+  {
+    "part": "C295747",
+    "url": "https://www.lcsc.com/datasheet/lcsc_datasheet_2102031704_JST-S2B-PH-SM4-TB-LF-SN_C295747.pdf",
+    "status": "200",
+    "file": "C295747-datasheet.pdf",
+    "sha256": "3a68cda614a0729aef4263bf2c668fe017b418ee71767cb0a0ae3333d8d1986b",
+    "pdf": false
+  },
+  {
+    "part": "C318884",
+    "url": "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_XKB-Connection-TS-1187A-B-A-B_C318884.pdf",
+    "status": "200",
+    "file": "C318884-datasheet.pdf",
+    "sha256": "002c59fb4ecd9bfd7ed8c2a580cf0613bc6028924f74cff9f86c6b8c289c51c9",
+    "pdf": false
+  },
+  {
+    "part": "C5118826",
+    "url": "https://www.lcsc.com/datasheet/lcsc_datasheet_2411271956_RAYTAC-MDBT50Q-1MV2_C5118826.pdf",
+    "status": "200",
+    "file": "C5118826-datasheet.pdf",
+    "sha256": "4d210e6137fecb1d8c2e01cd28357b9efa61bc38e4221c49908666e1d2a041dc",
+    "pdf": false
+  },
+  {
+    "part": "C81598",
+    "url": "https://www.lcsc.com/datasheet/lcsc_datasheet_1811061725_ST-Semtech-1N4148W_C81598.pdf",
+    "status": "200",
+    "file": "C81598-datasheet.pdf",
+    "sha256": "8a759e02f61eb1f9252bbcc05c36b5c6a54479300847fcdce4a91b0c287475a4",
+    "pdf": false
+  }
+]

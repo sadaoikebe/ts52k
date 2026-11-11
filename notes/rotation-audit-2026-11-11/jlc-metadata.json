@@ -1,0 +1,262 @@
+[
+  {
+    "part": "C140288",
+    "url": "https://jlcpcb.com/partdetail/C140288",
+    "html_sha256": "38cd0e0f190c0d19fe45059ae9303e9c792e42a7236d454b06993f1a12dda876",
+    "footprint_viewer": "https://jlcpcb.com/user-center/lcsvg/svg.html?code=C140288&detail=1",
+    "metadata": {
+      "componentCode": "C140288",
+      "componentModelEn": "BQ24072RGTR",
+      "componentBrandEn": "Texas Instruments",
+      "componentSpecificationEn": "QFN-16-EP(3x3)",
+      "dataManualUrl": "https://www.lcsc.com/datasheet/lcsc_datasheet_1806131014_Texas-Instruments-BQ24072RGTR_C140288.pdf"
+    }
+  },
+  {
+    "part": "C14663",
+    "url": "https://jlcpcb.com/partdetail/C14663",
+    "html_sha256": "59a36849fddb01b79488c64588b9e27660d9e9f92785f68d6d0c6cdb5558c9e8",
+    "footprint_viewer": "https://jlcpcb.com/user-center/lcsvg/svg.html?code=C14663&detail=1",
+    "metadata": {
+      "componentCode": "C14663",
+      "componentModelEn": "CC0603KRX7R9BB104",
+      "componentBrandEn": "YAGEO",
+      "componentSpecificationEn": "0603",
+      "dataManualUrl": "https://www.lcsc.com/datasheet/lcsc_datasheet_2211101700_YAGEO-CC0603KRX7R9BB104_C14663.pdf"
+    }
+  },
+  {
+    "part": "C15127",
+    "url": "https://jlcpcb.com/partdetail/C15127",
+    "html_sha256": "36739057983d2355c0ea845f5a25793c81e1c0368d55a4da028f26c0baa221e6",
+    "footprint_viewer": "https://jlcpcb.com/user-center/lcsvg/svg.html?code=C15127&detail=1",
+    "metadata": {
+      "componentCode": "C15127",
+      "componentModelEn": "AO3401A",
+      "componentBrandEn": "Alpha & Omega Semicon",
+      "componentSpecificationEn": "SOT-23",
+      "dataManualUrl": "https://www.lcsc.com/datasheet/lcsc_datasheet_2412061733_Alpha---Omega-Semicon-AO3401A_C15127.pdf"
+    }
+  },
+  {
+    "part": "C1547",
+    "url": "https://jlcpcb.com/partdetail/C1547",
+    "html_sha256": "51487e4e8ad63b7093dede0d7c8c25beee01a84333ab6cc94b9402e604120315",
+    "footprint_viewer": "https://jlcpcb.com/user-center/lcsvg/svg.html?code=C1547&detail=1",
+    "metadata": {
+      "componentCode": "C1547",
+      "componentModelEn": "0402CG120J500NT",
+      "componentBrandEn": "FH (Guangdong Fenghua Advanced Tech)",
+      "componentSpecificationEn": "0402",
+      "dataManualUrl": "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_FH--Guangdong-Fenghua-Advanced-Tech-0402CG120J500NT_C1547.pdf"
+    }
+  },
+  {
+    "part": "C15849",
+    "url": "https://jlcpcb.com/partdetail/C15849",
+    "html_sha256": "ba25bae2cea23973e0f3052f7eca85809116cced5d1fa6cd2ef65fe4578573d4",
+    "footprint_viewer": "https://jlcpcb.com/user-center/lcsvg/svg.html?code=C15849&detail=1",
+    "metadata": {
+      "componentCode": "C15849",
+      "componentModelEn": "CL10A105KB8NNNC",
+      "componentBrandEn": "Samsung Electro-Mechanics",
+      "componentSpecificationEn": "0603",
+      "dataManualUrl": "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_Samsung-Electro-Mechanics-CL10A105KB8NNNC_C15849.pdf"
+    }
+  },
+  {
+    "part": "C15850",
+    "url": "https://jlcpcb.com/partdetail/C15850",
+    "html_sha256": "635d3790f1d551aed317df05f145a381709a864c542a5670b9bfce2288aaaf60",
+    "footprint_viewer": "https://jlcpcb.com/user-center/lcsvg/svg.html?code=C15850&detail=1",
+    "metadata": {
+      "componentCode": "C15850",
+      "componentModelEn": "CL21A106KAYNNNE",
+      "componentBrandEn": "Samsung Electro-Mechanics",
+      "componentSpecificationEn": "0805",
+      "dataManualUrl": "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_Samsung-Electro-Mechanics-CL21A106KAYNNNE_C15850.pdf"
+    }
+  },
+  {
+    "part": "C165948",
+    "url": "https://jlcpcb.com/partdetail/C165948",
+    "html_sha256": "d31ca690db9595f5740c0d1b44863d73e43df57ee0bed77f1dff724656d3b155",
+    "footprint_viewer": "https://jlcpcb.com/user-center/lcsvg/svg.html?code=C165948&detail=1",
+    "metadata": {
+      "componentCode": "C165948",
+      "componentModelEn": "TYPE-C-31-M-12",
+      "componentBrandEn": "Korean Hroparts Elec",
+      "componentSpecificationEn": "SMD",
+      "dataManualUrl": "https://www.lcsc.com/datasheet/lcsc_datasheet_2205251630_Korean-Hroparts-Elec-TYPE-C-31-M-12_C165948.pdf"
+    }
+  },
+  {
+    "part": "C19666",
+    "url": "https://jlcpcb.com/partdetail/C19666",
+    "html_sha256": "c08c4011bc0b485cc471d796deda56068ffea23ea7e7e293eb62152c7ab75c76",
+    "footprint_viewer": "https://jlcpcb.com/user-center/lcsvg/svg.html?code=C19666&detail=1",
+    "metadata": {
+      "componentCode": "C19666",
+      "componentModelEn": "CL10A475KO8NNNC",
+      "componentBrandEn": "Samsung Electro-Mechanics",
+      "componentSpecificationEn": "0603",
+      "dataManualUrl": "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_Samsung-Electro-Mechanics-CL10A475KO8NNNC_C19666.pdf"
+    }
+  },
+  {
+    "part": "C22395519",
+    "url": "https://jlcpcb.com/partdetail/C22395519",
+    "html_sha256": "6a4ac989f741d6bd9697cdbcf4fd9af34bd3e52d0fc3ed225efd328e1ad5c5bc",
+    "footprint_viewer": "https://jlcpcb.com/user-center/lcsvg/svg.html?code=C22395519&detail=1",
+    "metadata": {
+      "componentCode": "C22395519",
+      "componentModelEn": "H5VU10U",
+      "componentBrandEn": "hongjiacheng",
+      "componentSpecificationEn": "DFN1006-2L",
+      "dataManualUrl": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2405091603_hongjiacheng-H5VU10U_C22395519.pdf"
+    }
+  },
+  {
+    "part": "C22843",
+    "url": "https://jlcpcb.com/partdetail/C22843",
+    "html_sha256": "d404316713188f6bba3d1ff41eb4dfa46e8366b6c4544bd21847afecca4d76e2",
+    "footprint_viewer": "https://jlcpcb.com/user-center/lcsvg/svg.html?code=C22843&detail=1",
+    "metadata": {
+      "componentCode": "C22843",
+      "componentModelEn": "0603WAF1501T5E",
+      "componentBrandEn": "UNI-ROYAL(Uniroyal Elec)",
+      "componentSpecificationEn": "0603",
+      "dataManualUrl": "https://www.lcsc.com/datasheet/lcsc_datasheet_2206010130_UNI-ROYAL-Uniroyal-Elec-0603WAF1501T5E_C22843.pdf"
+    }
+  },
+  {
+    "part": "C22939",
+    "url": "https://jlcpcb.com/partdetail/C22939",
+    "html_sha256": "830f2a0ab4708784c6f85c716b73d2f5d982517163747f3c32091785e699cc96",
+    "footprint_viewer": "https://jlcpcb.com/user-center/lcsvg/svg.html?code=C22939&detail=1",
+    "metadata": {
+      "componentCode": "C22939",
+      "componentModelEn": "0603WAF220KT5E",
+      "componentBrandEn": "UNI-ROYAL(Uniroyal Elec)",
+      "componentSpecificationEn": "0603",
+      "dataManualUrl": "https://www.lcsc.com/datasheet/lcsc_datasheet_2206010130_UNI-ROYAL-Uniroyal-Elec-0603WAF220KT5E_C22939.pdf"
+    }
+  },
+  {
+    "part": "C23186",
+    "url": "https://jlcpcb.com/partdetail/C23186",
+    "html_sha256": "044d26823faf819abdef7687dbb0a7910c2bae12ce33ec1ed63231e9c7193e74",
+    "footprint_viewer": "https://jlcpcb.com/user-center/lcsvg/svg.html?code=C23186&detail=1",
+    "metadata": {
+      "componentCode": "C23186",
+      "componentModelEn": "0603WAF5101T5E",
+      "componentBrandEn": "UNI-ROYAL(Uniroyal Elec)",
+      "componentSpecificationEn": "0603",
+      "dataManualUrl": "https://www.lcsc.com/datasheet/lcsc_datasheet_2206010116_UNI-ROYAL-Uniroyal-Elec-0603WAF5101T5E_C23186.pdf"
+    }
+  },
+  {
+    "part": "C25804",
+    "url": "https://jlcpcb.com/partdetail/C25804",
+    "html_sha256": "b4cdab6850411e6c9625c5aad25f44ceac55d401d571fbf639de128cd5d0f582",
+    "footprint_viewer": "https://jlcpcb.com/user-center/lcsvg/svg.html?code=C25804&detail=1",
+    "metadata": {
+      "componentCode": "C25804",
+      "componentModelEn": "0603WAF1002T5E",
+      "componentBrandEn": "UNI-ROYAL(Uniroyal Elec)",
+      "componentSpecificationEn": "0603",
+      "dataManualUrl": "https://www.lcsc.com/datasheet/lcsc_datasheet_2206010045_UNI-ROYAL-Uniroyal-Elec-0603WAF1002T5E_C25804.pdf"
+    }
+  },
+  {
+    "part": "C25981",
+    "url": "https://jlcpcb.com/partdetail/C25981",
+    "html_sha256": "08344ca2473298d85143b61f43585974f06447f01185bb56f20557441ba6558c",
+    "footprint_viewer": "https://jlcpcb.com/user-center/lcsvg/svg.html?code=C25981&detail=1",
+    "metadata": {
+      "componentCode": "C25981",
+      "componentModelEn": "0603WAF8201T5E",
+      "componentBrandEn": "UNI-ROYAL(Uniroyal Elec)",
+      "componentSpecificationEn": "0603",
+      "dataManualUrl": "https://www.lcsc.com/datasheet/lcsc_datasheet_2206010045_UNI-ROYAL-Uniroyal-Elec-0603WAF8201T5E_C25981.pdf"
+    }
+  },
+  {
+    "part": "C295747",
+    "url": "https://jlcpcb.com/partdetail/C295747",
+    "html_sha256": "ca96202624cfc7e963d2bcbd35b1d94ac2231f9a4215bb1079b433074c24e65b",
+    "footprint_viewer": "https://jlcpcb.com/user-center/lcsvg/svg.html?code=C295747&detail=1",
+    "metadata": {
+      "componentCode": "C295747",
+      "componentModelEn": "S2B-PH-SM4-TB(LF)(SN)",
+      "componentBrandEn": "JST",
+      "componentSpecificationEn": "SMD,P=2mm,Surface Mount，Right Angle",
+      "dataManualUrl": "https://www.lcsc.com/datasheet/lcsc_datasheet_2102031704_JST-S2B-PH-SM4-TB-LF-SN_C295747.pdf"
+    }
+  },
+  {
+    "part": "C318884",
+    "url": "https://jlcpcb.com/partdetail/C318884",
+    "html_sha256": "2dc8bd60c73085653b47372dc32d743b91c2733485a6353c586aafde617437e4",
+    "footprint_viewer": "https://jlcpcb.com/user-center/lcsvg/svg.html?code=C318884&detail=1",
+    "metadata": {
+      "componentCode": "C318884",
+      "componentModelEn": "TS-1187A-B-A-B",
+      "componentBrandEn": "XKB Connection",
+      "componentSpecificationEn": "SMD-4P,5.1x5.1mm",
+      "dataManualUrl": "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_XKB-Connection-TS-1187A-B-A-B_C318884.pdf"
+    }
+  },
+  {
+    "part": "C5118826",
+    "url": "https://jlcpcb.com/partdetail/C5118826",
+    "html_sha256": "e7fbbf31dea57a87572a937cac3e11d2ce8381c8fc3909725cd8f9f9efba2ef6",
+    "footprint_viewer": "https://jlcpcb.com/user-center/lcsvg/svg.html?code=C5118826&detail=1",
+    "metadata": {
+      "componentCode": "C5118826",
+      "componentModelEn": "MDBT50Q-1MV2",
+      "componentBrandEn": "RAYTAC",
+      "componentSpecificationEn": "SMD-61P",
+      "dataManualUrl": "https://www.lcsc.com/datasheet/lcsc_datasheet_2411271956_RAYTAC-MDBT50Q-1MV2_C5118826.pdf"
+    }
+  },
+  {
+    "part": "C713281",
+    "url": "https://jlcpcb.com/partdetail/C713281",
+    "html_sha256": "d2d7997d80da4fb617063ddeb8688160b5f316422f0272a04e02cbef9c546f25",
+    "footprint_viewer": "https://jlcpcb.com/user-center/lcsvg/svg.html?code=C713281&detail=1",
+    "metadata": {
+      "componentCode": "C713281",
+      "componentModelEn": "LQM18DN100M70L",
+      "componentBrandEn": "Murata Electronics",
+      "componentSpecificationEn": "0603",
+      "dataManualUrl": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2304140030_Murata-Electronics-LQM18DN100M70L_C713281.pdf"
+    }
+  },
+  {
+    "part": "C81598",
+    "url": "https://jlcpcb.com/partdetail/C81598",
+    "html_sha256": "fa4c5e830e9842d5402b6b3b6b387237b448bcf4bb12fbca5eefc2f4570ea1e6",
+    "footprint_viewer": "https://jlcpcb.com/user-center/lcsvg/svg.html?code=C81598&detail=1",
+    "metadata": {
+      "componentCode": "C81598",
+      "componentModelEn": "1N4148W",
+      "componentBrandEn": "ST(Semtech)",
+      "componentSpecificationEn": "SOD-123",
+      "dataManualUrl": "https://www.lcsc.com/datasheet/lcsc_datasheet_1811061725_ST-Semtech-1N4148W_C81598.pdf"
+    }
+  },
+  {
+    "part": "C96341",
+    "url": "https://jlcpcb.com/partdetail/C96341",
+    "html_sha256": "63cae52a6dd1ef5c702c0aabef18b2271825220355d8c7b46826dadeab40f5e7",
+    "footprint_viewer": "https://jlcpcb.com/user-center/lcsvg/svg.html?code=C96341&detail=1",
+    "metadata": {
+      "componentCode": "C96341",
+      "componentModelEn": "X1A0000610008",
+      "componentBrandEn": "Seiko Epson",
+      "componentSpecificationEn": "SMD2012-2P",
+      "dataManualUrl": "https://www.lcsc.com/datasheet/lcsc_datasheet_2109071630_Seiko-Epson-X1A0000610008_C96341.pdf"
+    }
+  }
+]

@@ -1,0 +1,1022 @@
+[
+  {
+    "part": "C15849",
+    "matched_numbered_pads": 2,
+    "best": {
+      "clockwise_rotation_svg_to_kicad": 0,
+      "translation_mm": [
+        0.0,
+        0.0
+      ],
+      "rms_mm": 0.07396000000000003,
+      "max_mm": 0.07396000000000003
+    },
+    "all_cardinal_fits": [
+      {
+        "clockwise_rotation_svg_to_kicad": 0,
+        "translation_mm": [
+          0.0,
+          0.0
+        ],
+        "rms_mm": 0.07396000000000003,
+        "max_mm": 0.07396000000000003
+      },
+      {
+        "clockwise_rotation_svg_to_kicad": 90,
+        "translation_mm": [
+          0.0,
+          0.0
+        ],
+        "rms_mm": 1.0450273114134385,
+        "max_mm": 1.0450273114134385
+      },
+      {
+        "clockwise_rotation_svg_to_kicad": 180,
+        "translation_mm": [
+          0.0,
+          0.0
+        ],
+        "rms_mm": 1.47604,
+        "max_mm": 1.47604
+      },
+      {
+        "clockwise_rotation_svg_to_kicad": 270,
+        "translation_mm": [
+          0.0,
+          0.0
+        ],
+        "rms_mm": 1.0450273114134385,
+        "max_mm": 1.0450273114134385
+      }
+    ]
+  },
+  {
+    "part": "C19666",
+    "matched_numbered_pads": 2,
+    "best": {
+      "clockwise_rotation_svg_to_kicad": 0,
+      "translation_mm": [
+        0.0,
+        0.0
+      ],
+      "rms_mm": 0.07396000000000003,
+      "max_mm": 0.07396000000000003
+    },
+    "all_cardinal_fits": [
+      {
+        "clockwise_rotation_svg_to_kicad": 0,
+        "translation_mm": [
+          0.0,
+          0.0
+        ],
+        "rms_mm": 0.07396000000000003,
+        "max_mm": 0.07396000000000003
+      },
+      {
+        "clockwise_rotation_svg_to_kicad": 90,
+        "translation_mm": [
+          0.0,
+          0.0
+        ],
+        "rms_mm": 1.0450273114134385,
+        "max_mm": 1.0450273114134385
+      },
+      {
+        "clockwise_rotation_svg_to_kicad": 180,
+        "translation_mm": [
+          0.0,
+          0.0
+        ],
+        "rms_mm": 1.47604,
+        "max_mm": 1.47604
+      },
+      {
+        "clockwise_rotation_svg_to_kicad": 270,
+        "translation_mm": [
+          0.0,
+          0.0
+        ],
+        "rms_mm": 1.0450273114134385,
+        "max_mm": 1.0450273114134385
+      }
+    ]
+  },
+  {
+    "part": "C15850",
+    "matched_numbered_pads": 2,
+    "best": {
+      "clockwise_rotation_svg_to_kicad": 0,
+      "translation_mm": [
+        0.0,
+        0.0
+      ],
+      "rms_mm": 0.05076000000000014,
+      "max_mm": 0.05076000000000014
+    },
+    "all_cardinal_fits": [
+      {
+        "clockwise_rotation_svg_to_kicad": 0,
+        "translation_mm": [
+          0.0,
+          0.0
+        ],
+        "rms_mm": 0.05076000000000014,
+        "max_mm": 0.05076000000000014
+      },
+      {
+        "clockwise_rotation_svg_to_kicad": 90,
+        "translation_mm": [
+          0.0,
+          0.0
+        ],
+        "rms_mm": 1.3798625212679705,
+        "max_mm": 1.3798625212679705
+      },
+      {
+        "clockwise_rotation_svg_to_kicad": 180,
+        "translation_mm": [
+          0.0,
+          0.0
+        ],
+        "rms_mm": 1.95076,
+        "max_mm": 1.95076
+      },
+      {
+        "clockwise_rotation_svg_to_kicad": 270,
+        "translation_mm": [
+          0.0,
+          0.0
+        ],
+        "rms_mm": 1.3798625212679705,
+        "max_mm": 1.3798625212679705
+      }
+    ]
+  },
+  {
+    "part": "C14663",
+    "matched_numbered_pads": 2,
+    "best": {
+      "clockwise_rotation_svg_to_kicad": 0,
+      "translation_mm": [
+        0.0,
+        0.0
+      ],
+      "rms_mm": 0.07396000000000003,
+      "max_mm": 0.07396000000000003
+    },
+    "all_cardinal_fits": [
+      {
+        "clockwise_rotation_svg_to_kicad": 0,
+        "translation_mm": [
+          0.0,
+          0.0
+        ],
+        "rms_mm": 0.07396000000000003,
+        "max_mm": 0.07396000000000003
+      },
+      {
+        "clockwise_rotation_svg_to_kicad": 90,
+        "translation_mm": [
+          0.0,
+          0.0
+        ],
+        "rms_mm": 1.0450273114134385,
+        "max_mm": 1.0450273114134385
+      },
+      {
+        "clockwise_rotation_svg_to_kicad": 180,
+        "translation_mm": [
+          0.0,
+          0.0
+        ],
+        "rms_mm": 1.47604,
+        "max_mm": 1.47604
+      },
+      {
+        "clockwise_rotation_svg_to_kicad": 270,
+        "translation_mm": [
+          0.0,
+          0.0
+        ],
+        "rms_mm": 1.0450273114134385,
+        "max_mm": 1.0450273114134385
+      }
+    ]
+  },
+  {
+    "part": "C1547",
+    "matched_numbered_pads": 2,
+    "best": {
+      "clockwise_rotation_svg_to_kicad": 0,
+      "translation_mm": [
+        0.0,
+        0.0
+      ],
+      "rms_mm": 0.06090000000000001,
+      "max_mm": 0.06090000000000001
+    },
+    "all_cardinal_fits": [
+      {
+        "clockwise_rotation_svg_to_kicad": 0,
+        "translation_mm": [
+          0.0,
+          0.0
+        ],
+        "rms_mm": 0.06090000000000001,
+        "max_mm": 0.06090000000000001
+      },
+      {
+        "clockwise_rotation_svg_to_kicad": 90,
+        "translation_mm": [
+          0.0,
+          0.0
+        ],
+        "rms_mm": 0.6372164545898041,
+        "max_mm": 0.6372164545898041
+      },
+      {
+        "clockwise_rotation_svg_to_kicad": 180,
+        "translation_mm": [
+          0.0,
+          0.0
+        ],
+        "rms_mm": 0.8991,
+        "max_mm": 0.8991
+      },
+      {
+        "clockwise_rotation_svg_to_kicad": 270,
+        "translation_mm": [
+          0.0,
+          0.0
+        ],
+        "rms_mm": 0.6372164545898041,
+        "max_mm": 0.6372164545898041
+      }
+    ]
+  },
+  {
+    "part": "C81598",
+    "matched_numbered_pads": 2,
+    "best": {
+      "clockwise_rotation_svg_to_kicad": 0,
+      "translation_mm": [
+        0.00012699999999998823,
+        0.0
+      ],
+      "rms_mm": 0.08482000000000012,
+      "max_mm": 0.08482000000000012
+    },
+    "all_cardinal_fits": [
+      {
+        "clockwise_rotation_svg_to_kicad": 0,
+        "translation_mm": [
+          0.00012699999999998823,
+          0.0
+        ],
+        "rms_mm": 0.08482000000000012,
+        "max_mm": 0.08482000000000012
+      },
+      {
+        "clockwise_rotation_svg_to_kicad": 90,
+        "translation_mm": [
+          0.0,
+          0.00012699999999998823
+        ],
+        "rms_mm": 2.394180534629751,
+        "max_mm": 2.394180534629751
+      },
+      {
+        "clockwise_rotation_svg_to_kicad": 180,
+        "translation_mm": [
+          -0.00012699999999998823,
+          0.0
+        ],
+        "rms_mm": 3.38482,
+        "max_mm": 3.38482
+      },
+      {
+        "clockwise_rotation_svg_to_kicad": 270,
+        "translation_mm": [
+          0.0,
+          -0.00012699999999998823
+        ],
+        "rms_mm": 2.394180534629751,
+        "max_mm": 2.394180534629751
+      }
+    ]
+  },
+  {
+    "part": "C22395519",
+    "matched_numbered_pads": 2,
+    "best": {
+      "clockwise_rotation_svg_to_kicad": 0,
+      "translation_mm": [
+        0.0,
+        0.0
+      ],
+      "rms_mm": 0.026219999999999966,
+      "max_mm": 0.026219999999999966
+    },
+    "all_cardinal_fits": [
+      {
+        "clockwise_rotation_svg_to_kicad": 0,
+        "translation_mm": [
+          0.0,
+          0.0
+        ],
+        "rms_mm": 0.026219999999999966,
+        "max_mm": 0.026219999999999966
+      },
+      {
+        "clockwise_rotation_svg_to_kicad": 90,
+        "translation_mm": [
+          0.0,
+          0.0
+        ],
+        "rms_mm": 0.5827954086984557,
+        "max_mm": 0.5827954086984557
+      },
+      {
+        "clockwise_rotation_svg_to_kicad": 180,
+        "translation_mm": [
+          0.0,
+          0.0
+        ],
+        "rms_mm": 0.82378,
+        "max_mm": 0.82378
+      },
+      {
+        "clockwise_rotation_svg_to_kicad": 270,
+        "translation_mm": [
+          0.0,
+          0.0
+        ],
+        "rms_mm": 0.5827954086984557,
+        "max_mm": 0.5827954086984557
+      }
+    ]
+  },
+  {
+    "part": "C165948",
+    "matched_numbered_pads": 16,
+    "best": {
+      "clockwise_rotation_svg_to_kicad": 0,
+      "translation_mm": [
+        -0.00025400000000000075,
+        -1.5348
+      ],
+      "rms_mm": 0.0685838073090143,
+      "max_mm": 0.11118712346760307
+    },
+    "all_cardinal_fits": [
+      {
+        "clockwise_rotation_svg_to_kicad": 0,
+        "translation_mm": [
+          -0.00025400000000000075,
+          -1.5348
+        ],
+        "rms_mm": 0.0685838073090143,
+        "max_mm": 0.11118712346760307
+      },
+      {
+        "clockwise_rotation_svg_to_kicad": 90,
+        "translation_mm": [
+          -1.75895,
+          -3.2940039999999997
+        ],
+        "rms_mm": 4.48723895074967,
+        "max_mm": 8.669801074068827
+      },
+      {
+        "clockwise_rotation_svg_to_kicad": 180,
+        "translation_mm": [
+          0.00025400000000002157,
+          -5.0527
+        ],
+        "rms_mm": 6.345543559351318,
+        "max_mm": 12.178535819277496
+      },
+      {
+        "clockwise_rotation_svg_to_kicad": 270,
+        "translation_mm": [
+          1.75895,
+          -3.2934959999999998
+        ],
+        "rms_mm": 4.48723895074967,
+        "max_mm": 8.669801074068827
+      }
+    ]
+  },
+  {
+    "part": "C295747",
+    "matched_numbered_pads": 4,
+    "best": {
+      "clockwise_rotation_svg_to_kicad": 0,
+      "translation_mm": [
+        0.0,
+        0.024237999999999982
+      ],
+      "rms_mm": 0.049813238200301646,
+      "max_mm": 0.04981579769510864
+    },
+    "all_cardinal_fits": [
+      {
+        "clockwise_rotation_svg_to_kicad": 0,
+        "translation_mm": [
+          0.0,
+          0.024237999999999982
+        ],
+        "rms_mm": 0.049813238200301646,
+        "max_mm": 0.04981579769510864
+      },
+      {
+        "clockwise_rotation_svg_to_kicad": 90,
+        "translation_mm": [
+          0.0007620000000000404,
+          0.02499999999999991
+        ],
+        "rms_mm": 5.389273592860174,
+        "max_mm": 6.29278258036141
+      },
+      {
+        "clockwise_rotation_svg_to_kicad": 180,
+        "translation_mm": [
+          0.0,
+          0.025761999999999396
+        ],
+        "rms_mm": 7.621421019645877,
+        "max_mm": 8.861787635894915
+      },
+      {
+        "clockwise_rotation_svg_to_kicad": 270,
+        "translation_mm": [
+          -0.0007620000000000404,
+          0.02499999999999991
+        ],
+        "rms_mm": 5.389273592860174,
+        "max_mm": 6.29278258036141
+      }
+    ]
+  },
+  {
+    "part": "C713281",
+    "matched_numbered_pads": 2,
+    "best": {
+      "clockwise_rotation_svg_to_kicad": 0,
+      "translation_mm": [
+        -0.0006350000000000522,
+        0.0
+      ],
+      "rms_mm": 0.08772999999999997,
+      "max_mm": 0.08772999999999997
+    },
+    "all_cardinal_fits": [
+      {
+        "clockwise_rotation_svg_to_kicad": 0,
+        "translation_mm": [
+          -0.0006350000000000522,
+          0.0
+        ],
+        "rms_mm": 0.08772999999999997,
+        "max_mm": 0.08772999999999997
+      },
+      {
+        "clockwise_rotation_svg_to_kicad": 90,
+        "translation_mm": [
+          0.0,
+          -0.0006350000000000522
+        ],
+        "rms_mm": 1.0534867359867421,
+        "max_mm": 1.0534867359867421
+      },
+      {
+        "clockwise_rotation_svg_to_kicad": 180,
+        "translation_mm": [
+          0.0006350000000000522,
+          0.0
+        ],
+        "rms_mm": 1.48727,
+        "max_mm": 1.48727
+      },
+      {
+        "clockwise_rotation_svg_to_kicad": 270,
+        "translation_mm": [
+          0.0,
+          0.0006350000000000522
+        ],
+        "rms_mm": 1.0534867359867421,
+        "max_mm": 1.0534867359867421
+      }
+    ]
+  },
+  {
+    "part": "C15127",
+    "matched_numbered_pads": 3,
+    "best": {
+      "clockwise_rotation_svg_to_kicad": 180,
+      "translation_mm": [
+        0.07048966666666671,
+        0.0
+      ],
+      "rms_mm": 0.19973409812937695,
+      "max_mm": 0.2824666666666668
+    },
+    "all_cardinal_fits": [
+      {
+        "clockwise_rotation_svg_to_kicad": 0,
+        "translation_mm": [
+          -0.6954896666666667,
+          0.0
+        ],
+        "rms_mm": 2.505519050008512,
+        "max_mm": 2.7824666666666666
+      },
+      {
+        "clockwise_rotation_svg_to_kicad": 90,
+        "translation_mm": [
+          -0.31249999999999994,
+          -0.3829896666666668
+        ],
+        "rms_mm": 1.7772899903942396,
+        "max_mm": 1.9776132292347877
+      },
+      {
+        "clockwise_rotation_svg_to_kicad": 180,
+        "translation_mm": [
+          0.07048966666666671,
+          0.0
+        ],
+        "rms_mm": 0.19973409812937695,
+        "max_mm": 0.2824666666666668
+      },
+      {
+        "clockwise_rotation_svg_to_kicad": 270,
+        "translation_mm": [
+          -0.31249999999999994,
+          0.3829896666666668
+        ],
+        "rms_mm": 1.7772899903942396,
+        "max_mm": 1.9776132292347877
+      }
+    ]
+  },
+  {
+    "part": "C23186",
+    "matched_numbered_pads": 2,
+    "best": {
+      "clockwise_rotation_svg_to_kicad": 0,
+      "translation_mm": [
+        0.0,
+        0.0
+      ],
+      "rms_mm": 0.0706199999999999,
+      "max_mm": 0.0706199999999999
+    },
+    "all_cardinal_fits": [
+      {
+        "clockwise_rotation_svg_to_kicad": 0,
+        "translation_mm": [
+          0.0,
+          0.0
+        ],
+        "rms_mm": 0.0706199999999999,
+        "max_mm": 0.0706199999999999
+      },
+      {
+        "clockwise_rotation_svg_to_kicad": 90,
+        "translation_mm": [
+          0.0,
+          0.0
+        ],
+        "rms_mm": 1.1179061608203078,
+        "max_mm": 1.1179061608203078
+      },
+      {
+        "clockwise_rotation_svg_to_kicad": 180,
+        "translation_mm": [
+          0.0,
+          0.0
+        ],
+        "rms_mm": 1.57938,
+        "max_mm": 1.57938
+      },
+      {
+        "clockwise_rotation_svg_to_kicad": 270,
+        "translation_mm": [
+          0.0,
+          0.0
+        ],
+        "rms_mm": 1.1179061608203078,
+        "max_mm": 1.1179061608203078
+      }
+    ]
+  },
+  {
+    "part": "C25981",
+    "matched_numbered_pads": 2,
+    "best": {
+      "clockwise_rotation_svg_to_kicad": 0,
+      "translation_mm": [
+        0.0,
+        0.0
+      ],
+      "rms_mm": 0.0706199999999999,
+      "max_mm": 0.0706199999999999
+    },
+    "all_cardinal_fits": [
+      {
+        "clockwise_rotation_svg_to_kicad": 0,
+        "translation_mm": [
+          0.0,
+          0.0
+        ],
+        "rms_mm": 0.0706199999999999,
+        "max_mm": 0.0706199999999999
+      },
+      {
+        "clockwise_rotation_svg_to_kicad": 90,
+        "translation_mm": [
+          0.0,
+          0.0
+        ],
+        "rms_mm": 1.1179061608203078,
+        "max_mm": 1.1179061608203078
+      },
+      {
+        "clockwise_rotation_svg_to_kicad": 180,
+        "translation_mm": [
+          0.0,
+          0.0
+        ],
+        "rms_mm": 1.57938,
+        "max_mm": 1.57938
+      },
+      {
+        "clockwise_rotation_svg_to_kicad": 270,
+        "translation_mm": [
+          0.0,
+          0.0
+        ],
+        "rms_mm": 1.1179061608203078,
+        "max_mm": 1.1179061608203078
+      }
+    ]
+  },
+  {
+    "part": "C22843",
+    "matched_numbered_pads": 2,
+    "best": {
+      "clockwise_rotation_svg_to_kicad": 0,
+      "translation_mm": [
+        0.0,
+        0.0
+      ],
+      "rms_mm": 0.0706199999999999,
+      "max_mm": 0.0706199999999999
+    },
+    "all_cardinal_fits": [
+      {
+        "clockwise_rotation_svg_to_kicad": 0,
+        "translation_mm": [
+          0.0,
+          0.0
+        ],
+        "rms_mm": 0.0706199999999999,
+        "max_mm": 0.0706199999999999
+      },
+      {
+        "clockwise_rotation_svg_to_kicad": 90,
+        "translation_mm": [
+          0.0,
+          0.0
+        ],
+        "rms_mm": 1.1179061608203078,
+        "max_mm": 1.1179061608203078
+      },
+      {
+        "clockwise_rotation_svg_to_kicad": 180,
+        "translation_mm": [
+          0.0,
+          0.0
+        ],
+        "rms_mm": 1.57938,
+        "max_mm": 1.57938
+      },
+      {
+        "clockwise_rotation_svg_to_kicad": 270,
+        "translation_mm": [
+          0.0,
+          0.0
+        ],
+        "rms_mm": 1.1179061608203078,
+        "max_mm": 1.1179061608203078
+      }
+    ]
+  },
+  {
+    "part": "C25804",
+    "matched_numbered_pads": 2,
+    "best": {
+      "clockwise_rotation_svg_to_kicad": 0,
+      "translation_mm": [
+        0.0,
+        0.0
+      ],
+      "rms_mm": 0.0706199999999999,
+      "max_mm": 0.0706199999999999
+    },
+    "all_cardinal_fits": [
+      {
+        "clockwise_rotation_svg_to_kicad": 0,
+        "translation_mm": [
+          0.0,
+          0.0
+        ],
+        "rms_mm": 0.0706199999999999,
+        "max_mm": 0.0706199999999999
+      },
+      {
+        "clockwise_rotation_svg_to_kicad": 90,
+        "translation_mm": [
+          0.0,
+          0.0
+        ],
+        "rms_mm": 1.1179061608203078,
+        "max_mm": 1.1179061608203078
+      },
+      {
+        "clockwise_rotation_svg_to_kicad": 180,
+        "translation_mm": [
+          0.0,
+          0.0
+        ],
+        "rms_mm": 1.57938,
+        "max_mm": 1.57938
+      },
+      {
+        "clockwise_rotation_svg_to_kicad": 270,
+        "translation_mm": [
+          0.0,
+          0.0
+        ],
+        "rms_mm": 1.1179061608203078,
+        "max_mm": 1.1179061608203078
+      }
+    ]
+  },
+  {
+    "part": "C22939",
+    "matched_numbered_pads": 2,
+    "best": {
+      "clockwise_rotation_svg_to_kicad": 0,
+      "translation_mm": [
+        0.0,
+        0.0
+      ],
+      "rms_mm": 0.0706199999999999,
+      "max_mm": 0.0706199999999999
+    },
+    "all_cardinal_fits": [
+      {
+        "clockwise_rotation_svg_to_kicad": 0,
+        "translation_mm": [
+          0.0,
+          0.0
+        ],
+        "rms_mm": 0.0706199999999999,
+        "max_mm": 0.0706199999999999
+      },
+      {
+        "clockwise_rotation_svg_to_kicad": 90,
+        "translation_mm": [
+          0.0,
+          0.0
+        ],
+        "rms_mm": 1.1179061608203078,
+        "max_mm": 1.1179061608203078
+      },
+      {
+        "clockwise_rotation_svg_to_kicad": 180,
+        "translation_mm": [
+          0.0,
+          0.0
+        ],
+        "rms_mm": 1.57938,
+        "max_mm": 1.57938
+      },
+      {
+        "clockwise_rotation_svg_to_kicad": 270,
+        "translation_mm": [
+          0.0,
+          0.0
+        ],
+        "rms_mm": 1.1179061608203078,
+        "max_mm": 1.1179061608203078
+      }
+    ]
+  },
+  {
+    "part": "C318884",
+    "matched_numbered_pads": 4,
+    "best": {
+      "clockwise_rotation_svg_to_kicad": 0,
+      "translation_mm": [
+        0.0,
+        0.0
+      ],
+      "rms_mm": 0.02588130599486809,
+      "max_mm": 0.02588130599486809
+    },
+    "all_cardinal_fits": [
+      {
+        "clockwise_rotation_svg_to_kicad": 0,
+        "translation_mm": [
+          0.0,
+          0.0
+        ],
+        "rms_mm": 0.02588130599486809,
+        "max_mm": 0.02588130599486809
+      },
+      {
+        "clockwise_rotation_svg_to_kicad": 90,
+        "translation_mm": [
+          0.0,
+          0.0
+        ],
+        "rms_mm": 4.993326530680725,
+        "max_mm": 5.008753821261332
+      },
+      {
+        "clockwise_rotation_svg_to_kicad": 180,
+        "translation_mm": [
+          0.0,
+          0.0
+        ],
+        "rms_mm": 7.061582672602509,
+        "max_mm": 7.061582672602509
+      },
+      {
+        "clockwise_rotation_svg_to_kicad": 270,
+        "translation_mm": [
+          0.0,
+          0.0
+        ],
+        "rms_mm": 4.993326530680725,
+        "max_mm": 5.008753821261332
+      }
+    ]
+  },
+  {
+    "part": "C5118826",
+    "matched_numbered_pads": 61,
+    "best": {
+      "clockwise_rotation_svg_to_kicad": 0,
+      "translation_mm": [
+        0.0003512295081967517,
+        1.7000420000000003
+      ],
+      "rms_mm": 0.0008983010629991003,
+      "max_mm": 0.001675626465736199
+    },
+    "all_cardinal_fits": [
+      {
+        "clockwise_rotation_svg_to_kicad": 0,
+        "translation_mm": [
+          0.0003512295081967517,
+          1.7000420000000003
+        ],
+        "rms_mm": 0.0008983010629991003,
+        "max_mm": 0.001675626465736199
+      },
+      {
+        "clockwise_rotation_svg_to_kicad": 90,
+        "translation_mm": [
+          1.6302858688524589,
+          2.2880561475409835
+        ],
+        "rms_mm": 6.9937691129249,
+        "max_mm": 11.811836986315928
+      },
+      {
+        "clockwise_rotation_svg_to_kicad": 180,
+        "translation_mm": [
+          1.0422717213114754,
+          3.9179907868852455
+        ],
+        "rms_mm": 9.890906167672131,
+        "max_mm": 16.704464822458043
+      },
+      {
+        "clockwise_rotation_svg_to_kicad": 270,
+        "translation_mm": [
+          -0.5876629180327868,
+          3.3299766393442627
+        ],
+        "rms_mm": 6.994084587688159,
+        "max_mm": 11.811843724688632
+      }
+    ]
+  },
+  {
+    "part": "C140288",
+    "matched_numbered_pads": 17,
+    "best": {
+      "clockwise_rotation_svg_to_kicad": 0,
+      "translation_mm": [
+        -0.0004706470588235341,
+        -0.0004706470588235341
+      ],
+      "rms_mm": 0.036276052554368936,
+      "max_mm": 0.038079326634737364
+    },
+    "all_cardinal_fits": [
+      {
+        "clockwise_rotation_svg_to_kicad": 0,
+        "translation_mm": [
+          -0.0004706470588235341,
+          -0.0004706470588235341
+        ],
+        "rms_mm": 0.036276052554368936,
+        "max_mm": 0.038079326634737364
+      },
+      {
+        "clockwise_rotation_svg_to_kicad": 90,
+        "translation_mm": [
+          0.0004706470588235504,
+          -0.0004706470588235504
+        ],
+        "rms_mm": 2.1720628198018117,
+        "max_mm": 2.3610268874641642
+      },
+      {
+        "clockwise_rotation_svg_to_kicad": 180,
+        "translation_mm": [
+          0.00047064705882347857,
+          0.00047064705882347857
+        ],
+        "rms_mm": 3.0715464890412885,
+        "max_mm": 3.3210409417795166
+      },
+      {
+        "clockwise_rotation_svg_to_kicad": 270,
+        "translation_mm": [
+          -0.0004706470588235504,
+          0.0004706470588235504
+        ],
+        "rms_mm": 2.1720628198018117,
+        "max_mm": 2.3610268874641642
+      }
+    ]
+  },
+  {
+    "part": "C96341",
+    "matched_numbered_pads": 2,
+    "best": {
+      "clockwise_rotation_svg_to_kicad": 0,
+      "translation_mm": [
+        0.0,
+        0.0
+      ],
+      "rms_mm": 0.0007000000000000339,
+      "max_mm": 0.0007000000000000339
+    },
+    "all_cardinal_fits": [
+      {
+        "clockwise_rotation_svg_to_kicad": 0,
+        "translation_mm": [
+          0.0,
+          0.0
+        ],
+        "rms_mm": 0.0007000000000000339,
+        "max_mm": 0.0007000000000000339
+      },
+      {
+        "clockwise_rotation_svg_to_kicad": 90,
+        "translation_mm": [
+          0.0,
+          0.0
+        ],
+        "rms_mm": 1.0601653125810144,
+        "max_mm": 1.0601653125810144
+      },
+      {
+        "clockwise_rotation_svg_to_kicad": 180,
+        "translation_mm": [
+          0.0,
+          0.0
+        ],
+        "rms_mm": 1.4992999999999999,
+        "max_mm": 1.4992999999999999
+      },
+      {
+        "clockwise_rotation_svg_to_kicad": 270,
+        "translation_mm": [
+          0.0,
+          0.0
+        ],
+        "rms_mm": 1.0601653125810144,
+        "max_mm": 1.0601653125810144
+      }
+    ]
+  }
+]
