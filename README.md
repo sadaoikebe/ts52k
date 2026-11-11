@@ -21,7 +21,7 @@
 
 回路図は無線版へ更新しました。既存の配置を引き継いだ親シートと、MDBT50Q・電源容量・LF水晶の子シートの2枚です。[回路図PDF](pcb/schematic-review/ts52k-wireless.pdf)と[配置元・確認記録](notes/wireless-schematic-layout.md)を参照してください。PCBは2026-11-10にU5を西端へ移し、GPIO割当てと西側の配置・配線を更新しました。[配置画像・記録](pcb/placement-review/README.md)を参照してください。取り込み判断・実機検証・無線版の製造データ作成は未了です。
 
-現行の決定は[無線版の決定事項](notes/wireless-decisions.md)に集約しています。BOMは19品種・81点で、回路図から参照番号付きで照合済みです。ERCはエラー・警告とも0件。電池・ケース、SWD機材の購入判断は後日です。
+現行の決定は[無線版の決定事項](notes/wireless-decisions.md)に集約しています。BOMは20品種・82点で（2026-11-11に電池の逆接続保護Q1を追加）、回路図から参照番号付きで照合済みです。ERCはエラー・警告とも0件。電池・ケース、SWD機材の購入判断は後日です。
 
 使用しているKiCad MCPとローカル開発環境は[KiCad開発環境の記録](pcb/DEVELOPMENT.md)を参照してください。
 
@@ -41,7 +41,7 @@ case/    FreeCAD ソース、3Dプリント用 3MF、プレート加工用 DXF
 | ライブラリ | 内容 |
 | :--- | :--- |
 | `MX_Only.pretty` | Cherry MX キースイッチのフットプリント（1U〜3U、7種） |
-| `ts52k.kicad_sym` / `.pretty` | 無線版の選定済み19品種とMXシンボル。採用ランド14種を同梱 |
+| `ts52k.kicad_sym` / `.pretty` | 無線版の選定済み20品種とMXシンボル。採用ランド15種を同梱 |
 | `tag-connect.kicad_sym` | Tag-Connect TC2030のSWDシンボル。既定ランドは`ts52k.pretty`に同梱 |
 
 選定済み部品の登録、回路図への反映とPCBへの取り込みは完了しています。[ライブラリの出典・変更・削除内容](pcb/LIBRARIES.md)と[部品ごとのシンボル／ランド対応表](pcb/wireless-library.csv)を参照してください。全配線を接続した後の設計レビュー・実機検証は残っています。
@@ -113,7 +113,7 @@ nice!nano v2の公開回路図はBQ24075表記です。量産でBQ24072を使っ
 
 セルの容量はまだ決まっていないので、500 mA（EN1 = High、EN2 = Low）にはしません。nice!nano の公称も 100 mA です。BQ24072 に過放電保護は無く、短絡保護はあります。基板に保護 IC は足しません。セルを切り離す SYSOFF は 75 と 79 のピンで、72 にはありません。ロードスイッチは足しません。
 
-コネクタはJST S2B-PH-SM4-TB(LF)(SN) / C295747で、基板側は1=BAT+、2=GNDに統一します。電池の容量・外形・製品は後で選び、ケーブルの実際の極性を基板に合わせます。PHシリーズ共通の極性規約を意味しません。
+コネクタはJST S2B-PH-SM4-TB(LF)(SN) / C295747で、基板側は1=BAT+、2=GNDに統一します。コネクタの1番とBQ24072のBATの間には、逆接続保護のPチャネルMOSFET（Q1、AO3401A / C15127）が直列に入っています。逆向きの電池をつないでもQ1がオフのままで、充電ICとモジュールに負電圧がかかりません。極性の確認が不要になるわけではありません（[手順書](notes/brick-avoidance.md)）。電池の容量・外形・製品は後で選び、ケーブルの実際の極性を基板に合わせます。PHシリーズ共通の極性規約を意味しません。
 
 ### キーの配線
 
@@ -150,7 +150,7 @@ SW2 は型番未確定の EC11 互換です。押し込みは `col6` に入っ�
 
 ## 部品リスト
 
-回路図の実装対象BOMは**19品種・81点**です。[参照番号付きBOM](pcb/schematic-review/bom.csv)を回路図から生成し、[選定済みBOM](notes/wireless-bom-draft.csv)と一致することを確認しました。選定根拠は[先行例との対応](notes/wireless-bom-candidates.md)、実装条件は[ランド・配置の照合](notes/wireless-layout-check.md)にまとめています。実装座標はPCB移行後です。
+回路図の実装対象BOMは**20品種・82点**です。[参照番号付きBOM](pcb/schematic-review/bom.csv)を回路図から生成し、[選定済みBOM](notes/wireless-bom-draft.csv)と一致することを確認しました。選定根拠は[先行例との対応](notes/wireless-bom-candidates.md)、実装条件は[ランド・配置の照合](notes/wireless-layout-check.md)にまとめています。実装座標はPCB移行後です。
 
 ### 残すもの、足すもの
 

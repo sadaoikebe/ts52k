@@ -1,5 +1,7 @@
 # Revision 0.2 基板レイアウト
 
+2026-11-11にブランチ claude-fable-mosfet-2026-11-11 で逆接続保護のQ1をJ3の南西へ追加した（未マージ。[配置・配線記録](placement-review/README.md)の冒頭）。その場合の製造データはBOM 21行・CPL 82点。
+
 現在のPCBは無線版で、2026-11-10にU5を西端へ移し、GPIO割当てと西側の配置・配線を更新済み。[配置画像・変更記録](placement-review/README.md)と[現在のGPIO表](../notes/wireless-pin-assignment.md)を参照。取り込み判断は完了し、`wireless` にマージ・push済み（9986174）。無線版の製造データは2026-11-11に再生成済みで、`pcb/jlcpcb/` は無線版の出力（ガーバー、BOM 20行、CPL 81点・全て裏面、LCSC番号の欠けなし）。実機検証は未了。以下のRP2040配置・配線・DRCの記述は移行前の記録。
 
 この文書は旧RP2040版の配置・出力時の記録。無線版のライブラリ整理後のERC/DRC結果ではない。無線版の現状は[決定事項](../notes/wireless-decisions.md)と[ライブラリ](LIBRARIES.md)を参照する。

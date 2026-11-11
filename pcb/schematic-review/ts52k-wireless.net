@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>/home/hatch/workspace/ts52k-mosfet/pcb/ts52k.kicad_sch</source>
-    <date>2026-11-10T23:57:44</date>
+    <date>2026-11-11T00:14:09</date>
     <tool>Eeschema 10.0.8-10.0.8~ubuntu24.04.1</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>

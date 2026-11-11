@@ -1,0 +1,128 @@
+{
+ "q1": {
+  "pos": [
+   24.97,
+   68.73
+  ],
+  "layer": "B.Cu",
+  "orientation": 0.0,
+  "courtyard": [
+   23.045,
+   67.035,
+   26.895,
+   70.425
+  ],
+  "pads": {
+   "1": {
+    "net": "GND",
+    "pos": [
+     24.0325,
+     69.68
+    ]
+   },
+   "2": {
+    "net": "BAT",
+    "pos": [
+     24.0325,
+     67.78
+    ]
+   },
+   "3": {
+    "net": "/BAT_CONN",
+    "pos": [
+     25.9075,
+     68.73
+    ]
+   }
+  },
+  "courtyard_note": "outline extents [x0,y0,x1,y1] mm"
+ },
+ "courtyard_gap_mm": {
+  "D3": 2.19,
+  "SW1": 1.33,
+  "C29": 1.82,
+  "R20": 0.495,
+  "J3": 0.01,
+  "C30": 0.27
+ },
+ "min_copper_clearance_B_Cu_mm": {
+  "Q1.1 GND": [
+   0.235,
+   "track [D-]"
+  ],
+  "Q1.2 BAT": [
+   0.22,
+   "track [USB_VBUS]"
+  ],
+  "Q1.3 /BAT_CONN": [
+   0.33,
+   "track [GND]"
+  ],
+  "via Net-(D3-A) (22.75,69.55)": [
+   0.216,
+   "track [D-]"
+  ],
+  "via Net-(D3-A) (24.75,65.50)": [
+   0.351,
+   "track [/BAT_CONN]"
+  ],
+  "via BAT (23.80,66.50)": [
+   0.426,
+   "track [USB_VBUS]"
+  ],
+  "track /BAT_CONN (25.55,64.00)": [
+   0.3,
+   "J3.2 [GND]"
+  ],
+  "track /BAT_CONN (25.55,68.37)": [
+   0.676,
+   "track [GND]"
+  ],
+  "track /BAT_CONN (26.40,64.00)": [
+   0.45,
+   "track [col2]"
+  ]
+ },
+ "power_tracks": {
+  "BAT": {
+   "length_mm": 23.183,
+   "min_width_mm": 0.3
+  },
+  "/BAT_CONN": {
+   "length_mm": 5.728,
+   "min_width_mm": 0.3
+  }
+ },
+ "nearest_holes_to_Q1": [
+  [
+   9.47,
+   "MX3",
+   "",
+   1.75
+  ],
+  [
+   9.52,
+   "MX8",
+   "",
+   1.75
+  ],
+  [
+   9.66,
+   "MX8",
+   "1",
+   1.47
+  ],
+  [
+   10.52,
+   "MX3",
+   "2",
+   1.47
+  ]
+ ],
+ "drc": {
+  "violations": 9,
+  "unconnected": 0,
+  "schematic_parity": 0,
+  "kicad": "10.0.8"
+ }
+}

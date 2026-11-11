@@ -4,11 +4,11 @@
 
 ## 回路図で選ぶもの
 
-- `ts52k`：選定済み19品種のシンボルと既存のMXスイッチ。19品種には`MPN`、`Manufacturer`、`LCSC`、`JLCClass`と`ts52k:`のフットプリントを設定済み。抵抗・容量・インダクタ・水晶の`Value`には値を表示し、完全型番は`MPN`で保持する。
+- `ts52k`：選定済み20品種（2026-11-11にAO3401Aを追加）のシンボルと既存のMXスイッチ。20品種には`MPN`、`Manufacturer`、`LCSC`、`JLCClass`と`ts52k:`のフットプリントを設定済み。抵抗・容量・インダクタ・水晶の`Value`には値を表示し、完全型番は`MPN`で保持する。
 - `tag-connect:TC2030_IDC_NL`：SWD接点。部品実装がないためBOM・実装座標出力から除外。既存IDを維持し、ライブラリの既定ランドを`ts52k:`に変更した。1=VTref、2=SWDIO、3=nRESET、4=SWCLK、5=GND、6=NC。
 - `MX_Only`：現在使用している7種類のMXキー用フットプリント。
 
-[部品対応表](wireless-library.csv)に19品種・81点のシンボルIDとフットプリントIDを記載した。[仮BOM](../notes/wireless-bom-draft.csv)と対応する。SWDは実装部品でないため19品種の外にある。キースイッチと既存エンコーダもPCBA用の仮BOMには含めない。
+[部品対応表](wireless-library.csv)に20品種・82点のシンボルIDとフットプリントIDを記載した。[仮BOM](../notes/wireless-bom-draft.csv)と対応する。SWDは実装部品でないため19品種の外にある。キースイッチと既存エンコーダもPCBA用の仮BOMには含めない。
 
 `sym-lib-table`と`fp-lib-table`は`${KIPRJMOD}`を使い、他のPCでも同じファイルを参照する。プロジェクトのピン留めには`ts52k`、`MX_Only`、`tag-connect`を設定した。KiCad全体の標準ライブラリ設定には変更を加えていない。
 
@@ -25,6 +25,7 @@
 | H5VU10U | 既存`ts52k:H5VU10U` / `Diode_SMD:D_SOD-882D` | 下記のメーカー推奨ランドへ変更 |
 | リセットスイッチ | `Switch:SW_Push` / 既存`rp2040:SW_Tactile_XKB_TS-1187A_5.1x5.1mm` | 既存採用ランドを`ts52k`へコピー。1・2各2パッドの定義を継続 |
 | 1N4148W | `Device:D_Small` / `Diode_SMD:D_SOD-123` | 既存マトリクスの配置・端点を維持するため公式D_Small図形を採用。1=K、2=A |
+| AO3401A（Q1、2026-11-11追加） | `Transistor_FET:AO3401A`（`TP0610T` の図形・ピンを継承する定義）／ `Package_TO_SOT_SMD:SOT-23` | KiCad 10.0.8の公式定義から、継承をほどいた独立シンボルとして登録。1=G、2=S、3=D。ランドは無変更で同梱 |
 | SWD | 既存`tag-connect:TC2030_IDC_NL` / `Connector:Tag-Connect_TC2030-IDC-NL_2x03_P1.27mm_Vertical` | 標準ランドを同梱。6接点にペースト無し、位置決め穴3個。回路図のピン名文字を1 mmへ縮小して重なりを解消 |
 
 コピー元のライブラリIDとSHA-256を[library-sources.json](library-sources.json)に保存した。シンボルのハッシュは元の公式`.kicad_sym`ファイル全体、フットプリントは元の`.kicad_mod`のもの。独立したシンボルとして同梱しているため、他のローカルシンボルへの継承依存はない。
@@ -53,6 +54,8 @@ BQ24072は[TIの現行RGT0016C図](https://www.ti.com/lit/ds/symlink/bq24072.pdf
 ライブラリは無線版で使用するものに整理した。無線版回路図への移行で旧RP2040子シートと未使用の埋め込みシンボルも除去済み。PCBの旧部品と旧ライブラリIDも仮配置時に取り除いた。
 
 ## 確認結果
+
+2026-11-11にKiCad 10.0.8で `check_libraries.py` を再実行し、21個の`ts52k`シンボルと15個のフットプリント、20品種・82点でPASS（[結果](library-validation.json)）。以下は当初の確認記録。
 
 KiCad 10.0.5で20個の`ts52k`シンボルと14個のフットプリントをSVG出力し、全フットプリントをKiCad APIでも読み込んだ。19品種の型番・数量・LCSC番号と仮BOMの一致、全シンボルのピン番号と対応ランドのパッド番号の一致、モジュールの主要電源・USB・SWD端子番号、水晶とESDのランド寸法、SWDのペースト無しを確認済み。固定金具MP、穴、ペーストだけのパッドは電気端子として数えない。
 
