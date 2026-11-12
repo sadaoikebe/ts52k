@@ -126,3 +126,56 @@ def island_vias(bd, K):
             print('island without via, no legal spot:', bb2)
     print('island vias', added)
     return added
+
+
+def fence(bd, K):
+    """Ground vias around and inside the digital island (design-spec 5-11): L1 there is electrodes, so a via can
+    only sit on a guard ring (7.35 .. 8.15 mm from a key centre) or clear of every ring (>= 9.0 mm). Candidates are
+    taken on the rings of the keys over the island and on a 1 mm grid between them; a via is placed wherever it
+    clears all copper by 0.3 mm and other ground vias by 2 mm."""
+    b = bd.b
+    X0, Y0, X1, Y1 = 12.0, 46.6, 50.0, 86.0
+    segs, pts, gnd = [], [], []
+    for t in b.GetTracks():
+        if t.Type() == pcbnew.PCB_VIA_T:
+            p = t.GetPosition()
+            (gnd if t.GetNetname() == 'GND' else pts).append((mm(p.x), mm(p.y), mm(t.GetWidth(L1)) / 2))
+        else:
+            s_, e = t.GetStart(), t.GetEnd()
+            segs.append((mm(s_.x), mm(s_.y), mm(e.x), mm(e.y), mm(t.GetWidth()) / 2))
+    for f in b.GetFootprints():
+        if f.GetReference().startswith('MX'):
+            continue
+        for p in f.Pads():
+            q = p.GetPosition()
+            bb = p.GetBoundingBox()
+            pts.append((mm(q.x), mm(q.y), math.hypot(mm(bb.GetWidth()), mm(bb.GetHeight())) / 2))
+    cand = []
+    for k, (kx, ky) in K.items():
+        if kx < X1 + 9 and ky < Y1 + 9:
+            for a in range(0, 360, 15):
+                cand.append((kx + 7.75 * math.cos(math.radians(a)), ky + 7.75 * math.sin(math.radians(a))))
+    y = Y0
+    while y <= Y1:
+        x = X0
+        while x <= X1:
+            cand.append((x, y))
+            x += 1.0
+        y += 1.0
+    n = 0
+    for x, y in cand:
+        if not (X0 <= x <= X1 and Y0 <= y <= Y1):
+            continue
+        r = min(math.hypot(x - kx, y - ky) for kx, ky in K.values())
+        if not (7.35 <= r <= 8.15 or r >= 9.0):
+            continue
+        if any(seg_dist(x, y, *s_[:4]) < s_[4] + 0.3 + 0.3 for s_ in segs):
+            continue
+        if any(math.hypot(x - px, y - py) < pr + 0.3 + 0.3 for px, py, pr in pts):
+            continue
+        if any(math.hypot(x - px, y - py) < 2.0 for px, py, pr in gnd):
+            continue
+        bd.via('GND', x, y)
+        gnd.append((x, y, 0.3))
+        n += 1
+    print('island fence vias', n)

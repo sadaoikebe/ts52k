@@ -68,6 +68,13 @@ def run(bd, A, Bp, K, SV, DV):
     u44 = bd.pad('U4', 4)
     qspi_north(bd)                                   # frees the pocket around the flash ground pin
     T('GND', [u44, (34.3, u44[1]), (35.3, 59.4), (37.0, 61.1), (38.12, 62.91)], 0.25)
+    c9 = bd.pad('C9', 2)                             # C9 ground: explicit via (the pour reached it with one thermal spoke)
+    T('GND', [c9, (c9[0], 56.3)], 0.25)
+    bd.via('GND', c9[0], 56.3)
+    import pcbnew
+    for p in bd.fp('C9').Pads():
+        if p.GetNumber() == '2':
+            p.SetLocalZoneConnection(pcbnew.ZONE_CONNECTION_FULL)
     c14 = bd.pad('C14', 2)                           # C14 ground is fenced in by the MUX A lines: own via
     T('GND', [c14, (c14[0], 70.45)], 0.25)
     bd.via('GND', c14[0], 70.45)

@@ -63,6 +63,7 @@ def keys_stage(bd):
 
 
 # ---------------------------------------------------------------- rows
+ROW4_STEP = {'MX67': -0.9, 'MX23': -1.3, 'MX82': -3.2}
 ROW_FEED = {1: (18.8, 64.29), 2: (19.4, 83.34), 3: (20.3, 102.04), 4: (21.4, 102.74)}
 
 
@@ -79,11 +80,13 @@ def rows_stage(bd):
             bd.track(net, [(35.1, gy), (35.1, 64.9)], L1, 0.25)
             xs[r].append(dx)
             continue
-        if r == 4 and any(abs(dx - DV(q)[0]) < 0.9 for q in K if ROW_OF[q] == 3):
-            # a row-3 key right above uses the same x: step the row-4 bus via aside
-            bd.via(net, dx + 0.9, gy, 0.6, 0.3)
-            bd.track(net, [(dx, dy), (dx, gy + 1.7), (dx + 0.9, gy + 0.8), (dx + 0.9, gy)], L4, 0.25)
-            xs[r].append(dx + 0.9)
+        if k in ROW4_STEP:
+            # row-4 bus via stepped west: MX67 has a row-3 via at the same x right above; at MX23 and MX82 the
+            # column arrives on a diagonal / passes overhead and would come within 1.5 mm of the via (5-9)
+            s_ = ROW4_STEP[k]
+            bd.via(net, dx + s_, gy, 0.6, 0.3)
+            bd.track(net, [(dx, dy), (dx, gy + 0.8 - s_), (dx + s_, gy + 0.8), (dx + s_, gy)], L4, 0.25)
+            xs[r].append(dx + s_)
             continue
         bd.via(net, dx, gy, 0.6, 0.3)
         bd.track(net, [(dx, dy), (dx, gy)], L4, 0.25)        # lead-in on L4
@@ -306,6 +309,7 @@ def run(bd, keys, stage):
     west.run(bd, K, SV, DV)
     import finish
     finish.run(bd, K)
+    finish.fence(bd, K)
     zones_stage(bd)
     fill(bd)
     import finish as _f

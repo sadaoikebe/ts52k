@@ -1,7 +1,7 @@
 #!/bin/bash
 # drc.sh : run DRC, print a summary (counts by type, then details filtered by an optional grep pattern)
 P=$(dirname $(dirname $(realpath $0)))
-kicad-cli pcb drc --schematic-parity --severity-all --format json -o /tmp/tc52-drc.json $P/ts52k.kicad_pcb >/dev/null 2>&1
+kicad-cli pcb drc --schematic-parity --all-track-errors --refill-zones --severity-all --format json -o /tmp/tc52-drc.json $P/ts52k.kicad_pcb >/dev/null 2>&1
 git -C $P checkout ts52k.kicad_pro 2>/dev/null
 python3 - "$@" <<'PY'
 import json,sys,collections

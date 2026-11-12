@@ -95,9 +95,9 @@ def main():
             raise RuntimeError("ERC errors: inspect " + str(assembly_dir / "erc.json"))
 
         run(cli, "sch", "export", "bom", "--fields", "Reference,Value,Footprint,LCSC,MPN",
-            "--labels", "Reference,Value,Footprint,LCSC,MPN", "-o", raw_bom, SCHEMATIC)
+            "--labels", "Reference,Value,Footprint,LCSC,MPN", "--exclude-dnp", "-o", raw_bom, SCHEMATIC)
         # Include mixed SMD/PTH J1 regardless of the footprint assembly attribute.
-        run(cli, "pcb", "export", "pos", "--side", "back", "--format", "csv", "--units", "mm",
+        run(cli, "pcb", "export", "pos", "--side", "back", "--format", "csv", "--units", "mm", "--exclude-dnp",
             "-o", raw_positions, BOARD)
         with raw_bom.open(encoding="utf-8-sig", newline="") as source:
             bom_rows = list(csv.DictReader(source))
@@ -108,7 +108,8 @@ def main():
         pos = {row["Ref"]: row for row in positions}
         if len(bom) != len(bom_rows) or len(pos) != len(positions):
             raise RuntimeError("Duplicate component references in BOM or position file")
-        hand_soldered = {ref for ref in bom if re.fullmatch(r"MX\d+", ref)} | {"SW2", "J2"}
+        # TC52: the keys are bare electrodes (not in the BOM); the encoder is hand-soldered, J2 is contacts only
+        hand_soldered = {"SW2", "J2"} & set(bom)
         expected = set(bom) - hand_soldered
         if set(pos) != expected:
             raise RuntimeError(f"BOM/CPL mismatch: missing positions {sorted(expected - set(pos))}; "
@@ -136,7 +137,7 @@ def main():
         ]
 
         run(cli, "pcb", "export", "gerbers", "--layers",
-            "F.Cu,B.Cu,F.Mask,B.Mask,F.SilkS,B.SilkS,F.Paste,B.Paste,Edge.Cuts",
+            "F.Cu,In1.Cu,In2.Cu,B.Cu,F.Mask,B.Mask,F.SilkS,B.SilkS,F.Paste,B.Paste,Edge.Cuts",
             "--subtract-soldermask", "--check-zones", "-o", plotted, BOARD)
         run(cli, "pcb", "export", "drill", "--format", "excellon", "--drill-origin", "absolute",
             "--excellon-separate-th", "--excellon-units", "mm", "-o", plotted, BOARD)
@@ -150,7 +151,9 @@ def main():
             for path in sorted(plotted.iterdir()):
                 if path.is_file():
                     archive.write(path, path.name)
-        sources = [BOARD, PROJECT, SCHEMATIC, PCB_DIR / "rp2040.kicad_sch", PCB_DIR / "ts52k.kicad_dru",
+        sources = [BOARD, PROJECT, SCHEMATIC, PCB_DIR / "rp2040.kicad_sch", PCB_DIR / "ec.kicad_sch", PCB_DIR / "ts52k.kicad_dru",
+                   PCB_DIR / "tc52.kicad_sym", PCB_DIR / "tc52.pretty" / "ecs_pad.kicad_mod",
+                   PCB_DIR / "tc52.pretty" / "ecs_pad_edge.kicad_mod", PCB_DIR / "tc52.pretty" / "Hole_M2_Pad.kicad_mod",
                    PCB_DIR / "ts52k.kicad_sym", PCB_DIR / "sym-lib-table", PCB_DIR / "fp-lib-table",
                    PCB_DIR / "tag-connect.kicad_sym",
                    PCB_DIR / "rp2040.pretty" / "IC57_RP2040.kicad_mod",
@@ -158,6 +161,7 @@ def main():
         manifest = {
             "source_sha256": {str(path.relative_to(PCB_DIR)): sha256(path) for path in sources},
             "output_sha256": {str(path.relative_to(JLC_DIR)): sha256(path) for path in [output_zip, output_bom, output_cpl]},
+            "copper_layers": 4,
             "assembly_references": len(expected),
             "bom_line_items": len(jlc_bom),
             "drc_warnings": sum(v["severity"] == "warning" for v in drc["violations"]),

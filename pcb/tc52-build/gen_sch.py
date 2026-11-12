@@ -236,7 +236,7 @@ def build_ec():
             if mx == name:
                 nets[str(M.X_PIN[xn])] = f'COL{c}'
         sh.place('tc52:CD4051B', ref, 'CD4051BM96', xm, ym, nets, lcsc='C21379', mpn='CD4051BM96')
-        sh.place('Device:C', dec, '100n', xm + 38.1, ym, {'1': '+3V3M', '2': 'GND'}, fp=C0402, lcsc='C1525', mpn='CL05B104KO5NNNC')
+        sh.place('Device:C', dec, '0.1u', xm + 38.1, ym, {'1': '+3V3M', '2': 'GND'}, fp=C0402, lcsc='C1525', mpn='CL05B104KO5NNNC')
     # --- AFE ---------------------------------------------------------------
     ya = 304.8
     sh.text('Analog front end (TC69 circuit): SENSE node (C30 reference cap, purge by GPIO26) -> R22 -> non-inverting x44 -> ADC2', 25.4, ya - 25.4, 2.5)
@@ -248,9 +248,9 @@ def build_ec():
     sh.place('tc52:AD8601', 'U6', 'AD8601ARTZ', 121.92, ya, {'3': 'AMP_IN', '4': 'AMP_FB', '1': 'AMP_OUT', '5': '+3V3A', '2': 'GND'},
              lcsc='C41249', mpn='AD8601ARTZ-REEL7')
     sh.place('Device:R', 'R21', '43k 1%', 154.94, ya, {'1': 'AMP_OUT', '2': 'AMP_FB'}, fp=R0402, lcsc='C881384', mpn='CR0402F43K0Q10Z', note='design-spec R2 (gain trim seat)')
-    sh.place('Device:R', 'R20', '1k 1%', 177.8, ya, {'1': 'AMP_FB', '2': 'GND'}, fp=R0402, lcsc='C11702', mpn='0402WGF1001TCE', note='design-spec R1')
+    sh.place('Device:R', 'R20', '1k', 177.8, ya, {'1': 'AMP_FB', '2': 'GND'}, fp=R0402, lcsc='C11702', mpn='0402WGF1001TCE', note='design-spec R1')
     sh.place('Device:R', 'R23', '0', 200.66, ya, {'1': 'AMP_OUT', '2': 'ADC'}, fp=R0402, lcsc='C17168', mpn='0402WGF0000TCE', note='design-spec R_ADC')
-    sh.place('Device:C', 'C33', '100n', 223.52, ya, {'1': '+3V3A', '2': 'GND'}, fp=C0402, lcsc='C1525', mpn='CL05B104KO5NNNC')
+    sh.place('Device:C', 'C33', '0.1u', 223.52, ya, {'1': '+3V3A', '2': 'GND'}, fp=C0402, lcsc='C1525', mpn='CL05B104KO5NNNC')
     sh.place('tc52:TestPoint', 'TP1', 'SENSE', 246.38, ya, {'1': 'SENSE'}, in_bom=False)
     sh.place('tc52:TestPoint', 'TP2', 'ADC', 261.62, ya, {'1': 'AMP_OUT'}, in_bom=False)
     sh.place('tc52:TestPoint', 'TP4', 'GND', 276.86, ya, {'1': 'GND'}, in_bom=False)
