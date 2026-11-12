@@ -1,10 +1,10 @@
 {
   "source_sha256": {
-    "ts52k.kicad_pcb": "f3bd24cb69c8acd8425198c5152d7d9c43f39ae4725e9275957b57545ef4a329",
+    "ts52k.kicad_pcb": "ac7dc53dd9b743d1681dbc2b772dcf02e85cf76dd05361e4f441fa762977410f",
     "ts52k.kicad_pro": "633fd67be9f171c5faf1c8ee3fe30595ef5622d54d99c09567cc4255423b8398",
     "ts52k.kicad_sch": "342d7b68a7e97282ec1229b702c405d1fc52605b028752add21c65d9107c5dd2",
     "rp2040.kicad_sch": "e7900cc01be92b62b58ea34b7f16c2418c5bd2f25a480fdd095aa3e1bd8da182",
-    "ec.kicad_sch": "bf45d648da25dddcce60f2ec6941e0d9841627b9bfee66267275fc70cb2cfeb4",
+    "ec.kicad_sch": "71df825f82fb47546e691c334a64624d0a69dc9dfa390c1555cac29344627dd5",
     "ts52k.kicad_dru": "cbe3e25e719c5f237acf5faa406e020dc28f3449544ad4714938115d2fece5e0",
     "tc52.kicad_sym": "6063cbf87792c03942cc8a5c0769270b5dcf168e6b7e8960fb54cc690985e503",
     "tc52.pretty/ecs_pad.kicad_mod": "7a1c1aee832cffe0175ad27e299103027921bf04b5747571334a704b85ef9427",
@@ -18,13 +18,13 @@
     "rp2040.pretty/SW_Tactile_XKB_TS-1187A_5.1x5.1mm.kicad_mod": "4b692e5fbd9bc5822af8cca4c166c9c9773f4d8ab855c27a16479ab579437daf"
   },
   "output_sha256": {
-    "gerber/ts52k-gerbers.zip": "2db13169e5ba2698947fc374a6e147603a894b94b07b277f1eeb93e0207c3e02",
-    "assembly/ts52k-bom.csv": "12b78e6a48b54df9ceab01e4e0e81f9aa2c1764662514f5588219617e32eb406",
+    "gerber/ts52k-gerbers.zip": "fe7ba0a7dccb601e17fa90fef47af2e7c357c983d1464e063a8747a95bee3fe3",
+    "assembly/ts52k-bom.csv": "52dfcca6e139a47091bf2ce2a6a34da21685d0d83fedbfb08f8b4f16ba0e67a4",
     "assembly/ts52k-cpl.csv": "edd3a8d6cd7d3e6e91578921519fec00362185ab34520888c23bcbe570904b68"
   },
   "copper_layers": 4,
   "assembly_references": 76,
-  "bom_line_items": 24,
+  "bom_line_items": 22,
   "drc_warnings": 15,
   "erc_warnings": 6
 }
