@@ -2588,11 +2588,11 @@
 		(uuid "7025ef9e-d1cd-54fc-91d3-583db369c22d")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}" (at 502.92 146.05 0) (hide yes) (effects (font (size 1.27 1.27))))
 	)
-	(text "Row drive: GPIO18..21 -> 100R -> ROW1..4"
+	(text "Row drive: GPIO21..18 -> 100R -> ROW1..4 (ROW1 = GPIO21)"
 		(exclude_from_sim no)
 		(at 25.40 170.18 0)
 		(effects (font (size 2.5 2.5)) (justify left bottom))
-		(uuid "c385e2df-035b-5241-ab39-a84d5398417f")
+		(uuid "c785419f-8367-5b7c-b444-3f35d1c2033f")
 	)
 	(symbol
 		(lib_id "Device:R")
@@ -3120,11 +3120,11 @@
 		(uuid "0c28b2cc-71f2-5cbf-b9c0-3ea3068961eb")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}" (at 190.50 240.03 0) (hide yes) (effects (font (size 1.27 1.27))))
 	)
-	(text "Analog front end (TC69 circuit): SENSE node (C30 reference cap, purge by GPIO26) -> R22 -> non-inverting x44 -> ADC2"
+	(text "Analog front end (TC69 circuit): SENSE node (C30 reference cap, purge by GPIO28) -> R22 -> non-inverting x44 -> ADC0 (GPIO26)"
 		(exclude_from_sim no)
 		(at 25.40 279.40 0)
 		(effects (font (size 2.5 2.5)) (justify left bottom))
-		(uuid "033755bb-28c3-5caa-aa9b-09a31ae50e81")
+		(uuid "f941325a-a010-5e95-89bc-623ccbc7dc19")
 	)
 	(symbol
 		(lib_id "Device:C")

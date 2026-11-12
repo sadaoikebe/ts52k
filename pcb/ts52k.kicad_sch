@@ -1486,7 +1486,7 @@
 		(property "Sheetfile" "ec.kicad_sch" (at 152.4 102.3 0) (effects (font (size 1.27 1.27)) (justify left top)))
 		(instances (project "ts52k" (path "/a46aaf04-b440-466e-8b21-108f618a37ed" (page "3"))))
 	)
-	(text "TC52: capacitive matrix (52 electrodes), column MUX x2 and analog front end\nare on sheet ec. Nets are joined by global labels:\nROW1..4_DRV, INHA/S1A..S3A, INHB/S1B..S3B, SENSE (purge, GPIO26), ADC (GPIO28), ENC_SW"
+	(text "TC52: capacitive matrix (52 electrodes), column MUX x2 and analog front end\nare on sheet ec. Nets are joined by global labels:\nROW1..4_DRV, INHA/S1A..S3A, INHB/S1B..S3B, SENSE (purge, GPIO28), ADC (GPIO26 = ADC0), ENC_SW"
 		(exclude_from_sim no)
 		(at 154.94 82.0 0)
 		(effects (font (size 1.6 1.6)) (justify left))

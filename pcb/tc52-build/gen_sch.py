@@ -220,7 +220,7 @@ def build_ec():
                  fp=R0402, lcsc='C25741', mpn='0402WGF1003TCE')
     # --- row series resistors ----------------------------------------------
     yr = 182.88
-    sh.text('Row drive: GPIO18..21 -> 100R -> ROW1..4', 25.4, yr - 12.7, 2.5)
+    sh.text('Row drive: GPIO21..18 -> 100R -> ROW1..4 (ROW1 = GPIO21)', 25.4, yr - 12.7, 2.5)
     for ri in range(1, 5):
         sh.place('Device:R', f'R{30+ri}', '100', 40.64 + (ri - 1) * 30.48, yr, {'1': f'ROW{ri}_DRV', '2': f'ROW{ri}'},
                  fp=R0402, lcsc='C25076', mpn='0402WGF1000TCE')
@@ -239,7 +239,7 @@ def build_ec():
         sh.place('Device:C', dec, '0.1u', xm + 38.1, ym, {'1': '+3V3M', '2': 'GND'}, fp=C0402, lcsc='C1525', mpn='CL05B104KO5NNNC')
     # --- AFE ---------------------------------------------------------------
     ya = 304.8
-    sh.text('Analog front end (TC69 circuit): SENSE node (C30 reference cap, purge by GPIO26) -> R22 -> non-inverting x44 -> ADC2', 25.4, ya - 25.4, 2.5)
+    sh.text('Analog front end (TC69 circuit): SENSE node (C30 reference cap, purge by GPIO28) -> R22 -> non-inverting x44 -> ADC0 (GPIO26)', 25.4, ya - 25.4, 2.5)
     sh.place('Device:C', 'C30', '300p C0G', 40.64, ya, {'1': 'SENSE', '2': 'GND'}, fp=C0603, lcsc='C52152', mpn='0603CG301J500NT',
              note='design-spec C2: SENSE reference capacitor (alt. 330p C1664)')
     sh.place('Device:C', 'C31', 'DNP', 63.5, ya, {'1': 'SENSE', '2': 'GND'}, fp=C0603, dnp=True, in_bom=False,
@@ -345,7 +345,7 @@ def edit_root(tree):
                 ['property', Q('Sheetfile'), Q('ec.kicad_sch'), ['at', '152.4', '102.3', '0'],
                  ['effects', ['font', ['size', '1.27', '1.27']], ['justify', 'left', 'top']]],
                 ['instances', ['project', Q('ts52k'), ['path', Q('/' + ROOT_UUID), ['page', Q('3')]]]]])
-    new.append(['text', Q('TC52: capacitive matrix (52 electrodes), column MUX x2 and analog front end\\nare on sheet ec. Nets are joined by global labels:\\nROW1..4_DRV, INHA/S1A..S3A, INHB/S1B..S3B, SENSE (purge, GPIO26), ADC (GPIO28), ENC_SW'),
+    new.append(['text', Q('TC52: capacitive matrix (52 electrodes), column MUX x2 and analog front end\\nare on sheet ec. Nets are joined by global labels:\\nROW1..4_DRV, INHA/S1A..S3A, INHB/S1B..S3B, SENSE (purge, GPIO28), ADC (GPIO26 = ADC0), ENC_SW'),
                 ['exclude_from_sim', 'no'], ['at', '154.94', '82.0', '0'],
                 ['effects', ['font', ['size', '1.6', '1.6']], ['justify', 'left']], ['uuid', Q(uid('root-note'))]])
     out[idx:idx] = new
