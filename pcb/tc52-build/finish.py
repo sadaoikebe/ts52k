@@ -6,7 +6,8 @@ from west import at, two
 
 HOLES = [(61.91, 54.77), (119.06, 54.77), (176.21, 54.77), (233.32, 54.77),
          (57.15, 92.87), (133.35, 92.87), (209.55, 92.87), (284.0, 92.87),
-         (122.6, 111.92), (200.03, 111.92), (280.99, 111.92)]
+         (122.2, 111.92), (200.03, 111.10), (280.99, 111.92)]
+HEAD_R = 2.6        # M2 screw head (up to 4.0 mm across) + 0.6 mm: no copper on L4 inside this radius (TC69: no signal copper within 2.2 mm)
 PLATE_HOLE = (19.05, 111.92)
 
 
@@ -15,6 +16,20 @@ def seg_dist(px, py, ax, ay, bx, by):
     L2_ = dx * dx + dy * dy
     t = 0 if L2_ == 0 else max(0, min(1, ((px - ax) * dx + (py - ay) * dy) / L2_))
     return math.hypot(px - ax - t * dx, py - ay - t * dy)
+
+
+def head_keepout(b, ref, x, y, tracks):
+    z = pcbnew.ZONE(b)
+    z.SetIsRuleArea(True)
+    z.SetLayer(L4)
+    z.SetZoneName(f'SCREW_HEAD_{ref}')
+    z.SetDoNotAllowZoneFills(True); z.SetDoNotAllowTracks(tracks); z.SetDoNotAllowVias(tracks)
+    z.SetDoNotAllowPads(False); z.SetDoNotAllowFootprints(False)
+    o = z.Outline(); o.NewOutline()
+    for j in range(48):
+        a = 2 * math.pi * j / 48
+        o.Append(pcbnew.FromMM(x + HEAD_R * math.cos(a)), pcbnew.FromMM(y + HEAD_R * math.sin(a)))
+    b.Add(z)
 
 
 def run(bd, K):
@@ -35,8 +50,13 @@ def run(bd, K):
         f = bd.fp(f'H{i + 2}')
         f.SetPosition(pcbnew.VECTOR2I(pcbnew.FromMM(x), pcbnew.FromMM(y)))
         f.Reference().SetVisible(False)
+        # the screw head sits on L4: keep tracks, vias and the pour out from under it, so that only H1/R25 decides
+        # whether the plate is grounded and no signal runs under a metal head with only solder mask in between
+        head_keepout(b, f'H{i + 2}', x, y, True)
     f = bd.fp('H1')
     f.SetPosition(pcbnew.VECTOR2I(pcbnew.FromMM(PLATE_HOLE[0]), pcbnew.FromMM(PLATE_HOLE[1])))
+    # H1: the head lands on the PLATE pad; the ground pour stays out from under it (the PLATE track to R25 is allowed)
+    head_keepout(b, 'H1', PLATE_HOLE[0], PLATE_HOLE[1], False)
     f.Reference().SetVisible(False)
     a, c = two(bd, 'R25', PLATE_HOLE[0], PLATE_HOLE[1] - 3.6, 'n')
     bd.track('PLATE', [PLATE_HOLE, a], L4, 0.25)
@@ -58,7 +78,8 @@ def run(bd, K):
                 continue
             q = p.GetPosition()
             bb = p.GetBoundingBox()
-            pts.append((mm(q.x), mm(q.y), max(mm(bb.GetWidth()), mm(bb.GetHeight())) / 2 + 0.05))
+            r = HEAD_R - 0.25 if f.GetReference().startswith('H') else max(mm(bb.GetWidth()), mm(bb.GetHeight())) / 2 + 0.05
+            pts.append((mm(q.x), mm(q.y), r))
     n = 0
     for k, (kx, ky) in K.items():
         got = 0

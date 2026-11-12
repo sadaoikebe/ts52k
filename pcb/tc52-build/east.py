@@ -178,7 +178,7 @@ def band_run(bd, band, Bp, K, SV, DV):
     grp = ['INHB', 'PB', 'S1B', 'S2B', 'S3B']                       # west -> east
     x1 = c10[1][0] + 2.61                                           # beside the c10 leg MX42 -> MX43 (2 mm from the MX43 via)
     x2 = c10[2][0] + 2.3                                            # beside the leg MX43 -> MX48
-    x3 = 211.0                                                      # east of the mounting hole at (209.55, 92.87)
+    x3 = 212.3                                                      # east of the screw head at H8 (209.55, 90.74): 2.6 mm from the hole centre
     xv0 = SV('MX82')[0] + 2.2                                       # through the gap between c10 (MX82 leg) and the MX52 row via
     yeast = {'S3B': 103.2, 'S2B': 103.5, 'S1B': 103.8, 'PB': 104.1, 'INHB': 104.4}
     xbelly = {'INHB': bx - 1.1, 'PB': bx - 0.6, 'S1B': bx, 'S2B': bx + 0.4, 'S3B': bx + 0.8}
@@ -188,7 +188,7 @@ def band_run(bd, band, Bp, K, SV, DV):
         xb = x2 + P * i
         xc = x3 + P * i
         xv = xv0 + P * i
-        ya = c10[1][1] - 0.5 - 0.1243 * i                           # shift x1 -> x2 starts above the MX43 via
+        ya = c10[1][1] - 2.2 - 0.1243 * i                           # shift x1 -> x2 starts above the MX43 via
         yb = 84.3 - 0.1243 * i                                      # shift x2 -> x3 below the row-2 bus
         yc = 96.7 - 0.1243 * i                                      # SE diagonal, 2 mm clear of the c10 corner above MX82
         pts = [p, (xa - 0.3, p[1]), (xa, p[1] + 0.3), (xa, ya), (xc, ya + xc - xa), (xc, yc),      # one diagonal: passes NE of the hole H8 (209.55, 90.74)

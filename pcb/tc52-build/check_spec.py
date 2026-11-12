@@ -138,6 +138,45 @@ for t in tracks:
 print('     SENSE track length %.0f mm (spec 5-13: about 230)' % L['SENSE'])
 print('     AMP_IN %.1f mm (5-7: <= 3)   AMP_FB %.1f mm' % (L['AMP_IN'], L['AMP_FB']))
 print('     columns: ' + ' '.join('%s=%.0f' % (f'c{i}', L[f'COL{i}']) for i in range(1, 15)))
+# 11b. screw heads (M2, on L4): no L4 copper within 2.6 mm of the hole centre; around H1 only PLATE
+import finish as FIN
+bad = []
+l4z = [z for z in b.Zones() if not z.GetIsRuleArea() and z.IsOnLayer(L4)]
+for f in b.GetFootprints():
+    r = f.GetReference()
+    if not (r[0] == 'H' and r[1:].isdigit()):
+        continue
+    hx, hy = mm(f.GetPosition().x), mm(f.GetPosition().y)
+    for t in b.GetTracks():
+        if r == 'H1' and t.GetNetname() == 'PLATE':
+            continue
+        if t.Type() == pcbnew.PCB_VIA_T:
+            d = math.hypot(mm(t.GetPosition().x) - hx, mm(t.GetPosition().y) - hy) - mm(t.GetWidth(L4)) / 2
+        elif t.GetLayer() == L4:
+            d = FIN.seg_dist(hx, hy, mm(t.GetStart().x), mm(t.GetStart().y), mm(t.GetEnd().x), mm(t.GetEnd().y)) - mm(t.GetWidth()) / 2
+        else:
+            continue
+        if d < FIN.HEAD_R - 0.01:
+            bad.append((r, t.GetNetname(), round(d, 2)))
+    for g in b.GetFootprints():
+        if g.GetReference() == r:
+            continue
+        for p in g.Pads():
+            if p.IsOnLayer(L4):
+                bbx = p.GetBoundingBox()
+                d = math.hypot(mm(p.GetPosition().x) - hx, mm(p.GetPosition().y) - hy) - math.hypot(mm(bbx.GetWidth()), mm(bbx.GetHeight())) / 2
+                if d < FIN.HEAD_R - 0.01:
+                    bad.append((r, g.GetReference() + '.' + p.GetNumber(), round(d, 2)))
+    hit = None
+    for z in l4z:
+        ps = z.GetFilledPolysList(L4)
+        for a in range(0, 360, 5):
+            for rr in (1.1, 1.5, 2.0, 2.5):
+                if ps.Contains(pcbnew.VECTOR2I(pcbnew.FromMM(hx + rr * math.cos(math.radians(a))), pcbnew.FromMM(hy + rr * math.sin(math.radians(a))))):
+                    hit = (r, 'pour ' + z.GetNetname(), rr)
+    if hit:
+        bad.append(hit)
+report('no L4 copper under the screw heads (2.6 mm around H1..H12; H1 carries PLATE only)', bad)
 # 12. outline unchanged against Rev 0.2
 import subprocess
 base = '/tmp/tc52_base_check.kicad_pcb'

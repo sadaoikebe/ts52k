@@ -63,7 +63,7 @@ def keys_stage(bd):
 
 
 # ---------------------------------------------------------------- rows
-ROW4_STEP = {'MX67': -0.9, 'MX23': -1.3, 'MX82': -3.2}
+ROW4_STEP = {'MX67': -0.9, 'MX23': -1.3, 'MX82': -3.2, 'MX47': 1.2}
 ROW_FEED = {1: (18.8, 64.29), 2: (19.4, 83.34), 3: (20.3, 102.04), 4: (21.4, 102.74)}
 
 
@@ -82,10 +82,13 @@ def rows_stage(bd):
             continue
         if k in ROW4_STEP:
             # row-4 bus via stepped west: MX67 has a row-3 via at the same x right above; at MX23 and MX82 the
-            # column arrives on a diagonal / passes overhead and would come within 1.5 mm of the via (5-9)
+            # column arrives on a diagonal / passes overhead and would come within 1.5 mm of the via (5-9).
+            # MX47 (row 2, stepped east): makes room for the MUX B bundle, which passes between this via and the
+            # screw head at H8.
             s_ = ROW4_STEP[k]
+            sg = 1 if gy < dy else -1
             bd.via(net, dx + s_, gy, 0.6, 0.3)
-            bd.track(net, [(dx, dy), (dx, gy + 0.8 - s_), (dx + s_, gy + 0.8), (dx + s_, gy)], L4, 0.25)
+            bd.track(net, [(dx, dy), (dx, gy + sg * (0.8 + abs(s_))), (dx + s_, gy + sg * 0.8), (dx + s_, gy)], L4, 0.25)
             xs[r].append(dx + s_)
             continue
         bd.via(net, dx, gy, 0.6, 0.3)
