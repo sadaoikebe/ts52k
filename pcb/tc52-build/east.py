@@ -60,6 +60,16 @@ def run(bd, A, Bp, K, SV, DV):
         x0 = max(p[1] - c1, p[0] + 0.3)
         T(n, [p, (x0, p[1]), (x0, x0 + c1)] if x0 > p[1] - c1 + 1e-6 else [p, (x0, p[1])])
         T(n, [(x0, x0 + c1), (ys - c1, ys), (ys - c2, ys), (XQ[n], XQ[n] + c2), (XQ[n], XQ[n] + cg[n]), (xg[n], yg[n]), (gx + 0.9, yg[n])])
+    # grounds that lost their pour connection when L1 became electrodes: C15 (pocket between QSPI_SS and the +3V3 feed)
+    # and the flash ground pin (under the MX7 electrode, so no via there: L4 track to the via in the U4 belly)
+    c15 = bd.pad('C15', 2)
+    T('GND', [c15, (30.95, 61.05)], 0.25)
+    bd.via('GND', 30.95, 61.05)
+    u44 = bd.pad('U4', 4)
+    T('GND', [u44, (34.3, u44[1]), (35.3, 59.4), (37.0, 61.1), (38.12, 62.91)], 0.25)
+    c14 = bd.pad('C14', 2)                           # C14 ground is fenced in by the MUX A lines: own via
+    T('GND', [c14, (c14[0], 70.45)], 0.25)
+    bd.via('GND', c14[0], 70.45)
     # ---- +3V3M: R26 / C37 south of X2, L3 under the bundle, vias inside the bundle
     place1(bd, 'R26', 30.1, 72.6, 0)
     place1(bd, 'C37', 28.1, 72.6, 0)
@@ -67,7 +77,7 @@ def run(bd, A, Bp, K, SV, DV):
     vj = (29.0, 73.9)                              # +3V3 on to J2 / R4 over L3 (old via sat on the MX8 guard ring)
     T('+3V3', [bd.pad('R26', 1), (30.1, 72.9), (29.3, 73.7), vj], 0.25)
     bd.via('+3V3', *vj)
-    T('+3V3', [vj, (28.1, 74.8), (28.1, 76.7)], 0.25, L3)
+    T('+3V3', [vj, (28.07, 74.83), (28.07, 78.88)], 0.25, L3)
     T('PA', [bd.pad('R26', 2), bd.pad('C37', 1), V0], 0.25)
     bd.via('+3V3M', *V0)
     c37 = bd.pad('C37', 2)
@@ -75,7 +85,7 @@ def run(bd, A, Bp, K, SV, DV):
     bd.via('GND', c37[0] - 0.85, c37[1])
     bd.via('+3V3M', *PA_VIA)
     bd.via('+3V3M', *PB_VIA)
-    T('PA', [V0, (29.3, 72.4), (PA_VIA[0], 72.4 + 29.3 - PA_VIA[0]), PA_VIA, (31.6, PA_VIA[1] - 0.35), (31.6, 66.01), PB_VIA],
+    T('PA', [V0, (29.3, 72.4), (30.3, 71.4), (30.3, 69.0), (PA_VIA[0], 69.0 - (PA_VIA[0] - 30.3)), PA_VIA, (31.6, PA_VIA[1] - 0.35), (31.6, 66.01), PB_VIA],
       0.2, L3)
     for n, v in (('PA', PA_VIA), ('PB', PB_VIA)):
         ca = 35.90 if n == 'PA' else CA[n]
@@ -203,6 +213,8 @@ def band_run(bd, band, Bp, K, SV, DV):
     c20, c19 = bd.pad('C20', 2), bd.pad('C19', 1)
     T('ENC_B', [(xr, lane['ENC_B']), (c20[0] - 0.8, lane['ENC_B']), c20])
     T('ENC_A', [(xr, lane['ENC_A']), (291.4, lane['ENC_A']), (292.38, 51.1), (296.6, 51.1), (296.6, c19[1] + 0.3), (296.9, c19[1]), c19])
+    c20g = bd.pad('C20', 1); pc = pads(bd, 'SW2', 'C')[0]
+    bd.track('GND', [c20g, (294.3, c20g[1]), (pc[0], 49.4), pc], L4, 0.3)
     p = band['ENC_SW']
     s1 = [q for q in pads(bd, 'SW2', 'S1')][0]
     T('ENC_SW', [p, (xr + 0.2, p[1]), (xr + 0.5, p[1] + 0.3), (xr + 0.5, s1[1] - 1.8), (xr + 2.3, s1[1]), s1])

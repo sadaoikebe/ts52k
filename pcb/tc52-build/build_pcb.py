@@ -166,6 +166,7 @@ def main():
     apply_netlist(bd, comps, nets)
     import layout
     layout.run(bd, KEYS, stage)
+    board.GetDesignSettings().m_TrackMinWidth = MM(0.15)
     pcbnew.SaveBoard(OUT, board)
     print('saved', OUT)
 

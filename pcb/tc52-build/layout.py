@@ -243,6 +243,8 @@ def zones_stage(bd):
         ls = [l for l in z.GetLayerSet().Seq()]
         if z.GetAssignedPriority() == 1 and ls == [L1]:
             b.RemoveNative(z)          # local MCU zone on the front: L1 is electrodes only now
+        elif z.GetAssignedPriority() == 1:
+            z.SetIslandRemovalMode(pcbnew.ISLAND_REMOVAL_MODE_ALWAYS)
         elif len(ls) == 2:
             main = z
     # inner planes: same outline as the main zone, small clearance (only via/hole antipads)
@@ -255,7 +257,7 @@ def zones_stage(bd):
         z.SetLocalClearance(MM(0.2))
         z.SetMinThickness(MM(0.2))
         z.SetPadConnection(pcbnew.ZONE_CONNECTION_FULL)
-        z.SetIslandRemovalMode(pcbnew.ISLAND_REMOVAL_MODE_NEVER)
+        z.SetIslandRemovalMode(pcbnew.ISLAND_REMOVAL_MODE_NEVER if layer == L2 else pcbnew.ISLAND_REMOVAL_MODE_ALWAYS)
         b.Add(z)
     # no pour between electrode and guard ring (keeps the TC69 electrode geometry)
     for k, (x, y) in K.items():
@@ -293,3 +295,6 @@ def run(bd, keys, stage):
     finish.run(bd, K)
     zones_stage(bd)
     fill(bd)
+    import finish as _f
+    if _f.island_vias(bd, K):
+        fill(bd)

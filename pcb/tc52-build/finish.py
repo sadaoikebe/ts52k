@@ -67,3 +67,51 @@ def run(bd, K):
         if got < 2:
             print('ring vias', k, got)
     print('ring vias placed', n)
+
+
+def island_vias(bd, K):
+    """Ground the pieces of the local MCU pour on L4 that have no via of their own (they would leave C9, C15 and
+    the flash ground pin floating). A via may sit on a guard ring (7.4 .. 8.1 mm from a key centre) or clear of all rings."""
+    b = bd.b
+    z = [z for z in b.Zones() if not z.GetIsRuleArea() and z.GetAssignedPriority() == 1][0]
+    polys = z.GetFilledPolysList(L4)
+    vias = [t for t in b.GetTracks() if t.Type() == pcbnew.PCB_VIA_T]
+    other = [(mm(t.GetStart().x), mm(t.GetStart().y), mm(t.GetEnd().x), mm(t.GetEnd().y), mm(t.GetWidth()) / 2)
+             for t in b.GetTracks() if t.Type() != pcbnew.PCB_VIA_T and t.GetLayer() in (L1, L3) and t.GetNetname() != 'GND']
+    added = []
+    for i in range(polys.OutlineCount()):
+        o = pcbnew.SHAPE_POLY_SET(); o.AddOutline(polys.Outline(i))
+        if any(v.GetNetname() == 'GND' and o.Contains(v.GetPosition()) for v in vias):
+            continue
+        bb = o.BBox()
+        best = None
+        y = mm(bb.GetTop())
+        while y < mm(bb.GetBottom()) and best is None:
+            x = mm(bb.GetLeft())
+            while x < mm(bb.GetRight()):
+                p = pcbnew.VECTOR2I(pcbnew.FromMM(x), pcbnew.FromMM(y))
+                ok = o.Contains(p, -1, pcbnew.FromMM(-0.001)) and all(
+                    o.Contains(pcbnew.VECTOR2I(pcbnew.FromMM(x + dx), pcbnew.FromMM(y + dy))) for dx, dy in ((0.33, 0), (-0.33, 0), (0, 0.33), (0, -0.33), (0.24, 0.24), (-0.24, 0.24), (0.24, -0.24), (-0.24, -0.24)))
+                if ok:
+                    for kx, ky in K.values():
+                        r = math.hypot(x - kx, y - ky)
+                        if r < 6.5:
+                            ok = False
+                            break
+                if ok and any(seg_dist(x, y, *s[:4]) < s[4] + 0.55 for s in other):
+                    ok = False
+                if ok and any(math.hypot(x - mm(v.GetPosition().x), y - mm(v.GetPosition().y)) < 0.95 for v in vias):
+                    ok = False
+                if ok:
+                    best = (x, y)
+                    break
+                x += 0.1
+            y += 0.1
+        if best:
+            bd.via('GND', *best)
+            added.append((round(best[0], 2), round(best[1], 2)))
+        else:
+            bb2 = [round(mm(v), 1) for v in (bb.GetLeft(), bb.GetTop(), bb.GetRight(), bb.GetBottom())]
+            print('island without via, no legal spot:', bb2)
+    print('island vias', added)
+    return added

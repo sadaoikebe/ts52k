@@ -52,12 +52,15 @@ def run(bd, K, SV, DV):
     bd.via('ROW4', *F[4])
     # ---- PURGE (SENSE, pin 40), ADC (pin 38), +3V3 (from C17) -> MX3 gate
     g = SV('MX3', 0)[0]
-    ps, pa, c17 = bd.pad('U5', 40), bd.pad('U5', 38), bd.pad('C17', 1)
+    ps, pa = bd.pad('U5', 40), bd.pad('U5', 38)
+    c17, c17g = two(bd, 'C17', 19.98, 64.94, 'n')       # turned upright: its ground via goes north-west, +3V3 leaves west
+    T('GND', [c17g, (18.9, c17g[1]), (18.6, 63.6)], 0.25)
+    bd.via('GND', 18.6, 63.6)
     LS, LA, LV = 70.5, 72.7, 73.2          # lanes through the gate
     XS, XA, XV = 15.45, 17.63, 18.0
     T('SENSE', [ps, (XS + 0.4, ps[1]), (XS, ps[1] + 0.4), (XS, LS - 0.6), (XS - 0.6, LS), (-1.4, LS), (-2.0, LS + 0.6), (-2.0, 116.4)])
     T('ADC', [pa, (XA + 0.3, pa[1]), (XA, pa[1] + 0.3), (XA, LA - 0.8), (XA - 0.8, LA), (9.5, LA)], 0.15)
-    T('+3V3', [c17, (c17[0], 63.85), (XV + 0.3, 63.85), (XV, 64.15), (XV, LV - 0.6), (XV - 0.6, LV), (12.5, LV), (9.2, 76.5), (6.5, 79.2), (2.6, 79.2)], 0.2)
+    T('+3V3', [c17, (XV + 0.3, c17[1]), (XV, c17[1] + 0.3), (XV, LV - 0.6), (XV - 0.6, LV), (12.5, LV), (9.2, 76.5), (6.5, 79.2), (2.6, 79.2)], 0.2)
     # ---- AFE (west of the gate). U6 on the back: north row = pins 1, 2, 3 (west -> east), south row = 5 (west), 4 (east)
     cx, cy = 2.5, 74.0
     for rot in (0, 90, 180, 270):
@@ -73,13 +76,13 @@ def run(bd, K, SV, DV):
     a, b = two(bd, 'R22', p3[0], LS, 's')
     T('AMP_IN', [b, p3], 0.2)
     # reference capacitors hang on the SENSE line; AGND island (C30, C31, V-) with a single via
-    c30a, c30b = two(bd, 'C30', 0.6, LS, 's')
-    c31a, c31b = two(bd, 'C31', -0.9, LS, 's')
-    T('GND', [c31b, c30b, (0.9, 71.75), (1.95, 71.75), (p2[0], 71.75), p2], 0.3)
+    c30a, c30b = two(bd, 'C30', 0.45, LS, 's')
+    c31a, c31b = two(bd, 'C31', -1.05, LS, 's')
+    T('GND', [c31b, c30b, (0.75, 71.75), (1.95, 71.75), (p2[0], 71.75), p2], 0.3)
     bd.via('GND', 1.95, 71.2)
     T('GND', [(1.95, 71.75), (1.95, 71.2)], 0.3)
-    at(bd, 'TP4', 1, -0.9, 73.45, 0)
-    T('GND', [c31b, (-0.9, 73.45)], 0.3)
+    at(bd, 'TP4', 1, -1.05, 73.45, 0)
+    T('GND', [c31b, (-1.05, 73.45)], 0.3)
     # output: channel under the body -> east: R23 (to ADC), R21 (feedback) ; test point
     r23a, r23b = two(bd, 'R23', 5.6, cy, 'e')
     r21a, r21b = two(bd, 'R21', 4.45, cy, 's')
