@@ -210,7 +210,8 @@ def build_ec():
             if not k:
                 continue
             sh.place('tc52:ECS_PAD', k, 'ECS_PAD', x0 + (ci - 1) * dx, y0 + (ri - 1) * dy,
-                     {'1': f'ROW{ri}', '2': f'COL{ci}', '3': 'GND'}, in_bom=False)
+                     {'1': f'ROW{ri}', '2': f'COL{ci}', '3': 'GND'}, in_bom=False,
+                     fp='tc52:ecs_pad_edge' if k == 'MX74' else None)
     # --- column pull-downs --------------------------------------------------
     yb = 142.24
     sh.text('Column discharge resistors (at the MUX inputs)', 25.4, yb - 10.16, 2.5)

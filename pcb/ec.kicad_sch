@@ -2037,7 +2037,7 @@
 		(uuid "c1366e70-a8f8-5fc7-951f-3a98e8012b95")
 		(property "Reference" "MX74" (at 502.92 58.20 0) (effects (font (size 1.0 1.0))))
 		(property "Value" "ECS_PAD" (at 502.92 63.50 0) (hide yes) (effects (font (size 1.27 1.27))))
-		(property "Footprint" "tc52:ecs_pad" (at 502.92 63.50 0) (hide yes) (effects (font (size 1.27 1.27))))
+		(property "Footprint" "tc52:ecs_pad_edge" (at 502.92 63.50 0) (hide yes) (effects (font (size 1.27 1.27))))
 		(property "Datasheet" "" (at 502.92 63.50 0) (hide yes) (effects (font (size 1.27 1.27))))
 		(property "Description" "Capacitive key electrode (TC69 ecs_pad): 1=drive, 2=sense, 3=guard ring" (at 502.92 63.50 0) (hide yes) (effects (font (size 1.27 1.27))))
 		(pin "1" (uuid "5c2e13ab-b9a0-59c9-a8db-8f813fc7c804"))

@@ -72,11 +72,11 @@ def run(bd, A, Bp, K, SV, DV):
     T('GND', [c14, (c14[0], 70.45)], 0.25)
     bd.via('GND', c14[0], 70.45)
     # ---- +3V3M: R26 / C37 south of X2, L3 under the bundle, vias inside the bundle
-    place1(bd, 'R26', 30.1, 72.6, 0)
-    place1(bd, 'C37', 28.1, 72.6, 0)
-    T('+3V3', [(30.8, 71.2), (30.8, 72.2), (30.4, 72.6), bd.pad('R26', 1)], 0.25)
+    place1(bd, 'R26', 30.1, 72.85, 0)
+    place1(bd, 'C37', 28.1, 72.85, 0)
+    T('+3V3', [(30.8, 71.2), (30.8, 72.3), (30.4, 72.7), bd.pad('R26', 1)], 0.25)
     vj = (29.0, 73.9)                              # +3V3 on to J2 / R4 over L3 (old via sat on the MX8 guard ring)
-    T('+3V3', [bd.pad('R26', 1), (30.1, 72.9), (29.3, 73.7), vj], 0.25)
+    T('+3V3', [bd.pad('R26', 1), (30.1, 73.1), (29.3, 73.9), vj], 0.25)
     bd.via('+3V3', *vj)
     T('+3V3', [vj, (28.07, 74.83), (28.07, 78.88)], 0.25, L3)
     T('PA', [bd.pad('R26', 2), bd.pad('C37', 1), V0], 0.25)
@@ -184,7 +184,7 @@ def band_run(bd, band, Bp, K, SV, DV):
         ya = c10[1][1] - 0.5 - 0.1243 * i                           # shift x1 -> x2 starts above the MX43 via
         yb = 84.3 - 0.1243 * i                                      # shift x2 -> x3 below the row-2 bus
         yc = 96.7 - 0.1243 * i                                      # SE diagonal, 2 mm clear of the c10 corner above MX82
-        pts = [p, (xa - 0.3, p[1]), (xa, p[1] + 0.3), (xa, ya), (xb, ya + xb - xa), (xb, yb), (xc, yb + xc - xb), (xc, yc),
+        pts = [p, (xa - 0.3, p[1]), (xa, p[1] + 0.3), (xa, ya), (xc, ya + xc - xa), (xc, yc),      # one diagonal: passes NE of the hole H8 (209.55, 90.74)
                (xv, yc + xv - xc), (xv, yeast[n]), (xbelly[n], yeast[n])]
         if n == 'INHB':
             pts += [(xbelly[n], b6[1]), b6]

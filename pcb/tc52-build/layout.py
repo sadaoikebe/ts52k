@@ -171,11 +171,11 @@ def columns_stage(bd):
     col_r(bd, 4, 90.0, LANE1)
     # ---- c5, c6 (no row-4 key: straight down into the band)
     leg(5, 'MX20', 'MX21'); leg(5, 'MX21', 'MX27')
-    s = SV('MX27'); e = fan(bd, 'COL5', A[14], LANE2, +1, 81.35)
+    s = SV('MX27'); e = fan(bd, 'COL5', A[14], LANE2, +1, 81.34)
     T(5, [s, (s[0], LANE2 - 1.5), (s[0] - 1.5, LANE2), e])
     col_r(bd, 5, 100.0, LANE2)
     leg(6, 'MX25', 'MX26'); leg(6, 'MX26', 'MX31')
-    s = SV('MX31'); e = fan(bd, 'COL6', A[15], LANE3, +1, 80.5)
+    s = SV('MX31'); e = fan(bd, 'COL6', A[15], LANE3, +1, 80.48)
     T(6, [s, (s[0], LANE3 - 1.5), (s[0] - 1.5, LANE3), e])
     col_r(bd, 6, 112.0, LANE3)
     # ---- c7
@@ -213,21 +213,21 @@ def columns_stage(bd):
     # ---- c13
     leg(13, 'MX55', 'MX65'); leg(13, 'MX65', 'MX66')
     T(13, [SV('MX66'), SV('MX67')])
-    s = SV('MX67'); e = fan(bd, 'COL13', Bp[14], LANE2, +1, 227.85)
+    s = SV('MX67'); e = fan(bd, 'COL13', Bp[14], LANE2, +1, 227.84)
     T(13, [s, (s[0], LANE2 - 1.5), (s[0] - 1.5, LANE2), e])
     col_r(bd, 13, 262.0, LANE2)
     # ---- c14 (MX74 is offset: arrive from above, leave past its lead-in)
     s, q, z = SV('MX64'), SV('MX74'), SV('MX71')
     T(14, [s, (287.5, s[1] + 287.5 - s[0]), (q[0] - 1.97, s[1] + 287.5 - s[0]), (q[0], s[1] + 287.5 - s[0] + 1.97), q])
     T(14, [q, (q[0], 90.0), (z[0], 90.0 + q[0] - z[0]), z])
-    e = fan(bd, 'COL14', Bp[15], LANE3, +1, 227.0)
+    e = fan(bd, 'COL14', Bp[15], LANE3, +1, 226.98)
     T(14, [z, (z[0], LANE3 - 1.5), (z[0] - 1.5, LANE3), e])
     col_r(bd, 14, 283.0, LANE3)
     # ---- SENSE trunk (lowest lane; MUX A hangs on a short stub under its body, MUX B is the end)
     S = lambda pts: bd.track('SENSE', pts, L4, 0.2)
-    xb = MUXB[0] - 1.3
+    xb = MUXB[0] - 1.0
     S([(-2.0, 116.4), (0.0, TRUNK), (xb, TRUNK), (xb, Bp[3][1]), Bp[3]])
-    xa = MUXA[0] - 1.3
+    xa = MUXA[0] - 1.0
     S([(xa, TRUNK), (xa, A[3][1]), A[3]])
     return A, Bp
 

@@ -14,7 +14,8 @@ def load(path):
         ref = first(c, 'ref')[1]
         d = {'value': first(c, 'value')[1], 'footprint': (first(c, 'footprint') or [0, ''])[1],
              'path': first(c, 'sheetpath') and first(first(c, 'sheetpath'), 'tstamps')[1],
-             'uuid': first(c, 'tstamps')[1], 'props': {}}
+             'uuid': first(c, 'tstamps')[1], 'props': {},
+             'descr': (first(c, 'description') or [0, ''])[1]}
         for p in find(c, 'property'):
             d['props'][first(p, 'name')[1]] = (first(p, 'value') or [0, ''])[1]
         comps[ref] = d

@@ -90,6 +90,9 @@ def strip(bd):
             if n == 'GND' and min(math.hypot(x - a, y - c) for a, c in ((18.4, 63.65), (18.4, 65.1), (19.98, 60.17))) < 0.1:
                 b.RemoveNative(t)      # in the way of the west fan-out (rows, S0-S3, PURGE, ADC); restitched in layout.py
                 continue
+            if n == 'GND' and math.hypot(x - 18.69, y - 44.41) < 0.05:
+                t.SetPosition(V(18.8, 44.45))   # was 0.45 mm from the board edge (0.5 mm required)
+                continue
             if n == 'GND':
                 # stitching is regenerated; keep only island vias that do not hit an electrode on L1
                 if not island_keep(x, y) or d < 8.9:
@@ -99,6 +102,9 @@ def strip(bd):
         elif t.GetLayer() == L1:
             # island jumpers that used the front side move to L3 (L1 carries electrodes only)
             t.SetLayer(L3)
+    # BOOTSEL switch: the two pads of each number are one terminal inside the switch; only one pad 2 is wired
+    # (the bundle passes between them), so let the connectivity treat the pair as joined.
+    b.FindFootprintByReference('SW1').SetDuplicatePadNumbersAreJumpers(True)
     for d in list(b.GetDrawings()):
         if d.GetClass() == 'PCB_TEXT' and 'TS52K' in d.GetText():
             d.SetText('TC52 Keyboard R0.1')
@@ -121,7 +127,15 @@ def apply_netlist(bd, comps, nets):
             b.Add(f)
             f.SetPosition(V(284 + (park[0] % 8) * 2.2, 90 + (park[0] // 8) * 1.6))
             park[0] += 1
+        if f.GetFPID().GetUniStringLibId() != c['footprint'] and ref.startswith('MX'):
+            b.RemoveNative(f)                   # electrode variant changed in the schematic
+            f = load_fp(c['footprint']); f.SetReference(ref); b.Add(f)
         f.SetValue(c['value'])
+        if c.get('descr'):
+            f.SetField('Description', c['descr'])
+            for x in f.GetFields():
+                if x.GetName() == 'Description':
+                    x.SetVisible(False)
         f.SetPath(pcbnew.KIID_PATH(c['path'] + c['uuid']))
         for k in ('LCSC', 'MPN'):
             if c['props'].get(k):
