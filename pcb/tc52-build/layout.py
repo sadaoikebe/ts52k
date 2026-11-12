@@ -18,12 +18,14 @@ COL_OF = {k: int(KN[k][1][3:]) for k in KN}
 # other L4 wiring passes between them (the electrode on L1 is the connection).
 SENSE_VIAS = {
     'MX3': [(0.9, -5.3), (1.19, 1.68)],     # gate for +3V3 / ADC / PURGE going west to the AFE
-    'MX13': [(1.5, -4.2), (1.5, 4.2)],      # gate for the bundle (BOOTSEL, ENC x3, +3V3M, S0-S3) going east
+    'MX8': [(2.0, -5.0), (2.0, 5.0)],       # gate for the east bundle (BOOTSEL, ENC x3, MUX A and MUX B control)
+    'MX12': [(2.0, -5.0), (2.0, 5.0)],      # gate for the MUX A control lines
     'MX7': [(5.0, -1.5)],                   # c2 leaves MX7 away from the flash (U4) and QSPI
 }
 DRIVE_VIA = {
     'MX3': (-1.19, 5.2),                    # below the gate lanes
-    'MX13': (-1.19, 4.6),                   # below the bundle
+    'MX8': (-1.19, 5.0),                    # below the bundle
+    'MX12': (-1.19, 5.0),
 }
 BUS = {1: 64.29, 2: 83.34, 3: 102.04, 4: 102.74}   # L1 row buses (rows 3 and 4 share one gap)
 GAP_Y = {'MX74': 88.1}                             # MX74 sits 4.76 mm lower than row 2
@@ -71,6 +73,18 @@ def rows_stage(bd):
         net = f'ROW{r}'
         dx, dy = DV(k)
         gy = GAP_Y.get(k, BUS[r])
+        if k == 'MX7':      # the flash (U4) is below: lead-in on L3 inside the island, up to the bus between R14 and the bundle
+            bd.via(net, 35.1, 64.9, 0.6, 0.3)
+            bd.track(net, [(dx, dy), (35.1, dy + 35.1 - dx), (35.1, 64.9)], L3, 0.25)
+            bd.track(net, [(35.1, gy), (35.1, 64.9)], L1, 0.25)
+            xs[r].append(dx)
+            continue
+        if r == 4 and any(abs(dx - DV(q)[0]) < 0.9 for q in K if ROW_OF[q] == 3):
+            # a row-3 key right above uses the same x: step the row-4 bus via aside
+            bd.via(net, dx + 0.9, gy, 0.6, 0.3)
+            bd.track(net, [(dx, dy), (dx, gy + 1.7), (dx + 0.9, gy + 0.8), (dx + 0.9, gy)], L4, 0.25)
+            xs[r].append(dx + 0.9)
+            continue
         bd.via(net, dx, gy, 0.6, 0.3)
         bd.track(net, [(dx, dy), (dx, gy)], L4, 0.25)        # lead-in on L4
         if k not in GAP_Y:
@@ -121,17 +135,17 @@ def columns_stage(bd):
     # ---- c1 (gate at MX3)
     T(1, [SV('MX2'), (SV('MX2')[0], 65.5), SV('MX3', 0)])
     T(1, [SV('MX3', 1), (SV('MX3', 1)[0], 88.11), SV('MX4'), (SV('MX4')[0], 104.0), (14.5, 107.36), (14.5, C1_LANE)])
-    e = fan(bd, 'COL1', A[2], C1_LANE, -1, 67.6)
+    e = fan(bd, 'COL1', A[1], C1_LANE, -1, 70.9)
     T(1, [SV('MX5'), (SV('MX5')[0], C1_LANE - 1.5), (SV('MX5')[0] + 1.5, C1_LANE), e])
     col_r(bd, 1, 24.0, C1_LANE)
-    # ---- c2 (around the flash, gate at MX13)
-    s7, s8 = SV('MX7'), SV('MX8')
-    T(2, [s7, (43.6, s7[1]), (43.6, 67.0), (s8[0], 71.31), s8])
-    a, b2 = SV('MX13', 0), SV('MX13', 1)
-    T(2, [s8, (s8[0], 81.0), (s8[0] + 7.67, 88.67), (a[0], 88.67), a])
+    # ---- c2 (around the flash, gate at MX8)
+    s7 = SV('MX7'); g1, g2 = SV('MX8', 0), SV('MX8', 1); s13 = SV('MX13')
+    T(2, [s7, (43.6, s7[1]), (43.6, 64.5), (g1[0], 68.0), g1])
+    T(2, [g2, (s13[0], g2[1] + s13[0] - g2[0]), s13])
+    b2 = s13
     s9 = SV('MX9')
     T(2, [b2, (b2[0], 103.6), (b2[0] - 6.23, 109.83), (s9[0] + 2.09, 109.83), s9])
-    e = fan(bd, 'COL2', A[4], LANE1, -1, 67.95)
+    e = fan(bd, 'COL2', A[2], LANE1, -1, 70.0)
     T(2, [s9, (s9[0], LANE1 - 1.5), (s9[0] + 1.5, LANE1), e])
     col_r(bd, 2, 45.0, LANE1)
     # ---- generic upper legs: diagonal first, then vertical into the next key
@@ -141,24 +155,26 @@ def columns_stage(bd):
         d = q[0] - p[0]
         T(n, [p, (p[0], y0), (q[0], y0 + abs(d)), q])
     # ---- c3
-    leg(3, 'MX11', 'MX12'); leg(3, 'MX12', 'MX18')
-    s = SV('MX18'); s14 = SV('MX14')
+    p = SV('MX11'); g1, g2 = SV('MX12', 0), SV('MX12', 1); s = SV('MX18')
+    T(3, [p, (g1[0], p[1] + g1[0] - p[0]), g1])
+    T(3, [g2, (s[0], g2[1] + s[0] - g2[0]), s])
+    s14 = SV('MX14')
     T(3, [s, (s[0], 103.6), (s[0] - (s14[1] - 103.6), s14[1]), s14])
-    T(3, [(s[0], 103.6), (s[0], A[5][1] - (A[5][0] - 1.0 - s[0])), (A[5][0] - 1.0, A[5][1]), A[5]])
+    T(3, [(s[0], 103.6), (s[0], A[4][1] - (A[4][0] - 1.0 - s[0])), (A[4][0] - 1.0, A[4][1]), A[4]])
     col_r(bd, 3, 57.8, s14[1])
     # ---- c4
     leg(4, 'MX16', 'MX17'); leg(4, 'MX17', 'MX22'); leg(4, 'MX22', 'MX23', 93.5)
     s = SV('MX23')
-    e = fan(bd, 'COL4', A[12], LANE1, +1, 80.5)
+    e = fan(bd, 'COL4', A[13], LANE1, +1, 82.2)
     T(4, [s, (s[0], LANE1 - 1.5), (s[0] - 1.5, LANE1), e])
     col_r(bd, 4, 90.0, LANE1)
     # ---- c5, c6 (no row-4 key: straight down into the band)
     leg(5, 'MX20', 'MX21'); leg(5, 'MX21', 'MX27')
-    s = SV('MX27'); e = fan(bd, 'COL5', A[13], LANE2, +1, 83.9)
+    s = SV('MX27'); e = fan(bd, 'COL5', A[14], LANE2, +1, 81.35)
     T(5, [s, (s[0], LANE2 - 1.5), (s[0] - 1.5, LANE2), e])
     col_r(bd, 5, 100.0, LANE2)
     leg(6, 'MX25', 'MX26'); leg(6, 'MX26', 'MX31')
-    s = SV('MX31'); e = fan(bd, 'COL6', A[14], LANE3, +1, 87.3)
+    s = SV('MX31'); e = fan(bd, 'COL6', A[15], LANE3, +1, 80.5)
     T(6, [s, (s[0], LANE3 - 1.5), (s[0] - 1.5, LANE3), e])
     col_r(bd, 6, 112.0, LANE3)
     # ---- c7
@@ -190,27 +206,27 @@ def columns_stage(bd):
     col_r(bd, 11, 231.0, 100.8)
     # ---- c12
     leg(12, 'MX51', 'MX56'); leg(12, 'MX56', 'MX75'); leg(12, 'MX75', 'MX61', 93.5)
-    s = SV('MX61'); e = fan(bd, 'COL12', Bp[13], LANE1, +1, 227.0)
+    s = SV('MX61'); e = fan(bd, 'COL12', Bp[13], LANE1, +1, 228.7)
     T(12, [s, (s[0], LANE1 - 1.5), (s[0] - 1.5, LANE1), e])
     col_r(bd, 12, 245.0, LANE1)
     # ---- c13
     leg(13, 'MX55', 'MX65'); leg(13, 'MX65', 'MX66')
     T(13, [SV('MX66'), SV('MX67')])
-    s = SV('MX67'); e = fan(bd, 'COL13', Bp[14], LANE2, +1, 230.4)
+    s = SV('MX67'); e = fan(bd, 'COL13', Bp[14], LANE2, +1, 227.85)
     T(13, [s, (s[0], LANE2 - 1.5), (s[0] - 1.5, LANE2), e])
     col_r(bd, 13, 262.0, LANE2)
     # ---- c14 (MX74 is offset: arrive from above, leave past its lead-in)
     s, q, z = SV('MX64'), SV('MX74'), SV('MX71')
     T(14, [s, (287.5, s[1] + 287.5 - s[0]), (q[0] - 1.97, s[1] + 287.5 - s[0]), (q[0], s[1] + 287.5 - s[0] + 1.97), q])
     T(14, [q, (q[0], 90.0), (z[0], 90.0 + q[0] - z[0]), z])
-    e = fan(bd, 'COL14', Bp[15], LANE3, +1, 233.8)
+    e = fan(bd, 'COL14', Bp[15], LANE3, +1, 227.0)
     T(14, [z, (z[0], LANE3 - 1.5), (z[0] - 1.5, LANE3), e])
     col_r(bd, 14, 283.0, LANE3)
     # ---- SENSE trunk (lowest lane; MUX A hangs on a short stub under its body, MUX B is the end)
     S = lambda pts: bd.track('SENSE', pts, L4, 0.2)
-    xb = MUXB[0] - 0.9
+    xb = MUXB[0] - 1.3
     S([(5.0, TRUNK), (xb, TRUNK), (xb, Bp[3][1]), Bp[3]])
-    xa = MUXA[0] - 0.9
+    xa = MUXA[0] - 1.3
     S([(xa, TRUNK), (xa, A[3][1]), A[3]])
     return A, Bp
 
@@ -267,6 +283,8 @@ def run(bd, keys, stage):
     K.update(keys)
     keys_stage(bd)
     rows_stage(bd)
-    columns_stage(bd)
+    A, Bp = columns_stage(bd)
+    import east
+    east.run(bd, A, Bp, K, SV, DV)
     zones_stage(bd)
     fill(bd)

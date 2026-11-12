@@ -6,14 +6,24 @@
   (condition "A.intersectsArea('MCU_FANOUT') && B.intersectsArea('MCU_FANOUT')")
   (constraint clearance (min 0.15mm)))
 
-# New ROW/COL tracks/vias retain 0.20 mm inside MCU_FANOUT too.
-# Existing MCU pad-to-power clearances retain their original local rule.
-(rule "Matrix routing 0.20 mm clearance"
-  (condition "((A.Type == 'Track' || A.Type == 'Via') && (A.NetName == 'row*' || A.NetName == 'col*')) || ((B.Type == 'Track' || B.Type == 'Via') && (B.NetName == 'row*' || B.NetName == 'col*'))")
-  (constraint clearance (min 0.20mm)))
+# TC52 (design-spec section 5): high-impedance nets keep 2.0 mm from everything that is not matrix or ground.
+# Checked between tracks and vias; pad adjacency at the MUX pins and the AFE parts is reviewed by hand.
+(rule "HIZ to other nets 2.0 mm"
+  (condition "(A.Type == 'Track' || A.Type == 'Via') && (B.Type == 'Track' || B.Type == 'Via') && (A.NetName == 'COL*' || A.NetName == 'SENSE') && B.NetName != 'COL*' && B.NetName != 'ROW*' && B.NetName != 'SENSE' && B.NetName != 'GND' && B.NetName != 'AMP_IN'")
+  (constraint clearance (min 2.0mm)))
+
+# Column to column / column to SENSE: 1.5 mm centre to centre for 0.2 mm tracks.
+(rule "HIZ to HIZ 1.3 mm"
+  (condition "(A.Type == 'Track' || A.Type == 'Via') && (B.Type == 'Track' || B.Type == 'Via') && (A.NetName == 'COL*' || A.NetName == 'SENSE') && (B.NetName == 'COL*' || B.NetName == 'SENSE') && A.Net != B.Net")
+  (constraint clearance (min 1.3mm)))
 
 # TC2030-IDC-NL datasheet rev. B: 0.020 inch to other exposed-side signals.
 (rule "Tag-Connect contact clearance"
  (layer "B.Cu")
  (condition "(A.Type == 'Pad' && A.memberOfFootprint('J2') && B.Type != 'Pad') || (B.Type == 'Pad' && B.memberOfFootprint('J2') && A.Type != 'Pad')")
  (constraint clearance (min 0.508mm)))
+
+# TC52 bundle (static select lines, encoder, MUX supply): 0.15 mm track / 0.15 mm gap (design-spec section 1).
+(rule "Bundle 0.15 mm clearance"
+  (condition "A.Type == 'Track' && B.Type == 'Track' && (A.NetName == 'S??' || A.NetName == 'INH?' || A.NetName == 'ENC_*' || A.NetName == '+3V3M' || A.NetName == '+3V3' || A.NetName == 'Net-(R14-Pad2)') && (B.NetName == 'S??' || B.NetName == 'INH?' || B.NetName == 'ENC_*' || B.NetName == '+3V3M' || B.NetName == '+3V3' || B.NetName == 'Net-(R14-Pad2)')")
+  (constraint clearance (min 0.15mm)))

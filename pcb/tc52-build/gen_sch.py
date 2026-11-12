@@ -226,9 +226,9 @@ def build_ec():
     sh.place('tc52:TestPoint', 'TP3', 'ROW1', 40.64 + 4 * 30.48, yr, {'1': 'ROW1'}, in_bom=False)
     # --- MUX ---------------------------------------------------------------
     ym = 236.22
-    sh.text('Column select: S0 = 0 -> MUX A (U7), S0 = 1 -> MUX B (U8). S1/S2/S3 = address A/B/C', 25.4, ym - 22.86, 2.5)
-    for name, ref, xm, inh, dec in (('A', 'U7', 60.96, 'S0', 'C34'), ('B', 'U8', 152.4, 'S0_N', 'C35')):
-        nets = {'11': 'S1', '10': 'S2', '9': 'S3', '6': inh, '3': 'SENSE', '16': '+3V3M', '7': 'GND', '8': 'GND'}
+    sh.text('Column select: each MUX has its own lines. INHA / INHB low = that MUX on (never both low). S1x/S2x/S3x = address A/B/C. No inverter: see build log', 25.4, ym - 22.86, 2.5)
+    for name, ref, xm, dec in (('A', 'U7', 60.96, 'C34'), ('B', 'U8', 152.4, 'C35')):
+        nets = {'11': 'S1' + name, '10': 'S2' + name, '9': 'S3' + name, '6': 'INH' + name, '3': 'SENSE', '16': '+3V3M', '7': 'GND', '8': 'GND'}
         for xn, pin in M.X_PIN.items():
             nets[str(pin)] = 'GND'
         for c, (mx, xn) in M.MUX_INPUT.items():
@@ -236,9 +236,6 @@ def build_ec():
                 nets[str(M.X_PIN[xn])] = f'COL{c}'
         sh.place('tc52:CD4051B', ref, 'CD4051BM96', xm, ym, nets, lcsc='C21379', mpn='CD4051BM96')
         sh.place('Device:C', dec, '100n', xm + 38.1, ym, {'1': '+3V3M', '2': 'GND'}, fp=C0402, lcsc='C1525', mpn='CL05B104KO5NNNC')
-    sh.place('tc52:74AHC1G04', 'U9', 'SN74AHC1G04DBVR', 243.84, ym, {'2': 'S0', '1': None, '4': 'S0_N', '5': '+3V3M', '3': 'GND'},
-             lcsc='C7465', mpn='SN74AHC1G04DBVR')
-    sh.place('Device:C', 'C36', '100n', 274.32, ym, {'1': '+3V3M', '2': 'GND'}, fp=C0402, lcsc='C1525', mpn='CL05B104KO5NNNC')
     # --- AFE ---------------------------------------------------------------
     ya = 304.8
     sh.text('Analog front end (TC69 circuit): SENSE node (C30 reference cap, purge by GPIO26) -> R22 -> non-inverting x44 -> ADC2', 25.4, ya - 25.4, 2.5)
@@ -262,7 +259,7 @@ def build_ec():
     sh.place('Device:R', 'R24', '22', xs, ya, {'1': '+3V3', '2': '+3V3A'}, fp=R0402, lcsc='C25092', mpn='0402WGF220JTCE', note='design-spec R_F')
     sh.place('Device:C', 'C32', '4.7u', xs + 25.4, ya, {'1': '+3V3A', '2': 'GND'}, fp=C0402, lcsc='C23733', mpn='CL05A475MP5NRNC', note='design-spec C_F1')
     sh.place('power:PWR_FLAG', '#FLG0301', 'PWR_FLAG', xs + 48.26, ya, {'1': '+3V3A'}, in_bom=False)
-    sh.text('+3V3M (MUX x2, inverter) = +3V3 through 22R, 4.7u: separate from +3V3A (op amp), see build log', xs - 15.24, ya + 20.32, 2.5)
+    sh.text('+3V3M (MUX x2) = +3V3 through 22R, 4.7u: separate from +3V3A (op amp), see build log', xs - 15.24, ya + 20.32, 2.5)
     sh.place('Device:R', 'R26', '22', xs, ya + 38.1, {'1': '+3V3', '2': '+3V3M'}, fp=R0402, lcsc='C25092', mpn='0402WGF220JTCE', note='second R_F: MUX supply')
     sh.place('Device:C', 'C37', '4.7u', xs + 25.4, ya + 38.1, {'1': '+3V3M', '2': 'GND'}, fp=C0402, lcsc='C23733', mpn='CL05A475MP5NRNC', note='second C_F1: MUX supply')
     sh.place('power:PWR_FLAG', '#FLG0302', 'PWR_FLAG', xs + 48.26, ya + 38.1, {'1': '+3V3M'}, in_bom=False)
@@ -280,8 +277,8 @@ N_HOLES = 12
 
 
 # ---------------------------------------------------------------- root + rp2040
-GPIO_NETS = [(0, 'ENC_A'), (1, 'ENC_B'), (2, 'ENC_SW'), (18, 'ROW1_DRV'), (19, 'ROW2_DRV'), (20, 'ROW3_DRV'),
-             (21, 'ROW4_DRV'), (22, 'S0'), (23, 'S1'), (24, 'S2'), (25, 'S3'), (26, 'SENSE'), (28, 'ADC')]
+GPIO_NETS = [(0, 'ENC_B'), (1, 'ENC_A'), (2, 'ENC_SW'), (18, 'ROW1_DRV'), (19, 'ROW2_DRV'), (20, 'ROW3_DRV'),
+             (21, 'ROW4_DRV'), (3, 'S3B'), (4, 'S2B'), (5, 'S1B'), (7, 'INHB'), (8, 'S3A'), (9, 'S2A'), (10, 'S1A'), (11, 'INHA'), (26, 'SENSE'), (28, 'ADC')]
 
 
 def pt(node):
@@ -347,7 +344,7 @@ def edit_root(tree):
                 ['property', Q('Sheetfile'), Q('ec.kicad_sch'), ['at', '152.4', '102.3', '0'],
                  ['effects', ['font', ['size', '1.27', '1.27']], ['justify', 'left', 'top']]],
                 ['instances', ['project', Q('ts52k'), ['path', Q('/' + ROOT_UUID), ['page', Q('3')]]]]])
-    new.append(['text', Q('TC52: capacitive matrix (52 electrodes), column MUX x2 and analog front end\\nare on sheet ec. Nets are joined by global labels:\\nROW1..4_DRV, S0..S3, SENSE (purge, GPIO26), ADC (GPIO28), ENC_SW'),
+    new.append(['text', Q('TC52: capacitive matrix (52 electrodes), column MUX x2 and analog front end\\nare on sheet ec. Nets are joined by global labels:\\nROW1..4_DRV, INHA/S1A..S3A, INHB/S1B..S3B, SENSE (purge, GPIO26), ADC (GPIO28), ENC_SW'),
                 ['exclude_from_sim', 'no'], ['at', '154.94', '82.0', '0'],
                 ['effects', ['font', ['size', '1.6', '1.6']], ['justify', 'left']], ['uuid', Q(uid('root-note'))]])
     out[idx:idx] = new
@@ -359,7 +356,7 @@ def edit_root(tree):
 
 def edit_rp(tree):
     keep = {g for g, _ in GPIO_NETS}
-    add = {23: (130.81, 135.89, 0), 24: (77.47, 120.65, 180), 25: (77.47, 123.19, 180), 26: (77.47, 125.73, 180), 28: (77.47, 130.81, 180)}
+    add = {7: (130.81, 90.17, 0), 8: (130.81, 95.25, 0), 9: (130.81, 97.79, 0), 10: (130.81, 100.33, 0), 11: (130.81, 102.87, 0), 23: (130.81, 135.89, 0), 24: (77.47, 120.65, 180), 25: (77.47, 123.19, 180), 26: (77.47, 125.73, 180), 28: (77.47, 130.81, 180)}
     out = []
     for c in tree:
         if isinstance(c, list) and c[0] == 'hierarchical_label' and c[1].startswith('GPIO') and int(c[1][4:]) not in keep:
@@ -368,7 +365,7 @@ def edit_rp(tree):
             continue
         if isinstance(c, list) and c[0] == 'no_connect':
             p = pt(c)
-            hit = [g for g, (x, y, a) in add.items() if abs(p[0] - x) < 0.01 and abs(p[1] - y) < 0.01]
+            hit = [g for g, (x, y, a) in add.items() if g in keep and abs(p[0] - x) < 0.01 and abs(p[1] - y) < 0.01]
             if hit:
                 g = hit[0]
                 x, y, a = add[g]

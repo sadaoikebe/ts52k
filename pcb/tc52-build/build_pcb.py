@@ -27,7 +27,7 @@ FPDIR = '/usr/share/kicad/footprints'
 
 def island_keep(x, y):
     """region whose Rev 0.2 routing is kept"""
-    return 14.0 <= x <= 52.0 and y <= 84.5
+    return 14.0 <= x <= 42.0 and y <= 84.5
 
 
 def near_key(x, y):
@@ -68,10 +68,25 @@ def strip(bd):
             if not (t.Type() != pcbnew.PCB_VIA_T and abs(s.x - e.x) < MM(0.02) and mm(s.x) > 290 and max(mm(s.y), mm(e.y)) < 49.5):
                 b.RemoveNative(t)
             continue
+        if n == '+3V3' and t.Type() != pcbnew.PCB_VIA_T and t.GetLayer() == L4:
+            s, e = t.GetStart(), t.GetEnd()
+            xa, xb = sorted((mm(s.x), mm(e.x))); ya, yb = sorted((mm(s.y), mm(e.y)))
+            if (31.5 <= xb <= 33.5 and 60.6 <= ya and yb <= 63.9) or (xa >= 39.8 and xb >= 40.6 and yb <= 62.3) \
+                    or (xa >= 34.3 and xb <= 39.84 and 62.1 <= ya and yb <= 62.75) or (xa >= 30.5 and xb <= 30.85 and ya >= 72.4):
+                b.RemoveNative(t)      # C15->R2 feed is re-laid 0.25 mm further NE; R15/R16 move to the encoder
+                continue
+        if n == '+3V3' and t.Type() != pcbnew.PCB_VIA_T and t.GetLayer() == pcbnew.F_Cu:
+            s, e = t.GetStart(), t.GetEnd()
+            if (32.7 < mm(s.x) < 34.4 and mm(s.y) < 63.2) or (mm(s.x) > 28.0 and mm(s.y) > 74.1) or (mm(e.x) > 28.0 and mm(e.y) > 74.1 and mm(e.x) < 31):
+                b.RemoveNative(t)      # jumpers whose vias land on a guard ring (ring outer radius 8.45 mm); re-laid in east.py
+                continue
         if t.Type() == pcbnew.PCB_VIA_T:
             p = t.GetPosition()
             x, y = mm(p.x), mm(p.y)
             k, d = near_key(x, y)
+            if n == '+3V3' and min(math.hypot(x - a, y - c) for a, c in ((32.75, 63.14), (34.37, 62.7), (30.6, 74.03))) < 0.1:
+                b.RemoveNative(t)
+                continue
             if n == 'GND' and min(math.hypot(x - a, y - c) for a, c in ((18.4, 63.65), (18.4, 65.1), (19.98, 60.17))) < 0.1:
                 b.RemoveNative(t)      # in the way of the west fan-out (rows, S0-S3, PURGE, ADC); restitched in layout.py
                 continue
