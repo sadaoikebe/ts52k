@@ -21,6 +21,17 @@ def run(bd, K):
     b = bd.b
     # ---- holes
     for i, (x, y) in enumerate(HOLES):
+        # TC69 puts the hole on the row centre line midway between two keys, its edge touching both guard rings.
+        # Here it slides along the perpendicular until the hole wall is 0.26 mm clear of the ring copper
+        # (same strip of plate between the two switches; no ring copper at the hole wall, so the plate stays floating
+        # unless R25 is fitted). Row 1 holes move south (away from the upper band), row 3 holes north.
+        d = min(math.hypot(x - kx, y - ky) for kx, ky in K.values())
+        need = 8.45 + 1.05 + 0.26
+        if d < need:
+            dx = min(abs(x - kx) for kx, ky in K.values() if abs(y - ky) < 0.01)
+            dy = math.sqrt(need ** 2 - dx ** 2)
+            y = y + dy if y < 60 else y - dy
+            print('hole', i + 2, round(x, 2), round(y, 2))
         f = bd.fp(f'H{i + 2}')
         f.SetPosition(pcbnew.VECTOR2I(pcbnew.FromMM(x), pcbnew.FromMM(y)))
         f.Reference().SetVisible(False)

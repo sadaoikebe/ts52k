@@ -259,6 +259,19 @@ def zones_stage(bd):
         z.SetPadConnection(pcbnew.ZONE_CONNECTION_FULL)
         z.SetIslandRemovalMode(pcbnew.ISLAND_REMOVAL_MODE_NEVER if layer == L2 else pcbnew.ISLAND_REMOVAL_MODE_ALWAYS)
         b.Add(z)
+    # places where the high-impedance spacing rules cannot hold by construction (1.27 mm MUX pin pitch and the fans
+    # down to the lanes; PURGE / ADC leaving neighbouring RP2040 pins): the custom DRC rules skip pairs inside these
+    for x0, y0, x1, y1 in ((70.4, 103.0, 83.0, 119.2), (214.5, 103.0, 229.3, 119.2), (15.0, 61.7, 21.6, 64.0)):
+        z = pcbnew.ZONE(b)
+        z.SetIsRuleArea(True)
+        z.SetLayer(L4)
+        z.SetZoneName('HIZ_LOCAL')
+        for f_ in (z.SetDoNotAllowZoneFills, z.SetDoNotAllowTracks, z.SetDoNotAllowVias, z.SetDoNotAllowPads, z.SetDoNotAllowFootprints):
+            f_(False)
+        o = z.Outline(); o.NewOutline()
+        for px, py in ((x0, y0), (x1, y0), (x1, y1), (x0, y1)):
+            o.Append(MM(px), MM(py))
+        b.Add(z)
     # no pour between electrode and guard ring (keeps the TC69 electrode geometry)
     for k, (x, y) in K.items():
         z = pcbnew.ZONE(b)

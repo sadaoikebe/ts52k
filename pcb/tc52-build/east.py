@@ -66,6 +66,7 @@ def run(bd, A, Bp, K, SV, DV):
     T('GND', [c15, (30.95, 61.05)], 0.25)
     bd.via('GND', 30.95, 61.05)
     u44 = bd.pad('U4', 4)
+    qspi_north(bd)                                   # frees the pocket around the flash ground pin
     T('GND', [u44, (34.3, u44[1]), (35.3, 59.4), (37.0, 61.1), (38.12, 62.91)], 0.25)
     c14 = bd.pad('C14', 2)                           # C14 ground is fenced in by the MUX A lines: own via
     T('GND', [c14, (c14[0], 70.45)], 0.25)
@@ -253,3 +254,23 @@ def place1(bd, ref, x, y, rot, east=False):
     p1 = bd.pad(ref, 1)
     f.SetPosition(pcbnew.VECTOR2I(pcbnew.FromMM(2 * x - p1[0]), pcbnew.FromMM(2 * y - p1[1])))
     return f
+
+
+def qspi_north(bd):
+    """Rev 0.2 ran QSPI_SD0 south and east of the flash ground pin (U4 pin 4), whose ground came from a via to the
+    front pour. The front is an electrode now (no via possible there), so SD0 / SCLK / SD3 pass north of the pin
+    instead and the ground pin leaves to the south-east on L4."""
+    import pcbnew
+    mm = pcbnew.ToMM
+    b = bd.b
+    def inside(t, x0, y0, x1, y1):
+        return all(x0 <= mm(p.x) <= x1 and y0 <= mm(p.y) <= y1 for p in (t.GetStart(), t.GetEnd()))
+    box = {'/rp2040/QSPI_SD0': (30.7, 57.3, 39.9, 59.2), '/rp2040/QSPI_SCLK': (30.9, 57.0, 41.0, 58.1),
+           '/rp2040/QSPI_SD3': (31.0, 56.6, 41.35, 57.95)}
+    for t in list(b.GetTracks()):
+        n = t.GetNetname()
+        if n in box and t.Type() != pcbnew.PCB_VIA_T and t.GetLayer() == L4 and inside(t, *box[n]):
+            b.RemoveNative(t)
+    bd.track('/rp2040/QSPI_SD3', [(31.075, 56.7), (40.087, 56.7), (41.296, 57.909)], L4, 0.15)
+    bd.track('/rp2040/QSPI_SCLK', [(30.925, 57.075), (39.967, 57.075), (40.946, 58.054)], L4, 0.15)
+    bd.track('/rp2040/QSPI_SD0', [(30.772, 57.425), (38.6, 57.425), (39.4, 58.225), (39.859, 58.403)], L4, 0.15)
