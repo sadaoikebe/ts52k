@@ -1,0 +1,1195 @@
+diff --git a/keyboards/tc69/keymaps/nicola/keymap.c b/keyboards/tc69/keymaps/nicola/keymap.c
+index 50937868ea08..a98b39ca6f0f 100644
+--- a/keyboards/tc69/keymaps/nicola/keymap.c
++++ b/keyboards/tc69/keymaps/nicola/keymap.c
+@@ -78,8 +78,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+     case KC_EISU:
+       if (record->event.pressed) {
+         // NICOLA親指シフト
+-        send_string(SS_TAP(X_MHEN)); // Win
+-        send_string(SS_TAP(X_LANG2)); // Mac
++        send_string(SS_TAP(X_INT5)); // Win (Muhenkan key)
++        send_string(SS_TAP(X_LNG2)); // Mac
+         nicola_off();
+         // NICOLA親指シフト
+       }
+@@ -88,8 +88,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+     case KC_KANA2:
+       if (record->event.pressed) {
+         // NICOLA親指シフト
+-        send_string(SS_TAP(X_HENK)); // Win
+-        send_string(SS_TAP(X_LANG1)); // Mac
++        send_string(SS_TAP(X_INT4)); // Win (Henkan key)
++        send_string(SS_TAP(X_LNG1)); // Mac
+         nicola_on();
+         // NICOLA親指シフト
+       }
+diff --git a/users/nicola/info.json b/users/nicola/info.json
+new file mode 100644
+index 000000000000..4d3324505fc9
+--- /dev/null
++++ b/users/nicola/info.json
+@@ -0,0 +1,128 @@
++[
++  [
++    "Esc",
++    "\n\n\n\n\n\n\n！\n？\n\n１",
++    "\n\n\n\n\n\n\n＠\n／\n\n２",
++    "\n\n\n\n\n\n\n＃\n～\n\n３",
++    "\n\n\n\n\n\n\n＄\n「\n\n４",
++    "\n\n\n\n\n\n\n％\n」\n\n５",
++    "\n\n\n\n\n\n\n＾\n[\n\n６",
++    "\n\n\n\n\n\n\n＆\n]\n\n７",
++    {
++      "a": 5
++    },
++    "＊\n８",
++    "（\n９",
++    "）\n０",
++    "＿\nー",
++    "＋\n＝",
++    {
++      "a": 4,
++      "w": 2
++    },
++    "Backspace"
++  ],
++  [
++    {
++      "w": 1.5
++    },
++    "Tab",
++    "\n\n\n\n\n\n\nQ\nぁ\n\n。",
++    "\n\n\n\n\n\n\nW\nえ\n\nか",
++    "\n\n\n\n\n\n\nE\nり\n\nた",
++    "\n\n\n\n\n\n\nR\nゃ\n\nこ",
++    "\n\n\n\n\n\n\nT\nれ\n\nさ",
++    "\n\n\n\n\n\nぱ\nY\nよ\n\nら",
++    "\n\n\n\n\n\n\nU\nに\n\nち",
++    "\n\n\n\n\n\n\nI\nる\n\nく",
++    "\n\n\n\n\n\n\nO\nま\n\nつ",
++    "\n\n\n\n\n\nぴ\nP\nぇ\n\n，",
++    "\n\n\n\n\n\n\n[\n「\n\n、",
++    "\n\n\n\n\n\n\n]\n」\n\n；",
++    {
++      "w": 1.5
++    },
++    "|\n\\"
++  ],
++  [
++    {
++      "w": 1.75
++    },
++    "Ctrl",
++    "\n\n\n\n\n\n\nA\nを\n\nう",
++    "\n\n\n\n\n\n\nS\nあ\n\nし",
++    "\n\n\n\n\n\n\nD\nな\n\nて",
++    "\n\n\n\n\n\n\nF\nゅ\n\nけ",
++    "\n\n\n\n\n\n\nG\nも\n\nせ",
++    "\n\n\n\n\n\n\nH\nみ\n\nは",
++    "\n\n\n\n\n\n\nJ\nお\n\nと",
++    "\n\n\n\n\n\n\nK\nの\n\nき",
++    "\n\n\n\n\n\nぽ\nL\nょ\n\nい",
++    "\n\n\n\n\n\n\n;\nっ\n\nん",
++    "\n\n\n\n\n\n\n'\n\"\n\nBS",
++    {
++      "w": 2.25
++    },
++    "Enter"
++  ],
++  [
++    {
++      "w": 2.25
++    },
++    "Shift",
++    "\n\n\n\n\n\n\nZ\nぅ\n\n．",
++    "\n\n\n\n\n\n\nX\nー\n\nひ",
++    "\n\n\n\n\n\n\nC\nろ\n\nす",
++    "\n\n\n\n\n\n\nV\nや\n\nふ",
++    "\n\n\n\n\n\n\nB\nぃ\n\nへ",
++    "\n\n\n\n\n\nぷ\nN\nぬ\n\nめ",
++    "\n\n\n\n\n\n\nM\nゆ\n\nそ",
++    "\n\n\n\n\n\nぺ\n<\nむ\n\nね",
++    "\n\n\n\n\n\n\n>\nわ\n\nほ",
++    "\n\n\n\n\n\n\n？\nぉ\n\n・",
++    {
++      "w": 2.75
++    },
++    "Shift"
++  ],
++  [
++    {
++      "w": 1.25
++    },
++    "Fn",
++    {
++      "w": 1.25
++    },
++    "Win",
++    {
++      "w": 1.25
++    },
++    "Alt",
++    {
++      "a": 5,
++      "w": 3
++    },
++    "親指左",
++    {
++      "w": 3
++    },
++    "親指右",
++    {
++      "a": 4,
++      "w": 1.5
++    },
++    "Alt",
++    {
++      "w": 1.25
++    },
++    "Win",
++    {
++      "w": 1.25
++    },
++    "App\n\n\nFn",
++    {
++      "w": 1.25
++    },
++    "Ctrl"
++  ]
++]
+\ No newline at end of file
+diff --git a/users/nicola/jtu.c b/users/nicola/jtu.c
+new file mode 100644
+index 000000000000..794e4167ddf0
+--- /dev/null
++++ b/users/nicola/jtu.c
+@@ -0,0 +1,343 @@
++#include QMK_KEYBOARD_H
++#include "jtu.h"
++
++enum jtu_jis_key {
++    JU_J_2,
++    JU_J_6,
++    JU_J_7,
++    JU_J_8,
++    JU_J_9,
++    JU_J_0,
++    JU_J_MINS,
++    JU_J_EQL,
++    JU_J_INT3,
++    JU_J_LBRC,
++    JU_J_SCLN,
++    JU_J_QUOT,
++    JU_J_INT1,
++    JU_N_J
++};
++static bool jtu_pressed[JU_N_J];
++
++static bool rshift_to_unreg = false;
++static bool lshift_to_reg = false;
++static bool rshift_to_reg = false;
++
++#define UNREG_SHIFT() \
++          if (lshift) { unregister_code(KC_LSFT); lshift_to_reg = true; } \
++          if (rshift) { unregister_code(KC_RSFT); rshift_to_reg = true; }
++
++#define CLOSE_UNREG_SHIFT() \
++          if (lshift_to_reg) { register_code(KC_LSFT); lshift_to_reg = false; } \
++          if (rshift_to_reg) { register_code(KC_RSFT); rshift_to_reg = false; }
++
++#define REG_SHIFT() \
++          { register_code(KC_RSFT); rshift_to_unreg = true; }
++
++#define CLOSE_REG_SHIFT() \
++          if (rshift_to_unreg) { unregister_code(KC_RSFT); rshift_to_unreg = false; }
++
++#define JTU_PRESS(x) \
++          if (jtu_pressed[JU_J_ ## x]) unregister_code(KC_ ## x); \
++          register_code(KC_ ## x); \
++          jtu_pressed[JU_J_ ## x] = true \
++
++#define JTU_RELEASE(x) \
++          if (jtu_pressed[JU_J_ ## x]) unregister_code(KC_ ## x); \
++          jtu_pressed[JU_J_ ## x] = false \
++
++enum jtu_ansi_key {
++    JU_A_2,
++    JU_A_6,
++    JU_A_7,
++    JU_A_8,
++    JU_A_9,
++    JU_A_0,
++    JU_A_MINS,
++    JU_A_EQL,
++    JU_A_BSLS,
++    JU_A_SCLN,
++    JU_A_QUOT,
++    JU_A_GRV,
++    JU_N_A
++};
++static bool jtu_a_pressed_nshift[JU_N_A];
++static bool jtu_a_pressed_shift[JU_N_A];
++
++bool process_jtu(uint16_t keycode, keyrecord_t *record) {
++  static bool lshift = false;
++  static bool rshift = false;
++
++  switch (keycode) {
++    case KC_LSFT:
++      if (record->event.pressed) {
++        CLOSE_REG_SHIFT();
++        lshift = true;
++      } else {
++        CLOSE_UNREG_SHIFT();
++        lshift = false;
++      }
++      break;
++    case KC_RSFT:
++      if (record->event.pressed) {
++        CLOSE_REG_SHIFT();
++        rshift = true;
++      } else {
++        CLOSE_UNREG_SHIFT();
++        rshift = false;
++      }
++      break;
++    case JU_2:
++      if (record->event.pressed) {
++        if (lshift || rshift) {
++          jtu_a_pressed_shift[JU_A_2] = true;
++          UNREG_SHIFT();
++          JTU_PRESS(LBRC);
++        } else {
++          jtu_a_pressed_nshift[JU_A_2] = true;
++          CLOSE_REG_SHIFT();
++          JTU_PRESS(2);
++        }
++      } else {
++          if(jtu_a_pressed_shift[JU_A_2]) {
++            jtu_a_pressed_shift[JU_A_2] = false;
++            JTU_RELEASE(LBRC);
++            CLOSE_UNREG_SHIFT();
++          }
++          if(jtu_a_pressed_nshift[JU_A_2]) {
++            jtu_a_pressed_nshift[JU_A_2] = false;
++            JTU_RELEASE(2);
++          }
++      }
++      return false;
++    case JU_6:
++      if (record->event.pressed) {
++        if (lshift || rshift) {
++          jtu_a_pressed_shift[JU_A_6] = true;
++          UNREG_SHIFT();
++          JTU_PRESS(EQL);
++        } else {
++          jtu_a_pressed_nshift[JU_A_6] = true;
++          CLOSE_REG_SHIFT();
++          JTU_PRESS(6);
++        }
++      } else {
++          if(jtu_a_pressed_shift[JU_A_6]) {
++            jtu_a_pressed_shift[JU_A_6] = false;
++            JTU_RELEASE(EQL);
++            CLOSE_UNREG_SHIFT();
++          }
++          if(jtu_a_pressed_nshift[JU_A_6]) {
++            jtu_a_pressed_nshift[JU_A_6] = false;
++            JTU_RELEASE(6);
++          }
++      }
++      return false;
++    case JU_7:
++      if (record->event.pressed) {
++        if (lshift || rshift) {
++          jtu_a_pressed_shift[JU_A_7] = true;
++          CLOSE_UNREG_SHIFT();
++          JTU_PRESS(6);
++        } else {
++          jtu_a_pressed_nshift[JU_A_7] = true;
++          CLOSE_REG_SHIFT();
++          JTU_PRESS(7);
++        }
++      } else {
++          if(jtu_a_pressed_shift[JU_A_7]) {
++            jtu_a_pressed_shift[JU_A_7] = false;
++            JTU_RELEASE(6);
++          }
++          if(jtu_a_pressed_nshift[JU_A_7]) {
++            jtu_a_pressed_nshift[JU_A_7] = false;
++            JTU_RELEASE(7);
++          }
++      }
++      return false;
++    case JU_8:
++      if (record->event.pressed) {
++        if (lshift || rshift) {
++          jtu_a_pressed_shift[JU_A_8] = true;
++          CLOSE_UNREG_SHIFT();
++          JTU_PRESS(QUOT);
++        } else {
++          jtu_a_pressed_nshift[JU_A_8] = true;
++          CLOSE_REG_SHIFT();
++          JTU_PRESS(8);
++        }
++      } else {
++          if(jtu_a_pressed_shift[JU_A_8]) {
++            jtu_a_pressed_shift[JU_A_8] = false;
++            JTU_RELEASE(QUOT);
++          }
++          if(jtu_a_pressed_nshift[JU_A_8]) {
++            jtu_a_pressed_nshift[JU_A_8] = false;
++            JTU_RELEASE(8);
++          }
++      }
++      return false;
++    case JU_9:
++      if (record->event.pressed) {
++        if (lshift || rshift) {
++          jtu_a_pressed_shift[JU_A_9] = true;
++          CLOSE_UNREG_SHIFT();
++          JTU_PRESS(8);
++        } else {
++          jtu_a_pressed_nshift[JU_A_9] = true;
++          CLOSE_REG_SHIFT();
++          JTU_PRESS(9);
++        }
++      } else {
++          if(jtu_a_pressed_shift[JU_A_9]) {
++            jtu_a_pressed_shift[JU_A_9] = false;
++            JTU_RELEASE(8);
++          }
++          if(jtu_a_pressed_nshift[JU_A_9]) {
++            jtu_a_pressed_nshift[JU_A_9] = false;
++            JTU_RELEASE(9);
++          }
++      }
++      return false;
++    case JU_0:
++      if (record->event.pressed) {
++        if (lshift || rshift) {
++          jtu_a_pressed_shift[JU_A_0] = true;
++          CLOSE_UNREG_SHIFT();
++          JTU_PRESS(9);
++        } else {
++          jtu_a_pressed_nshift[JU_A_0] = true;
++          CLOSE_REG_SHIFT();
++          JTU_PRESS(0);
++        }
++      } else {
++          if(jtu_a_pressed_shift[JU_A_0]) {
++            jtu_a_pressed_shift[JU_A_0] = false;
++            JTU_RELEASE(9);
++          }
++          if(jtu_a_pressed_nshift[JU_A_0]) {
++            jtu_a_pressed_nshift[JU_A_0] = false;
++            JTU_RELEASE(0);
++          }
++      }
++      return false;
++    case JU_MINS:
++      if (record->event.pressed) {
++        if (lshift || rshift) {
++          jtu_a_pressed_shift[JU_A_MINS] = true;
++          CLOSE_UNREG_SHIFT();
++          JTU_PRESS(INT1);
++        } else {
++          jtu_a_pressed_nshift[JU_A_MINS] = true;
++          CLOSE_REG_SHIFT();
++          JTU_PRESS(MINS);
++        }
++      } else {
++          if(jtu_a_pressed_shift[JU_A_MINS]) {
++            jtu_a_pressed_shift[JU_A_MINS] = false;
++            JTU_RELEASE(INT1);
++          }
++          if(jtu_a_pressed_nshift[JU_A_MINS]) {
++            jtu_a_pressed_nshift[JU_A_MINS] = false;
++            JTU_RELEASE(MINS);
++          }
++      }
++      return false;
++    case JU_EQL:
++      if (record->event.pressed) {
++        if (lshift || rshift) {
++          jtu_a_pressed_shift[JU_A_EQL] = true;
++          CLOSE_UNREG_SHIFT();
++          JTU_PRESS(SCLN);
++        } else {
++          jtu_a_pressed_nshift[JU_A_EQL] = true;
++          REG_SHIFT();
++          JTU_PRESS(MINS);
++        }
++      } else {
++          if(jtu_a_pressed_shift[JU_A_EQL]) {
++            jtu_a_pressed_shift[JU_A_EQL] = false;
++            JTU_RELEASE(SCLN);
++          }
++          if(jtu_a_pressed_nshift[JU_A_EQL]) {
++            jtu_a_pressed_nshift[JU_A_EQL] = false;
++            JTU_RELEASE(MINS);
++            CLOSE_REG_SHIFT();
++          }
++      }
++      return false;
++    case JU_SCLN:
++      if (record->event.pressed) {
++        if (lshift || rshift) {
++          jtu_a_pressed_shift[JU_A_SCLN] = true;
++          UNREG_SHIFT();
++          JTU_PRESS(QUOT);
++        } else {
++          jtu_a_pressed_nshift[JU_A_SCLN] = true;
++          CLOSE_REG_SHIFT();
++          JTU_PRESS(SCLN);
++        }
++      } else {
++          if(jtu_a_pressed_shift[JU_A_SCLN]) {
++            jtu_a_pressed_shift[JU_A_SCLN] = false;
++            JTU_RELEASE(QUOT);
++            CLOSE_UNREG_SHIFT();
++          }
++          if(jtu_a_pressed_nshift[JU_A_SCLN]) {
++            jtu_a_pressed_nshift[JU_A_SCLN] = false;
++            JTU_RELEASE(SCLN);
++          }
++      }
++      return false;
++    case JU_QUOT:
++      if (record->event.pressed) {
++        if (lshift || rshift) {
++          jtu_a_pressed_shift[JU_A_QUOT] = true;
++          CLOSE_UNREG_SHIFT();
++          JTU_PRESS(2);
++        } else {
++          jtu_a_pressed_nshift[JU_A_QUOT] = true;
++          REG_SHIFT();
++          JTU_PRESS(7);
++        }
++      } else {
++          if(jtu_a_pressed_shift[JU_A_QUOT]) {
++            jtu_a_pressed_shift[JU_A_QUOT] = false;
++            JTU_RELEASE(2);
++          }
++          if(jtu_a_pressed_nshift[JU_A_QUOT]) {
++            jtu_a_pressed_nshift[JU_A_QUOT] = false;
++            JTU_RELEASE(7);
++            CLOSE_REG_SHIFT();
++          }
++      }
++      return false;
++    case JU_GRV:
++      if (record->event.pressed) {
++        if (lshift || rshift) {
++          jtu_a_pressed_shift[JU_A_GRV] = true;
++          CLOSE_UNREG_SHIFT();
++          JTU_PRESS(EQL);
++        } else {
++          jtu_a_pressed_nshift[JU_A_GRV] = true;
++          REG_SHIFT();
++          JTU_PRESS(LBRC);
++        }
++      } else {
++          if(jtu_a_pressed_shift[JU_A_GRV]) {
++            jtu_a_pressed_shift[JU_A_GRV] = false;
++            JTU_RELEASE(EQL);
++          }
++          if(jtu_a_pressed_nshift[JU_A_GRV]) {
++            jtu_a_pressed_nshift[JU_A_GRV] = false;
++            JTU_RELEASE(LBRC);
++            CLOSE_REG_SHIFT();
++          }
++      }
++      return false;
++    default:
++      CLOSE_REG_SHIFT();
++      CLOSE_UNREG_SHIFT();
++  }
++  return true;
++}
+diff --git a/users/nicola/jtu.h b/users/nicola/jtu.h
+new file mode 100644
+index 000000000000..ddd664a51191
+--- /dev/null
++++ b/users/nicola/jtu.h
+@@ -0,0 +1,28 @@
++
++#pragma once
++
++#include "action.h"
++#include "quantum_keycodes.h"
++
++#include "nicola.h"
++
++#define JU_LBRC KC_RBRACKET
++#define JU_RBRC KC_NONUS_HASH
++#define JU_BSLS KC_INT3
++
++enum jtu_keycodes {
++  JU_2 = NG_SAFE_RANGE,
++  JU_6,
++  JU_7,
++  JU_8,
++  JU_9,
++  JU_0,
++  JU_MINS,
++  JU_EQL,
++  JU_SCLN,
++  JU_QUOT,
++  JU_GRV,
++  JTU_SAFE_RANGE
++};
++
++bool process_jtu(uint16_t keycode, keyrecord_t *record);
+diff --git a/users/nicola/nicola.c b/users/nicola/nicola.c
+new file mode 100644
+index 000000000000..41d3c218cbff
+--- /dev/null
++++ b/users/nicola/nicola.c
+@@ -0,0 +1,481 @@
++/* Copyright 2018-2019 eswai <@eswai>
++ *
++ * This program is free software: you can redistribute it and/or modify
++ * it under the terms of the GNU General Public License as published by
++ * the Free Software Foundation, either version 2 of the License, or
++ * (at your option) any later version.
++ *
++ * This program is distributed in the hope that it will be useful,
++ * but WITHOUT ANY WARRANTY; without even the implied warranty of
++ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++ * GNU General Public License for more details.
++ *
++ * You should have received a copy of the GNU General Public License
++ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
++ */
++/*
++ * introduced NICOLA state machine
++ * (C) 2020 Sadao Ikebe @bonyarou
++ */
++
++#include QMK_KEYBOARD_H
++#include "nicola.h"
++#include <timer.h>
++
++static bool is_nicola = false; // 親指シフトがオンかオフか
++static uint8_t nicola_layer = 0; // レイヤー番号
++static uint8_t n_modifier = 0; // 押しているmodifierキーの数
++
++#define TIMEOUT_THRESHOLD (150)
++#define OVERLAP_THRESHOLD (20)
++
++typedef enum {
++  NICOLA_STATE_S1_INIT,
++  NICOLA_STATE_S2_M,
++  NICOLA_STATE_S3_O,
++  NICOLA_STATE_S4_MO,
++  NICOLA_STATE_S5_OM
++} nicola_state_t;
++
++static nicola_state_t nicola_int_state = NICOLA_STATE_S1_INIT;
++static int nicola_m_key;
++static int nicola_o_key;
++static uint16_t nicola_m_time;
++static uint16_t nicola_o_time;
++
++static int key_process_guard = 0;
++void keypress_timer_expired(void);
++
++// 親指シフトのレイヤー、シフトキーを設定
++void set_nicola(uint8_t layer) {
++  nicola_layer = layer;
++}
++
++// 親指シフトをオンオフ
++void nicola_on(void) {
++  is_nicola = true;
++  nicola_clear();
++  layer_on(nicola_layer);
++
++//   tap_code(KC_LANG1); // Mac
++//   tap_code(KC_HENK); // Win
++}
++
++void nicola_off(void) {
++  is_nicola = false;
++  nicola_clear();
++  layer_off(nicola_layer);
++
++//   tap_code(KC_LANG2); // Mac
++//   tap_code(KC_MHEN); // Win
++}
++
++// 親指シフトの状態
++bool nicola_state(void) {
++  return is_nicola;
++}
++
++// バッファをクリアする
++void nicola_clear(void) {
++  nicola_int_state = NICOLA_STATE_S1_INIT;
++  key_process_guard = 0;
++}
++
++// 入力モードか編集モードかを確認する
++void nicola_mode(uint16_t keycode, keyrecord_t *record) {
++  if (!is_nicola) return;
++
++  // modifierが押されたらレイヤーをオフ
++  switch (keycode) {
++    case KC_LCTL:
++    case KC_LSFT:
++    case KC_LALT:
++    case KC_LGUI:
++    case KC_RCTL:
++    case KC_RSFT:
++    case KC_RALT:
++    case KC_RGUI:
++      if (record->event.pressed) {
++        if(n_modifier == 0) {
++          layer_off(nicola_layer);
++        }
++        n_modifier++;
++      } else {
++        n_modifier--;
++        if (n_modifier == 0) {
++          layer_on(nicola_layer);
++        }
++      }
++      break;
++  }
++
++}
++
++#define SS_ALNUM(x) SS_TAP(X_CAPS) x SS_TAP(X_CAPS)
++
++void nicola_m_type(void) {
++    switch(nicola_m_key) {
++        case NG_1   : send_string("1" ); break;
++        case NG_2   : send_string("2" ); break;
++        case NG_3   : send_string("3" ); break;
++        case NG_4   : send_string("4" ); break;
++        case NG_5   : send_string("5" ); break;
++        case NG_6   : send_string("6" ); break;
++        case NG_7   : send_string("7" ); break;
++        case NG_8   : send_string("8" ); break;
++        case NG_9   : send_string("9" ); break;
++        case NG_0   : send_string("0" ); break;
++        case NG_MINS: send_string("-" ); break;
++        case NG_EQL : send_string(SS_LSFT("-") ); break; // =
++
++        case NG_Q   : send_string("." ); break;
++        case NG_W   : send_string("ka"); break;
++        case NG_E   : send_string("ta"); break;
++        case NG_R   : send_string("ko"); break;
++        case NG_T   : send_string("sa"); break;
++        case NG_Y   : send_string("ra"); break;
++        case NG_U   : send_string("ti"); break;
++        case NG_I   : send_string("ku"); break;
++        case NG_O   : send_string("tu"); break;
++        case NG_P   : send_string(SS_ALNUM(SS_TAP(X_COMM))); break; // ，
++        case NG_LBRC: send_string("," ); break;
++        case NG_RBRC: send_string(";" ); break;
++        case NG_BSLS: send_string(SS_ALNUM(SS_TAP(X_INT1))); break;
++
++        case NG_A   : send_string("u" ); break;
++        case NG_S   : send_string("si"); break;
++        case NG_D   : send_string("te"); break;
++        case NG_F   : send_string("ke"); break;
++        case NG_G   : send_string("se"); break;
++        case NG_H   : send_string("ha"); break;
++        case NG_J   : send_string("to"); break;
++        case NG_K   : send_string("ki"); break;
++        case NG_L   : send_string("i" ); break;
++        case NG_SCLN: send_string("nn"); break;
++        case NG_QUOT: send_string(SS_TAP(X_BSPC)); break;
++
++        case NG_Z   : send_string(SS_ALNUM(SS_TAP(X_DOT))); break; // ，
++        case NG_X   : send_string("hi"); break;
++        case NG_C   : send_string("su"); break;
++        case NG_V   : send_string("hu"); break;
++        case NG_B   : send_string("he"); break;
++        case NG_N   : send_string("me"); break;
++        case NG_M   : send_string("so"); break;
++        case NG_COMM: send_string("ne"); break;
++        case NG_DOT : send_string("ho"); break;
++        case NG_SLSH: send_string("/" ); break;
++    }
++}
++
++void nicola_o_type(void) {
++    if(nicola_o_key != 0) {
++        send_string(" ");
++    }
++}
++
++void nicola_om_type(void) {
++    if(nicola_o_key == NG_SHFTL) {
++        switch(nicola_m_key) {
++            case NG_1   : send_string(SS_ALNUM(SS_LSFT(SS_TAP(X_SLSH)))); break;
++            case NG_2   : send_string(SS_ALNUM(SS_TAP(X_SLSH))); break;
++            case NG_3   : send_string(SS_ALNUM(SS_LSFT(SS_TAP(X_EQL)))); break; // ~
++            case NG_4   : send_string("]" ); break; // [
++            case NG_5   : send_string(SS_TAP(X_NUHS)); break; // ]
++            case NG_6   : send_string(SS_LSFT("]" )); break; // {
++            case NG_7   : send_string(SS_LSFT(SS_TAP(X_NUHS))); break; // }
++            case NG_8   : send_string(SS_LSFT(SS_TAP(X_QUOT)) ); break; // *
++            case NG_9   : send_string("*" ); break; // (
++            case NG_0   : send_string("(" ); break; // )
++            case NG_MINS: send_string(SS_LSFT(SS_TAP(X_INT1))); break; // _
++            case NG_EQL : send_string(SS_LSFT(";")); break; // +
++
++            case NG_Q   : send_string("xa"); break;
++            case NG_W   : send_string("e" ); break;
++            case NG_E   : send_string("ri"); break;
++            case NG_R   : send_string("xya");break;
++            case NG_T   : send_string("re"); break;
++            case NG_Y   : send_string("pa"); break;
++            case NG_U   : send_string("di"); break;
++            case NG_I   : send_string("gu"); break;
++            case NG_O   : send_string("du"); break;
++            case NG_P   : send_string("pi"); break;
++            case NG_LBRC: send_string("]" ); break;
++            case NG_RBRC: send_string(SS_TAP(X_NUHS)); break;
++            case NG_BSLS: send_string(SS_ALNUM(SS_TAP(X_INT1))); break;
++
++            case NG_A   : send_string("wo"); break;
++            case NG_S   : send_string("a" ); break;
++            case NG_D   : send_string("na"); break;
++            case NG_F   : send_string("xyu");break;
++            case NG_G   : send_string("mo"); break;
++            case NG_H   : send_string("ba"); break;
++            case NG_J   : send_string("do"); break;
++            case NG_K   : send_string("gi"); break;
++            case NG_L   : send_string("po"); break;
++            case NG_SCLN:                    break;
++            case NG_QUOT: send_string(SS_TAP(X_BSPC)); break;
++
++            case NG_Z   : send_string("xu"); break;
++            case NG_X   : send_string("-" ); break;
++            case NG_C   : send_string("ro"); break;
++            case NG_V   : send_string("ya"); break;
++            case NG_B   : send_string("xi"); break;
++            case NG_N   : send_string("pu"); break;
++            case NG_M   : send_string("zo"); break;
++            case NG_COMM: send_string("pe"); break;
++            case NG_DOT : send_string("bo"); break;
++            case NG_SLSH: send_string("?" ); break;
++        }
++    } else if(nicola_o_key == NG_SHFTR) {
++        switch(nicola_m_key) {
++            case NG_1   : send_string(SS_ALNUM(SS_LSFT(SS_TAP(X_SLSH)))); break;
++            case NG_2   : send_string(SS_ALNUM(SS_TAP(X_SLSH))); break;
++            case NG_3   : send_string(SS_ALNUM(SS_LSFT(SS_TAP(X_EQL)))); break; // ~
++            case NG_4   : send_string("]" ); break; // [
++            case NG_5   : send_string(SS_TAP(X_NUHS)); break; // ]
++            case NG_6   : send_string(SS_LSFT("]" )); break; // {
++            case NG_7   : send_string(SS_LSFT(SS_TAP(X_NUHS))); break; // }
++            case NG_8   : send_string(SS_LSFT(SS_TAP(X_QUOT)) ); break; // *
++            case NG_9   : send_string("*" ); break; // (
++            case NG_0   : send_string("(" ); break; // )
++            case NG_MINS: send_string(SS_LSFT(SS_TAP(X_INT1))); break; // _
++            case NG_EQL : send_string(SS_LSFT(";")); break; // +
++
++            case NG_Q   :                    break;
++            case NG_W   : send_string("ga"); break;
++            case NG_E   : send_string("da"); break;
++            case NG_R   : send_string("go"); break;
++            case NG_T   : send_string("za"); break;
++            case NG_Y   : send_string("yo"); break;
++            case NG_U   : send_string("ni"); break;
++            case NG_I   : send_string("ru"); break;
++            case NG_O   : send_string("ma"); break;
++            case NG_P   : send_string("xe"); break;
++            case NG_LBRC: send_string("[" ); break;
++            case NG_RBRC: send_string("]" ); break;
++            case NG_BSLS: send_string(SS_ALNUM(SS_TAP(X_INT1))); break;
++
++            case NG_A   : send_string("vu"); break;
++            case NG_S   : send_string("zi"); break;
++            case NG_D   : send_string("de"); break;
++            case NG_F   : send_string("ge"); break;
++            case NG_G   : send_string("ze"); break;
++            case NG_H   : send_string("mi"); break;
++            case NG_J   : send_string("o" ); break;
++            case NG_K   : send_string("no"); break;
++            case NG_L   : send_string("xyo");break;
++            case NG_SCLN: send_string("xtu");break;
++            case NG_QUOT: send_string("'" ); break;
++
++            case NG_Z   :                    break;
++            case NG_X   : send_string("bi"); break;
++            case NG_C   : send_string("zu"); break;
++            case NG_V   : send_string("bu"); break;
++            case NG_B   : send_string("be"); break;
++            case NG_N   : send_string("nu"); break;
++            case NG_M   : send_string("yu"); break;
++            case NG_COMM: send_string("mu"); break;
++            case NG_DOT : send_string("wa"); break;
++            case NG_SLSH: send_string("xo"); break;
++        }
++    }
++}
++
++// 親指シフトの入力処理
++bool process_nicola(uint16_t keycode, keyrecord_t *record) {
++  key_process_guard = 1; // timeout entrance guard
++  bool cont_process = true;
++  // if (!is_nicola || n_modifier > 0) return true;
++  uint16_t curr_time = timer_read();
++
++  if (record->event.pressed) {
++    if(NG_M_TOP <= keycode && keycode <= NG_M_BOTTOM) {
++        // M key
++        switch(nicola_int_state) {
++          case NICOLA_STATE_S1_INIT:
++            // no timeout check
++            nicola_int_state = NICOLA_STATE_S2_M;
++            break;
++          case NICOLA_STATE_S2_M:
++            // same behavior for time out and sequential stroke
++            nicola_m_type();
++            break;
++          case NICOLA_STATE_S3_O:
++            // timeout check
++            if(curr_time - nicola_o_time > TIMEOUT_THRESHOLD) {
++              // timeout => (output O) => S2
++              nicola_o_type();
++              nicola_int_state = NICOLA_STATE_S2_M;
++            } else {
++              // combo => S5
++              nicola_int_state = NICOLA_STATE_S5_OM;
++            }
++            break;
++          case NICOLA_STATE_S4_MO:
++            // timeout check
++            if(curr_time - nicola_o_time > TIMEOUT_THRESHOLD) {
++              // timeout => (output MO) => S2
++              nicola_om_type();
++              nicola_int_state = NICOLA_STATE_S2_M;
++            } else {
++              // combo => three key judge
++              uint16_t t1 = nicola_o_time - nicola_m_time;
++              uint16_t t2 = curr_time - nicola_o_time;
++              if(t1 < t2) {
++                // the O key in between is combo with the leading M key
++                nicola_om_type();
++                nicola_int_state = NICOLA_STATE_S2_M;
++              } else {
++                // the leading M key is single, the O key in between is combo with current key
++                nicola_m_type();
++                nicola_int_state = NICOLA_STATE_S5_OM;
++              }
++            }
++            break;
++          case NICOLA_STATE_S5_OM:
++            // same behavior for time out and sequential stroke
++            nicola_om_type();
++            nicola_int_state = NICOLA_STATE_S2_M;
++            break;
++        }
++        nicola_m_key = keycode;
++        nicola_m_time = curr_time;
++        cont_process = false;
++    } else if(keycode == NG_SHFTL || keycode == NG_SHFTR) {
++        // O key
++        switch(nicola_int_state) {
++          case NICOLA_STATE_S1_INIT:
++            // no timeout check
++            nicola_int_state = NICOLA_STATE_S3_O;
++            break;
++          case NICOLA_STATE_S2_M:
++            // timeout check
++            if(curr_time - nicola_m_time > TIMEOUT_THRESHOLD) {
++              // timeout => (output M) => S3
++              nicola_m_type();
++              nicola_int_state = NICOLA_STATE_S3_O;
++            } else {
++              // combo => S4
++              nicola_int_state = NICOLA_STATE_S4_MO;
++            }
++            break;
++          case NICOLA_STATE_S3_O:
++            // same behavior for time out and sequential stroke
++            nicola_o_type();
++            break;
++          case NICOLA_STATE_S4_MO:
++            // same behavior for time out and sequential stroke
++            nicola_om_type();
++            nicola_int_state = NICOLA_STATE_S3_O;
++            break;
++          case NICOLA_STATE_S5_OM:
++            // timeout check
++            if(curr_time - nicola_m_time > TIMEOUT_THRESHOLD) {
++              // timeout => (output MO) => S3
++              nicola_om_type();
++              nicola_int_state = NICOLA_STATE_S3_O;
++            } else {
++              // combo => three key judge
++              uint16_t t1 = nicola_m_time - nicola_o_time;
++              uint16_t t2 = curr_time - nicola_m_time;
++              if(t1 < t2) {
++                // the M key in between is combo with the leading O key
++                nicola_om_type();
++                nicola_int_state = NICOLA_STATE_S3_O;
++              } else {
++                // the leading O key is single, the M key in between is combo with current key
++                nicola_o_type();
++                nicola_int_state = NICOLA_STATE_S4_MO;
++              }
++            }
++            break;
++        }
++        nicola_o_key = keycode;
++        nicola_o_time = curr_time;
++        cont_process = false;
++    } else {
++        // その他のキーが押された
++        switch(nicola_int_state) {
++          case NICOLA_STATE_S1_INIT:
++            break;
++          case NICOLA_STATE_S2_M:
++            nicola_m_type();
++            break;
++          case NICOLA_STATE_S3_O:
++            nicola_o_type();
++            break;
++          case NICOLA_STATE_S4_MO:
++            nicola_om_type();
++            break;
++          case NICOLA_STATE_S5_OM:
++            nicola_om_type();
++            break;
++        }
++        nicola_int_state = NICOLA_STATE_S1_INIT;
++        key_process_guard = 0;
++        // continue processing current key, so this path returns true
++    }
++  } else { // key release
++    if(NG_TOP <= keycode && keycode <= NG_BOTTOM) { // key off
++        switch(nicola_int_state) {
++          case NICOLA_STATE_S1_INIT:
++            break;
++          case NICOLA_STATE_S2_M:
++            if(nicola_m_key == keycode) {
++              nicola_m_type();
++              nicola_int_state = NICOLA_STATE_S1_INIT;
++            }
++            break;
++          case NICOLA_STATE_S3_O:
++            if(nicola_o_key == keycode) {
++              nicola_o_type();
++              nicola_int_state = NICOLA_STATE_S1_INIT;
++            }
++            break;
++          case NICOLA_STATE_S4_MO:
++            if(nicola_m_key == keycode) {
++              // M ON --> O ON --> M OFF
++              uint16_t t1 = nicola_o_time - nicola_m_time;
++              uint16_t t2 = curr_time - nicola_o_time;
++              if(t1>=t2 && t2 < OVERLAP_THRESHOLD) {
++                // M ON --> O ON --> M OFF (M is output, but O is still open to combo)
++                nicola_m_type();
++                nicola_int_state = NICOLA_STATE_S3_O;
++              } else {
++                // M ON --> O ON --> M OFF (both M and O are output)
++                nicola_om_type();
++                nicola_int_state = NICOLA_STATE_S1_INIT;
++              }
++            } else if(nicola_o_key == keycode) {
++              // M ON --> O ON --> O OFF (both M and O are output)
++              nicola_om_type();
++              nicola_int_state = NICOLA_STATE_S1_INIT;
++            }
++            break;
++          case NICOLA_STATE_S5_OM:
++            if(nicola_o_key == keycode) {
++              // O ON --> M ON --> O OFF
++              uint16_t t1 = nicola_m_time - nicola_o_time;
++              uint16_t t2 = curr_time - nicola_m_time;
++              if(t1>=t2 && t2 < OVERLAP_THRESHOLD) {
++                // O ON --> M ON --> O OFF (O is output, but M is still open to combo)
++                nicola_o_type();
++                nicola_int_state = NICOLA_STATE_S2_M;
++              } else {
++                // O ON --> M ON --> O OFF (both M and O are output)
++                nicola_om_type();
++                nicola_int_state = NICOLA_STATE_S1_INIT;
++              }
++            } else if(nicola_m_key == keycode) {
++              // O ON --> M ON --> M OFF (both O and M are output)
++              nicola_om_type();
++              nicola_int_state = NICOLA_STATE_S1_INIT;
++            }
++            break;
++        }
++        cont_process = false;
++    }
++  }
++  key_process_guard = 0;
++  return cont_process;
++}
+diff --git a/users/nicola/nicola.h b/users/nicola/nicola.h
+new file mode 100644
+index 000000000000..b72811bb734a
+--- /dev/null
++++ b/users/nicola/nicola.h
+@@ -0,0 +1,93 @@
++#pragma once
++/* Copyright 2018-2019 eswai <@eswai>
++ *
++ * This program is free software: you can redistribute it and/or modify
++ * it under the terms of the GNU General Public License as published by
++ * the Free Software Foundation, either version 2 of the License, or
++ * (at your option) any later version.
++ *
++ * This program is distributed in the hope that it will be useful,
++ * but WITHOUT ANY WARRANTY; without even the implied warranty of
++ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++ * GNU General Public License for more details.
++ *
++ * You should have received a copy of the GNU General Public License
++ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
++ */
++
++void nicola_type(void);
++void nicola_clear(void);
++
++void nicola_mode(uint16_t, keyrecord_t *);
++
++void nicola_on(void);
++void nicola_off(void);
++bool nicola_state(void);
++
++bool process_nicola(uint16_t, keyrecord_t *);
++void set_nicola(uint8_t);
++
++typedef enum nicola_keycodes {
++  NG_TOP = SAFE_RANGE,
++  NG_M_TOP = NG_TOP,
++  NG_1 = NG_TOP,
++  NG_2,
++  NG_3,
++  NG_4,
++  NG_5,
++  NG_6,
++  NG_7,
++  NG_8,
++  NG_9,
++  NG_0,
++  NG_MINS,
++  NG_EQL,
++  NG_BSLS,
++
++  NG_Q,
++  NG_W,
++  NG_E,
++  NG_R,
++  NG_T,
++  NG_Y,
++  NG_U,
++  NG_I,
++  NG_O,
++  NG_P,
++  NG_LBRC,
++  NG_RBRC,
++
++  NG_A,
++  NG_S,
++  NG_D,
++  NG_F,
++  NG_G,
++  NG_H,
++  NG_J,
++  NG_K,
++  NG_L,
++  NG_SCLN,
++  NG_QUOT,
++
++  NG_Z,
++  NG_X,
++  NG_C,
++  NG_V,
++  NG_B,
++  NG_N,
++  NG_M,
++  NG_COMM,
++  NG_DOT,
++  NG_SLSH,
++
++  NG_M_BOTTOM = NG_SLSH,
++
++  NG_SHFTL,
++  NG_SHFTR,
++
++  NG_BOTTOM = NG_SHFTR,
++} NGKEYS;
++
++#define NG_SAFE_RANGE (NG_BOTTOM+1)
++
++
+diff --git a/users/nicola/readme.md b/users/nicola/readme.md
+new file mode 100644
+index 000000000000..6cb91931bcdf
+--- /dev/null
++++ b/users/nicola/readme.md
+@@ -0,0 +1,48 @@
++# 親指シフトキーマップ
++Copyright 2020 Sadao Ikebe  
++
++一般的な60% Keyboard の Spacebar が分割された物理配列を想定しています。  
++キーボード側で親指シフト出力するためのキーマップです。  
++物理的なキー配置はANSI配列ですが、JISキーボードのキーコードを送信します。  
++
++## 配列例
++![Layout](layout.png "Layout")
++
++## 物理配列 = ANSI配列 を JIS配列に置き換える
++
++|ANSI物理キー|NoShift出力|VK (JIS)|Shift出力|VK (JIS)|
++|---|---|---|---|---|
++|JU_2|2|KC_2|@|*KC_LBRC*|
++|JU_6|6|KC_6|^|*KC_EQL*|
++|JU_7|7|KC_7|&|Shift + KC_6|
++|JU_8|8|KC_8|*|Shift + KC_QUOT|
++|JU_9|9|KC_9|(|Shift + KC_8|
++|JU_0|0|KC_0|)|Shift + KC_9|
++|JU_MINS|-|KC_MINS|_|Shift + KC_INT1|
++|JU_EQL|=|*Shift +* KC_MINS|+|Shift + KC_SCLN|
++|JU_BSLS|\\ |KC_INT1|\||Shift + KC_INT3|
++|JU_SCLN|;|KC_SCLN|:|*KC_QUOT*|
++|JU_QUOT|'|*Shift +* KC_7|"| Shift + KC_2|
++|JU_GRV|\`|*Shift +* KC_LBRC|~|Shift + KC_EQL|
++斜体表記はシフト状態の変化
++
++|JIS論理キー|VK Code|NoShift入力|Shift入力|
++|---|---|---|---|
++| 2, " |KC_2|JU_2|Shift + JU_QUOT|
++| 6, & |KC_6|JU_6|Shift + JU_7|
++| 7, ' |KC_7|JU_7|*JU_QUOT*|
++| 8, ( |KC_8|JU_8|Shift + JU_9|
++| 9, ) |KC_9|JU_9|Shift + JU_0|
++| 0  |KC_0|JU_0|(N/A)|
++| -, = |KC_MINS|JU_MINS|Shift + JU_EQL|
++| ^, ~ |KC_EQL|*Shift +* JU_6|Shift + JU_GRV|
++| \\, \| |KC_INT3|(N/A)|Shift + JU_BSLS|
++| @, \` |KC_LBRC|*Shift +* JU_2|*JU_GRV*|
++| ;, + |KC_SCLN|JU_SCLN|Shift + JU_EQL|
++| :, * |KC_QUOT|*Shift +* JU_SCLN|Shift + JU_8|
++| \\, _ |KC_INT1|JU_BSLS|Shift + JU_MINS|
++
++## 情報元
++
++* https://github.com/eswai/qmk_firmware/ を元にNICOLA規格のタイミング判定を追加しました。
++* [jtu_custom_keycodes](https://github.com/koktoh/jtu_custom_keycodes/tree/master/default) を元にRepeat判定を追加しました。
+diff --git a/users/nicola/rules.mk b/users/nicola/rules.mk
+new file mode 100644
+index 000000000000..c1d18f216d7a
+--- /dev/null
++++ b/users/nicola/rules.mk
+@@ -0,0 +1,5 @@
++SRC +=  nicola.c \
++		jtu.c
++
++# NICOLA key down timre requires TIMER1 so Backlight LED must be turned off
++BACKLIGHT_ENABLE = no       # Enable keyboard backlight functionality

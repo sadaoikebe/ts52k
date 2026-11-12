@@ -1,0 +1,446 @@
+diff --git a/keyboards/tc69/halconf.h b/keyboards/tc69/halconf.h
+new file mode 100644
+index 000000000000..36d2cb8e6679
+--- /dev/null
++++ b/keyboards/tc69/halconf.h
+@@ -0,0 +1,21 @@
++/* Copyright 2021 QMK
++ *
++ * This program is free software: you can redistribute it and/or modify
++ * it under the terms of the GNU General Public License as published by
++ * the Free Software Foundation, either version 2 of the License, or
++ * (at your option) any later version.
++ *
++ * This program is distributed in the hope that it will be useful,
++ * but WITHOUT ANY WARRANTY; without even the implied warranty of
++ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++ * GNU General Public License for more details.
++ *
++ * You should have received a copy of the GNU General Public License
++ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
++ */
++
++#pragma once
++
++#define HAL_USE_ADC TRUE
++
++#include_next <halconf.h>
+diff --git a/keyboards/tc69/info.json b/keyboards/tc69/info.json
+new file mode 100644
+index 000000000000..eff80be56735
+--- /dev/null
++++ b/keyboards/tc69/info.json
+@@ -0,0 +1,95 @@
++{
++    "keyboard_name": "TC69 Oyayubi Shift",
++    "manufacturer": "Shobon",
++    "maintainer": "shobon",
++    "usb": {
++        "vid": "0xFEED",
++        "pid": "0x6363",
++        "device_version": "0.0.1"
++    },
++    "processor": "RP2040",
++    "bootloader": "rp2040",
++    "matrix_size": {
++        "cols": 16,
++        "rows": 5
++    },
++    "layouts": {
++        "LAYOUT_oyayubi_shift": {
++            "layout": [
++                {"label":"~", "x":0, "y":0},
++                {"label":"!", "x":1, "y":0},
++                {"label":"@", "x":2, "y":0},
++                {"label":"#", "x":3, "y":0},
++                {"label":"$", "x":4, "y":0},
++                {"label":"%", "x":5, "y":0},
++                {"label":"^", "x":6, "y":0},
++                {"label":"&", "x":7, "y":0},
++                {"label":"*", "x":8, "y":0},
++                {"label":"(", "x":9, "y":0},
++                {"label":")", "x":10, "y":0},
++                {"label":"_", "x":11, "y":0},
++                {"label":"+", "x":12, "y":0},
++                {"label":"BS", "x":13, "y":0, "w":2},
++                {"label":"Home", "x":15, "y":0},
++
++                {"label":"Tab", "x":0, "y":1, "w":1.5},
++                {"label":"Q", "x":1.5, "y":1},
++                {"label":"W", "x":2.5, "y":1},
++                {"label":"E", "x":3.5, "y":1},
++                {"label":"R", "x":4.5, "y":1},
++                {"label":"T", "x":5.5, "y":1},
++                {"label":"Y", "x":6.5, "y":1},
++                {"label":"U", "x":7.5, "y":1},
++                {"label":"I", "x":8.5, "y":1},
++                {"label":"O", "x":9.5, "y":1},
++                {"label":"P", "x":10.5, "y":1},
++                {"label":"{", "x":11.5, "y":1},
++                {"label":"}", "x":12.5, "y":1},
++                {"label":"|", "x":13.5, "y":1, "w":1.5},
++                {"label":"Page Up", "x":15, "y":1},
++
++                {"label":"Control", "x":0, "y":2, "w":1.75},
++                {"label":"A", "x":1.75, "y":2},
++                {"label":"S", "x":2.75, "y":2},
++                {"label":"D", "x":3.75, "y":2},
++                {"label":"F", "x":4.75, "y":2},
++                {"label":"G", "x":5.75, "y":2},
++                {"label":"H", "x":6.75, "y":2},
++                {"label":"J", "x":7.75, "y":2},
++                {"label":"K", "x":8.75, "y":2},
++                {"label":"L", "x":9.75, "y":2},
++                {"label":":", "x":10.75, "y":2},
++                {"label":"\"", "x":11.75, "y":2},
++                {"label":"Enter", "x":12.75, "y":2, "w":2.25},
++                {"label":"Page Down", "x":15, "y":2},
++
++                {"label":"Shift", "x":0, "y":3, "w":2.25},
++                {"label":"Z", "x":2.25, "y":3},
++                {"label":"X", "x":3.25, "y":3},
++                {"label":"C", "x":4.25, "y":3},
++                {"label":"V", "x":5.25, "y":3},
++                {"label":"B", "x":6.25, "y":3},
++                {"label":"N", "x":7.25, "y":3},
++                {"label":"M", "x":8.25, "y":3},
++                {"label":"<", "x":9.25, "y":3},
++                {"label":">", "x":10.25, "y":3},
++                {"label":"?", "x":11.25, "y":3},
++                {"label":"Shift", "x":12.25, "y":3, "w":1.75},
++                {"label":"Up", "x":14, "y":3},
++                {"label":"End", "x":15, "y":3},
++
++                {"label":"FN", "x":0, "y":4, "w":1.25},
++                {"label":"Win", "x":1.25, "y":4, "w":1.25},
++                {"label":"Alt", "x":2.5, "y":4, "w":1.25},
++                {"label":"Left Thumb", "x":3.75, "y":4, "w":3},
++                {"label":"Right Thumb", "x":6.75, "y":4, "w":3},
++                {"label":"Alt", "x":9.75, "y":4, "w":1.25},
++                {"label":"Win", "x":11, "y":4},
++                {"label":"Menu", "x":12, "y":4},
++                {"label":"Left", "x":13, "y":4},
++                {"label":"Down", "x":14, "y":4},
++                {"label":"Right", "x":15, "y":4}
++            ]
++        }
++    }
++}
+diff --git a/keyboards/tc69/keymaps/nicola/keymap.c b/keyboards/tc69/keymaps/nicola/keymap.c
+new file mode 100644
+index 000000000000..50937868ea08
+--- /dev/null
++++ b/keyboards/tc69/keymaps/nicola/keymap.c
+@@ -0,0 +1,116 @@
++/* Copyright 2018-2019 eswai <@eswai>
++ *
++ * This program is free software: you can redistribute it and/or modify
++ * it under the terms of the GNU General Public License as published by
++ * the Free Software Foundation, either version 2 of the License, or
++ * (at your option) any later version.
++ *
++ * This program is distributed in the hope that it will be useful,
++ * but WITHOUT ANY WARRANTY; without even the implied warranty of
++ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++ * GNU General Public License for more details.
++ *
++ * You should have received a copy of the GNU General Public License
++ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
++ */
++/*
++ For TC69
++ * (C) 2020 Sadao Ikebe @bonyarou
++ */
++
++#include QMK_KEYBOARD_H
++#include "bootloader.h"
++
++#include "nicola.h" // NICOLA親指シフト
++
++// Each layer gets a name for readability, which is then used in the keymap matrix below.
++// The underscores don't mean anything - you can have a layer called STUFF or any other name.
++// Layer names don't all need to be of the same length, obviously, and you can also skip them
++// entirely and just use numbers.
++enum keymap_layers {
++  _QWERTY,
++// NICOLA親指シフト
++  _NICOLA, // NICOLA親指シフト入力レイヤー
++// NICOLA親指シフト
++  _FUNC
++};
++
++enum custom_keycodes {
++  KC_EISU = NG_SAFE_RANGE,
++  KC_KANA2
++};
++
++const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
++  [_QWERTY] = LAYOUT_oyayubi_shift( \
++      KC_ESC,  KC_1,    KC_2,    KC_3,    KC_4,   KC_5,   KC_6,    KC_7,   KC_8,    KC_9,    KC_0,    KC_MINS,  KC_EQL,           KC_BSPC,          KC_HOME, \
++      KC_TAB,  KC_Q,    KC_W,    KC_E,    KC_R,   KC_T,   KC_Y,    KC_U,   KC_I,    KC_O,    KC_P,    KC_LBRC,  KC_RBRC,                   KC_BSLS, KC_PGUP, \
++      KC_LCTL, KC_A,    KC_S,    KC_D,    KC_F,   KC_G,   KC_H,    KC_J,   KC_K,    KC_L,    KC_SCLN, KC_QUOT,                             KC_ENT,  KC_PGDN, \
++      KC_LSFT,          KC_Z,    KC_X,    KC_C,   KC_V,   KC_B,    KC_N,   KC_M,    KC_COMM, KC_DOT,  KC_SLSH,                    KC_RSFT, KC_UP,   KC_END,  \
++      MO(_FUNC), KC_LGUI, KC_LALT, KC_SPC,                         KC_SPC,          KC_RALT, KC_RGUI, LT(_FUNC, KC_APP), KC_LEFT, KC_DOWN, KC_RGHT ),
++
++// NICOLA親指シフト
++  // デフォルトレイヤーに関係なくQWERTYで
++    [_NICOLA] = LAYOUT_oyayubi_shift( \
++      KC_ESC,  NG_1,    NG_2,    NG_3,    NG_4,   NG_5,   NG_6,    NG_7,   NG_8,     NG_9,    NG_0,    NG_MINS,  NG_EQL,  KC_BSPC,          KC_TRNS, \
++      KC_TAB,  NG_Q,    NG_W,    NG_E,    NG_R,   NG_T,   NG_Y,    NG_U,   NG_I,     NG_O,    NG_P,    NG_LBRC,  NG_RBRC,          NG_BSLS, KC_TRNS, \
++      KC_LCTL, NG_A,    NG_S,    NG_D,    NG_F,   NG_G,   NG_H,    NG_J,   NG_K,     NG_L,    NG_SCLN, NG_QUOT,                    KC_ENT,  KC_TRNS, \
++      KC_LSFT,          NG_Z,    NG_X,    NG_C,   NG_V,   NG_B,    NG_N,   NG_M,     NG_COMM, NG_DOT,  NG_SLSH,           KC_RSFT, KC_TRNS, KC_TRNS, \
++      MO(_FUNC), KC_LGUI, KC_LALT,        NG_SHFTL,                        NG_SHFTR,          KC_TRNS, KC_TRNS,  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS ),
++
++  // Function Layer
++  [_FUNC] = LAYOUT_oyayubi_shift( \
++      KC_GRV,  KC_F1,   KC_F2,   KC_F3,     KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,    KC_F9,    KC_F10,  KC_F11,  KC_F12,  KC_DEL,           KC_TRNS, \
++      KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,   KC_TRNS, KC_TRNS, KC_HOME, KC_PGDN, KC_PGUP,  KC_END,   KC_PSCR, KC_TRNS, KC_BRK,           KC_TRNS, KC_TRNS, \
++      KC_TRNS, RGB_RMOD, RGB_MOD, KC_TRNS,   KC_TRNS, KC_TRNS, KC_LEFT, KC_DOWN, KC_UP,   KC_RIGHT, KC_INS,  KC_DEL,                    KC_ENT,  KC_TRNS, \
++      KC_LSFT,          RGB_VAI, RGB_VAD,   KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,  KC_TRNS,  KC_TRNS, KC_TRNS,          KC_TRNS, KC_TRNS, KC_TRNS, \
++      MO(_FUNC), KC_TRNS, KC_TRNS, KC_EISU,                            KC_KANA2,          KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS )
++};
++
++void matrix_init_user(void) {
++  // NICOLA親指シフト
++  set_nicola(_NICOLA);
++  // NICOLA親指シフト
++}
++
++bool process_record_user(uint16_t keycode, keyrecord_t *record) {
++
++  switch (keycode) {
++    case KC_EISU:
++      if (record->event.pressed) {
++        // NICOLA親指シフト
++        send_string(SS_TAP(X_MHEN)); // Win
++        send_string(SS_TAP(X_LANG2)); // Mac
++        nicola_off();
++        // NICOLA親指シフト
++      }
++      return false;
++      break;
++    case KC_KANA2:
++      if (record->event.pressed) {
++        // NICOLA親指シフト
++        send_string(SS_TAP(X_HENK)); // Win
++        send_string(SS_TAP(X_LANG1)); // Mac
++        nicola_on();
++        // NICOLA親指シフト
++      }
++      return false;
++      break;
++  }
++
++  // NICOLA親指シフト
++  bool a = true;
++  if (nicola_state()) {
++    nicola_mode(keycode, record);
++    a = process_nicola(keycode, record);
++  }
++  if (a == false) return false;
++  // NICOLA親指シフト
++
++// as kbd101 layer driver on windows recognizes the IME on/off key, we no longer need to disguise as 106 keyboard
++//   bool continue_process = process_jtu(keycode, record);
++//   if (continue_process == false) {
++//     return false;
++//   }
++
++  return true;
++}
+diff --git a/keyboards/tc69/matrix.c b/keyboards/tc69/matrix.c
+new file mode 100644
+index 000000000000..97d4fbd97dcc
+--- /dev/null
++++ b/keyboards/tc69/matrix.c
+@@ -0,0 +1,121 @@
++#include QMK_KEYBOARD_H
++
++#include "pico.h"
++#include "drivers/analog.h"
++
++#define ADC_RING_BUFFER_SIZE 3
++
++const int CAP_ROW_PINS[] = { GP2, GP4, GP1, GP0, GP7 };
++const int CAP_COL_PINS[] = { GP3, GP6, GP27, GP26 };
++#define CAP_PURGE GP28
++#define CAP_SENSE GP29
++
++const int adc_press_threshold = 150 * ADC_RING_BUFFER_SIZE;
++const int adc_release_threshold = 30 * ADC_RING_BUFFER_SIZE;
++static int adc_ring_index = 0;
++
++int adc_ring_buffer[ADC_RING_BUFFER_SIZE][MATRIX_COLS][MATRIX_ROWS];
++int calibration_val[MATRIX_COLS][MATRIX_ROWS];
++matrix_row_t matrix[MATRIX_ROWS];
++
++void acquire_adc(int adc_measured_val[][5]) {
++  for(int j=0; j<16; ++j) {
++    // digitalWrite(COLS[0], (j&1) ? HIGH : LOW);
++    writePin(CAP_COL_PINS[0], (j&1) ? true : false);
++    // digitalWrite(COLS[1], (j&2) ? HIGH : LOW);
++    writePin(CAP_COL_PINS[1], (j&2) ? true : false);
++    // digitalWrite(COLS[2], (j&4) ? HIGH : LOW);
++    writePin(CAP_COL_PINS[2], (j&4) ? true : false);
++    // digitalWrite(COLS[3], (j&8) ? HIGH : LOW);
++    writePin(CAP_COL_PINS[3], (j&8) ? true : false);
++    for(int i=0; i<5; ++i) {
++      writePinHigh(CAP_ROW_PINS[i]);
++      //adc_measured_val[j][i] = 0;
++      //adc_measured_val[j][i] = adc_read();
++      adc_measured_val[j][i] = analogReadPin(CAP_SENSE);
++      //palSetLineMode(CAP_SENSE, PAL_MODE_INPUT_ANALOG);
++      //adc_measured_val[j][i] = adc_read(pinToMux(CAP_SENSE));
++      writePinLow(CAP_ROW_PINS[i]);
++      setPinOutput(CAP_PURGE);
++      writePinLow(CAP_PURGE);
++      //wait_ms(6);
++      setPinInput(CAP_PURGE);
++    }
++  }
++}
++
++void matrix_print(void) {
++}
++
++void matrix_init(void) {
++    //adc_init();
++    // adc_gpio_init(CAP_SENSE);
++    // adc_select_input(3);
++
++  int adc_measured_val[MATRIX_COLS][MATRIX_ROWS];
++
++  for(int i=0; i<MATRIX_ROWS; ++i) {
++    matrix[i] = 0;
++    for(int j=0; j<MATRIX_COLS; ++j) {
++      adc_measured_val[j][i] = 0;
++      calibration_val[j][i] = 0;
++      for(int k=0; k<ADC_RING_BUFFER_SIZE; ++k) {
++        adc_ring_buffer[k][j][i] = 0;
++      }
++    }
++  }
++
++  for(int i=0; i<ADC_RING_BUFFER_SIZE; ++i) {
++    acquire_adc(adc_measured_val);
++  }
++
++  for(int i=0; i<ADC_RING_BUFFER_SIZE; ++i) {
++    acquire_adc(adc_measured_val);
++    for(int j=0; j<16; ++j) {
++      for(int k=0; k<5; ++k) {
++        calibration_val[j][k] += adc_measured_val[j][k];
++      }
++    }
++  }
++}
++
++uint8_t matrix_scan(void) {
++    matrix_row_t curr_matrix[5] = {0, 0, 0, 0, 0};
++    acquire_adc(adc_ring_buffer[adc_ring_index]);
++    adc_ring_index = (adc_ring_index + 1) % ADC_RING_BUFFER_SIZE;
++
++    //Serial.print("ADC: ");
++    //for(int i=0; i<16; ++i) {
++    //  for(int j=0; j<5; ++j) {
++    //    Serial.print(adc_ring_buffer[adc_ring_index][i][j]);
++    //    Serial.print(' ');
++    //  }
++    //  Serial.println();
++    //}
++    //Serial.println();
++
++    for(int i=0; i<MATRIX_COLS; ++i) {
++      for(int j=0; j<MATRIX_ROWS; ++j) {
++        int adc_total = 0;
++        for(int k=0; k<ADC_RING_BUFFER_SIZE; ++k) {
++          adc_total += adc_ring_buffer[k][i][j];
++        }
++
++        if(adc_total > calibration_val[i][j] + adc_press_threshold) {
++          curr_matrix[j] |= (1 << i);
++        }
++        else if(adc_total < calibration_val[i][j] + adc_release_threshold) {
++          curr_matrix[j] &= ~(1 << i);
++        }
++      }
++    }
++
++    bool changed = memcmp(matrix, curr_matrix, sizeof(curr_matrix)) != 0;
++    if (changed) memcpy(matrix, curr_matrix, sizeof(curr_matrix));
++
++    return changed ? 1 : 0;
++}
++
++matrix_row_t matrix_get_row(uint8_t row) {
++  return matrix[row];
++}
+diff --git a/keyboards/tc69/rules.mk b/keyboards/tc69/rules.mk
+new file mode 100644
+index 000000000000..1d39eac58e11
+--- /dev/null
++++ b/keyboards/tc69/rules.mk
+@@ -0,0 +1,13 @@
++# MCU name
++MCU = RP2040
++BOOTLOADER = rp2040
++CUSTOM_MATRIX = yes
++
++#MOUSEKEY_ENABLE = no
++#EXTRAKEY_ENABLE = no
++#CONSOLE_ENABLE = no
++#COMMAND_ENABLE = no
++#NKRO_ENABLE = yes
++
++SRC +=  matrix.c
++SRC +=  analog.c
+diff --git a/keyboards/tc69/tc69.h b/keyboards/tc69/tc69.h
+new file mode 100644
+index 000000000000..2db13722c38d
+--- /dev/null
++++ b/keyboards/tc69/tc69.h
+@@ -0,0 +1,44 @@
++/*
++ * (C) 2020 Sadao Ikebe @bonyarou
++ *
++ * This program is free software: you can redistribute it and/or modify
++ * it under the terms of the GNU General Public License as published by
++ * the Free Software Foundation, either version 2 of the License, or
++ * (at your option) any later version.
++ *
++ * This program is distributed in the hope that it will be useful,
++ * but WITHOUT ANY WARRANTY; without even the implied warranty of
++ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++ * GNU General Public License for more details.
++ *
++ * You should have received a copy of the GNU General Public License
++ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
++ */
++
++#pragma once
++
++#include "quantum.h"
++
++/* This is a shortcut to help you visually see your layout.
++ *
++ * The first section contains all of the arguments representing the physical
++ * layout of the board and position of the keys.
++ *
++ * The second converts the arguments into a two-dimensional array which
++ * represents the switch matrix.
++ *
++ * This keyboard has electrically 9 rows 8 cols switch matrix, while it looks like 5 rows 16 cols layout.
++ */
++#define LAYOUT_oyayubi_shift( \
++      K05,   K07,   K06,   K04,   K02,   K01,   K00,   K03,   K0D,   K0F,   K0E,   K0C,   K0A,  K09,        K0B, \
++      K15,   K17,   K16,   K14,   K12,   K11,   K10,   K13,   K1D,   K1F,   K1E,   K1C,   K1A,        K18,  K1B, \
++      K25,   K27,   K26,   K24,   K22,   K21,   K20,   K23,   K2D,   K2F,   K2E,   K2C,         K29,        K2B, \
++      K35,          K36,   K34,   K32,   K31,   K30,   K33,   K3D,   K3F,   K3E,   K3C,         K39,  K38,  K3B, \
++      K45,   K47,          K44,          K41,                 K4D,          K4E,   K4C,   K4A,  K49,  K48,  K4B  \
++) { \
++    { K00,   K01,   K02,   K03,   K04,   K05,   K06,   K07, KC_NO,   K09,   K0A,   K0B,   K0C,  K0D,  K0E,   K0F }, \
++    { K10,   K11,   K12,   K13,   K14,   K15,   K16,   K17,   K18, KC_NO,   K1A,   K1B,   K1C,  K1D,  K1E,   K1F }, \
++    { K20,   K21,   K22,   K23,   K24,   K25,   K26,   K27, KC_NO,   K29, KC_NO,   K2B,   K2C,  K2D,  K2E,   K2F }, \
++    { K30,   K31,   K32,   K33,   K34,   K35,   K36, KC_NO,   K38,   K39, KC_NO,   K3B,   K3C,  K3D,  K3E,   K3F }, \
++    {KC_NO,  K41, KC_NO, KC_NO,   K44,   K45, KC_NO,   K47,   K48,   K49,   K4A,   K4B,   K4C,  K4D,  K4E, KC_NO }, \
++}

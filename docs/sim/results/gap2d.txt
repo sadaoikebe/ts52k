@@ -1,0 +1,2 @@
+a: direct C_AB 26.57 fF/mm -> x7.5 mm = 0.199 pF ; C_AA 0.073 pF/mm
+b: direct C_AB 4.20 fF/mm -> x7.5 mm = 0.031 pF ; C_AA 0.772 pF/mm
