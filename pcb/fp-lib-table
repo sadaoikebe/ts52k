@@ -2,4 +2,5 @@
   (lib (name "MX_Only")(type "KiCad")(uri "${KIPRJMOD}/MX_Only.pretty")(options "")(descr "Cherry MX keyswitch footprints, no LED"))
   (lib (name "rp2040")(type "KiCad")(uri "${KIPRJMOD}/rp2040.pretty")(options "")(descr ""))
   (lib (name "tag-connect")(type "KiCad")(uri "${KIPRJMOD}/tag-connect.pretty")(options "")(descr "Tag-Connect TC2030/TC2050 programming headers"))
+  (lib (name "tc52")(type "KiCad")(uri "${KIPRJMOD}/tc52.pretty")(options "")(descr "TC52: ecs_pad (from TC69) and fixing hole with land"))
 )

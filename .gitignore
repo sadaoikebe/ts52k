@@ -20,3 +20,4 @@ fp-info-cache
 **/.DS_Store
 *.FCStd1
 
+__pycache__/
