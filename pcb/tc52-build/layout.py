@@ -17,9 +17,9 @@ COL_OF = {k: int(KN[k][1][3:]) for k in KN}
 # Two sense vias = an "electrode gate": the column enters at the first and leaves at the second,
 # other L4 wiring passes between them (the electrode on L1 is the connection).
 SENSE_VIAS = {
-    'MX3': [(0.9, -5.3), (1.19, 1.68)],     # gate for +3V3 / ADC / PURGE going west to the AFE
-    'MX8': [(2.0, -5.0), (2.0, 5.0)],       # gate for the east bundle (BOOTSEL, ENC x3, MUX A and MUX B control)
-    'MX12': [(2.0, -5.0), (2.0, 5.0)],      # gate for the MUX A control lines
+    'MX3': [(1.6, -5.2), (1.6, 5.2)],       # gate for +3V3 / ADC / PURGE going west to the AFE
+    'MX8': [(1.6, -5.2), (1.6, 5.2)],       # gate for the east bundle (BOOTSEL, ENC x3, MUX A and MUX B control)
+    'MX12': [(1.6, -5.2), (1.6, 5.2)],      # gate for the MUX A control lines
     'MX7': [(5.0, -1.5)],                   # c2 leaves MX7 away from the flash (U4) and QSPI
 }
 DRIVE_VIA = {
@@ -63,7 +63,7 @@ def keys_stage(bd):
 
 
 # ---------------------------------------------------------------- rows
-ROW_FEED = {1: (21.45, 64.29), 2: (20.5, 83.34), 3: (23.0, 102.04), 4: (22.4, 102.74)}
+ROW_FEED = {1: (18.8, 64.29), 2: (19.4, 83.34), 3: (20.3, 102.04), 4: (21.4, 102.74)}
 
 
 def rows_stage(bd):
@@ -133,8 +133,9 @@ def columns_stage(bd):
     A = place_mux(bd, 'U7', MUXA)
     Bp = place_mux(bd, 'U8', MUXB)
     # ---- c1 (gate at MX3)
-    T(1, [SV('MX2'), (SV('MX2')[0], 65.5), SV('MX3', 0)])
-    T(1, [SV('MX3', 1), (SV('MX3', 1)[0], 88.11), SV('MX4'), (SV('MX4')[0], 104.0), (14.5, 107.36), (14.5, C1_LANE)])
+    p, g1, g2, q = SV('MX2'), SV('MX3', 0), SV('MX3', 1), SV('MX4')
+    T(1, [p, (p[0], g1[1] - (g1[0] - p[0])), g1])
+    T(1, [g2, (g2[0], q[1] - (q[0] - g2[0])), q, (q[0], 104.0), (14.5, 107.36), (14.5, C1_LANE)])
     e = fan(bd, 'COL1', A[1], C1_LANE, -1, 70.9)
     T(1, [SV('MX5'), (SV('MX5')[0], C1_LANE - 1.5), (SV('MX5')[0] + 1.5, C1_LANE), e])
     col_r(bd, 1, 24.0, C1_LANE)
@@ -225,7 +226,7 @@ def columns_stage(bd):
     # ---- SENSE trunk (lowest lane; MUX A hangs on a short stub under its body, MUX B is the end)
     S = lambda pts: bd.track('SENSE', pts, L4, 0.2)
     xb = MUXB[0] - 1.3
-    S([(5.0, TRUNK), (xb, TRUNK), (xb, Bp[3][1]), Bp[3]])
+    S([(-2.0, 116.4), (0.0, TRUNK), (xb, TRUNK), (xb, Bp[3][1]), Bp[3]])
     xa = MUXA[0] - 1.3
     S([(xa, TRUNK), (xa, A[3][1]), A[3]])
     return A, Bp
@@ -284,7 +285,11 @@ def run(bd, keys, stage):
     keys_stage(bd)
     rows_stage(bd)
     A, Bp = columns_stage(bd)
-    import east
-    east.run(bd, A, Bp, K, SV, DV)
+    import east, west
+    band = east.run(bd, A, Bp, K, SV, DV)
+    east.band_run(bd, band, Bp, K, SV, DV)
+    west.run(bd, K, SV, DV)
+    import finish
+    finish.run(bd, K)
     zones_stage(bd)
     fill(bd)

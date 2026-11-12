@@ -11,15 +11,15 @@ NET = {'BOOT': 'Net-(R14-Pad2)', 'PB': '+3V3M', 'PA': '+3V3M'}
 XG0 = 38.75
 PIN = {'ENC_B': 2, 'ENC_A': 3, 'ENC_SW': 4, 'S3B': 5, 'S2B': 6, 'S1B': 7, 'INHB': 9, 'S3A': 11, 'S2A': 12, 'S1A': 13, 'INHA': 14}
 CA = {'ENC_B': 31.57, 'ENC_A': 31.994, 'ENC_SW': 32.418, 'S3B': 32.842, 'S2B': 33.266, 'S1B': 33.69, 'PB': 34.432,
-      'INHB': 35.175, 'PA': 35.9}
+      'INHB': 35.175, 'PA': 35.92}
 XQ = {'+3V3': 36.0, 'ENC_B': 35.7, 'ENC_A': 35.4, 'ENC_SW': 35.1, 'S3B': 34.8, 'S2B': 34.5, 'S1B': 34.2, 'PB': 33.85,
       'INHB': 33.5, 'PA': 33.15, 'S3A': 32.65, 'S2A': 32.35, 'S1A': 32.05, 'INHA': 31.75}
 PB_VIA = (30.9, 30.9 + 34.432)
-PA_VIA = (31.25, 31.25 + 35.9)
+PA_VIA = (31.25, 31.25 + 35.92)
 V0 = (28.1, 73.6)
 # after the gate
-POST = {'ENC_B': 74.0, 'ENC_A': 74.3, 'ENC_SW': 74.6, 'S3B': 74.9, 'S2B': 75.2, 'S1B': 75.5, 'PB': 75.8, 'INHB': 76.1,
-        'PA': 76.4, 'S3A': 76.7, 'S2A': 77.0, 'S1A': 77.3, 'INHA': 77.6}
+POST = {'ENC_B': 74.3, 'ENC_A': 74.6, 'ENC_SW': 74.9, 'S3B': 75.2, 'S2B': 75.5, 'S1B': 75.8, 'PB': 76.1, 'INHB': 76.4,
+        'PA': 76.7, 'S3A': 77.0, 'S2A': 77.3, 'S1A': 77.6, 'INHA': 77.9}
 NORTH = ['+3V3', 'ENC_B', 'ENC_A', 'ENC_SW', 'S3B', 'S2B', 'S1B', 'PB', 'INHB']
 ASET = ['PA', 'S3A', 'S2A', 'S1A', 'INHA']
 XN0 = 46.42          # x of the westmost north-going line
@@ -37,10 +37,10 @@ def run(bd, A, Bp, K, SV, DV):
     # ---- re-laid +3V3 feed C15 -> via (32.75, 63.14) -> R2
     T('+3V3', [(29.22, 60.62), (29.8, 61.2), (30.13, 61.2), (32.6, 63.67), bd.pad('R2', 1)], 0.25)
     # +3V3 for the flash (U4 pin 8, C2): L3 jumper under the bundle; both vias clear of the guard rings
-    va, vb = (34.1, 64.75), (40.0, 64.4)
+    va, vb = (34.2, 64.95), (40.55, 63.3)
     bd.via('+3V3', *va); bd.via('+3V3', *vb)
-    T('+3V3', [va, (34.1, 65.9), (38.5, 65.9), vb], 0.25, L3)
-    T('+3V3', [(39.35, 63.8), vb], 0.25)
+    T('+3V3', [va, (34.2, 65.9), (38.5, 65.9), (40.55, 63.85), vb], 0.25, L3)
+    T('+3V3', [(39.86, 63.29), vb], 0.25)
     # ---- BOOTSEL and the +3V3 line for the encoder pull-ups
     r14 = bd.pad('R14', 2)
     T('BOOT', [r14, (r14[0], r14[0] + cg['BOOT']), (xg['BOOT'], yg['BOOT']), (gx + 0.9, yg['BOOT'])])
@@ -55,7 +55,7 @@ def run(bd, A, Bp, K, SV, DV):
     for j, n in enumerate(('S3A', 'S2A', 'S1A', 'INHA')):
         p = bd.pad('U5', PIN[n])
         c1 = 36.76 + 0.4243 * j
-        c2 = c1 - 0.43
+        c2 = c1 - 0.42
         ys = 68.0 + 0.3 * j
         x0 = max(p[1] - c1, p[0] + 0.3)
         T(n, [p, (x0, p[1]), (x0, x0 + c1)] if x0 > p[1] - c1 + 1e-6 else [p, (x0, p[1])])
@@ -78,7 +78,8 @@ def run(bd, A, Bp, K, SV, DV):
     T('PA', [V0, (29.3, 72.4), (PA_VIA[0], 72.4 + 29.3 - PA_VIA[0]), PA_VIA, (31.6, PA_VIA[1] - 0.35), (31.6, 66.01), PB_VIA],
       0.2, L3)
     for n, v in (('PA', PA_VIA), ('PB', PB_VIA)):
-        T(n, [v, (XQ[n], XQ[n] + CA[n]), (XQ[n], XQ[n] + cg[n]), (xg[n], yg[n]), (gx + 0.9, yg[n])])
+        ca = 35.90 if n == 'PA' else CA[n]
+        T(n, [v, (v[0] + 0.3, v[0] + 0.3 + ca), (XQ[n], XQ[n] + ca), (XQ[n], XQ[n] + cg[n]), (xg[n], yg[n]), (gx + 0.9, yg[n])])
     # ---- after the gate: BOOTSEL to SW1, the rest drops to the post-gate lanes
     sw = [q for q in pads(bd, 'SW1', '2') if q[1] < 76][0]
     T('BOOT', [(gx + 0.9, yg['BOOT']), (sw[0] - (sw[1] - yg['BOOT']), yg['BOOT']), sw])
@@ -97,11 +98,11 @@ def run(bd, A, Bp, K, SV, DV):
     for i, n in enumerate(NORTH):
         xn = XN0 + P * i
         yb = BAND0 + P * i
-        T(n, [end[n], (xn - 0.3, post[n]), (xn, post[n] - 0.3), (xn, yb + 0.3), (xn + 0.3, yb), (xn + 1.0, yb)])
+        T(n, [end[n], (xn - 0.15, post[n]), (xn, post[n] - 0.15), (xn, yb + 0.3), (xn + 0.3, yb), (xn + 1.0, yb)])
         band[n] = (xn + 1.0, yb)
     # ---- MUX A group: under SW1, through the MX12 gate, down between c3 and c4
     g12 = SV('MX12', 0)[0]
-    xdown = {'INHA': 70.1, 'S1A': 70.4, 'S2A': 70.7, 'S3A': 71.0, 'PA': 71.3}
+    xdown = {'INHA': 70.4, 'S1A': 70.7, 'S2A': 71.0, 'S3A': 71.3, 'PA': 71.6}
     for j, n in enumerate(ASET):
         y1 = post[n]; y2 = 74.3 + P * j
         xa = 50.5 + 0.1243 * j
@@ -122,10 +123,7 @@ def run(bd, A, Bp, K, SV, DV):
     ygap = (a11[1] + a12[1]) / 2
     y0 = 95.0 - 0.1243 * 4
     T('PA', [end['PA'], (end['PA'][0], y0), (xo, y0 + xo - end['PA'][0]), (xo, ygap), (bx + 1.0, ygap), (bx + 1.0, a16[1]), a16])
-    place1(bd, 'C34', xo, a9[1] - 3.5, 0, east=True)
-    c34 = bd.pad('C34', 2)
-    T('GND', [c34, (c34[0] + 0.9, c34[1])], 0.25)
-    bd.via('GND', c34[0] + 0.9, c34[1])
+    decap(bd, 'C34', a16)
     # MUX A ground pins: 7, 8 (VEE, VSS), 1 (X4, unused), 15 (X2, unused)
     a7, a8 = A[7], A[8]
     vx = a8[0] - 1.9
@@ -135,6 +133,92 @@ def run(bd, A, Bp, K, SV, DV):
     T('GND', [a5, (bx - 0.3, a5[1] + 0.4)], 0.25); bd.via('GND', bx - 0.3, a5[1] + 0.4)
     T('GND', [a12, (a12[0] + 2.1, a12[1])], 0.25); bd.via('GND', a12[0] + 2.1, a12[1])
     return band
+
+
+def decap(bd, ref, p16):
+    """100n at MUX pin 16: below the pad, ground via further south"""
+    place1(bd, ref, p16[0], p16[1] + 1.3, 90)
+    p1, p2 = bd.pad(ref, 1), bd.pad(ref, 2)
+    if p2[1] < p1[1]:
+        f = bd.fp(ref); f.SetOrientationDegrees(270)
+        import pcbnew
+        q = bd.pad(ref, 1)
+        f.SetPosition(pcbnew.VECTOR2I(f.GetPosition().x + pcbnew.FromMM(p16[0] - q[0]), f.GetPosition().y + pcbnew.FromMM(p16[1] + 1.3 - q[1])))
+        p1, p2 = bd.pad(ref, 1), bd.pad(ref, 2)
+    bd.track('+3V3M', [p16, p1], L4, 0.25)
+    bd.track('GND', [p2, (p2[0], p2[1] + 0.95)], L4, 0.25)
+    bd.via('GND', p2[0], p2[1] + 0.95)
+
+
+def band_run(bd, band, Bp, K, SV, DV):
+    """upper band -> MUX B (between c10 and c11) and -> encoder SW2"""
+    T = lambda name, pts, w=W, layer=L4: bd.track(NET.get(name, name), pts, layer, w)
+    # ---- MUX B group: S3B, S2B, S1B, PB, INHB turn south; INHB is the westmost
+    c10 = SV('MX42'), SV('MX43'), SV('MX48')
+    b6, b9, b10, b11, b16 = (Bp[i] for i in (6, 9, 10, 11, 16))
+    bx = (b6[0] + b11[0]) / 2
+    grp = ['INHB', 'PB', 'S1B', 'S2B', 'S3B']                       # west -> east
+    x1 = c10[1][0] + 2.61                                           # beside the c10 leg MX42 -> MX43 (2 mm from the MX43 via)
+    x2 = c10[2][0] + 2.3                                            # beside the leg MX43 -> MX48
+    x3 = 211.0                                                      # east of the mounting hole at (209.55, 92.87)
+    xv0 = SV('MX82')[0] + 2.2                                       # through the gap between c10 (MX82 leg) and the MX52 row via
+    yeast = {'S3B': 103.2, 'S2B': 103.5, 'S1B': 103.8, 'PB': 104.1, 'INHB': 104.4}
+    xbelly = {'INHB': bx - 1.1, 'PB': bx - 0.6, 'S1B': bx, 'S2B': bx + 0.4, 'S3B': bx + 0.8}
+    for i, n in enumerate(grp):
+        p = band[n]
+        xa = x1 + P * i
+        xb = x2 + P * i
+        xc = x3 + P * i
+        xv = xv0 + P * i
+        ya = c10[1][1] - 0.5 - 0.1243 * i                           # shift x1 -> x2 starts above the MX43 via
+        yb = 84.3 - 0.1243 * i                                      # shift x2 -> x3 below the row-2 bus
+        yc = 96.7 - 0.1243 * i                                      # SE diagonal, 2 mm clear of the c10 corner above MX82
+        pts = [p, (xa - 0.3, p[1]), (xa, p[1] + 0.3), (xa, ya), (xb, ya + xb - xa), (xb, yb), (xc, yb + xc - xb), (xc, yc),
+               (xv, yc + xv - xc), (xv, yeast[n]), (xbelly[n], yeast[n])]
+        if n == 'INHB':
+            pts += [(xbelly[n], b6[1]), b6]
+        elif n == 'PB':
+            yg = b11[1] + 0.9
+            pts += [(xbelly[n], yg), (bx + 1.0, yg + bx + 1.0 - xbelly[n]), (bx + 1.0, b16[1]), b16]
+        else:
+            pad = {'S1B': b11, 'S2B': b10, 'S3B': b9}[n]
+            pts += [(xbelly[n], pad[1]), pad]
+        T(n, pts)
+    decap(bd, 'C35', b16)
+    b7, b8 = Bp[7], Bp[8]
+    vx = b8[0] - 1.9
+    bd.track('GND', [b8, (vx + 0.6, b8[1]), (vx, (b7[1] + b8[1]) / 2), (vx + 0.6, b7[1]), b7], L4, 0.25)
+    bd.via('GND', vx, (b7[1] + b8[1]) / 2)
+    # ---- encoder: pull-ups R15 (ENC_A, straddles ENC_B) and R16 (ENC_B) next to SW2
+    y1 = 49.1
+    xr = 287.5
+    place1(bd, 'R15', xr, y1, 90); fix_vertical(bd, 'R15', xr, y1)
+    place1(bd, 'R16', xr + 1.5, y1 - 0.51, 90); fix_vertical(bd, 'R16', xr + 1.5, y1 - 0.51)
+    lane = {'+3V3': y1, 'ENC_B': y1 + 0.51, 'ENC_A': y1 + 1.02}
+    for n in ('+3V3', 'ENC_B', 'ENC_A'):
+        p = band[n]
+        d = p[1] - lane[n]
+        T(n, [p, (xr - 3.0 - d, p[1]), (xr - 3.0, lane[n]), (xr, lane[n])])
+    T('+3V3', [(xr, y1), (xr + 0.9, y1), bd.pad('R16', 1)])
+    c20, c19 = bd.pad('C20', 2), bd.pad('C19', 1)
+    T('ENC_B', [(xr, lane['ENC_B']), (c20[0] - 0.8, lane['ENC_B']), c20])
+    T('ENC_A', [(xr, lane['ENC_A']), (291.4, lane['ENC_A']), (292.38, 51.1), (296.6, 51.1), (296.6, c19[1] + 0.3), (296.9, c19[1]), c19])
+    p = band['ENC_SW']
+    s1 = [q for q in pads(bd, 'SW2', 'S1')][0]
+    T('ENC_SW', [p, (xr + 0.2, p[1]), (xr + 0.5, p[1] + 0.3), (xr + 0.5, s1[1] - 1.8), (xr + 2.3, s1[1]), s1])
+
+
+def fix_vertical(bd, ref, x, y):
+    """vertical 2-pad part: pad 1 at (x, y), pad 2 below"""
+    import pcbnew
+    f = bd.fp(ref)
+    for r in (90, 270):
+        f.SetOrientationDegrees(r)
+        p1, p2 = bd.pad(ref, 1), bd.pad(ref, 2)
+        if p2[1] > p1[1]:
+            break
+    p1 = bd.pad(ref, 1)
+    f.SetPosition(pcbnew.VECTOR2I(f.GetPosition().x + pcbnew.FromMM(x - p1[0]), f.GetPosition().y + pcbnew.FromMM(y - p1[1])))
 
 
 def pads(bd, ref, num):

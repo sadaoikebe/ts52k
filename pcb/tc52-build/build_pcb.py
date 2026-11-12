@@ -65,7 +65,7 @@ def strip(bd):
         if n in ('rpg1', 'rpg2', 'Net-(R14-Pad2)'):
             # encoder and BOOTSEL lines are rerouted (upper band / electrode gate); keep only the stubs at C19/C20
             s, e = t.GetStart(), t.GetEnd()
-            if not (t.Type() != pcbnew.PCB_VIA_T and abs(s.x - e.x) < MM(0.02) and mm(s.x) > 290 and max(mm(s.y), mm(e.y)) < 49.5):
+            if not (t.Type() != pcbnew.PCB_VIA_T and abs(s.x - e.x) < MM(0.02) and mm(s.x) > 292.5 and max(mm(s.y), mm(e.y)) < 49.5):
                 b.RemoveNative(t)
             continue
         if n == '+3V3' and t.Type() != pcbnew.PCB_VIA_T and t.GetLayer() == L4:

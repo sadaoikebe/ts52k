@@ -1360,32 +1360,32 @@
 		(uuid "457be3ad-8fda-5129-b9cb-4160d85e7130")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}" (at 106.68 49.53 0) (hide yes) (effects (font (size 1.27 1.27))))
 	)
-	(global_label "ROW1_DRV"
+	(global_label "ROW4_DRV"
 		(shape bidirectional)
 		(at 106.68 52.07 0)
 		(effects (font (size 1.27 1.27)) (justify left))
-		(uuid "5e42c7c5-9d3e-56c3-9e59-a2b09dfffe6c")
+		(uuid "ede63003-dad9-54d0-93ae-50f88d5ead2b")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}" (at 106.68 52.07 0) (hide yes) (effects (font (size 1.27 1.27))))
-	)
-	(global_label "ROW2_DRV"
-		(shape bidirectional)
-		(at 106.68 54.61 0)
-		(effects (font (size 1.27 1.27)) (justify left))
-		(uuid "5ffefaab-e4f8-59fc-bc19-a98f4c559595")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}" (at 106.68 54.61 0) (hide yes) (effects (font (size 1.27 1.27))))
 	)
 	(global_label "ROW3_DRV"
 		(shape bidirectional)
+		(at 106.68 54.61 0)
+		(effects (font (size 1.27 1.27)) (justify left))
+		(uuid "c2c4c7a4-da82-5ffe-ab4a-378e1ac79f89")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}" (at 106.68 54.61 0) (hide yes) (effects (font (size 1.27 1.27))))
+	)
+	(global_label "ROW2_DRV"
+		(shape bidirectional)
 		(at 106.68 57.15 0)
 		(effects (font (size 1.27 1.27)) (justify left))
-		(uuid "6bd5b62d-b2d8-513c-9726-e5ba8dadfa4f")
+		(uuid "e64dea3c-1904-5f4e-8607-41b186cec07a")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}" (at 106.68 57.15 0) (hide yes) (effects (font (size 1.27 1.27))))
 	)
-	(global_label "ROW4_DRV"
+	(global_label "ROW1_DRV"
 		(shape bidirectional)
 		(at 106.68 59.69 0)
 		(effects (font (size 1.27 1.27)) (justify left))
-		(uuid "be4a3ceb-d85f-5a23-8060-38ee7e0f7588")
+		(uuid "a51a9f65-23a0-54b9-a2ef-e0678c5f8b6d")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}" (at 106.68 59.69 0) (hide yes) (effects (font (size 1.27 1.27))))
 	)
 	(global_label "S3B"
@@ -1444,18 +1444,18 @@
 		(uuid "117163b1-b860-5293-9d6c-0815b607da15")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}" (at 106.68 80.01 0) (hide yes) (effects (font (size 1.27 1.27))))
 	)
-	(global_label "SENSE"
+	(global_label "ADC"
 		(shape bidirectional)
 		(at 106.68 82.55 0)
 		(effects (font (size 1.27 1.27)) (justify left))
-		(uuid "51a3b6b0-6aba-59ed-8f1c-16ea74775f58")
+		(uuid "47f8e565-16c5-521a-a7c5-aa6024e63982")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}" (at 106.68 82.55 0) (hide yes) (effects (font (size 1.27 1.27))))
 	)
-	(global_label "ADC"
+	(global_label "SENSE"
 		(shape bidirectional)
 		(at 106.68 85.09 0)
 		(effects (font (size 1.27 1.27)) (justify left))
-		(uuid "798aa1a8-99e4-59d3-accb-e10a23acf88f")
+		(uuid "9205e9df-0d8d-5023-af96-a8dabf1ac6b9")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}" (at 106.68 85.09 0) (hide yes) (effects (font (size 1.27 1.27))))
 	)
 	(global_label "ENC_SW"
