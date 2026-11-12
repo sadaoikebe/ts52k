@@ -228,17 +228,17 @@ def build_ec():
     ym = 236.22
     sh.text('Column select: S0 = 0 -> MUX A (U7), S0 = 1 -> MUX B (U8). S1/S2/S3 = address A/B/C', 25.4, ym - 22.86, 2.5)
     for name, ref, xm, inh, dec in (('A', 'U7', 60.96, 'S0', 'C34'), ('B', 'U8', 152.4, 'S0_N', 'C35')):
-        nets = {'11': 'S1', '10': 'S2', '9': 'S3', '6': inh, '3': 'SENSE', '16': '+3V3A', '7': 'GND', '8': 'GND'}
+        nets = {'11': 'S1', '10': 'S2', '9': 'S3', '6': inh, '3': 'SENSE', '16': '+3V3M', '7': 'GND', '8': 'GND'}
         for xn, pin in M.X_PIN.items():
             nets[str(pin)] = 'GND'
         for c, (mx, xn) in M.MUX_INPUT.items():
             if mx == name:
                 nets[str(M.X_PIN[xn])] = f'COL{c}'
         sh.place('tc52:CD4051B', ref, 'CD4051BM96', xm, ym, nets, lcsc='C21379', mpn='CD4051BM96')
-        sh.place('Device:C', dec, '100n', xm + 38.1, ym, {'1': '+3V3A', '2': 'GND'}, fp=C0402, lcsc='C1525', mpn='CL05B104KO5NNNC')
-    sh.place('tc52:74AHC1G04', 'U9', 'SN74AHC1G04DBVR', 243.84, ym, {'2': 'S0', '1': None, '4': 'S0_N', '5': '+3V3A', '3': 'GND'},
+        sh.place('Device:C', dec, '100n', xm + 38.1, ym, {'1': '+3V3M', '2': 'GND'}, fp=C0402, lcsc='C1525', mpn='CL05B104KO5NNNC')
+    sh.place('tc52:74AHC1G04', 'U9', 'SN74AHC1G04DBVR', 243.84, ym, {'2': 'S0', '1': None, '4': 'S0_N', '5': '+3V3M', '3': 'GND'},
              lcsc='C7465', mpn='SN74AHC1G04DBVR')
-    sh.place('Device:C', 'C36', '100n', 274.32, ym, {'1': '+3V3A', '2': 'GND'}, fp=C0402, lcsc='C1525', mpn='CL05B104KO5NNNC')
+    sh.place('Device:C', 'C36', '100n', 274.32, ym, {'1': '+3V3M', '2': 'GND'}, fp=C0402, lcsc='C1525', mpn='CL05B104KO5NNNC')
     # --- AFE ---------------------------------------------------------------
     ya = 304.8
     sh.text('Analog front end (TC69 circuit): SENSE node (C30 reference cap, purge by GPIO26) -> R22 -> non-inverting x44 -> ADC2', 25.4, ya - 25.4, 2.5)
@@ -258,10 +258,14 @@ def build_ec():
     sh.place('tc52:TestPoint', 'TP4', 'GND', 276.86, ya, {'1': 'GND'}, in_bom=False)
     # --- analog supply -----------------------------------------------------
     xs = 330.2
-    sh.text('+3V3A = +3V3 through 22R, 4.7u + 100n', xs - 15.24, ya - 25.4, 2.5)
+    sh.text('+3V3A (op amp) = +3V3 through 22R, 4.7u + 100n', xs - 15.24, ya - 25.4, 2.5)
     sh.place('Device:R', 'R24', '22', xs, ya, {'1': '+3V3', '2': '+3V3A'}, fp=R0402, lcsc='C25092', mpn='0402WGF220JTCE', note='design-spec R_F')
     sh.place('Device:C', 'C32', '4.7u', xs + 25.4, ya, {'1': '+3V3A', '2': 'GND'}, fp=C0402, lcsc='C23733', mpn='CL05A475MP5NRNC', note='design-spec C_F1')
     sh.place('power:PWR_FLAG', '#FLG0301', 'PWR_FLAG', xs + 48.26, ya, {'1': '+3V3A'}, in_bom=False)
+    sh.text('+3V3M (MUX x2, inverter) = +3V3 through 22R, 4.7u: separate from +3V3A (op amp), see build log', xs - 15.24, ya + 20.32, 2.5)
+    sh.place('Device:R', 'R26', '22', xs, ya + 38.1, {'1': '+3V3', '2': '+3V3M'}, fp=R0402, lcsc='C25092', mpn='0402WGF220JTCE', note='second R_F: MUX supply')
+    sh.place('Device:C', 'C37', '4.7u', xs + 25.4, ya + 38.1, {'1': '+3V3M', '2': 'GND'}, fp=C0402, lcsc='C23733', mpn='CL05A475MP5NRNC', note='second C_F1: MUX supply')
+    sh.place('power:PWR_FLAG', '#FLG0302', 'PWR_FLAG', xs + 48.26, ya + 38.1, {'1': '+3V3M'}, in_bom=False)
     # --- holes ---------------------------------------------------------------
     yh = 363.22
     sh.text('Plate fixing holes (M2). H1 has a land: PLATE -> R25 (not fitted) -> GND', 25.4, yh - 15.24, 2.5)

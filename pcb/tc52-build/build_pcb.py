@@ -62,10 +62,19 @@ def strip(bd):
         if n.startswith(('row', 'col', 'Net-(D')):
             b.RemoveNative(t)
             continue
+        if n in ('rpg1', 'rpg2', 'Net-(R14-Pad2)'):
+            # encoder and BOOTSEL lines are rerouted (upper band / electrode gate); keep only the stubs at C19/C20
+            s, e = t.GetStart(), t.GetEnd()
+            if not (t.Type() != pcbnew.PCB_VIA_T and abs(s.x - e.x) < MM(0.02) and mm(s.x) > 290 and max(mm(s.y), mm(e.y)) < 49.5):
+                b.RemoveNative(t)
+            continue
         if t.Type() == pcbnew.PCB_VIA_T:
             p = t.GetPosition()
             x, y = mm(p.x), mm(p.y)
             k, d = near_key(x, y)
+            if n == 'GND' and min(math.hypot(x - a, y - c) for a, c in ((18.4, 63.65), (18.4, 65.1), (19.98, 60.17))) < 0.1:
+                b.RemoveNative(t)      # in the way of the west fan-out (rows, S0-S3, PURGE, ADC); restitched in layout.py
+                continue
             if n == 'GND':
                 # stitching is regenerated; keep only island vias that do not hit an electrode on L1
                 if not island_keep(x, y) or d < 8.9:

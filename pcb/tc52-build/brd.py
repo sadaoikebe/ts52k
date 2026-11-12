@@ -90,3 +90,24 @@ def dog2(p, q, first='d'):
     """diagonal first, then axis-aligned leg into q. first='dv': diagonal then vertical; 'dh': diagonal then horizontal"""
     r = dog(q, p, 'v' if first == 'dv' else 'h')
     return r[::-1]
+
+
+def offset(pts, d):
+    """parallel polyline at distance d to the right of the direction of travel (board coords, y down); mitred joins"""
+    segs = []
+    for (x1, y1), (x2, y2) in zip(pts, pts[1:]):
+        L = math.hypot(x2 - x1, y2 - y1)
+        nx, ny = -(y2 - y1) / L, (x2 - x1) / L          # right-hand normal for y-down coordinates
+        segs.append(((x1 + nx * d, y1 + ny * d), (x2 + nx * d, y2 + ny * d)))
+    out = [segs[0][0]]
+    for (a, b), (c, e) in zip(segs, segs[1:]):
+        x1, y1, x2, y2 = a[0], a[1], b[0], b[1]
+        x3, y3, x4, y4 = c[0], c[1], e[0], e[1]
+        den = (x1 - x2) * (y3 - y4) - (y1 - y2) * (x3 - x4)
+        if abs(den) < 1e-9:
+            out.append(b)
+        else:
+            t = ((x1 - x3) * (y3 - y4) - (y1 - y3) * (x3 - x4)) / den
+            out.append((x1 + t * (x2 - x1), y1 + t * (y2 - y1)))
+    out.append(segs[-1][1])
+    return out
