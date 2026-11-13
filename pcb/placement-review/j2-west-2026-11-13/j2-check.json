@@ -1,0 +1,133 @@
+{
+ "J2": {
+  "pos": [
+   -0.6,
+   86.5
+  ],
+  "orientation": -90.0,
+  "layer": "B.Cu",
+  "courtyard_bbox": [
+   -2.645,
+   82.955,
+   1.445,
+   90.045
+  ],
+  "pads": {
+   "1": [
+    0.035,
+    85.23,
+    "nRF_VDD"
+   ],
+   "2": [
+    -1.235,
+    85.23,
+    "SWDIO"
+   ],
+   "3": [
+    0.035,
+    86.5,
+    "nRESET"
+   ],
+   "4": [
+    -1.235,
+    86.5,
+    "SWCLK"
+   ],
+   "5": [
+    0.035,
+    87.77,
+    "GND"
+   ],
+   "6": [
+    -1.235,
+    87.77,
+    "unconnected-(J2-NC-Pad6)"
+   ]
+  },
+  "holes": [
+   [
+    -0.6,
+    83.96,
+    0.4953
+   ],
+   [
+    0.416,
+    89.04,
+    0.4953
+   ],
+   [
+    -1.616,
+    89.04,
+    0.4953
+   ]
+  ]
+ },
+ "switch_body_15.6mm_nearest": [
+  {
+   "ref": "MX3",
+   "center": [
+    11.9063,
+    73.81906
+   ],
+   "gap_from_courtyard_mm": 2.978
+  },
+  {
+   "ref": "MX4",
+   "center": [
+    16.66875,
+    92.86875
+   ],
+   "gap_from_courtyard_mm": 7.424
+  },
+  {
+   "ref": "MX5",
+   "center": [
+    7.14375,
+    111.91875
+   ],
+   "gap_from_courtyard_mm": 14.074
+  },
+  {
+   "ref": "MX2",
+   "center": [
+    9.525,
+    54.76875
+   ],
+   "gap_from_courtyard_mm": 20.388
+  }
+ ],
+ "board_edge_x": -3.572,
+ "courtyard_to_edge_mm": 0.927,
+ "hole_edge_to_board_edge_mm": 1.461,
+ "ANT_EDGE_bottom_y": 82.0,
+ "pad_or_hole_to_ANT_EDGE_mm": 1.465,
+ "MX4_west_stab_holes": [
+  [
+   4.7625,
+   85.88375,
+   1.524
+  ],
+  [
+   4.7625,
+   101.12375,
+   1.9939
+  ]
+ ],
+ "nearest_J2_hole_edge_to_MX4_stab_x_mm": 3.851,
+ "track_lengths_mm": {
+  "nRESET": {
+   "F.Cu": 9.97,
+   "B.Cu": 62.85
+  },
+  "nRF_VDD": {
+   "F.Cu": 14.56,
+   "B.Cu": 33.56
+  },
+  "SWDIO": {
+   "B.Cu": 21.44
+  },
+  "SWCLK": {
+   "B.Cu": 23.04
+  }
+ }
+}

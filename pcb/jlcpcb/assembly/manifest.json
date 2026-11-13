@@ -1,6 +1,6 @@
 {
   "source_sha256": {
-    "ts52k.kicad_pcb": "6da25e25c00eee05020e4543c9a223ae708bbd7a88d1fd5fb54deb209e92222f",
+    "ts52k.kicad_pcb": "84db94a0f57a714e70ad1098edc3d0b50fc9ea069d71a71a4c8238e4419dcd13",
     "ts52k.kicad_pro": "6c31c99bf71308ea18cad53844d45162582b08600e685bd4d7a00dbe69ac1e10",
     "ts52k.kicad_sch": "66b119ad18ba57cfab34db89721cc3fbc9a64d165c01420691324004ad5ffa18",
     "mdbt50q.kicad_sch": "80db280ec42eca85cf541feca4eb6e8e0dc3f4b50cf2221616d1b10f17812821",
@@ -11,7 +11,7 @@
     "tag-connect.kicad_sym": "ae4f4163bf06169f4015e0683927256debc21972c7a236feaaea2f134c6d4fd4"
   },
   "output_sha256": {
-    "gerber/ts52k-gerbers.zip": "7166ad49f20d81b01838e70e2b4f2427ad3a2abb5ea2d29f409d5330ee9e04b2",
+    "gerber/ts52k-gerbers.zip": "e814485c8e39dcbc44cf0eca34388fe931a8a54695759eade00a26dac40836cf",
     "assembly/ts52k-bom.csv": "ceff20a31fae2e1bc59f6bca868a38dd1965d9e8d2d0035a9a2a84bde995b6be",
     "assembly/ts52k-cpl.csv": "aed416db821aa71ef7df9182309a9ff0b044ca739fc955c51e34e9e0a30686da"
   },
