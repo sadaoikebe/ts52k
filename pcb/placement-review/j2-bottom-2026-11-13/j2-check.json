@@ -1,0 +1,218 @@
+{
+ "J2": {
+  "pos": [
+   19.05,
+   115.0
+  ],
+  "orientation": 90.0,
+  "layer": "B.Cu",
+  "courtyard_bbox": [
+   17.005,
+   111.455,
+   21.095,
+   118.545
+  ],
+  "pads": {
+   "1": [
+    18.415,
+    116.27,
+    "nRF_VDD"
+   ],
+   "2": [
+    19.685,
+    116.27,
+    "SWDIO"
+   ],
+   "3": [
+    18.415,
+    115.0,
+    "nRESET"
+   ],
+   "4": [
+    19.685,
+    115.0,
+    "SWCLK"
+   ],
+   "5": [
+    18.415,
+    113.73,
+    "GND"
+   ],
+   "6": [
+    19.685,
+    113.73,
+    "unconnected-(J2-NC-Pad6)"
+   ]
+  },
+  "holes": [
+   [
+    19.05,
+    117.54,
+    0.4953
+   ],
+   [
+    18.034,
+    112.46,
+    0.4953
+   ],
+   [
+    20.066,
+    112.46,
+    0.4953
+   ]
+  ]
+ },
+ "obstacle_model": {
+  "switch": "15.6 x 15.6 mm square on the switch centre",
+  "stabilizer": "stab hole centre x +-4.2 mm, y from outer edge of the 3.05 hole to outer edge of the 4.0 hole, + 0.2 mm",
+  "stab-wire": "between the two housings, 4.0 hole row +-2 mm",
+  "encoder": "SW2 F.CrtYd"
+ },
+ "nearest_front_obstacles_by_kind": {
+  "switch": [
+   {
+    "ref": "MX5",
+    "box": [
+     -0.656,
+     104.119,
+     14.944,
+     119.719
+    ],
+    "gap_from_courtyard_mm": 2.061
+   },
+   {
+    "ref": "MX9",
+    "box": [
+     23.156,
+     104.119,
+     38.756,
+     119.719
+    ],
+    "gap_from_courtyard_mm": 2.061
+   },
+   {
+    "ref": "MX4",
+    "box": [
+     8.869,
+     85.069,
+     24.469,
+     100.669
+    ],
+    "gap_from_courtyard_mm": 10.786
+   }
+  ],
+  "stab-wire": [
+   {
+    "ref": "MX4-wire",
+    "box": [
+     4.76,
+     99.124,
+     28.57,
+     103.124
+    ],
+    "gap_from_courtyard_mm": 8.331
+   },
+   {
+    "ref": "MX23-wire",
+    "box": [
+     76.2,
+     101.664,
+     114.3,
+     105.664
+    ],
+    "gap_from_courtyard_mm": 55.408
+   },
+   {
+    "ref": "MX60-wire",
+    "box": [
+     138.11,
+     101.664,
+     161.93,
+     105.664
+    ],
+    "gap_from_courtyard_mm": 117.158
+   }
+  ],
+  "stabilizer": [
+   {
+    "ref": "MX4-stab@28.57",
+    "box": [
+     24.17,
+     84.16,
+     32.97,
+     103.318
+    ],
+    "gap_from_courtyard_mm": 8.699
+   },
+   {
+    "ref": "MX4-stab@4.76",
+    "box": [
+     0.36,
+     84.16,
+     9.16,
+     103.318
+    ],
+    "gap_from_courtyard_mm": 11.303
+   },
+   {
+    "ref": "MX23-stab@76.20",
+    "box": [
+     71.8,
+     101.47,
+     80.6,
+     120.628
+    ],
+    "gap_from_courtyard_mm": 50.705
+   }
+  ],
+  "encoder": [
+   {
+    "ref": "SW2",
+    "box": [
+     288.131,
+     45.736,
+     302.421,
+     63.326
+    ],
+    "gap_from_courtyard_mm": 271.339
+   }
+  ]
+ },
+ "nearest_front_obstacle": {
+  "kind": "switch",
+  "ref": "MX5",
+  "gap_mm": 2.061
+ },
+ "courtyard_to_board_edge_mm": 2.899,
+ "hole_edge_to_board_edge_mm": 3.409,
+ "nearest_back_courtyards": [
+  {
+   "ref": "D9",
+   "gap_mm": 28.035
+  },
+  {
+   "ref": "D5",
+   "gap_mm": 28.639
+  },
+  {
+   "ref": "D4",
+   "gap_mm": 28.828
+  }
+ ],
+ "track_lengths_mm": {
+  "nRESET": {
+   "F.Cu": 9.97,
+   "B.Cu": 108.22
+  },
+  "nRF_VDD": {
+   "F.Cu": 14.56,
+   "B.Cu": 82.89
+  },
+  "SWDIO": {
+   "B.Cu": 78.63
+  },
+  "SWCLK": {
+   "B.Cu": 82.75
+  }
+ }
+}
