@@ -24,6 +24,14 @@ SCHEMATIC = PCB_DIR / "ts52k.kicad_sch"
 PROJECT = PCB_DIR / "ts52k.kicad_pro"
 
 
+# CPL rotation offsets (degrees) keyed by LCSC part number, taken over from the TS52K wireless rotation audit
+# (origin/wireless notes/rotation-audit-2026-11-11): only C15127 (AO3401A, Q1) needs one. The parts that the
+# audit did not cover on this board (AD8601, CD4051, 0402 passives) use the wired TC52 values unchanged.
+ROTATION_CORRECTIONS = {
+    "C15127": 180.0,
+}
+
+
 def cli_path(override):
     if override:
         return override
@@ -115,7 +123,7 @@ def main():
             raise RuntimeError(f"BOM/CPL mismatch: missing positions {sorted(expected - set(pos))}; "
                                f"unexpected positions {sorted(set(pos) - expected)}")
         if not {"J1", "SW1"}.issubset(pos):
-            raise RuntimeError("The USB connector J1 and BOOTSEL switch SW1 must both be assembled")
+            raise RuntimeError("The USB connector J1 and reset switch SW1 must both be assembled")
         if any(row["Side"].lower() != "bottom" for row in positions):
             raise RuntimeError("Every assembled component must be on the bottom side")
         missing_parts = [ref for ref in sorted(expected) if not re.fullmatch(r"C\d+", bom[ref]["LCSC"])]
@@ -130,11 +138,14 @@ def main():
             {"Comment": value, "Designator": ",".join(refs), "Footprint": footprint, "LCSC Part #": lcsc}
             for (value, footprint, lcsc), refs in grouped.items()
         ]
-        jlc_cpl = [
-            {"Designator": row["Ref"], "Mid X": row["PosX"], "Mid Y": row["PosY"],
-             "Layer": "Bottom", "Rotation": row["Rot"]}
-            for row in positions
-        ]
+        jlc_cpl = []
+        for row in positions:
+            rotation = row["Rot"]
+            offset = ROTATION_CORRECTIONS.get(bom[row["Ref"]]["LCSC"])
+            if offset:
+                rotation = f"{(float(rotation) + offset) % 360:.6f}"
+            jlc_cpl.append({"Designator": row["Ref"], "Mid X": row["PosX"], "Mid Y": row["PosY"],
+                            "Layer": "Bottom", "Rotation": rotation})
 
         run(cli, "pcb", "export", "gerbers", "--layers",
             "F.Cu,In1.Cu,In2.Cu,B.Cu,F.Mask,B.Mask,F.SilkS,B.SilkS,F.Paste,B.Paste,Edge.Cuts",
@@ -151,13 +162,11 @@ def main():
             for path in sorted(plotted.iterdir()):
                 if path.is_file():
                     archive.write(path, path.name)
-        sources = [BOARD, PROJECT, SCHEMATIC, PCB_DIR / "rp2040.kicad_sch", PCB_DIR / "ec.kicad_sch", PCB_DIR / "ts52k.kicad_dru",
+        sources = [BOARD, PROJECT, SCHEMATIC, PCB_DIR / "mdbt50q.kicad_sch", PCB_DIR / "ec.kicad_sch", PCB_DIR / "ts52k.kicad_dru",
                    PCB_DIR / "tc52.kicad_sym", PCB_DIR / "tc52.pretty" / "ecs_pad.kicad_mod",
                    PCB_DIR / "tc52.pretty" / "ecs_pad_edge.kicad_mod", PCB_DIR / "tc52.pretty" / "Hole_M2_Pad.kicad_mod",
                    PCB_DIR / "ts52k.kicad_sym", PCB_DIR / "sym-lib-table", PCB_DIR / "fp-lib-table",
-                   PCB_DIR / "tag-connect.kicad_sym",
-                   PCB_DIR / "rp2040.pretty" / "IC57_RP2040.kicad_mod",
-                   PCB_DIR / "rp2040.pretty" / "SW_Tactile_XKB_TS-1187A_5.1x5.1mm.kicad_mod"]
+                   PCB_DIR / "tag-connect.kicad_sym"] + sorted((PCB_DIR / "ts52k.pretty").glob("*.kicad_mod"))
         manifest = {
             "source_sha256": {str(path.relative_to(PCB_DIR)): sha256(path) for path in sources},
             "output_sha256": {str(path.relative_to(JLC_DIR)): sha256(path) for path in [output_zip, output_bom, output_cpl]},

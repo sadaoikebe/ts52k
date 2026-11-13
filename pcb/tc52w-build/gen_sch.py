@@ -121,6 +121,11 @@ def define_symbols():
             if s[1].startswith('ts52k:MX') or s[1] == 'power:GND':
                 continue
             S.setdefault(s[1], s)
+    lib = parse(open(os.path.join(PCB, 'tag-connect.kicad_sym')).read())      # library copy, so the sheet matches it
+    for sym in find(lib, 'symbol'):
+        if sym[1] == 'TC2030_IDC_NL':
+            t = parse(dump(sym)); t[1] = Q('tag-connect:TC2030_IDC_NL')
+            S['tag-connect:TC2030_IDC_NL'] = t
     S['tc52:ECS_PAD'] = box_symbol(
         'tc52:ECS_PAD', 'MX',
         [('1', 'ROW', 'passive', 'l', 0), ('2', 'COL', 'passive', 'r', 0), ('3', 'GND', 'passive', 'b', 0)],

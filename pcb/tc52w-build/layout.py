@@ -30,7 +30,7 @@ SENSE_VIAS = {
 DRIVE_VIA = {
     'MX3': (-1.19, 5.2),                    # below the gate lanes
     'MX4': (-1.19, 5.2),                    # clear of the module supply parts
-    'MX5': (-1.19, -5.2),                   # short lead-in from the point where ROW4 comes down from the module
+    'MX5': (-0.94, -5.3),                   # short lead-in from the point where ROW4 comes down from the module
     'MX8': (-1.19, 5.0),                    # below the bundle
     'MX12': (-1.19, 5.0),
 }
@@ -70,7 +70,7 @@ def keys_stage(bd):
 
 
 # ---------------------------------------------------------------- rows
-ROW4_STEP = {'MX67': -0.9, 'MX23': -1.3, 'MX82': -3.2, 'MX47': 1.2}
+ROW4_STEP = {'MX67': -0.9, 'MX23': -1.3, 'MX82': -3.2, 'MX47': 1.2, 'MX5': 1.2}     # MX5: lead-in clear of the AFE
 ROW_END = {}        # row -> (x_min, x_max) of the L1 bus, for module.py
 
 

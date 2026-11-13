@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-"""check_spec.py : checks from design-spec.md that the KiCad DRC does not cover (or that the rule areas exempt).
+"""check_spec.py : checks from design-spec.md (and the wireless additions, docs/tc52w-build-log.md) that the KiCad DRC
+does not cover (or that the rule areas exempt).
 
 Prints one line per check; exits 1 if a hard check fails. The 'review' lists are for reading, not pass/fail.
 """
@@ -45,7 +46,9 @@ def report(name, bad, hard=True):
 
 # 1. L2: no tracks at all; L3: tracks only inside the island
 report('L2 carries no tracks (5-1)', [(t.GetNetname(), seg(t)) for t in tracks if t.GetLayer() == L2])
-isl = lambda x, y: 14.0 <= x <= 45.5 and 41.0 <= y <= 84.5
+# the wireless island: under / beside the module, the hops under the bundle, the VBUS jumper at the USB connector
+ISL = ((0.5, 74.5, 10.0, 100.0), (20.5, 68.0, 29.5, 80.0), (22.0, 48.0, 25.8, 49.5))
+isl = lambda x, y: any(x0 <= x <= x1 and y0 <= y <= y1 for x0, y0, x1, y1 in ISL)
 report('L3 tracks only inside the digital island', [(t.GetNetname(), seg(t)) for t in tracks if t.GetLayer() == L3 and not (isl(*seg(t)[:2]) and isl(*seg(t)[2:]))])
 # 2. L1: only rows, electrodes, ground
 report('L1 tracks are row buses only (5-8)', [(t.GetNetname(), seg(t)) for t in tracks if t.GetLayer() == L1 and not t.GetNetname().startswith('ROW')])
@@ -54,10 +57,13 @@ hiz = lambda n: n.startswith('COL') or n in ('SENSE', 'AMP_IN', 'AMP_FB')
 report('HIZ track width 0.2 mm (5-4)', [(t.GetNetname(), mm(t.GetWidth())) for t in tracks if hiz(t.GetNetname()) and abs(mm(t.GetWidth()) - 0.2) > 1e-6])
 # 4. L3 above HIZ tracks is ground (no L3 track within 1 mm of a COL/SENSE track)
 l3 = [t for t in tracks if t.GetLayer() == L3]
+HL = [(0.8, 93.0, 5.0, 98.6)]
 bad = []
 for t in tracks:
     if t.GetLayer() == L4 and (t.GetNetname().startswith('COL') or t.GetNetname() == 'SENSE'):
         for u in l3:
+            if all(any(x0 <= x <= x1 and y0 <= y <= y1 for x0, y0, x1, y1 in HL) for x, y in (seg(u)[:2], seg(u)[2:])):
+                continue                    # SWD via stubs beside the SENSE pad of the module (inside HIZ_LOCAL; static in use)
             d = dist_ss(seg(t), seg(u))
             if d < 1.0:
                 bad.append((t.GetNetname(), u.GetNetname(), round(d, 2), [round(v, 1) for v in seg(u)]))
@@ -177,7 +183,73 @@ for f in b.GetFootprints():
     if hit:
         bad.append(hit)
 report('no L4 copper under the screw heads (2.6 mm around H1..H12; H1 carries PLATE only)', bad)
-# 12. outline unchanged against Rev 0.2
+# W1. antenna keep-out: no copper on any layer in the module's own keep-out and in the widened strip (ANT_EDGE)
+import module as MOD
+u5 = b.FindFootprintByReference('U5')
+boxes = [MOD.ANT]
+for z in u5.Zones():
+    if len(list(z.GetLayerSet().Seq())) >= 4:
+        bb_ = z.GetBoundingBox()
+        boxes.append((mm(bb_.GetLeft()), mm(bb_.GetTop()), mm(bb_.GetRight()), mm(bb_.GetBottom())))
+bad = []
+inb = lambda x, y, m=0.0: any(x0 - m < x < x1 + m and y0 - m < y < y1 + m for x0, y0, x1, y1 in boxes)
+for t in tracks:
+    x1, y1, x2, y2 = seg(t)
+    if any(inb(x1 + (x2 - x1) * i / 20, y1 + (y2 - y1) * i / 20, mm(t.GetWidth()) / 2) for i in range(21)):
+        bad.append((t.GetNetname(), b.GetLayerName(t.GetLayer()), [round(v, 2) for v in seg(t)]))
+for v in vias:
+    if inb(mm(v.GetPosition().x), mm(v.GetPosition().y), 0.3):
+        bad.append((v.GetNetname(), 'via', round(mm(v.GetPosition().x), 2), round(mm(v.GetPosition().y), 2)))
+for z in b.Zones():
+    if z.GetIsRuleArea():
+        continue
+    for L in z.GetLayerSet().Seq():
+        ps = z.GetFilledPolysList(L)
+        for x0, y0, x1, y1 in boxes:
+            x = x0 + 0.1
+            while x < x1:
+                y = y0 + 0.1
+                while y < y1:
+                    if ps.Contains(pcbnew.VECTOR2I(pcbnew.FromMM(x), pcbnew.FromMM(y))) and -3.57 < x:
+                        bad.append(('pour', b.GetLayerName(L), round(x, 1), round(y, 1)))
+                    y += 0.3
+                x += 0.3
+report('antenna keep-out free of copper on all four layers (module zone + ANT_EDGE)', bad[:20])
+# W2. L2 is solid under every electrode and ring (only via / hole antipads), and the antenna void is far from them
+l2 = [z for z in b.Zones() if z.GetZoneName() == 'L2_GND'][0].GetFilledPolysList(L2)
+holes = [(mm(v.GetPosition().x), mm(v.GetPosition().y)) for v in vias if v.GetNetname() != 'GND']
+for f in b.GetFootprints():
+    for p in f.Pads():
+        if p.GetDrillSize().x > 0 and p.GetNetname() != 'GND':
+            holes.append((mm(p.GetPosition().x), mm(p.GetPosition().y)))
+bad = []
+for k, (kx, ky) in K.items():
+    for i in range(-17, 18):
+        for j in range(-17, 18):
+            x, y = kx + i * 0.5, ky + j * 0.5
+            if math.hypot(x - kx, y - ky) > 8.45 or x < -3.2 or x > 303.2 or y > 121.0:
+                continue
+            if not l2.Contains(pcbnew.VECTOR2I(pcbnew.FromMM(x), pcbnew.FromMM(y))) and min(math.hypot(x - hx, y - hy) for hx, hy in holes) > 1.0:
+                bad.append((k, round(x, 1), round(y, 1)))
+report('L2 ground is unbroken under all 52 electrodes and guard rings', bad)
+vx = max(bx[2] for bx in boxes); vy0 = min(bx[1] for bx in boxes); vy1 = max(bx[3] for bx in boxes)
+dmin = min((math.hypot(max(kx - vx, 0), max(vy0 - ky, 0, ky - vy1)) - 8.45, k) for k, (kx, ky) in K.items())
+print('     antenna void (x < %.2f, y %.1f..%.1f): nearest guard ring %s at %.1f mm' % (vx, vy0, vy1, dmin[1], dmin[0]))
+hz = [seg(t) for t in tracks if t.GetNetname().startswith('COL') or t.GetNetname() in ('SENSE', 'AMP_IN')]
+dv = min(dist_ss(sg, (vx, vy0, vx, vy1)) for sg in hz)
+print('     antenna void to the nearest column / SENSE track: %.1f mm' % dv)
+# W3. tracks narrower than 0.15 mm exist only as necks at the module's pads
+cxm, cym = mm(u5.GetPosition().x), mm(u5.GetPosition().y)
+bad = [(t.GetNetname(), mm(t.GetWidth()), [round(v, 2) for v in seg(t)]) for t in tracks
+       if mm(t.GetWidth()) < 0.149 and not all(abs(x - cxm) < 8.5 and abs(y - cym) < 6.2 for x, y in (seg(t)[:2], seg(t)[2:]))]
+report('tracks under 0.15 mm only as necks between the module pads', bad)
+# W4. fast lines stay off the "low frequency I/O only" pads (3..14, 50, 52, 54, 56..61); PURGE (SENSE) is exempt by design
+LF = set(range(3, 15)) | {50, 52, 54} | set(range(56, 62))
+bad = [(p.GetNumber(), p.GetNetname()) for p in u5.Pads() if p.GetNumber().isdigit() and int(p.GetNumber()) in LF and p.GetNetname().startswith('ROW')]
+report('row strobes are not on low-frequency-only module pads', bad)
+print('     low-frequency-only pads in use:', ' '.join(f'{p.GetNumber()}={p.GetNetname()}' for p in sorted(u5.Pads(), key=lambda p: int(p.GetNumber())) if int(p.GetNumber()) in LF and p.GetNetname() and not p.GetNetname().startswith('unconnected')))
+# 12. outline and key positions unchanged against Rev 0.2 and against the wired TC52
+
 import subprocess
 base = '/tmp/tc52_base_check.kicad_pcb'
 open(base, 'w').write(subprocess.check_output(['git', '-C', HERE, 'show', 'c672d06:pcb/ts52k.kicad_pcb'], text=True))
@@ -188,8 +260,15 @@ report('Edge.Cuts identical to Rev 0.2', [] if edges(b) == edges(bb) else ['outl
 basek = {f.GetReference(): (round(mm(f.GetPosition().x), 3), round(mm(f.GetPosition().y), 3)) for f in bb.GetFootprints() if f.GetReference().startswith('MX')}
 bad = [(k, basek.get(k), K[k]) for k in K if k not in basek or abs(basek[k][0] - K[k][0]) > 2e-3 or abs(basek[k][1] - K[k][1]) > 2e-3]
 report('key centres identical to Rev 0.2 (52 of %d MX footprints there)' % len(basek), bad)
+wired = '/tmp/tc52_wired_check.kicad_pcb'
+open(wired, 'w').write(subprocess.check_output(['git', '-C', HERE, 'show', '733bf7d:pcb/ts52k.kicad_pcb'], text=True))
+bw = pcbnew.LoadBoard(wired)
+report('Edge.Cuts identical to the wired TC52 (733bf7d)', [] if edges(b) == edges(bw) else ['outline differs'])
+wk = {f.GetReference(): (f.GetPosition().x, f.GetPosition().y, f.GetOrientationDegrees()) for f in bw.GetFootprints() if f.GetReference().startswith(('MX', 'H'))}
+nk = {f.GetReference(): (f.GetPosition().x, f.GetPosition().y, f.GetOrientationDegrees()) for f in b.GetFootprints() if f.GetReference().startswith(('MX', 'H'))}
+report('52 key centres and 12 fixing holes identical to the wired TC52', [k for k in wk if wk[k] != nk.get(k)] + [k for k in nk if k not in wk])
 for ref in ('SW2', 'J1', 'J2', 'SW1'):
-    f1, f2 = b.FindFootprintByReference(ref), bb.FindFootprintByReference(ref)
+    f1, f2 = b.FindFootprintByReference(ref), bw.FindFootprintByReference(ref)
     if f1.GetPosition() != f2.GetPosition():
-        print('     note:', ref, 'moved from Rev 0.2')
+        print('     note:', ref, 'moved from the wired TC52: (%.2f, %.2f) -> (%.2f, %.2f)' % (mm(f2.GetPosition().x), mm(f2.GetPosition().y), mm(f1.GetPosition().x), mm(f1.GetPosition().y)))
 sys.exit(1 if fail else 0)

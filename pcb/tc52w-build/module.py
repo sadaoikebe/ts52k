@@ -317,6 +317,15 @@ def north(bd, K, SV, DV):
     T('GND', [qq['1'], (qq['1'][0] - 0.5, qq['1'][1]), gv], 0.25)
     bd.via('GND', *gv)
     T('GND', [c3b, (21.6, 59.6), gv], 0.3)
+    # polarity mark at pin 1 (BAT+), as on the TS52K wireless board
+    t = pcbnew.PCB_TEXT(bd.b)
+    t.SetText('+')
+    t.SetLayer(pcbnew.B_SilkS)
+    t.SetPosition(V(j1[0] + 1.25, j1[1] - 0.6))
+    t.SetTextSize(pcbnew.VECTOR2I(MM(1.0), MM(1.0)))
+    t.SetTextThickness(MM(0.18))
+    t.SetMirrored(True)
+    bd.b.Add(t)
     # ---- MCU_VBUS: R4 -> north of R3 -> between Q1 / J3 and the USB pair -> hop
     hx, _, hn = HOP['MCU_VBUS']
     T('MCU_VBUS', [r4b, (21.6, 54.0), (23.5, 54.0), (hx, 54.0 + hx - 23.5), (hx, hn)], 0.3)
@@ -385,12 +394,12 @@ def south(bd, K, SV, DV):
     T('SWCLK', [p53, (p53[0], 95.9), vc]); bd.via('SWCLK', *vc)
     nw = {'SWCLK': (1.4, 76.3), 'SWDIO': (2.0, 77.3), 'nRESET': (2.0, 75.0)}
     T('SWCLK', [vc, (1.45, 95.95), (1.45, 95.0), (1.4, 94.9), nw['SWCLK']], 0.15, L3)
-    T('SWDIO', [vd, (2.1, 95.25), (2.1, 77.4), nw['SWDIO']], 0.15, L3)
-    T('nRESET', [v40, (3.15, v40[1]), (2.8, v40[1] - 0.35), (2.8, 75.9), (2.0, 75.1), nw['nRESET']], 0.15, L3)
+    T('SWDIO', [vd, (1.9, 95.05), (1.9, 77.4), nw['SWDIO']], 0.15, L3)
+    T('nRESET', [v40, (v40[0] - 0.4, v40[1] - 0.4), (3.2, v40[1] - 0.4), (2.8, v40[1] - 0.8), (2.8, 75.9), (2.0, 75.1), nw['nRESET']], 0.15, L3)
     for n, v in nw.items():
         bd.via(n, *v)
     # ---- AFE (wired TC52 block, moved south-west of the module).  U6 on the back: north row = pins 1, 2, 3
-    ax, ay, LS = 2.2, 101.7, 97.25
+    ax, ay, LS = 2.2, 102.7, 98.25
     for rot in (0, 90, 180, 270):
         f = bd.place('U6', ax, ay, rot)
         q = {n: bd.pad('U6', n) for n in range(1, 6)}
@@ -406,7 +415,7 @@ def south(bd, K, SV, DV):
     T('SENSE', [(p3[0], LS), (XT + 0.6, LS), (XT, LS + 0.6), (XT, 114.6), (-2.0, 115.5), (-2.0, 116.4)], 0.2)
     a, b = two(bd, 'R22', p3[0], LS, 's')
     T('AMP_IN', [b, p3], 0.2)
-    c13a, c13b = two(bd, 'C13', p3[0], 99.15, 'w')            # between the + input riser and the V- riser
+    c13a, c13b = two(bd, 'C13', p3[0], LS + 1.9, 'w')            # between the + input riser and the V- riser
     c30a, c30b = two(bd, 'C30', ax - 2.65, LS, 's')
     c31a, c31b = two(bd, 'C31', ax - 4.15, LS, 's')
     yg_ = LS + 1.25
@@ -419,18 +428,18 @@ def south(bd, K, SV, DV):
     r23a, r23b = two(bd, 'R23', ax + 3.25, ay, 'e')
     r21a, r21b = two(bd, 'R21', ax + 2.25, ay, 's')
     T('AMP_OUT', [p1, (p1[0], ay), r21a, r23a], 0.2)
-    T('ADC', [vb, (8.2, 100.1), (r23b[0] + 0.6, ay), r23b])
+    T('ADC', [vb, (8.2, 99.5), (r23b[0], r23b[1] - 1.79), r23b])
     at(bd, 'TP2', 1, ax - 2.85, ay, 0)
     T('AMP_OUT', [(p1[0], ay), (ax - 2.85, ay)], 0.2)
     T('AMP_FB', [r21b, (p4[0], r21b[1]), p4], 0.2)
-    a, b = two(bd, 'R20', p4[0], ay + 2.6, 's')
+    a, b = two(bd, 'R20', p4[0], ay + 2.55, 's')
     T('AMP_FB', [p4, a], 0.2)
-    gr = (3.25, 105.6)                           # on the MX5 guard ring
+    gr = (2.6, 106.5)                            # on the MX5 guard ring
     T('GND', [b, gr], 0.3)
     bd.via('GND', *gr)
     c33a, c33b = two(bd, 'C33', p5[0], ay + 3.0, 'w')
     c32a, c32b = two(bd, 'C32', p5[0], ay + 4.1, 'w')
-    T('+3V3A', [b27, (b27[0], 105.6), (7.0, 107.6), (3.6, 107.6), (p5[0], 107.6 - (3.6 - p5[0])), c32a, c33a, p5], 0.25)
+    T('+3V3A', [b27, (b27[0], 106.2), (7.0, 108.2), (p5[0] + 0.6, 108.2), (p5[0], 107.6), c32a, c33a, p5], 0.25)
     T('GND', [c32b, c33b], 0.25)
     gs = (c33b[0] - 1.5, ay + 3.55)
     T('GND', [(c33b[0], ay + 3.55), gs], 0.25)
@@ -470,7 +479,7 @@ def south(bd, K, SV, DV):
     HIZ_LOCAL.append((0.8, 93.0, 5.0, 98.6))
 
 
-ANT = (-3.6, 81.0, 0.5, 96.6)        # antenna keep-out widened along the board edge (all copper layers)
+ANT = (-3.6, 81.0, 0.5, 97.0)        # antenna keep-out widened along the board edge (all copper layers)
 BODY = (-3.4, 84.0, 12.5, 96.0)     # module body: no stitching vias under it
 
 
