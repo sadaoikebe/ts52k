@@ -389,13 +389,14 @@ def south(bd, K, SV, DV):
     T('nRESET', [p40, (p40[0], p40[1] - 0.55), v40])
     bd.via('nRESET', *v40)
     p51, p53 = P(51), P(53)
-    vd, vc = (2.6, 95.75), (1.75, 96.25)
-    T('SWDIO', [p51, vd]); bd.via('SWDIO', *vd)
+    vd, vc = (2.45, 95.75), (1.75, 96.25)        # SWDIO via 0.15 mm west of its pad: SENSE passes 0.3 mm from it
+    T('SWDIO', [p51, (p51[0], 95.6), vd]); bd.via('SWDIO', *vd)
     T('SWCLK', [p53, (p53[0], 95.9), vc]); bd.via('SWCLK', *vc)
     nw = {'SWCLK': (1.4, 76.3), 'SWDIO': (2.0, 77.3), 'nRESET': (2.0, 75.0)}
     T('SWCLK', [vc, (1.45, 95.95), (1.45, 95.0), (1.4, 94.9), nw['SWCLK']], 0.15, L3)
-    T('SWDIO', [vd, (1.9, 95.05), (1.9, 77.4), nw['SWDIO']], 0.15, L3)
-    T('nRESET', [v40, (v40[0] - 0.4, v40[1] - 0.4), (3.2, v40[1] - 0.4), (2.8, v40[1] - 0.8), (2.8, 75.9), (2.0, 75.1), nw['nRESET']], 0.15, L3)
+    T('SWDIO', [vd, (1.9, 95.2), (1.9, 77.4), nw['SWDIO']], 0.15, L3)
+    yr = v40[1] - 0.55                           # 0.3 mm clear of the guard's ground via (3.4, 92.9)
+    T('nRESET', [v40, (v40[0] - 0.55, yr), (3.2, yr), (2.8, yr - 0.4), (2.8, 75.9), (2.0, 75.1), nw['nRESET']], 0.15, L3)
     for n, v in nw.items():
         bd.via(n, *v)
     # ---- AFE (wired TC52 block, moved south-west of the module).  U6 on the back: north row = pins 1, 2, 3
@@ -411,7 +412,15 @@ def south(bd, K, SV, DV):
     p1, p2, p3, p4, p5 = (q[n] for n in range(1, 6))
     XT = -2.9                                    # SENSE trunk down the west edge
     p50 = P(50)
-    T('SENSE', [p50, (p3[0] + 0.1, p50[1] + 0.4), (p3[0] + 0.1, 96.3), (p3[0], 96.5), (p3[0], LS)], 0.2)
+    T('SENSE', [p50, (p50[0] + 0.05, p50[1] + 0.25), (p50[0] + 0.05, 95.0), (p3[0], 95.2), (p3[0], LS)], 0.2)
+    # ground guard beside SENSE where it runs past the ROW1 strobe (pad 48, its track and R31).  No ground via fits
+    # south of the module here, so the guard hangs from a via under the module and comes out between pads 50 and 49
+    # on a 0.1 mm neck; its south end is open (3.7 mm stub, deliberate: DRC reports it as a dangling track)
+    XG = p3[0] + 0.45
+    gg = (p50[0] + 0.41, 92.9)                  # neck: 0.16 mm to pad 50, 0.14 mm to pad 49, 0.21 mm to SENSE
+    bd.via('GND', *gg)
+    T('GND', [gg, (gg[0], p50[1] + 0.5), (XG, p50[1] + 0.5 + XG - gg[0])], 0.1)
+    T('GND', [(XG, p50[1] + 0.5 + XG - gg[0]), (XG, LS - 0.55)], 0.15)
     T('SENSE', [(p3[0], LS), (XT + 0.6, LS), (XT, LS + 0.6), (XT, 114.6), (-2.0, 115.5), (-2.0, 116.4)], 0.2)
     a, b = two(bd, 'R22', p3[0], LS, 's')
     T('AMP_IN', [b, p3], 0.2)

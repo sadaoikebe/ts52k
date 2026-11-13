@@ -32,6 +32,20 @@ ROTATION_CORRECTIONS = {
 }
 
 
+# Stack the design depends on (docs/design-spec.md section 1): the electrode / column capacitances are computed for
+# one sheet of 7628 prepreg (0.2104 mm) between L1-L2 and L3-L4.  The board file carries it (build_pcb.py); the
+# export refuses to run if the file says anything else, and repeats the order instruction in its outputs.
+STACKUP_NAME = "JLC04161H-7628"
+STACKUP_ORDER_NOTE = ("4 layers, 1.6 mm, stack JLC04161H-7628 (L1-L2 and L3-L4: 7628 prepreg 0.2104 mm). "
+                      "Select it explicitly when ordering (impedance control: yes); thinner prepregs (3313, 1080) are not acceptable.")
+
+
+def stackup_dielectrics(board_path):
+    text = board_path.read_text(encoding="utf-8")
+    block = text[text.index("(stackup"):text.index("(copper_finish")]
+    return [(typ, float(th)) for typ, th in re.findall(r'\(layer "dielectric \d+"\s*\(type "(\w+)"\)\s*\(thickness ([\d.]+)\)', block)]
+
+
 def cli_path(override):
     if override:
         return override
@@ -78,6 +92,10 @@ def main():
     edge_clearance = settings["board"]["design_settings"]["rules"]["min_copper_edge_clearance"]
     if edge_clearance < 0.2:
         raise RuntimeError(f"Copper-to-edge rule is only {edge_clearance} mm; JLCPCB requires at least 0.2 mm")
+
+    dielectrics = stackup_dielectrics(BOARD)
+    if dielectrics != [("prepreg", 0.2104), ("core", 1.065), ("prepreg", 0.2104)]:
+        raise RuntimeError(f"Board stackup is not {STACKUP_NAME}: {dielectrics}")
 
     with tempfile.TemporaryDirectory(prefix="ts52k-jlc-") as temp_dir:
         temp = Path(temp_dir)
@@ -171,6 +189,8 @@ def main():
             "source_sha256": {str(path.relative_to(PCB_DIR)): sha256(path) for path in sources},
             "output_sha256": {str(path.relative_to(JLC_DIR)): sha256(path) for path in [output_zip, output_bom, output_cpl]},
             "copper_layers": 4,
+            "stackup": STACKUP_NAME,
+            "stackup_order_note": STACKUP_ORDER_NOTE,
             "assembly_references": len(expected),
             "bom_line_items": len(jlc_bom),
             "drc_warnings": sum(v["severity"] == "warning" for v in drc["violations"]),
@@ -178,12 +198,14 @@ def main():
         }
         (assembly_dir / "manifest.json").write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
         status_file.write_text(
-            "EXPORT COMPLETED. Review the source hashes, live stock, component rotations and JLCPCB DFM before ordering.\n",
+            "EXPORT COMPLETED. Review the source hashes, live stock, component rotations and JLCPCB DFM before ordering.\n"
+            "ORDER WITH: " + STACKUP_ORDER_NOTE + "\n",
             encoding="utf-8",
         )
         print(f"Exported {len(expected)} bottom-side parts in {len(jlc_bom)} BOM groups.")
         print(f"Gerbers: {output_zip}\nBOM: {output_bom}\nCPL: {output_cpl}")
         print("Review live stock, component rotations and JLCPCB DFM before ordering.")
+        print("Order with: " + STACKUP_ORDER_NOTE)
 
 
 if __name__ == "__main__":

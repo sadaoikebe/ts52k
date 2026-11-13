@@ -399,11 +399,13 @@ def build_ec():
     sh.place('tc52:TestPoint', 'TP2', 'ADC', 261.62, ya, {'1': 'AMP_OUT'}, in_bom=False)
     sh.place('tc52:TestPoint', 'TP4', 'GND', 276.86, ya, {'1': 'GND'}, in_bom=False)
     xs = 330.2
-    sh.text('+3V3A (op amp) = GPIO AFE_EN (P0.13, high drive, held high while scanning) through R27 22R, 4.7u + 100n.\\n'
-            'The op amp draws under 1 mA; the pin also gates it for sleep.  Reason for not feeding it from +3V3: docs/tc52w-build-log.md', xs - 15.24, ya - 25.4, 2.5)
-    sh.place('Device:R', 'R27', '22', xs, ya, {'1': 'AFE_EN', '2': '+3V3A'}, fp=R0402, lcsc='C25092', mpn='0402WGF220JTCE',
-             note='design-spec R_F: op amp supply filter, fed from GPIO AFE_EN')
-    sh.place('Device:C', 'C32', '4.7u', xs + 25.4, ya, {'1': '+3V3A', '2': 'GND'}, fp=C0402, lcsc='C23733', mpn='CL05A475MP5NRNC', note='design-spec C_F1')
+    sh.text('+3V3A (op amp) = GPIO AFE_EN (P0.13, high drive, held high while scanning) through R27 100R, 1u + 100n.\\n'
+            'The op amp draws under 1 mA; the pin also gates it for sleep.  100R / 1u (not 22R / 4.7u as on +3V3M): the pin\\n'
+            'charges the capacitors at switch-on, this keeps the peak near 25 mA and the charge at 3.6 uC (same 1.4 kHz corner).\\n'
+            'Reason for not feeding it from +3V3: docs/tc52w-build-log.md', xs - 15.24, ya - 25.4, 2.5)
+    sh.place('Device:R', 'R27', '100', xs, ya, {'1': 'AFE_EN', '2': '+3V3A'}, fp=R0402, lcsc='C25076', mpn='0402WGF1000TCE',
+             note='design-spec R_F: op amp supply filter, fed from GPIO AFE_EN (100R limits the switch-on current of the pin)')
+    sh.place('Device:C', 'C32', '1u', xs + 25.4, ya, {'1': '+3V3A', '2': 'GND'}, fp=C0402, lcsc='C52923', mpn='CL05A105KA5NQNC', note='design-spec C_F1 (1u: charged through a GPIO)')
     sh.flag('+3V3A', xs + 48.26, ya)
     sh.text('+3V3M (MUX x2) = +3V3 through 22R, 4.7u', xs - 15.24, ya + 20.32, 2.5)
     sh.place('Device:R', 'R26', '22', xs, ya + 38.1, {'1': '+3V3', '2': '+3V3M'}, fp=R0402, lcsc='C25092', mpn='0402WGF220JTCE', note='second R_F: MUX supply')

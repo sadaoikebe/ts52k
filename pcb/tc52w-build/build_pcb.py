@@ -97,6 +97,31 @@ def apply_netlist(bd, comps, nets):
     b.FindFootprintByReference('SW1').SetDuplicatePadNumbersAreJumpers(True)
 
 
+# JLC04161H-7628 (design-spec section 1): the electrode-to-L2 capacitance and the column loading are computed for
+# 0.2104 mm of 7628 prepreg between L1 and L2.  The base board still carries KiCad's default two-layer description;
+# the board file is given the real stack so that it cannot be ordered or analysed against the wrong one.
+STACK = (('F.Cu', 'copper', 0.035), ('dielectric 1', 'prepreg', 0.2104), ('In1.Cu', 'copper', 0.0152),
+         ('dielectric 2', 'core', 1.065), ('In2.Cu', 'copper', 0.0152), ('dielectric 3', 'prepreg', 0.2104),
+         ('B.Cu', 'copper', 0.035))
+
+
+def write_stackup(path):
+    """replace the copper / dielectric part of the (stackup ...) block (pcbnew's Python API does not expose it)"""
+    s = open(path).read()
+    i = s.index('\t\t\t(layer "F.Cu"\n\t\t\t\t(type "copper")')
+    j = s.index('\t\t\t(layer "B.Mask"', i)
+    out = []
+    for name, typ, th in STACK:
+        out.append(f'\t\t\t(layer "{name}"\n\t\t\t\t(type "{typ}")\n\t\t\t\t(thickness {th:g})\n')
+        if typ != 'copper':
+            out.append('\t\t\t\t(material "%s")\n\t\t\t\t(epsilon_r %s)\n\t\t\t\t(loss_tangent 0.02)\n' % (('7628', '4.4') if typ == 'prepreg' else ('FR4', '4.6')))
+        out.append('\t\t\t)\n')
+    s = s[:i] + ''.join(out) + s[j:]
+    open(path, 'w').write(s)
+    chk = pcbnew.LoadBoard(path)                 # must still load, with four copper layers
+    assert chk.GetCopperLayerCount() == 4
+
+
 def main():
     stage = sys.argv[1] if len(sys.argv) > 1 else 'all'
     tmp = '/tmp/tc52w_base.kicad_pcb'
@@ -111,6 +136,7 @@ def main():
     ds = board.GetDesignSettings()
     ds.m_TrackMinWidth = MM(0.1)          # 0.1 mm necks between the module's pads only (check_spec item)
     pcbnew.SaveBoard(OUT, board)
+    write_stackup(OUT)
     print('saved', OUT)
 
 

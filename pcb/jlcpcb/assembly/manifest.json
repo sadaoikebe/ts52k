@@ -1,10 +1,10 @@
 {
   "source_sha256": {
-    "ts52k.kicad_pcb": "f9ae539291022f90c7ed44a2be706c61ede02aae9e7b700343f13cea3289f147",
+    "ts52k.kicad_pcb": "0cd4ef6eb3b2f2053d48647f03231c47fcebf7dbed2114fb05731bf0c477d676",
     "ts52k.kicad_pro": "456e311310167e57b7917148dc601dbe9dac896d5e98f0399e404662c57f8f22",
     "ts52k.kicad_sch": "07cd28bad4bc14725cab95afc9581abbdd4ef4418a4a10965596d8e7549c3935",
     "mdbt50q.kicad_sch": "172a52a603c5d48e69b067ede7d999320835a03c474cd81a97b6467cf3132a1f",
-    "ec.kicad_sch": "5b6ff32905ded20041611e9d0b37ab65f86454d180f55da2cc38ad733d2ed012",
+    "ec.kicad_sch": "59d5cd35b3c665143ff9a21df15e9ef56056a022515701d4b8adc1d79bddc099",
     "ts52k.kicad_dru": "630c81a947838519013aa11bdfab183fb4717803d1beec78bf08dcb95e903d0b",
     "tc52.kicad_sym": "f4d8843f5d6ebe81b90c55dbe09c74989c07ded82482dc77b64087e7dcc8dec1",
     "tc52.pretty/ecs_pad.kicad_mod": "7a1c1aee832cffe0175ad27e299103027921bf04b5747571334a704b85ef9427",
@@ -31,13 +31,15 @@
     "ts52k.pretty/VQFN-16-1EP_3x3mm_P0.5mm_EP1.68x1.68mm.kicad_mod": "f68d777c2406c4c6178fdba99f3938a0ec0b5a827706f5c64a08157ce5117714"
   },
   "output_sha256": {
-    "gerber/ts52k-gerbers.zip": "a98a228add7249d94cbb2dc9ba306635ab3683bd6a053e4fa73f50a03f87b091",
-    "assembly/ts52k-bom.csv": "267984fda438c76aa45167fff5702cc67e4769e7f807c629856dc037749099b4",
+    "gerber/ts52k-gerbers.zip": "4f94fae4307162d15bfe75036c62e24c68fd598e0132aa4ea8dcc0a196b1d789",
+    "assembly/ts52k-bom.csv": "e4b4b594379114459851151954238d3caebc8e4cf21aeb368390970bc29b3405",
     "assembly/ts52k-cpl.csv": "81cfcb6a29c59dc7a8ba00641a028b66320a92bf57a33cb66e68fb1bba0e5763"
   },
   "copper_layers": 4,
+  "stackup": "JLC04161H-7628",
+  "stackup_order_note": "4 layers, 1.6 mm, stack JLC04161H-7628 (L1-L2 and L3-L4: 7628 prepreg 0.2104 mm). Select it explicitly when ordering (impedance control: yes); thinner prepregs (3313, 1080) are not acceptable.",
   "assembly_references": 67,
-  "bom_line_items": 30,
-  "drc_warnings": 7,
+  "bom_line_items": 31,
+  "drc_warnings": 8,
   "erc_warnings": 0
 }

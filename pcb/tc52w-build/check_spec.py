@@ -95,6 +95,47 @@ for t in tracks:
             if d < 2.38 - 0.01:
                 bad[(n, m)] = min(bad[(n, m)], round(d, 2))
 report('review: column / SENSE to row lead-in centre distance under 2.38 mm (5-9)', sorted(bad.items()), hard=False)
+# 6b. the same for the row strobes before their series resistors (ROWn_DRV), which item 6 leaves out, and for foreign
+#     vias beside SENSE / AMP_IN (item 5 looks at tracks only).  Hard part: wherever a strobe track runs within
+#     1.5 mm of SENSE on L4, a ground track must lie between the two (the guard south of the module).
+gnd4 = [seg(t) for t in tracks if t.GetLayer() == L4 and t.GetNetname() == 'GND']
+near = collections.defaultdict(lambda: 9.9)
+bad = []
+for t in tracks:
+    if t.GetLayer() != L4 or t.GetNetname() not in ('SENSE', 'AMP_IN'):
+        continue
+    a = seg(t)
+    for u in tracks:
+        m = u.GetNetname()
+        if u.GetLayer() != L4 or not (m.startswith('ROW') and m.endswith('DRV')):
+            continue
+        c = seg(u)
+        d = dist_ss(a, c)
+        if d >= 1.5:
+            continue
+        near[(t.GetNetname(), m)] = min(near[(t.GetNetname(), m)], round(d, 2))
+        for i in range(11):                     # sample the strobe track; nearest point on the SENSE segment
+            px, py = c[0] + (c[2] - c[0]) * i / 10, c[1] + (c[3] - c[1]) * i / 10
+            dx, dy = a[2] - a[0], a[3] - a[1]
+            LL = dx * dx + dy * dy
+            f = 0 if LL == 0 else max(0, min(1, ((px - a[0]) * dx + (py - a[1]) * dy) / LL))
+            qx, qy = a[0] + f * dx, a[1] + f * dy
+            if math.hypot(px - qx, py - qy) < 1.5 and not any(dist_ss((px, py, qx, qy), g) == 0.0 for g in gnd4):
+                bad.append((t.GetNetname(), m, round(px, 2), round(py, 2)))
+report('ground guard between SENSE and every row strobe track closer than 1.5 mm (L4)', bad)
+print('     SENSE / AMP_IN to ROWn_DRV track centre distances under 1.5 mm:', dict(near))
+vnear = []
+for t in tracks:
+    if t.GetLayer() != L4 or t.GetNetname() not in ('SENSE', 'AMP_IN'):
+        continue
+    for v in vias:
+        if v.GetNetname() in ('GND', 'SENSE', 'AMP_IN') or v.GetNetname().startswith('COL'):
+            continue
+        vx, vy = mm(v.GetPosition().x), mm(v.GetPosition().y)
+        d = dist_ss(seg(t), (vx, vy, vx, vy)) - mm(t.GetWidth()) / 2 - mm(v.GetWidth(L4)) / 2
+        if d < 1.0:
+            vnear.append((t.GetNetname(), v.GetNetname(), round(d, 2)))
+print('     foreign vias within 1.0 mm (edge to edge) of SENSE / AMP_IN:', sorted(set(vnear), key=lambda x: x[2]))
 # 7. guard rings: >= 2 ground vias on each ring
 bad = []
 for k, (x, y) in K.items():
