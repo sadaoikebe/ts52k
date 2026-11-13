@@ -3,7 +3,7 @@
   (generator "pcbnew")
   (layer "F.Cu")
   (descr "XKB TS-1187A series vertical tactile switch; recommended land pattern 7.0 x 4.5 mm, 5.0 x 3.0 mm inside spacing")
-  (tags "switch tactile XKB TS-1187A BOOTSEL")
+  (tags "switch tactile XKB TS-1187A RESET")
   (property "Reference" "REF**" (at 0 -3.4) (layer "F.SilkS")
     (effects (font (size 1 1) (thickness 0.15)))
   )

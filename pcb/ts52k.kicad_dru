@@ -1,15 +1,19 @@
 (version 1)
 
-# Existing fine-pitch RP2040 routing and pad clearances.
-# ROW/COL tracks and vias use the stricter rule below.
-(rule "RP2040 local 0.15 mm clearance"
-  (condition "A.intersectsArea('MCU_FANOUT') && B.intersectsArea('MCU_FANOUT')")
-  (constraint clearance (min 0.15mm)))
+# TC52 wireless: tracks leaving the MDBT50Q between its 0.4 mm pads (0.1 mm necks on the inner-row pads).
+(rule "Module pad escape"
+  (condition "A.Type == 'Track' && B.Type == 'Pad' && B.memberOfFootprint('U5')")
+  (constraint clearance (min 0.14mm)))
+
+# TC52 wireless: +3V3 / +3V3M vias that sit in their own bundle lane (neighbour lanes 0.525 mm away).
+(rule "Lane vias"
+  (condition "A.Type == 'Via' && (A.NetName == '+3V3M' || A.NetName == '+3V3') && B.Type == 'Track' && (B.NetName == 'S??' || B.NetName == 'INH?' || B.NetName == 'ENC_*' || B.NetName == '+3V3')")
+  (constraint clearance (min 0.14mm)))
 
 # TC52 (design-spec section 5): high-impedance nets keep 2.0 mm from everything that is not matrix or ground.
 # Checked between tracks and vias; pad adjacency at the MUX pins and the AFE parts is reviewed by hand.
 (rule "HIZ to other nets 2.0 mm"
-  (condition "(A.Type == 'Track' || A.Type == 'Via') && (B.Type == 'Track' || B.Type == 'Via') && (A.NetName == 'COL*' || A.NetName == 'SENSE') && B.NetName != 'COL*' && B.NetName != 'ROW*' && B.NetName != 'SENSE' && B.NetName != 'GND' && B.NetName != 'AMP_IN' && !(A.intersectsArea('MCU_FANOUT') && B.intersectsArea('MCU_FANOUT')) && !(A.intersectsArea('HIZ_LOCAL') && B.intersectsArea('HIZ_LOCAL'))")
+  (condition "(A.Type == 'Track' || A.Type == 'Via') && (B.Type == 'Track' || B.Type == 'Via') && (A.NetName == 'COL*' || A.NetName == 'SENSE') && B.NetName != 'COL*' && B.NetName != 'ROW*' && B.NetName != 'SENSE' && B.NetName != 'GND' && B.NetName != 'AMP_IN' && !(A.intersectsArea('HIZ_LOCAL') && B.intersectsArea('HIZ_LOCAL'))")
   (constraint clearance (min 2.0mm)))
 
 # Column to column / column to SENSE: 1.5 mm centre to centre for 0.2 mm tracks.
@@ -25,10 +29,15 @@
 
 # TC52 bundle (static select lines, encoder, MUX supply): 0.15 mm track / 0.15 mm gap (design-spec section 1).
 (rule "Bundle 0.15 mm clearance"
-  (condition "A.Type == 'Track' && B.Type == 'Track' && (A.NetName == 'S??' || A.NetName == 'INH?' || A.NetName == 'ENC_*' || A.NetName == 'ADC' || A.NetName == 'ROW?_DRV' || A.NetName == '+3V3M' || A.NetName == '+3V3' || A.NetName == 'Net-(R14-Pad2)') && (B.NetName == 'S??' || B.NetName == 'INH?' || B.NetName == 'ENC_*' || B.NetName == 'ADC' || B.NetName == 'ROW?_DRV' || B.NetName == '+3V3M' || B.NetName == '+3V3' || B.NetName == 'Net-(R14-Pad2)')")
+  (condition "A.Type == 'Track' && B.Type == 'Track' && (A.NetName == 'S??' || A.NetName == 'INH?' || A.NetName == 'ENC_*' || A.NetName == 'ADC' || A.NetName == 'ROW?_DRV' || A.NetName == '+3V3M' || A.NetName == '+3V3' || A.NetName == 'MCU_VBUS') && (B.NetName == 'S??' || B.NetName == 'INH?' || B.NetName == 'ENC_*' || B.NetName == 'ADC' || B.NetName == 'ROW?_DRV' || B.NetName == '+3V3M' || B.NetName == '+3V3' || B.NetName == 'MCU_VBUS')")
   (constraint clearance (min 0.15mm)))
 
 # Encoder pull-ups next to SW2: R15 straddles the ENC_B track (0402 pad gap 0.48 mm).
 (rule "Encoder pull-up straddle"
   (condition "(A.memberOfFootprint('R15') || A.memberOfFootprint('R16')) && B.Type == 'Track' && B.NetName == 'ENC_*'")
+  (constraint clearance (min 0.15mm)))
+
+# TC52 wireless: USB pair (full speed), 0.2 mm tracks 0.15 mm apart.
+(rule "USB pair"
+  (condition "A.NetName == 'D+' && B.NetName == 'D-'")
   (constraint clearance (min 0.15mm)))
