@@ -24,11 +24,23 @@ SCHEMATIC = PCB_DIR / "ts52k.kicad_sch"
 PROJECT = PCB_DIR / "ts52k.kicad_pro"
 
 
-# CPL rotation offsets (degrees) keyed by LCSC part number, taken over from the TS52K wireless rotation audit
-# (origin/wireless notes/rotation-audit-2026-11-11): only C15127 (AO3401A, Q1) needs one. The parts that the
-# audit did not cover on this board (AD8601, CD4051, 0402 passives) use the wired TC52 values unchanged.
+# CPL rotation offsets (degrees) keyed by LCSC part number.  Every one of the 31 BOM lines / 67 CPL points was compared
+# against the numbered lands of the JLCEDA/EasyEDA Official Library (GET https://easyeda.com/api/products/<C>/components),
+# pin names checked through the board nets and the datasheets: docs/tc52w-rotation-audit/ (2026-11-14).  Only the three
+# parts below differ from the KiCad footprint; everything else needs no offset.
+# The offsets assume that JLCPCB reads a Bottom rotation the way KiCad writes it (model A in
+# docs/tc52w-rotation-audit/README.md).  That convention is NOT documented by JLCPCB and public reports disagree:
+# confirm it in the order-time placement preview / with JLCPCB before ordering (see the README there).
 ROTATION_CORRECTIONS = {
+    # AO3401A, KiCad SOT-23: KiCad 1/2 west, 3 east; EasyEDA 1/2 east, 3 west (1=G 2=S 3=D in both).  180 deg.
     "C15127": 180.0,
+    # AD8601ARTZ, KiCad SOT-23-5: KiCad pin 1 north-west (1-3 west, 4-5 east); EasyEDA pin 1 south-east
+    # (1-3 east, 4-5 west); 1=OUT 2=V- 3=+IN 4=-IN 5=V+ in both and in the ADI datasheet.  180 deg.
+    "C41249": 180.0,
+    # CD4051BM96, KiCad SOIC-16: pins in two vertical columns, pin 1 north-west; EasyEDA: two horizontal rows, pin 1
+    # south-west.  The KiCad footprint is the EasyEDA land turned 90 deg clockwise; on the bottom side (KiCad's
+    # bottom convention) that needs +90 in the CPL (U7/U8 at KiCad 0 -> 90).  Pin numbering identical (TI datasheet).
+    "C21379": 90.0,
 }
 
 

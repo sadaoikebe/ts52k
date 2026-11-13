@@ -1,0 +1,839 @@
+[
+ {
+  "part": "C11702",
+  "kind": "components",
+  "url": "https://easyeda.com/api/products/C11702/components",
+  "fetched": "2026-11-14",
+  "ok": true,
+  "bytes": 12860,
+  "sha256": "89db3eec8a4ea3c84ec7ce6638b025bd61308f1f7db91322b9369c49add3ab0c"
+ },
+ {
+  "part": "C11702",
+  "kind": "lcsc",
+  "url": "https://wmsc.lcsc.com/ftps/wm/product/detail?productCode=C11702",
+  "fetched": "2026-11-14",
+  "ok": true,
+  "bytes": 36561,
+  "sha256": "e8551b2fc9d3f39b763d0cd9872be8bcf15bbf487793d01ea9a82f4080ee7eb9"
+ },
+ {
+  "part": "C11702",
+  "kind": "svgs",
+  "url": "https://easyeda.com/api/products/C11702/svgs",
+  "fetched": "2026-11-14",
+  "ok": true,
+  "bytes": 10625,
+  "sha256": "de3df7f117d0bc6d1552f30b9e99ac06dbb2a7e1ac916e6afcf1d4ff15a47b4b"
+ },
+ {
+  "part": "C140288",
+  "kind": "components",
+  "url": "https://easyeda.com/api/products/C140288/components",
+  "fetched": "2026-11-14",
+  "ok": true,
+  "bytes": 21131,
+  "sha256": "8522cfc630f9157b5d5afb6043a6494d5543965c027a9fec7e7e84ef8d4c344d"
+ },
+ {
+  "part": "C140288",
+  "kind": "lcsc",
+  "url": "https://wmsc.lcsc.com/ftps/wm/product/detail?productCode=C140288",
+  "fetched": "2026-11-14",
+  "ok": true,
+  "bytes": 43044,
+  "sha256": "37f94db0889b61838f606b864b6b27e5ad4ff1f0a5fd5441831499aaa13783d3"
+ },
+ {
+  "part": "C140288",
+  "kind": "svgs",
+  "url": "https://easyeda.com/api/products/C140288/svgs",
+  "fetched": "2026-11-14",
+  "ok": true,
+  "bytes": 34026,
+  "sha256": "c25e3acb6266d775c676b93a97af30bf586b8646f28a1adb13cab31668c10df0"
+ },
+ {
+  "part": "C15127",
+  "kind": "components",
+  "url": "https://easyeda.com/api/products/C15127/components",
+  "fetched": "2026-11-14",
+  "ok": true,
+  "bytes": 18735,
+  "sha256": "183dd9171623ca92f6be18c7c9a9caff965abb1e01fb3da7d0273b2a5023c2c7"
+ },
+ {
+  "part": "C15127",
+  "kind": "lcsc",
+  "url": "https://wmsc.lcsc.com/ftps/wm/product/detail?productCode=C15127",
+  "fetched": "2026-11-14",
+  "ok": true,
+  "bytes": 46273,
+  "sha256": "74f69b22639e67520f42cdbd735d1b1456dd8f7ef822ebb55f6c29aad65bea55"
+ },
+ {
+  "part": "C15127",
+  "kind": "svgs",
+  "url": "https://easyeda.com/api/products/C15127/svgs",
+  "fetched": "2026-11-14",
+  "ok": true,
+  "bytes": 13952,
+  "sha256": "aa01f7979dbdff18ab126c66b10b5bf4147eb2fd9938a9e3e4ccb810d5210f6c"
+ },
+ {
+  "part": "C1525",
+  "kind": "components",
+  "url": "https://easyeda.com/api/products/C1525/components",
+  "fetched": "2026-11-14",
+  "ok": true,
+  "bytes": 13482,
+  "sha256": "0c77acc5dbfc8483934a6d72364dc0431dc3c4e90775e2c2c573c0bc4d13e21d"
+ },
+ {
+  "part": "C1525",
+  "kind": "lcsc",
+  "url": "https://wmsc.lcsc.com/ftps/wm/product/detail?productCode=C1525",
+  "fetched": "2026-11-14",
+  "ok": true,
+  "bytes": 34904,
+  "sha256": "93025bf3542ff2d836a2c7ff5c66b8248fc64a7743c3055d3385c2561fc646f3"
+ },
+ {
+  "part": "C1525",
+  "kind": "svgs",
+  "url": "https://easyeda.com/api/products/C1525/svgs",
+  "fetched": "2026-11-14",
+  "ok": true,
+  "bytes": 11727,
+  "sha256": "3f9a8b7939a5993a1d573aa56a04f822a1c0884f1bf951b5851355454a39387f"
+ },
+ {
+  "part": "C1547",
+  "kind": "components",
+  "url": "https://easyeda.com/api/products/C1547/components",
+  "fetched": "2026-11-14",
+  "ok": true,
+  "bytes": 13425,
+  "sha256": "a77d0ecf3982413d9819ac51dd0971bf62b1bf0f5229580b828175333d42b924"
+ },
+ {
+  "part": "C1547",
+  "kind": "lcsc",
+  "url": "https://wmsc.lcsc.com/ftps/wm/product/detail?productCode=C1547",
+  "fetched": "2026-11-14",
+  "ok": true,
+  "bytes": 14615,
+  "sha256": "b9876a7980bbc15dd024dcc2b8a81c0dcac688707d64161a5af212e793afa3d6"
+ },
+ {
+  "part": "C1547",
+  "kind": "svgs",
+  "url": "https://easyeda.com/api/products/C1547/svgs",
+  "fetched": "2026-11-14",
+  "ok": true,
+  "bytes": 11722,
+  "sha256": "2b36afe5f23ed5435910c36b96c6656beb5e4fac5e6a04a49dacfad392f046e0"
+ },
+ {
+  "part": "C15849",
+  "kind": "components",
+  "url": "https://easyeda.com/api/products/C15849/components",
+  "fetched": "2026-11-14",
+  "ok": true,
+  "bytes": 13687,
+  "sha256": "04a0d6760179a1be0bf343b3d88a914e5aaad9188ed5b1b758ca803c3ea10b04"
+ },
+ {
+  "part": "C15849",
+  "kind": "lcsc",
+  "url": "https://wmsc.lcsc.com/ftps/wm/product/detail?productCode=C15849",
+  "fetched": "2026-11-14",
+  "ok": true,
+  "bytes": 35927,
+  "sha256": "24065ba1537ab67723cc2e8edeb7b0a030c4e6625618dc235b8d36343536d01c"
+ },
+ {
+  "part": "C15849",
+  "kind": "svgs",
+  "url": "https://easyeda.com/api/products/C15849/svgs",
+  "fetched": "2026-11-14",
+  "ok": true,
+  "bytes": 11762,
+  "sha256": "7a1cb9d5f7b111809f36ab628f37b49bccc12b8efae0b323a053dff955554bf7"
+ },
+ {
+  "part": "C15850",
+  "kind": "components",
+  "url": "https://easyeda.com/api/products/C15850/components",
+  "fetched": "2026-11-14",
+  "ok": true,
+  "bytes": 14513,
+  "sha256": "f990bf6e6f4db648fcc9837b6d2b999a2732776273a7302c5c7141d419702858"
+ },
+ {
+  "part": "C15850",
+  "kind": "lcsc",
+  "url": "https://wmsc.lcsc.com/ftps/wm/product/detail?productCode=C15850",
+  "fetched": "2026-11-14",
+  "ok": true,
+  "bytes": 34824,
+  "sha256": "994e91ff1e5cb68e2829d90e95df7dfd153a75ee70a8e241d96695ef1b148502"
+ },
+ {
+  "part": "C15850",
+  "kind": "svgs",
+  "url": "https://easyeda.com/api/products/C15850/svgs",
+  "fetched": "2026-11-14",
+  "ok": true,
+  "bytes": 12687,
+  "sha256": "480b04a4b8b39bb389c4cf931213aabc2c4d04040c7a50bf6a28f84ec4ee207d"
+ },
+ {
+  "part": "C165948",
+  "kind": "components",
+  "url": "https://easyeda.com/api/products/C165948/components",
+  "fetched": "2026-11-14",
+  "ok": true,
+  "bytes": 40678,
+  "sha256": "cb3e6e2c7ea95b7f635f27cbb44aa18874ec074391e3fb30e7f5d45273b8dd22"
+ },
+ {
+  "part": "C165948",
+  "kind": "lcsc",
+  "url": "https://wmsc.lcsc.com/ftps/wm/product/detail?productCode=C165948",
+  "fetched": "2026-11-14",
+  "ok": true,
+  "bytes": 41917,
+  "sha256": "cd8a91c8f6ae95619354aaede925ca9527af4d2cd04ba509eab6f1262e435637"
+ },
+ {
+  "part": "C165948",
+  "kind": "svgs",
+  "url": "https://easyeda.com/api/products/C165948/svgs",
+  "fetched": "2026-11-14",
+  "ok": true,
+  "bytes": 51341,
+  "sha256": "53e4b3246e3c479582c0bc10c1acf7192dc23af172af17b6f6a37db02f01f55b"
+ },
+ {
+  "part": "C17168",
+  "kind": "components",
+  "url": "https://easyeda.com/api/products/C17168/components",
+  "fetched": "2026-11-14",
+  "ok": true,
+  "bytes": 12853,
+  "sha256": "db8c79f9f8d04383bf1a0bd4a067efbf907f0af37ee53f6e31f9b2496e5c0a9b"
+ },
+ {
+  "part": "C17168",
+  "kind": "lcsc",
+  "url": "https://wmsc.lcsc.com/ftps/wm/product/detail?productCode=C17168",
+  "fetched": "2026-11-14",
+  "ok": true,
+  "bytes": 33963,
+  "sha256": "d6844f32f6c24c63d05a2c453dec0d7934bf6ee77b18bd4cb4f07766063a245c"
+ },
+ {
+  "part": "C17168",
+  "kind": "svgs",
+  "url": "https://easyeda.com/api/products/C17168/svgs",
+  "fetched": "2026-11-14",
+  "ok": true,
+  "bytes": 10624,
+  "sha256": "53bbb3ec3a342bd21c8bae829d2922b0f47b424c0462a05940f775d62011acc6"
+ },
+ {
+  "part": "C19666",
+  "kind": "components",
+  "url": "https://easyeda.com/api/products/C19666/components",
+  "fetched": "2026-11-14",
+  "ok": true,
+  "bytes": 13705,
+  "sha256": "88801716fa5c47795e5ce0be6405946140a7dd681f1e4a72d9ece61dfa487f27"
+ },
+ {
+  "part": "C19666",
+  "kind": "lcsc",
+  "url": "https://wmsc.lcsc.com/ftps/wm/product/detail?productCode=C19666",
+  "fetched": "2026-11-14",
+  "ok": true,
+  "bytes": 36261,
+  "sha256": "0e5a9d0309e0d97bcc2c42b73c60f573d71892ca357798ac28200d509a106eb4"
+ },
+ {
+  "part": "C19666",
+  "kind": "svgs",
+  "url": "https://easyeda.com/api/products/C19666/svgs",
+  "fetched": "2026-11-14",
+  "ok": true,
+  "bytes": 11761,
+  "sha256": "0aedb58774012459a81ad4b6354d1507e73616ea35681263170e1e919dfabf30"
+ },
+ {
+  "part": "C21379",
+  "kind": "components",
+  "url": "https://easyeda.com/api/products/C21379/components",
+  "fetched": "2026-11-14",
+  "ok": true,
+  "bytes": 52937,
+  "sha256": "f2e65b4c922a57ba164234f74833ccec332ee315f61039f516ada455eb53d849"
+ },
+ {
+  "part": "C21379",
+  "kind": "lcsc",
+  "url": "https://wmsc.lcsc.com/ftps/wm/product/detail?productCode=C21379",
+  "fetched": "2026-11-14",
+  "ok": true,
+  "bytes": 42452,
+  "sha256": "8b4926924992c5a6e01bcf0fc1bc9eb548d26a9eeab41eb8a691226a70c596c7"
+ },
+ {
+  "part": "C21379",
+  "kind": "svgs",
+  "url": "https://easyeda.com/api/products/C21379/svgs",
+  "fetched": "2026-11-14",
+  "ok": true,
+  "bytes": 31212,
+  "sha256": "1356c4414173ef312bbfec7ddbd053328372fba0269b7e6d5bdcd61d59d5d164"
+ },
+ {
+  "part": "C22395519",
+  "kind": "components",
+  "url": "https://easyeda.com/api/products/C22395519/components",
+  "fetched": "2026-11-14",
+  "ok": true,
+  "bytes": 14031,
+  "sha256": "29d64b87cf1e9037304663cc73f4a2384df74657fbf3bfbc9aeb5576dd0b0783"
+ },
+ {
+  "part": "C22395519",
+  "kind": "lcsc",
+  "url": "https://wmsc.lcsc.com/ftps/wm/product/detail?productCode=C22395519",
+  "fetched": "2026-11-14",
+  "ok": true,
+  "bytes": 12873,
+  "sha256": "b89ea06898eda505b625bc7f143039fd5bb6060921543a72fcd9219bdf9b8070"
+ },
+ {
+  "part": "C22395519",
+  "kind": "svgs",
+  "url": "https://easyeda.com/api/products/C22395519/svgs",
+  "fetched": "2026-11-14",
+  "ok": true,
+  "bytes": 11623,
+  "sha256": "760d34c61c0674052752077150becbf2515cbbce4b2dcb5105d0ec40210cbd9f"
+ },
+ {
+  "part": "C22843",
+  "kind": "components",
+  "url": "https://easyeda.com/api/products/C22843/components",
+  "fetched": "2026-11-14",
+  "ok": true,
+  "bytes": 21299,
+  "sha256": "509ca74d5389ee0c41dd5b7074573bdcca32035a0a44973ea6144077e3d24622"
+ },
+ {
+  "part": "C22843",
+  "kind": "lcsc",
+  "url": "https://wmsc.lcsc.com/ftps/wm/product/detail?productCode=C22843",
+  "fetched": "2026-11-14",
+  "ok": true,
+  "bytes": 35278,
+  "sha256": "990cc1f2e80bea67c24826cca5cf01e5d6ce6c9770690360566aa03caef74521"
+ },
+ {
+  "part": "C22843",
+  "kind": "svgs",
+  "url": "https://easyeda.com/api/products/C22843/svgs",
+  "fetched": "2026-11-14",
+  "ok": true,
+  "bytes": 10803,
+  "sha256": "e3b55c2d1f895c1bb341abe8adadf40a4f4e9436d0f12b0e23ea6f70e7eaac4b"
+ },
+ {
+  "part": "C22939",
+  "kind": "components",
+  "url": "https://easyeda.com/api/products/C22939/components",
+  "fetched": "2026-11-14",
+  "ok": true,
+  "bytes": 21309,
+  "sha256": "f88ae992ef988d36e1eb82d0a38d73cf8079d05aeb2f699e3f82cf2fa09fb739"
+ },
+ {
+  "part": "C22939",
+  "kind": "lcsc",
+  "url": "https://wmsc.lcsc.com/ftps/wm/product/detail?productCode=C22939",
+  "fetched": "2026-11-14",
+  "ok": true,
+  "bytes": 30758,
+  "sha256": "b203c9eaf3890df93d7522e6096e2f89d7de88ae5490c3bfe3a2ef4a661ee50e"
+ },
+ {
+  "part": "C22939",
+  "kind": "svgs",
+  "url": "https://easyeda.com/api/products/C22939/svgs",
+  "fetched": "2026-11-14",
+  "ok": true,
+  "bytes": 10802,
+  "sha256": "e5ead32d033da16e50c46ebcb24dc110465bcf539692e9b0a7ab66adaf52cab5"
+ },
+ {
+  "part": "C23186",
+  "kind": "components",
+  "url": "https://easyeda.com/api/products/C23186/components",
+  "fetched": "2026-11-14",
+  "ok": true,
+  "bytes": 21287,
+  "sha256": "42f97e725e5369409db6596cb42c7c49d4ff2860c42ca52391e451b4e6f292bf"
+ },
+ {
+  "part": "C23186",
+  "kind": "lcsc",
+  "url": "https://wmsc.lcsc.com/ftps/wm/product/detail?productCode=C23186",
+  "fetched": "2026-11-14",
+  "ok": true,
+  "bytes": 35344,
+  "sha256": "5165fea45d1131ac4f1779b5d19113a2e9fdd9ef091a9571c46f57c8c887b77b"
+ },
+ {
+  "part": "C23186",
+  "kind": "svgs",
+  "url": "https://easyeda.com/api/products/C23186/svgs",
+  "fetched": "2026-11-14",
+  "ok": true,
+  "bytes": 10803,
+  "sha256": "e9128a51e76213cc0b216d5f18d1b08e5818aaa1a064d78417bed8a8a4a3126a"
+ },
+ {
+  "part": "C23733",
+  "kind": "components",
+  "url": "https://easyeda.com/api/products/C23733/components",
+  "fetched": "2026-11-14",
+  "ok": true,
+  "bytes": 13433,
+  "sha256": "de144be5b2577d4cc5205cac112679900298baaeaa4deebdbe19c3e8db847c9b"
+ },
+ {
+  "part": "C23733",
+  "kind": "lcsc",
+  "url": "https://wmsc.lcsc.com/ftps/wm/product/detail?productCode=C23733",
+  "fetched": "2026-11-14",
+  "ok": true,
+  "bytes": 36082,
+  "sha256": "e6e24af633ac4aa770cf34501ca6be4f868e7bafe018a3e7e60fc62d8b8bea6b"
+ },
+ {
+  "part": "C23733",
+  "kind": "svgs",
+  "url": "https://easyeda.com/api/products/C23733/svgs",
+  "fetched": "2026-11-14",
+  "ok": true,
+  "bytes": 11724,
+  "sha256": "65c75a6fec925b82b76a293b6ccb47f1dc94ae93f222d23d9c25740387baf66f"
+ },
+ {
+  "part": "C25076",
+  "kind": "components",
+  "url": "https://easyeda.com/api/products/C25076/components",
+  "fetched": "2026-11-14",
+  "ok": true,
+  "bytes": 12861,
+  "sha256": "c467036a90e8f599f9e0924a3ddb9b6ecfb1c530ca44226f2fda8346fe668f26"
+ },
+ {
+  "part": "C25076",
+  "kind": "lcsc",
+  "url": "https://wmsc.lcsc.com/ftps/wm/product/detail?productCode=C25076",
+  "fetched": "2026-11-14",
+  "ok": true,
+  "bytes": 33638,
+  "sha256": "8ab0390f4737238705b0fab457ca5f28e72fffb9dfd699c5a6930a7baca23e66"
+ },
+ {
+  "part": "C25076",
+  "kind": "svgs",
+  "url": "https://easyeda.com/api/products/C25076/svgs",
+  "fetched": "2026-11-14",
+  "ok": true,
+  "bytes": 10626,
+  "sha256": "603a2f5236b4e6f0d4e0058932f7369a27d84582934dc203dbe4d24dedb41800"
+ },
+ {
+  "part": "C25092",
+  "kind": "components",
+  "url": "https://easyeda.com/api/products/C25092/components",
+  "fetched": "2026-11-14",
+  "ok": true,
+  "bytes": 12894,
+  "sha256": "1d36c1380daace3fdaaf57bd6cf14968ca40685d62ff132d062aec514da26e05"
+ },
+ {
+  "part": "C25092",
+  "kind": "lcsc",
+  "url": "https://wmsc.lcsc.com/ftps/wm/product/detail?productCode=C25092",
+  "fetched": "2026-11-14",
+  "ok": true,
+  "bytes": 29193,
+  "sha256": "f7e5cabc0fd01dacd113f55df013bbde44b8e0ee6256b65a8e77dcd57cd92f11"
+ },
+ {
+  "part": "C25092",
+  "kind": "svgs",
+  "url": "https://easyeda.com/api/products/C25092/svgs",
+  "fetched": "2026-11-14",
+  "ok": true,
+  "bytes": 10625,
+  "sha256": "f0d9e02bb5fb46e505e22bfae66b71e87d7a4d507630650be8e5e37d1f57e899"
+ },
+ {
+  "part": "C25741",
+  "kind": "components",
+  "url": "https://easyeda.com/api/products/C25741/components",
+  "fetched": "2026-11-14",
+  "ok": true,
+  "bytes": 12906,
+  "sha256": "13024e393aa005cae6bcb817c5e76a72c2df67767dd22dce48fb41636c247040"
+ },
+ {
+  "part": "C25741",
+  "kind": "lcsc",
+  "url": "https://wmsc.lcsc.com/ftps/wm/product/detail?productCode=C25741",
+  "fetched": "2026-11-14",
+  "ok": true,
+  "bytes": 35897,
+  "sha256": "50ab42174611e8ede11631eb26d2b59582ecb2523ee820f948f17176f3d02ce5"
+ },
+ {
+  "part": "C25741",
+  "kind": "svgs",
+  "url": "https://easyeda.com/api/products/C25741/svgs",
+  "fetched": "2026-11-14",
+  "ok": true,
+  "bytes": 10627,
+  "sha256": "9d9970fcb35dd61f614ef790580bb236d17e6c30f04e25a8017e06755d1da3cf"
+ },
+ {
+  "part": "C25744",
+  "kind": "components",
+  "url": "https://easyeda.com/api/products/C25744/components",
+  "fetched": "2026-11-14",
+  "ok": true,
+  "bytes": 12901,
+  "sha256": "870301b7cdcadffe2530d3f29ac1c7a53ecaf1d6ddf36543cb5b7289d503d1e1"
+ },
+ {
+  "part": "C25744",
+  "kind": "lcsc",
+  "url": "https://wmsc.lcsc.com/ftps/wm/product/detail?productCode=C25744",
+  "fetched": "2026-11-14",
+  "ok": true,
+  "bytes": 33647,
+  "sha256": "54358641774dc4ffecc0a06c2740eb5e8e3ece565193c655d2ec777a53c72e64"
+ },
+ {
+  "part": "C25744",
+  "kind": "svgs",
+  "url": "https://easyeda.com/api/products/C25744/svgs",
+  "fetched": "2026-11-14",
+  "ok": true,
+  "bytes": 10626,
+  "sha256": "3e5a9744fe366fec556fa4b00c1feef6fb148d99d9e48a5c7fba6f2d446eeaf6"
+ },
+ {
+  "part": "C25804",
+  "kind": "components",
+  "url": "https://easyeda.com/api/products/C25804/components",
+  "fetched": "2026-11-14",
+  "ok": true,
+  "bytes": 21305,
+  "sha256": "a31df68459f56e57741e30a5e5e729ced4f6b42414ece503de95d997ea243b51"
+ },
+ {
+  "part": "C25804",
+  "kind": "lcsc",
+  "url": "https://wmsc.lcsc.com/ftps/wm/product/detail?productCode=C25804",
+  "fetched": "2026-11-14",
+  "ok": true,
+  "bytes": 35725,
+  "sha256": "feea29183bb9a63e33b2ddf9304c8734bc8de25850412d1f5267fd9c68c560f8"
+ },
+ {
+  "part": "C25804",
+  "kind": "svgs",
+  "url": "https://easyeda.com/api/products/C25804/svgs",
+  "fetched": "2026-11-14",
+  "ok": true,
+  "bytes": 10802,
+  "sha256": "93fafdefc32ddefc757f2c71710f0794b702884cbf1c6f63543a3aab94b3ccf7"
+ },
+ {
+  "part": "C25981",
+  "kind": "components",
+  "url": "https://easyeda.com/api/products/C25981/components",
+  "fetched": "2026-11-14",
+  "ok": true,
+  "bytes": 21352,
+  "sha256": "4c365f6531be1b693d342a2b288775b6e0b1a59653e8486d18116c8d5e9a4279"
+ },
+ {
+  "part": "C25981",
+  "kind": "lcsc",
+  "url": "https://wmsc.lcsc.com/ftps/wm/product/detail?productCode=C25981",
+  "fetched": "2026-11-14",
+  "ok": true,
+  "bytes": 32867,
+  "sha256": "16caf54d969cb111e4d03b0f05703c5618c0db02ee372f645d443cfa4654400c"
+ },
+ {
+  "part": "C25981",
+  "kind": "svgs",
+  "url": "https://easyeda.com/api/products/C25981/svgs",
+  "fetched": "2026-11-14",
+  "ok": true,
+  "bytes": 10803,
+  "sha256": "33aadf81d0a24f6adb6f7e210e7833573005fa51ec4b56dab17a66a0817ae21c"
+ },
+ {
+  "part": "C295747",
+  "kind": "components",
+  "url": "https://easyeda.com/api/products/C295747/components",
+  "fetched": "2026-11-14",
+  "ok": true,
+  "bytes": 17502,
+  "sha256": "d3d941297c125617d17710fd1b67ccfc7712a6dad30bdbd01ce7d39e23002255"
+ },
+ {
+  "part": "C295747",
+  "kind": "lcsc",
+  "url": "https://wmsc.lcsc.com/ftps/wm/product/detail?productCode=C295747",
+  "fetched": "2026-11-14",
+  "ok": true,
+  "bytes": 50067,
+  "sha256": "22ec338101f436d2b2dc6db12f8aa31229e5b7ca31eb3ea3ea5256f04a6e7419"
+ },
+ {
+  "part": "C295747",
+  "kind": "svgs",
+  "url": "https://easyeda.com/api/products/C295747/svgs",
+  "fetched": "2026-11-14",
+  "ok": true,
+  "bytes": 14363,
+  "sha256": "8585247957f41d713931a673cdf3f1588fefb8932d62084899d96edb06b276ac"
+ },
+ {
+  "part": "C318884",
+  "kind": "components",
+  "url": "https://easyeda.com/api/products/C318884/components",
+  "fetched": "2026-11-14",
+  "ok": true,
+  "bytes": 18811,
+  "sha256": "e362df46c39069875fca8d3cf24d3e138e59d54a1e17233360a374c97ed4af0c"
+ },
+ {
+  "part": "C318884",
+  "kind": "lcsc",
+  "url": "https://wmsc.lcsc.com/ftps/wm/product/detail?productCode=C318884",
+  "fetched": "2026-11-14",
+  "ok": true,
+  "bytes": 26495,
+  "sha256": "616af8933d0bba633da181b30e87aa447d7635b5ad10effcb7db3bb57e4420ec"
+ },
+ {
+  "part": "C318884",
+  "kind": "svgs",
+  "url": "https://easyeda.com/api/products/C318884/svgs",
+  "fetched": "2026-11-14",
+  "ok": true,
+  "bytes": 15566,
+  "sha256": "f304540fe1b1689c83d63d6f3f93dbccac25245b76e8c6d950280e32eed48ae0"
+ },
+ {
+  "part": "C41249",
+  "kind": "components",
+  "url": "https://easyeda.com/api/products/C41249/components",
+  "fetched": "2026-11-14",
+  "ok": true,
+  "bytes": 24889,
+  "sha256": "a42475b134866d52c902c3129a5bed89ea54fff555e818895f1010fd9e923ddf"
+ },
+ {
+  "part": "C41249",
+  "kind": "lcsc",
+  "url": "https://wmsc.lcsc.com/ftps/wm/product/detail?productCode=C41249",
+  "fetched": "2026-11-14",
+  "ok": true,
+  "bytes": 45779,
+  "sha256": "8f67e31ece3950f6ef7c4249d1b77c62e9529491f74c076d503e9d34db914204"
+ },
+ {
+  "part": "C41249",
+  "kind": "svgs",
+  "url": "https://easyeda.com/api/products/C41249/svgs",
+  "fetched": "2026-11-14",
+  "ok": true,
+  "bytes": 17490,
+  "sha256": "12d0120db2e5c8dfa7fa4add1c0517742e197c383a5487cbcf6c205c94b1d8d1"
+ },
+ {
+  "part": "C5118826",
+  "kind": "components",
+  "url": "https://easyeda.com/api/products/C5118826/components",
+  "fetched": "2026-11-14",
+  "ok": true,
+  "bytes": 39914,
+  "sha256": "8432a2e94a6895cd43318db027a1de5269be6fa8e311f141433e19c7bbade460"
+ },
+ {
+  "part": "C5118826",
+  "kind": "lcsc",
+  "url": "https://wmsc.lcsc.com/ftps/wm/product/detail?productCode=C5118826",
+  "fetched": "2026-11-14",
+  "ok": true,
+  "bytes": 4666,
+  "sha256": "40873cc86055a10d2f4c0367fd1069925044034e8804dc5f0d0a35809775b3c0"
+ },
+ {
+  "part": "C5118826",
+  "kind": "svgs",
+  "url": "https://easyeda.com/api/products/C5118826/svgs",
+  "fetched": "2026-11-14",
+  "ok": true,
+  "bytes": 107366,
+  "sha256": "007c8f2838a4ab4fae30730b41533f0a08211058fcd2877e3945e88d276de22b"
+ },
+ {
+  "part": "C52152",
+  "kind": "components",
+  "url": "https://easyeda.com/api/products/C52152/components",
+  "fetched": "2026-11-14",
+  "ok": true,
+  "bytes": 14987,
+  "sha256": "694c74d61dad0b0632b67a800fe6f55ddfc08ab81c8748ca54d6ef7ae6a4a5f9"
+ },
+ {
+  "part": "C52152",
+  "kind": "lcsc",
+  "url": "https://wmsc.lcsc.com/ftps/wm/product/detail?productCode=C52152",
+  "fetched": "2026-11-14",
+  "ok": true,
+  "bytes": 9798,
+  "sha256": "794c6b8eb8e2da6f558303df7835cd87524a62ae8df42d30b116bb000e0834a8"
+ },
+ {
+  "part": "C52152",
+  "kind": "svgs",
+  "url": "https://easyeda.com/api/products/C52152/svgs",
+  "fetched": "2026-11-14",
+  "ok": true,
+  "bytes": 14949,
+  "sha256": "c0689915dbd6f36fac8c13180e7bce23c9590ce0d9673ba8a37a51f859075d20"
+ },
+ {
+  "part": "C52923",
+  "kind": "components",
+  "url": "https://easyeda.com/api/products/C52923/components",
+  "fetched": "2026-11-14",
+  "ok": true,
+  "bytes": 13446,
+  "sha256": "a335b7ead34085eda586455b5b3534fa7545098c2b37cbf916b7c12ffc1f5218"
+ },
+ {
+  "part": "C52923",
+  "kind": "lcsc",
+  "url": "https://wmsc.lcsc.com/ftps/wm/product/detail?productCode=C52923",
+  "fetched": "2026-11-14",
+  "ok": true,
+  "bytes": 35458,
+  "sha256": "ffc5cf358c7187158ef5589a996680458c0347c6584e8079ba62fc6d00717272"
+ },
+ {
+  "part": "C52923",
+  "kind": "svgs",
+  "url": "https://easyeda.com/api/products/C52923/svgs",
+  "fetched": "2026-11-14",
+  "ok": true,
+  "bytes": 11711,
+  "sha256": "171de7c2964141299d6aabf5a72d94401d54638ef3f30b6d4487c50c9bddc33a"
+ },
+ {
+  "part": "C713281",
+  "kind": "components",
+  "url": "https://easyeda.com/api/products/C713281/components",
+  "fetched": "2026-11-14",
+  "ok": true,
+  "bytes": 13634,
+  "sha256": "94bfe3fc40300d7b824ee530438f2d8f393446fa47e4fa905b32a46069cf4186"
+ },
+ {
+  "part": "C713281",
+  "kind": "lcsc",
+  "url": "https://wmsc.lcsc.com/ftps/wm/product/detail?productCode=C713281",
+  "fetched": "2026-11-14",
+  "ok": true,
+  "bytes": 37834,
+  "sha256": "0f2900706f7f838b121a9c728a3bf6bb4334226da171327485aac8676972634e"
+ },
+ {
+  "part": "C713281",
+  "kind": "svgs",
+  "url": "https://easyeda.com/api/products/C713281/svgs",
+  "fetched": "2026-11-14",
+  "ok": true,
+  "bytes": 11983,
+  "sha256": "97f67773d4af0ebc99dcc38fb8dbfaaaed28fc89f90d7bcd26a322e9a41be8ae"
+ },
+ {
+  "part": "C881384",
+  "kind": "components",
+  "url": "https://easyeda.com/api/products/C881384/components",
+  "fetched": "2026-11-14",
+  "ok": true,
+  "bytes": 12825,
+  "sha256": "34159e6e685b12e1412ec79b1bc7cef2074adc4ec74e41c07211b589b512fd23"
+ },
+ {
+  "part": "C881384",
+  "kind": "lcsc",
+  "url": "https://wmsc.lcsc.com/ftps/wm/product/detail?productCode=C881384",
+  "fetched": "2026-11-14",
+  "ok": true,
+  "bytes": 5036,
+  "sha256": "003fab06657236f0d0fd0658b702c2f5bfdf7f3e8a4cd45f7757f99ef75202b8"
+ },
+ {
+  "part": "C881384",
+  "kind": "svgs",
+  "url": "https://easyeda.com/api/products/C881384/svgs",
+  "fetched": "2026-11-14",
+  "ok": true,
+  "bytes": 10695,
+  "sha256": "c1215c20fcfc971e106a5808ac61ed48bb26018e2ee2e34bc446710b9a73c02e"
+ },
+ {
+  "part": "C96341",
+  "kind": "components",
+  "url": "https://easyeda.com/api/products/C96341/components",
+  "fetched": "2026-11-14",
+  "ok": true,
+  "bytes": 12905,
+  "sha256": "fa3e8e8476d392b224bcbe8cceb8ae6bac6f68fb8b2f260612b1b58919e72f13"
+ },
+ {
+  "part": "C96341",
+  "kind": "lcsc",
+  "url": "https://wmsc.lcsc.com/ftps/wm/product/detail?productCode=C96341",
+  "fetched": "2026-11-14",
+  "ok": true,
+  "bytes": 32942,
+  "sha256": "362c52c1d93bd69533eb23b3f7703961569d2c921c1390342a34039b739f7cd9"
+ },
+ {
+  "part": "C96341",
+  "kind": "svgs",
+  "url": "https://easyeda.com/api/products/C96341/svgs",
+  "fetched": "2026-11-14",
+  "ok": true,
+  "bytes": 11114,
+  "sha256": "3ea1790eabcfdd5f1ae9f7aae0bbd3947793a693f3422c7749497751dd2e1378"
+ }
+]

@@ -1,0 +1,75 @@
+07:23:31: Debug: Adding duplicate image handler for 'PNG file'
+07:23:31: Debug: Adding duplicate image handler for 'JPEG file'
+07:23:31: Debug: Adding duplicate image handler for 'TIFF file'
+07:23:31: Debug: Adding duplicate image handler for 'GIF file'
+07:23:31: Debug: Adding duplicate image handler for 'PNM file'
+07:23:31: Debug: Adding duplicate image handler for 'PCX file'
+07:23:31: Debug: Adding duplicate image handler for 'IFF file'
+07:23:31: Debug: Adding duplicate image handler for 'Windows icon file'
+07:23:31: Debug: Adding duplicate image handler for 'Windows cursor file'
+07:23:31: Debug: Adding duplicate image handler for 'Windows animated cursor file'
+07:23:31: Debug: Adding duplicate image handler for 'TGA file'
+07:23:31: Debug: Adding duplicate image handler for 'XPM file'
+07:23:32: Debug: Adding duplicate image handler for 'PNG file'
+07:23:32: Debug: Adding duplicate image handler for 'JPEG file'
+07:23:32: Debug: Adding duplicate image handler for 'TIFF file'
+07:23:32: Debug: Adding duplicate image handler for 'GIF file'
+07:23:32: Debug: Adding duplicate image handler for 'PNM file'
+07:23:32: Debug: Adding duplicate image handler for 'PCX file'
+07:23:32: Debug: Adding duplicate image handler for 'IFF file'
+07:23:32: Debug: Adding duplicate image handler for 'Windows icon file'
+07:23:32: Debug: Adding duplicate image handler for 'Windows cursor file'
+07:23:32: Debug: Adding duplicate image handler for 'Windows animated cursor file'
+07:23:32: Debug: Adding duplicate image handler for 'TGA file'
+07:23:32: Debug: Adding duplicate image handler for 'XPM file'
+ok   L2 carries no tracks (5-1)
+ok   L3 tracks only inside the digital island
+ok   L1 tracks are row buses only (5-8)
+ok   HIZ track width 0.2 mm (5-4)
+ok   no L3 wiring over column / SENSE tracks (5-5)
+note review: HIZ track to foreign track gaps under 2.0 mm (inside the exempt areas) : 13
+        (('COL10', '+3V3M'), 1.74)
+        (('COL10', 'INHB'), 1.09)
+        (('COL11', '+3V3M'), 1.75)
+        (('COL11', 'S1B'), 1.09)
+        (('COL12', '+3V3M'), 1.3)
+        (('COL13', '+3V3M'), 1.3)
+        (('COL14', '+3V3M'), 1.04)
+        (('COL4', '+3V3M'), 1.3)
+        (('COL5', '+3V3M'), 1.3)
+        (('COL6', '+3V3M'), 1.04)
+        (('SENSE', '+3V3M'), 1.82)
+        (('SENSE', 'SWCLK'), 1.07)
+note review: column / SENSE to row lead-in centre distance under 2.38 mm (5-9) : 8
+        (('COL1', 'ROW3'), 2.12)
+        (('COL11', 'ROW4'), 1.94)
+        (('COL12', 'ROW4'), 1.9)
+        (('COL2', 'ROW4'), 1.98)
+        (('COL4', 'ROW4'), 1.98)
+        (('COL9', 'ROW4'), 1.98)
+        (('SENSE', 'ROW1'), 1.05)
+        (('SENSE', 'ROW2'), 2.36)
+ok   ground guard between SENSE and every row strobe track closer than 1.5 mm (L4)
+     SENSE / AMP_IN to ROWn_DRV track centre distances under 1.5 mm: {('SENSE', 'ROW1_DRV'): 1.05}
+     foreign vias within 1.0 mm (edge to edge) of SENSE / AMP_IN: [('SENSE', 'SWDIO', 0.3), ('SENSE', 'SWDIO', 0.49), ('SENSE', 'SWDIO', 0.56), ('SENSE', 'ROW1', 0.65), ('SENSE', 'SWCLK', 1.0)]
+ok   two or more ground vias per guard ring (5-10)
+ok   no foreign via inside an electrode or ring
+ok   52 electrodes on the Rev 0.2 key positions, 0 degrees, nets per design-spec 3
+ok   MUX inputs match matrix.MUX_INPUT
+     SENSE track length 271 mm (spec 5-13: about 230)
+     AMP_IN 2.3 mm (5-7: <= 3)   AMP_FB 2.8 mm
+     columns: c1=119 c2=114 c3=68 c4=88 c5=95 c6=116 c7=140 c8=123 c9=99 c10=78 c11=83 c12=100 c13=121 c14=147
+ok   no L4 copper under the screw heads (2.6 mm around H1..H12; H1 carries PLATE only)
+ok   antenna keep-out free of copper on all four layers (module zone + ANT_EDGE)
+ok   L2 ground is unbroken under all 52 electrodes and guard rings
+     antenna void (x < 0.50, y 81.0..97.0): nearest guard ring MX3 at 5.0 mm
+     antenna void to the nearest column / SENSE track: 1.2 mm
+ok   tracks under 0.15 mm only as necks between the module pads
+ok   row strobes are not on low-frequency-only module pads
+     low-frequency-only pads in use: 3=ENC_B 4=ENC_A 5=ENC_SW 6=S3B 7=S2B 8=S1B 9=INHB 10=S3A 11=S2A 12=S1A 13=ADC 14=INHA 50=SENSE
+ok   Edge.Cuts identical to Rev 0.2
+ok   key centres identical to Rev 0.2 (52 of 52 MX footprints there)
+ok   Edge.Cuts identical to the wired TC52 (733bf7d)
+ok   52 key centres and 12 fixing holes identical to the wired TC52
+     note: J2 moved from the wired TC52: (26.43, 79.95) -> (-0.60, 76.30)
+     note: SW1 moved from the wired TC52: (47.60, 76.20) -> (0.90, 67.60)

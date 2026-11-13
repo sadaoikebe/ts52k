@@ -1,0 +1,1744 @@
+[
+ {
+  "ref": "C1",
+  "lcsc": "C15849",
+  "kicad": 180.0,
+  "cpl": 180.0,
+  "models": {
+   "A": {
+    "best": 180,
+    "rms": 0.075,
+    "second": 270,
+    "second_rms": 1.044
+   },
+   "B": {
+    "best": 0,
+    "rms": 0.075,
+    "second": 90,
+    "second_rms": 1.044
+   },
+   "C": {
+    "best": 0,
+    "rms": 0.075,
+    "second": 90,
+    "second_rms": 1.044
+   }
+  }
+ },
+ {
+  "ref": "C7",
+  "lcsc": "C15849",
+  "kicad": 90.0,
+  "cpl": 90.0,
+  "models": {
+   "A": {
+    "best": 90,
+    "rms": 0.075,
+    "second": 180,
+    "second_rms": 1.044
+   },
+   "B": {
+    "best": 90,
+    "rms": 0.075,
+    "second": 180,
+    "second_rms": 1.044
+   },
+   "C": {
+    "best": 270,
+    "rms": 0.075,
+    "second": 0,
+    "second_rms": 1.044
+   }
+  }
+ },
+ {
+  "ref": "C2",
+  "lcsc": "C19666",
+  "kicad": -90.0,
+  "cpl": -90.0,
+  "models": {
+   "A": {
+    "best": 270,
+    "rms": 0.075,
+    "second": 0,
+    "second_rms": 1.044
+   },
+   "B": {
+    "best": 270,
+    "rms": 0.075,
+    "second": 0,
+    "second_rms": 1.044
+   },
+   "C": {
+    "best": 90,
+    "rms": 0.075,
+    "second": 180,
+    "second_rms": 1.044
+   }
+  }
+ },
+ {
+  "ref": "C3",
+  "lcsc": "C19666",
+  "kicad": -90.0,
+  "cpl": -90.0,
+  "models": {
+   "A": {
+    "best": 270,
+    "rms": 0.075,
+    "second": 0,
+    "second_rms": 1.044
+   },
+   "B": {
+    "best": 270,
+    "rms": 0.075,
+    "second": 0,
+    "second_rms": 1.044
+   },
+   "C": {
+    "best": 90,
+    "rms": 0.075,
+    "second": 180,
+    "second_rms": 1.044
+   }
+  }
+ },
+ {
+  "ref": "C5",
+  "lcsc": "C19666",
+  "kicad": -90.0,
+  "cpl": -90.0,
+  "models": {
+   "A": {
+    "best": 270,
+    "rms": 0.075,
+    "second": 0,
+    "second_rms": 1.044
+   },
+   "B": {
+    "best": 270,
+    "rms": 0.075,
+    "second": 0,
+    "second_rms": 1.044
+   },
+   "C": {
+    "best": 90,
+    "rms": 0.075,
+    "second": 180,
+    "second_rms": 1.044
+   }
+  }
+ },
+ {
+  "ref": "C6",
+  "lcsc": "C19666",
+  "kicad": 90.0,
+  "cpl": 90.0,
+  "models": {
+   "A": {
+    "best": 90,
+    "rms": 0.075,
+    "second": 180,
+    "second_rms": 1.044
+   },
+   "B": {
+    "best": 90,
+    "rms": 0.075,
+    "second": 180,
+    "second_rms": 1.044
+   },
+   "C": {
+    "best": 270,
+    "rms": 0.075,
+    "second": 0,
+    "second_rms": 1.044
+   }
+  }
+ },
+ {
+  "ref": "C4",
+  "lcsc": "C15850",
+  "kicad": 90.0,
+  "cpl": 90.0,
+  "models": {
+   "A": {
+    "best": 90,
+    "rms": 0.05,
+    "second": 0,
+    "second_rms": 1.379
+   },
+   "B": {
+    "best": 90,
+    "rms": 0.05,
+    "second": 0,
+    "second_rms": 1.379
+   },
+   "C": {
+    "best": 270,
+    "rms": 0.05,
+    "second": 0,
+    "second_rms": 1.379
+   }
+  }
+ },
+ {
+  "ref": "C8",
+  "lcsc": "C1525",
+  "kicad": 90.0,
+  "cpl": 90.0,
+  "models": {
+   "A": {
+    "best": 90,
+    "rms": 0.06,
+    "second": 0,
+    "second_rms": 0.638
+   },
+   "B": {
+    "best": 90,
+    "rms": 0.06,
+    "second": 0,
+    "second_rms": 0.638
+   },
+   "C": {
+    "best": 270,
+    "rms": 0.06,
+    "second": 0,
+    "second_rms": 0.638
+   }
+  }
+ },
+ {
+  "ref": "C9",
+  "lcsc": "C1525",
+  "kicad": 90.0,
+  "cpl": 90.0,
+  "models": {
+   "A": {
+    "best": 90,
+    "rms": 0.06,
+    "second": 0,
+    "second_rms": 0.638
+   },
+   "B": {
+    "best": 90,
+    "rms": 0.06,
+    "second": 0,
+    "second_rms": 0.638
+   },
+   "C": {
+    "best": 270,
+    "rms": 0.06,
+    "second": 0,
+    "second_rms": 0.638
+   }
+  }
+ },
+ {
+  "ref": "C10",
+  "lcsc": "C1525",
+  "kicad": 90.0,
+  "cpl": 90.0,
+  "models": {
+   "A": {
+    "best": 90,
+    "rms": 0.06,
+    "second": 0,
+    "second_rms": 0.638
+   },
+   "B": {
+    "best": 90,
+    "rms": 0.06,
+    "second": 0,
+    "second_rms": 0.638
+   },
+   "C": {
+    "best": 270,
+    "rms": 0.06,
+    "second": 0,
+    "second_rms": 0.638
+   }
+  }
+ },
+ {
+  "ref": "C19",
+  "lcsc": "C1525",
+  "kicad": -90.0,
+  "cpl": -90.0,
+  "models": {
+   "A": {
+    "best": 270,
+    "rms": 0.06,
+    "second": 0,
+    "second_rms": 0.638
+   },
+   "B": {
+    "best": 270,
+    "rms": 0.06,
+    "second": 0,
+    "second_rms": 0.638
+   },
+   "C": {
+    "best": 90,
+    "rms": 0.06,
+    "second": 0,
+    "second_rms": 0.638
+   }
+  }
+ },
+ {
+  "ref": "C20",
+  "lcsc": "C1525",
+  "kicad": 90.0,
+  "cpl": 90.0,
+  "models": {
+   "A": {
+    "best": 90,
+    "rms": 0.06,
+    "second": 0,
+    "second_rms": 0.638
+   },
+   "B": {
+    "best": 90,
+    "rms": 0.06,
+    "second": 0,
+    "second_rms": 0.638
+   },
+   "C": {
+    "best": 270,
+    "rms": 0.06,
+    "second": 0,
+    "second_rms": 0.638
+   }
+  }
+ },
+ {
+  "ref": "C33",
+  "lcsc": "C1525",
+  "kicad": 180.0,
+  "cpl": 180.0,
+  "models": {
+   "A": {
+    "best": 180,
+    "rms": 0.06,
+    "second": 90,
+    "second_rms": 0.638
+   },
+   "B": {
+    "best": 0,
+    "rms": 0.06,
+    "second": 90,
+    "second_rms": 0.638
+   },
+   "C": {
+    "best": 0,
+    "rms": 0.06,
+    "second": 90,
+    "second_rms": 0.638
+   }
+  }
+ },
+ {
+  "ref": "C34",
+  "lcsc": "C1525",
+  "kicad": -90.0,
+  "cpl": -90.0,
+  "models": {
+   "A": {
+    "best": 270,
+    "rms": 0.06,
+    "second": 0,
+    "second_rms": 0.638
+   },
+   "B": {
+    "best": 270,
+    "rms": 0.06,
+    "second": 0,
+    "second_rms": 0.638
+   },
+   "C": {
+    "best": 90,
+    "rms": 0.06,
+    "second": 0,
+    "second_rms": 0.638
+   }
+  }
+ },
+ {
+  "ref": "C35",
+  "lcsc": "C1525",
+  "kicad": -90.0,
+  "cpl": -90.0,
+  "models": {
+   "A": {
+    "best": 270,
+    "rms": 0.06,
+    "second": 0,
+    "second_rms": 0.638
+   },
+   "B": {
+    "best": 270,
+    "rms": 0.06,
+    "second": 0,
+    "second_rms": 0.638
+   },
+   "C": {
+    "best": 90,
+    "rms": 0.06,
+    "second": 0,
+    "second_rms": 0.638
+   }
+  }
+ },
+ {
+  "ref": "C11",
+  "lcsc": "C1547",
+  "kicad": 90.0,
+  "cpl": 90.0,
+  "models": {
+   "A": {
+    "best": 90,
+    "rms": 0.06,
+    "second": 0,
+    "second_rms": 0.638
+   },
+   "B": {
+    "best": 90,
+    "rms": 0.06,
+    "second": 0,
+    "second_rms": 0.638
+   },
+   "C": {
+    "best": 270,
+    "rms": 0.06,
+    "second": 0,
+    "second_rms": 0.638
+   }
+  }
+ },
+ {
+  "ref": "C12",
+  "lcsc": "C1547",
+  "kicad": 90.0,
+  "cpl": 90.0,
+  "models": {
+   "A": {
+    "best": 90,
+    "rms": 0.06,
+    "second": 0,
+    "second_rms": 0.638
+   },
+   "B": {
+    "best": 90,
+    "rms": 0.06,
+    "second": 0,
+    "second_rms": 0.638
+   },
+   "C": {
+    "best": 270,
+    "rms": 0.06,
+    "second": 0,
+    "second_rms": 0.638
+   }
+  }
+ },
+ {
+  "ref": "C13",
+  "lcsc": "C1547",
+  "kicad": 180.0,
+  "cpl": 180.0,
+  "models": {
+   "A": {
+    "best": 180,
+    "rms": 0.06,
+    "second": 90,
+    "second_rms": 0.638
+   },
+   "B": {
+    "best": 0,
+    "rms": 0.06,
+    "second": 90,
+    "second_rms": 0.638
+   },
+   "C": {
+    "best": 0,
+    "rms": 0.06,
+    "second": 90,
+    "second_rms": 0.638
+   }
+  }
+ },
+ {
+  "ref": "C30",
+  "lcsc": "C52152",
+  "kicad": -90.0,
+  "cpl": -90.0,
+  "models": {
+   "A": {
+    "best": 270,
+    "rms": 0.075,
+    "second": 0,
+    "second_rms": 1.044
+   },
+   "B": {
+    "best": 270,
+    "rms": 0.075,
+    "second": 0,
+    "second_rms": 1.044
+   },
+   "C": {
+    "best": 90,
+    "rms": 0.075,
+    "second": 180,
+    "second_rms": 1.044
+   }
+  }
+ },
+ {
+  "ref": "C32",
+  "lcsc": "C52923",
+  "kicad": 180.0,
+  "cpl": 180.0,
+  "models": {
+   "A": {
+    "best": 180,
+    "rms": 0.06,
+    "second": 90,
+    "second_rms": 0.638
+   },
+   "B": {
+    "best": 0,
+    "rms": 0.06,
+    "second": 90,
+    "second_rms": 0.638
+   },
+   "C": {
+    "best": 0,
+    "rms": 0.06,
+    "second": 90,
+    "second_rms": 0.638
+   }
+  }
+ },
+ {
+  "ref": "C37",
+  "lcsc": "C23733",
+  "kicad": 180.0,
+  "cpl": 180.0,
+  "models": {
+   "A": {
+    "best": 180,
+    "rms": 0.06,
+    "second": 90,
+    "second_rms": 0.638
+   },
+   "B": {
+    "best": 0,
+    "rms": 0.06,
+    "second": 90,
+    "second_rms": 0.638
+   },
+   "C": {
+    "best": 0,
+    "rms": 0.06,
+    "second": 90,
+    "second_rms": 0.638
+   }
+  }
+ },
+ {
+  "ref": "D89",
+  "lcsc": "C22395519",
+  "kicad": 180.0,
+  "cpl": 180.0,
+  "models": {
+   "A": {
+    "best": 180,
+    "rms": 0.0,
+    "second": 270,
+    "second_rms": 0.566
+   },
+   "B": {
+    "best": 0,
+    "rms": 0.0,
+    "second": 90,
+    "second_rms": 0.566
+   },
+   "C": {
+    "best": 0,
+    "rms": 0.0,
+    "second": 90,
+    "second_rms": 0.566
+   }
+  }
+ },
+ {
+  "ref": "D90",
+  "lcsc": "C22395519",
+  "kicad": 0.0,
+  "cpl": 0.0,
+  "models": {
+   "A": {
+    "best": 0,
+    "rms": 0.0,
+    "second": 90,
+    "second_rms": 0.566
+   },
+   "B": {
+    "best": 180,
+    "rms": 0.0,
+    "second": 270,
+    "second_rms": 0.566
+   },
+   "C": {
+    "best": 180,
+    "rms": 0.0,
+    "second": 270,
+    "second_rms": 0.566
+   }
+  }
+ },
+ {
+  "ref": "D91",
+  "lcsc": "C22395519",
+  "kicad": 0.0,
+  "cpl": 0.0,
+  "models": {
+   "A": {
+    "best": 0,
+    "rms": 0.0,
+    "second": 90,
+    "second_rms": 0.566
+   },
+   "B": {
+    "best": 180,
+    "rms": 0.0,
+    "second": 270,
+    "second_rms": 0.566
+   },
+   "C": {
+    "best": 180,
+    "rms": 0.0,
+    "second": 270,
+    "second_rms": 0.566
+   }
+  }
+ },
+ {
+  "ref": "J1",
+  "lcsc": "C165948",
+  "kicad": 0.0,
+  "cpl": 0.0,
+  "models": {
+   "A": {
+    "best": 0,
+    "rms": 0.068,
+    "second": 270,
+    "second_rms": 3.332
+   },
+   "B": {
+    "best": 180,
+    "rms": 0.068,
+    "second": 270,
+    "second_rms": 3.332
+   },
+   "C": {
+    "best": 180,
+    "rms": 0.068,
+    "second": 90,
+    "second_rms": 3.332
+   }
+  }
+ },
+ {
+  "ref": "J3",
+  "lcsc": "C295747",
+  "kicad": 180.0,
+  "cpl": 180.0,
+  "models": {
+   "A": {
+    "best": 180,
+    "rms": 0.0,
+    "second": 90,
+    "second_rms": 1.414
+   },
+   "B": {
+    "best": 0,
+    "rms": 0.0,
+    "second": 90,
+    "second_rms": 1.414
+   },
+   "C": {
+    "best": 0,
+    "rms": 0.0,
+    "second": 90,
+    "second_rms": 1.414
+   }
+  }
+ },
+ {
+  "ref": "L1",
+  "lcsc": "C713281",
+  "kicad": -90.0,
+  "cpl": -90.0,
+  "models": {
+   "A": {
+    "best": 270,
+    "rms": 0.088,
+    "second": 0,
+    "second_rms": 1.054
+   },
+   "B": {
+    "best": 270,
+    "rms": 0.088,
+    "second": 0,
+    "second_rms": 1.054
+   },
+   "C": {
+    "best": 90,
+    "rms": 0.088,
+    "second": 0,
+    "second_rms": 1.054
+   }
+  }
+ },
+ {
+  "ref": "Q1",
+  "lcsc": "C15127",
+  "kicad": 0.0,
+  "cpl": 180.0,
+  "models": {
+   "A": {
+    "best": 180,
+    "rms": 0.2,
+    "second": 270,
+    "second_rms": 1.778
+   },
+   "B": {
+    "best": 0,
+    "rms": 0.2,
+    "second": 90,
+    "second_rms": 1.778
+   },
+   "C": {
+    "best": 0,
+    "rms": 0.2,
+    "second": 90,
+    "second_rms": 1.778
+   }
+  }
+ },
+ {
+  "ref": "R1",
+  "lcsc": "C25981",
+  "kicad": 90.0,
+  "cpl": 90.0,
+  "models": {
+   "A": {
+    "best": 90,
+    "rms": 0.072,
+    "second": 180,
+    "second_rms": 1.117
+   },
+   "B": {
+    "best": 90,
+    "rms": 0.072,
+    "second": 180,
+    "second_rms": 1.117
+   },
+   "C": {
+    "best": 270,
+    "rms": 0.072,
+    "second": 0,
+    "second_rms": 1.117
+   }
+  }
+ },
+ {
+  "ref": "R2",
+  "lcsc": "C22843",
+  "kicad": 180.0,
+  "cpl": 180.0,
+  "models": {
+   "A": {
+    "best": 180,
+    "rms": 0.072,
+    "second": 270,
+    "second_rms": 1.117
+   },
+   "B": {
+    "best": 0,
+    "rms": 0.072,
+    "second": 90,
+    "second_rms": 1.117
+   },
+   "C": {
+    "best": 0,
+    "rms": 0.072,
+    "second": 90,
+    "second_rms": 1.117
+   }
+  }
+ },
+ {
+  "ref": "R3",
+  "lcsc": "C25804",
+  "kicad": 0.0,
+  "cpl": 0.0,
+  "models": {
+   "A": {
+    "best": 0,
+    "rms": 0.072,
+    "second": 90,
+    "second_rms": 1.117
+   },
+   "B": {
+    "best": 180,
+    "rms": 0.072,
+    "second": 270,
+    "second_rms": 1.117
+   },
+   "C": {
+    "best": 180,
+    "rms": 0.072,
+    "second": 270,
+    "second_rms": 1.117
+   }
+  }
+ },
+ {
+  "ref": "R4",
+  "lcsc": "C22939",
+  "kicad": -90.0,
+  "cpl": -90.0,
+  "models": {
+   "A": {
+    "best": 270,
+    "rms": 0.072,
+    "second": 0,
+    "second_rms": 1.117
+   },
+   "B": {
+    "best": 270,
+    "rms": 0.072,
+    "second": 0,
+    "second_rms": 1.117
+   },
+   "C": {
+    "best": 90,
+    "rms": 0.072,
+    "second": 180,
+    "second_rms": 1.117
+   }
+  }
+ },
+ {
+  "ref": "R5",
+  "lcsc": "C23186",
+  "kicad": 0.0,
+  "cpl": 0.0,
+  "models": {
+   "A": {
+    "best": 0,
+    "rms": 0.072,
+    "second": 90,
+    "second_rms": 1.117
+   },
+   "B": {
+    "best": 180,
+    "rms": 0.072,
+    "second": 270,
+    "second_rms": 1.117
+   },
+   "C": {
+    "best": 180,
+    "rms": 0.072,
+    "second": 270,
+    "second_rms": 1.117
+   }
+  }
+ },
+ {
+  "ref": "R6",
+  "lcsc": "C23186",
+  "kicad": 180.0,
+  "cpl": 180.0,
+  "models": {
+   "A": {
+    "best": 180,
+    "rms": 0.072,
+    "second": 270,
+    "second_rms": 1.117
+   },
+   "B": {
+    "best": 0,
+    "rms": 0.072,
+    "second": 90,
+    "second_rms": 1.117
+   },
+   "C": {
+    "best": 0,
+    "rms": 0.072,
+    "second": 90,
+    "second_rms": 1.117
+   }
+  }
+ },
+ {
+  "ref": "R15",
+  "lcsc": "C25744",
+  "kicad": -90.0,
+  "cpl": -90.0,
+  "models": {
+   "A": {
+    "best": 270,
+    "rms": 0.077,
+    "second": 0,
+    "second_rms": 0.669
+   },
+   "B": {
+    "best": 270,
+    "rms": 0.077,
+    "second": 0,
+    "second_rms": 0.669
+   },
+   "C": {
+    "best": 90,
+    "rms": 0.077,
+    "second": 0,
+    "second_rms": 0.669
+   }
+  }
+ },
+ {
+  "ref": "R16",
+  "lcsc": "C25744",
+  "kicad": -90.0,
+  "cpl": -90.0,
+  "models": {
+   "A": {
+    "best": 270,
+    "rms": 0.077,
+    "second": 0,
+    "second_rms": 0.669
+   },
+   "B": {
+    "best": 270,
+    "rms": 0.077,
+    "second": 0,
+    "second_rms": 0.669
+   },
+   "C": {
+    "best": 90,
+    "rms": 0.077,
+    "second": 0,
+    "second_rms": 0.669
+   }
+  }
+ },
+ {
+  "ref": "R20",
+  "lcsc": "C11702",
+  "kicad": -90.0,
+  "cpl": -90.0,
+  "models": {
+   "A": {
+    "best": 270,
+    "rms": 0.077,
+    "second": 0,
+    "second_rms": 0.669
+   },
+   "B": {
+    "best": 270,
+    "rms": 0.077,
+    "second": 0,
+    "second_rms": 0.669
+   },
+   "C": {
+    "best": 90,
+    "rms": 0.077,
+    "second": 0,
+    "second_rms": 0.669
+   }
+  }
+ },
+ {
+  "ref": "R21",
+  "lcsc": "C881384",
+  "kicad": -90.0,
+  "cpl": -90.0,
+  "models": {
+   "A": {
+    "best": 270,
+    "rms": 0.077,
+    "second": 0,
+    "second_rms": 0.669
+   },
+   "B": {
+    "best": 270,
+    "rms": 0.077,
+    "second": 0,
+    "second_rms": 0.669
+   },
+   "C": {
+    "best": 90,
+    "rms": 0.077,
+    "second": 0,
+    "second_rms": 0.669
+   }
+  }
+ },
+ {
+  "ref": "R22",
+  "lcsc": "C25076",
+  "kicad": -90.0,
+  "cpl": -90.0,
+  "models": {
+   "A": {
+    "best": 270,
+    "rms": 0.077,
+    "second": 0,
+    "second_rms": 0.669
+   },
+   "B": {
+    "best": 270,
+    "rms": 0.077,
+    "second": 0,
+    "second_rms": 0.669
+   },
+   "C": {
+    "best": 90,
+    "rms": 0.077,
+    "second": 0,
+    "second_rms": 0.669
+   }
+  }
+ },
+ {
+  "ref": "R27",
+  "lcsc": "C25076",
+  "kicad": -90.0,
+  "cpl": -90.0,
+  "models": {
+   "A": {
+    "best": 270,
+    "rms": 0.077,
+    "second": 0,
+    "second_rms": 0.669
+   },
+   "B": {
+    "best": 270,
+    "rms": 0.077,
+    "second": 0,
+    "second_rms": 0.669
+   },
+   "C": {
+    "best": 90,
+    "rms": 0.077,
+    "second": 0,
+    "second_rms": 0.669
+   }
+  }
+ },
+ {
+  "ref": "R31",
+  "lcsc": "C25076",
+  "kicad": -90.0,
+  "cpl": -90.0,
+  "models": {
+   "A": {
+    "best": 270,
+    "rms": 0.077,
+    "second": 0,
+    "second_rms": 0.669
+   },
+   "B": {
+    "best": 270,
+    "rms": 0.077,
+    "second": 0,
+    "second_rms": 0.669
+   },
+   "C": {
+    "best": 90,
+    "rms": 0.077,
+    "second": 0,
+    "second_rms": 0.669
+   }
+  }
+ },
+ {
+  "ref": "R32",
+  "lcsc": "C25076",
+  "kicad": -90.0,
+  "cpl": -90.0,
+  "models": {
+   "A": {
+    "best": 270,
+    "rms": 0.077,
+    "second": 0,
+    "second_rms": 0.669
+   },
+   "B": {
+    "best": 270,
+    "rms": 0.077,
+    "second": 0,
+    "second_rms": 0.669
+   },
+   "C": {
+    "best": 90,
+    "rms": 0.077,
+    "second": 0,
+    "second_rms": 0.669
+   }
+  }
+ },
+ {
+  "ref": "R33",
+  "lcsc": "C25076",
+  "kicad": -90.0,
+  "cpl": -90.0,
+  "models": {
+   "A": {
+    "best": 270,
+    "rms": 0.077,
+    "second": 0,
+    "second_rms": 0.669
+   },
+   "B": {
+    "best": 270,
+    "rms": 0.077,
+    "second": 0,
+    "second_rms": 0.669
+   },
+   "C": {
+    "best": 90,
+    "rms": 0.077,
+    "second": 0,
+    "second_rms": 0.669
+   }
+  }
+ },
+ {
+  "ref": "R34",
+  "lcsc": "C25076",
+  "kicad": -90.0,
+  "cpl": -90.0,
+  "models": {
+   "A": {
+    "best": 270,
+    "rms": 0.077,
+    "second": 0,
+    "second_rms": 0.669
+   },
+   "B": {
+    "best": 270,
+    "rms": 0.077,
+    "second": 0,
+    "second_rms": 0.669
+   },
+   "C": {
+    "best": 90,
+    "rms": 0.077,
+    "second": 0,
+    "second_rms": 0.669
+   }
+  }
+ },
+ {
+  "ref": "R23",
+  "lcsc": "C17168",
+  "kicad": 0.0,
+  "cpl": 0.0,
+  "models": {
+   "A": {
+    "best": 0,
+    "rms": 0.077,
+    "second": 90,
+    "second_rms": 0.669
+   },
+   "B": {
+    "best": 180,
+    "rms": 0.077,
+    "second": 270,
+    "second_rms": 0.669
+   },
+   "C": {
+    "best": 180,
+    "rms": 0.077,
+    "second": 270,
+    "second_rms": 0.669
+   }
+  }
+ },
+ {
+  "ref": "R26",
+  "lcsc": "C25092",
+  "kicad": 180.0,
+  "cpl": 180.0,
+  "models": {
+   "A": {
+    "best": 180,
+    "rms": 0.077,
+    "second": 270,
+    "second_rms": 0.669
+   },
+   "B": {
+    "best": 0,
+    "rms": 0.077,
+    "second": 90,
+    "second_rms": 0.669
+   },
+   "C": {
+    "best": 0,
+    "rms": 0.077,
+    "second": 90,
+    "second_rms": 0.669
+   }
+  }
+ },
+ {
+  "ref": "R41",
+  "lcsc": "C25741",
+  "kicad": 90.0,
+  "cpl": 90.0,
+  "models": {
+   "A": {
+    "best": 90,
+    "rms": 0.077,
+    "second": 0,
+    "second_rms": 0.669
+   },
+   "B": {
+    "best": 90,
+    "rms": 0.077,
+    "second": 0,
+    "second_rms": 0.669
+   },
+   "C": {
+    "best": 270,
+    "rms": 0.077,
+    "second": 0,
+    "second_rms": 0.669
+   }
+  }
+ },
+ {
+  "ref": "R42",
+  "lcsc": "C25741",
+  "kicad": 90.0,
+  "cpl": 90.0,
+  "models": {
+   "A": {
+    "best": 90,
+    "rms": 0.077,
+    "second": 0,
+    "second_rms": 0.669
+   },
+   "B": {
+    "best": 90,
+    "rms": 0.077,
+    "second": 0,
+    "second_rms": 0.669
+   },
+   "C": {
+    "best": 270,
+    "rms": 0.077,
+    "second": 0,
+    "second_rms": 0.669
+   }
+  }
+ },
+ {
+  "ref": "R43",
+  "lcsc": "C25741",
+  "kicad": 90.0,
+  "cpl": 90.0,
+  "models": {
+   "A": {
+    "best": 90,
+    "rms": 0.077,
+    "second": 0,
+    "second_rms": 0.669
+   },
+   "B": {
+    "best": 90,
+    "rms": 0.077,
+    "second": 0,
+    "second_rms": 0.669
+   },
+   "C": {
+    "best": 270,
+    "rms": 0.077,
+    "second": 0,
+    "second_rms": 0.669
+   }
+  }
+ },
+ {
+  "ref": "R44",
+  "lcsc": "C25741",
+  "kicad": 90.0,
+  "cpl": 90.0,
+  "models": {
+   "A": {
+    "best": 90,
+    "rms": 0.077,
+    "second": 0,
+    "second_rms": 0.669
+   },
+   "B": {
+    "best": 90,
+    "rms": 0.077,
+    "second": 0,
+    "second_rms": 0.669
+   },
+   "C": {
+    "best": 270,
+    "rms": 0.077,
+    "second": 0,
+    "second_rms": 0.669
+   }
+  }
+ },
+ {
+  "ref": "R45",
+  "lcsc": "C25741",
+  "kicad": 90.0,
+  "cpl": 90.0,
+  "models": {
+   "A": {
+    "best": 90,
+    "rms": 0.077,
+    "second": 0,
+    "second_rms": 0.669
+   },
+   "B": {
+    "best": 90,
+    "rms": 0.077,
+    "second": 0,
+    "second_rms": 0.669
+   },
+   "C": {
+    "best": 270,
+    "rms": 0.077,
+    "second": 0,
+    "second_rms": 0.669
+   }
+  }
+ },
+ {
+  "ref": "R46",
+  "lcsc": "C25741",
+  "kicad": 90.0,
+  "cpl": 90.0,
+  "models": {
+   "A": {
+    "best": 90,
+    "rms": 0.077,
+    "second": 0,
+    "second_rms": 0.669
+   },
+   "B": {
+    "best": 90,
+    "rms": 0.077,
+    "second": 0,
+    "second_rms": 0.669
+   },
+   "C": {
+    "best": 270,
+    "rms": 0.077,
+    "second": 0,
+    "second_rms": 0.669
+   }
+  }
+ },
+ {
+  "ref": "R47",
+  "lcsc": "C25741",
+  "kicad": 90.0,
+  "cpl": 90.0,
+  "models": {
+   "A": {
+    "best": 90,
+    "rms": 0.077,
+    "second": 0,
+    "second_rms": 0.669
+   },
+   "B": {
+    "best": 90,
+    "rms": 0.077,
+    "second": 0,
+    "second_rms": 0.669
+   },
+   "C": {
+    "best": 270,
+    "rms": 0.077,
+    "second": 0,
+    "second_rms": 0.669
+   }
+  }
+ },
+ {
+  "ref": "R48",
+  "lcsc": "C25741",
+  "kicad": 90.0,
+  "cpl": 90.0,
+  "models": {
+   "A": {
+    "best": 90,
+    "rms": 0.077,
+    "second": 0,
+    "second_rms": 0.669
+   },
+   "B": {
+    "best": 90,
+    "rms": 0.077,
+    "second": 0,
+    "second_rms": 0.669
+   },
+   "C": {
+    "best": 270,
+    "rms": 0.077,
+    "second": 0,
+    "second_rms": 0.669
+   }
+  }
+ },
+ {
+  "ref": "R49",
+  "lcsc": "C25741",
+  "kicad": 90.0,
+  "cpl": 90.0,
+  "models": {
+   "A": {
+    "best": 90,
+    "rms": 0.077,
+    "second": 0,
+    "second_rms": 0.669
+   },
+   "B": {
+    "best": 90,
+    "rms": 0.077,
+    "second": 0,
+    "second_rms": 0.669
+   },
+   "C": {
+    "best": 270,
+    "rms": 0.077,
+    "second": 0,
+    "second_rms": 0.669
+   }
+  }
+ },
+ {
+  "ref": "R50",
+  "lcsc": "C25741",
+  "kicad": 90.0,
+  "cpl": 90.0,
+  "models": {
+   "A": {
+    "best": 90,
+    "rms": 0.077,
+    "second": 0,
+    "second_rms": 0.669
+   },
+   "B": {
+    "best": 90,
+    "rms": 0.077,
+    "second": 0,
+    "second_rms": 0.669
+   },
+   "C": {
+    "best": 270,
+    "rms": 0.077,
+    "second": 0,
+    "second_rms": 0.669
+   }
+  }
+ },
+ {
+  "ref": "R51",
+  "lcsc": "C25741",
+  "kicad": 90.0,
+  "cpl": 90.0,
+  "models": {
+   "A": {
+    "best": 90,
+    "rms": 0.077,
+    "second": 0,
+    "second_rms": 0.669
+   },
+   "B": {
+    "best": 90,
+    "rms": 0.077,
+    "second": 0,
+    "second_rms": 0.669
+   },
+   "C": {
+    "best": 270,
+    "rms": 0.077,
+    "second": 0,
+    "second_rms": 0.669
+   }
+  }
+ },
+ {
+  "ref": "R52",
+  "lcsc": "C25741",
+  "kicad": 90.0,
+  "cpl": 90.0,
+  "models": {
+   "A": {
+    "best": 90,
+    "rms": 0.077,
+    "second": 0,
+    "second_rms": 0.669
+   },
+   "B": {
+    "best": 90,
+    "rms": 0.077,
+    "second": 0,
+    "second_rms": 0.669
+   },
+   "C": {
+    "best": 270,
+    "rms": 0.077,
+    "second": 0,
+    "second_rms": 0.669
+   }
+  }
+ },
+ {
+  "ref": "R53",
+  "lcsc": "C25741",
+  "kicad": 90.0,
+  "cpl": 90.0,
+  "models": {
+   "A": {
+    "best": 90,
+    "rms": 0.077,
+    "second": 0,
+    "second_rms": 0.669
+   },
+   "B": {
+    "best": 90,
+    "rms": 0.077,
+    "second": 0,
+    "second_rms": 0.669
+   },
+   "C": {
+    "best": 270,
+    "rms": 0.077,
+    "second": 0,
+    "second_rms": 0.669
+   }
+  }
+ },
+ {
+  "ref": "R54",
+  "lcsc": "C25741",
+  "kicad": 90.0,
+  "cpl": 90.0,
+  "models": {
+   "A": {
+    "best": 90,
+    "rms": 0.077,
+    "second": 0,
+    "second_rms": 0.669
+   },
+   "B": {
+    "best": 90,
+    "rms": 0.077,
+    "second": 0,
+    "second_rms": 0.669
+   },
+   "C": {
+    "best": 270,
+    "rms": 0.077,
+    "second": 0,
+    "second_rms": 0.669
+   }
+  }
+ },
+ {
+  "ref": "SW1",
+  "lcsc": "C318884",
+  "kicad": 0.0,
+  "cpl": 0.0,
+  "models": {
+   "A": {
+    "best": 0,
+    "rms": 0.025,
+    "second": 90,
+    "second_rms": 4.994
+   },
+   "B": {
+    "best": 180,
+    "rms": 0.025,
+    "second": 90,
+    "second_rms": 4.994
+   },
+   "C": {
+    "best": 180,
+    "rms": 0.025,
+    "second": 90,
+    "second_rms": 4.994
+   }
+  }
+ },
+ {
+  "ref": "U5",
+  "lcsc": "C5118826",
+  "kicad": -90.0,
+  "cpl": -90.0,
+  "models": {
+   "A": {
+    "best": 270,
+    "rms": 0.0,
+    "second": 0,
+    "second_rms": 6.994
+   },
+   "B": {
+    "best": 270,
+    "rms": 0.0,
+    "second": 180,
+    "second_rms": 6.994
+   },
+   "C": {
+    "best": 90,
+    "rms": 0.0,
+    "second": 180,
+    "second_rms": 6.994
+   }
+  }
+ },
+ {
+  "ref": "U6",
+  "lcsc": "C41249",
+  "kicad": -90.0,
+  "cpl": 90.0,
+  "models": {
+   "A": {
+    "best": 90,
+    "rms": 0.159,
+    "second": 0,
+    "second_rms": 2.076
+   },
+   "B": {
+    "best": 90,
+    "rms": 0.159,
+    "second": 0,
+    "second_rms": 2.076
+   },
+   "C": {
+    "best": 270,
+    "rms": 0.159,
+    "second": 0,
+    "second_rms": 2.076
+   }
+  }
+ },
+ {
+  "ref": "U7",
+  "lcsc": "C21379",
+  "kicad": 0.0,
+  "cpl": 90.0,
+  "models": {
+   "A": {
+    "best": 90,
+    "rms": 0.261,
+    "second": 0,
+    "second_rms": 5.527
+   },
+   "B": {
+    "best": 90,
+    "rms": 0.261,
+    "second": 0,
+    "second_rms": 5.527
+   },
+   "C": {
+    "best": 270,
+    "rms": 0.261,
+    "second": 0,
+    "second_rms": 5.527
+   }
+  }
+ },
+ {
+  "ref": "U8",
+  "lcsc": "C21379",
+  "kicad": 0.0,
+  "cpl": 90.0,
+  "models": {
+   "A": {
+    "best": 90,
+    "rms": 0.261,
+    "second": 0,
+    "second_rms": 5.527
+   },
+   "B": {
+    "best": 90,
+    "rms": 0.261,
+    "second": 0,
+    "second_rms": 5.527
+   },
+   "C": {
+    "best": 270,
+    "rms": 0.261,
+    "second": 0,
+    "second_rms": 5.527
+   }
+  }
+ },
+ {
+  "ref": "U9",
+  "lcsc": "C140288",
+  "kicad": 180.0,
+  "cpl": 180.0,
+  "models": {
+   "A": {
+    "best": 180,
+    "rms": 0.036,
+    "second": 270,
+    "second_rms": 2.172
+   },
+   "B": {
+    "best": 0,
+    "rms": 0.036,
+    "second": 90,
+    "second_rms": 2.172
+   },
+   "C": {
+    "best": 0,
+    "rms": 0.036,
+    "second": 90,
+    "second_rms": 2.172
+   }
+  }
+ },
+ {
+  "ref": "X1",
+  "lcsc": "C96341",
+  "kicad": 180.0,
+  "cpl": 180.0,
+  "models": {
+   "A": {
+    "best": 180,
+    "rms": 0.0,
+    "second": 90,
+    "second_rms": 1.061
+   },
+   "B": {
+    "best": 0,
+    "rms": 0.0,
+    "second": 90,
+    "second_rms": 1.061
+   },
+   "C": {
+    "best": 0,
+    "rms": 0.0,
+    "second": 90,
+    "second_rms": 1.061
+   }
+  }
+ }
+]

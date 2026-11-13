@@ -31,9 +31,9 @@
     "ts52k.pretty/VQFN-16-1EP_3x3mm_P0.5mm_EP1.68x1.68mm.kicad_mod": "f68d777c2406c4c6178fdba99f3938a0ec0b5a827706f5c64a08157ce5117714"
   },
   "output_sha256": {
-    "gerber/ts52k-gerbers.zip": "4f94fae4307162d15bfe75036c62e24c68fd598e0132aa4ea8dcc0a196b1d789",
+    "gerber/ts52k-gerbers.zip": "7fe2c9dfa0a2cd6bcc3d3fd62f0883430779f623060ecd0c990f96b103919457",
     "assembly/ts52k-bom.csv": "e4b4b594379114459851151954238d3caebc8e4cf21aeb368390970bc29b3405",
-    "assembly/ts52k-cpl.csv": "81cfcb6a29c59dc7a8ba00641a028b66320a92bf57a33cb66e68fb1bba0e5763"
+    "assembly/ts52k-cpl.csv": "ba79bc76674818ac9ae333ffe5e28e1dde1142eb9ead524a1c3d1255a5f5e946"
   },
   "copper_layers": 4,
   "stackup": "JLC04161H-7628",

@@ -1,5 +1,7 @@
 > **このブランチ（tc52-wireless）の製造データは TC52 wireless（MDBT50Q＋BQ24072、4 層）のものです。** ガーバー zip・BOM 31 行・CPL 67 点は `export.py` で再生成済み。**発注時は 4 層・1.6 mm・スタック JLC04161H-7628（L1–L2／L3–L4 が 7628 プリプレグ 0.2104 mm）を明示する**（`assembly/export-status.txt` にも出力される）。発注時の指定と確認事項は [docs/tc52w-build-log.md](../../docs/tc52w-build-log.md) の「製造データ」を参照。以下の本文は Rev 0.2（RP2040 版）の記述のままです。
 
+> **CPL の向き（2026-11-14 全数照合）：** 31 種 67 点を EasyEDA 公式ライブラリのランドと照合し、`export.py` の補正は C15127（Q1）+180°、C41249（U6 AD8601）+180°、C21379（U7/U8 CD4051）+90° の 3 件。根拠は [docs/tc52w-rotation-audit](../../docs/tc52w-rotation-audit/README.md)。**JLCPCB が Bottom 面の角度をどう解釈するかは公開資料で定まっておらず未確定**（公開報告では 0°/180° 配置の部品が 180° ずれる可能性）。発注前にプレビューと JLCPCB への確認で決めること（同 README の表）。
+
 # Revision 0.2 — JLCPCB 向け出力
 
 **Revision 0.2 のガーバー・ドリル・BOM・実装座標を同梱しています。**
