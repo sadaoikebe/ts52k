@@ -1,3 +1,5 @@
+> **このブランチ（tc52-wireless）の製造データは TC52 wireless（MDBT50Q＋BQ24072、4 層）のものです。** ガーバー zip・BOM 30 行・CPL 67 点は `export.py` で再生成済み。発注時の指定と確認事項は [docs/tc52w-build-log.md](../../docs/tc52w-build-log.md) の「製造データ」を参照。以下の本文は Rev 0.2（RP2040 版）の記述のままです。
+
 # Revision 0.2 — JLCPCB 向け出力
 
 **Revision 0.2 のガーバー・ドリル・BOM・実装座標を同梱しています。**

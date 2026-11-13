@@ -1,3 +1,5 @@
+> **このブランチ（tc52-wireless）の基板は TC52 wireless です。** 配置と配線の記録は [docs/tc52w-build-log.md](../docs/tc52w-build-log.md)。以下は Rev 0.2（RP2040 版）の記述のままです。
+
 # Revision 0.2 基板レイアウト
 
 Revision 0.2 は RP2040 を搭載した52キー基板です。回路と基板の設計・配置・配線は完了しています。基板の詳細は [回路図](ts52k.kicad_sch)、[基板データ](ts52k.kicad_pcb)、[設計ルール](ts52k.kicad_dru)を参照してください。ケースとプレートは既存版と共通です。
